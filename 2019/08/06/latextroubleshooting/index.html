@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Alexander-Qi&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="有些时候，你会不幸地在编译自己的.tex文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的.tex文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。 预防方法预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。 看官方文档很多时候我们会百度自己的需求，然后照搬网上">
+<meta name="keywords" content="LaTeX, Gaussian">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alexander-Qi&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/2019/08/06/latextroubleshooting/index.html">
+<meta property="og:site_name" content="Alexander-Qi&#39;s Blog">
+<meta property="og:description" content="有些时候，你会不幸地在编译自己的.tex文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的.tex文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。 预防方法预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。 看官方文档很多时候我们会百度自己的需求，然后照搬网上">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2019-08-04T07:59:29.104Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alexander-Qi&#39;s Blog">
+<meta name="twitter:description" content="有些时候，你会不幸地在编译自己的.tex文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的.tex文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。 预防方法预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。 看官方文档很多时候我们会百度自己的需求，然后照搬网上">
+  
+    <link rel="alternate" href="/atom.xml" title="Alexander-Qi&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Alexander-Qi&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">LaTeX, Gaussian and More...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-latextroubleshooting" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/06/latextroubleshooting/" class="article-date">
+  <time datetime="2019-08-06T10:26:35.869Z" itemprop="datePublished">2019-08-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有些时候，你会不幸地在编译自己的<code>.tex</code>文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的<code>.tex</code>文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。</p>
+<h1 id="预防方法"><a href="#预防方法" class="headerlink" title="预防方法"></a>预防方法</h1><p>预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。</p>
+<h2 id="看官方文档"><a href="#看官方文档" class="headerlink" title="看官方文档"></a>看官方文档</h2><p>很多时候我们会百度自己的需求，然后照搬网上的解决方案，但这样很多时候是不合适的。我个人建议的做法是去Comprehensive TeX Archive Network上寻找网上查到的宏包的官方文档，随后模仿官方文档中的例子去解决自己的需求。</p>
+<p>CTAN的官网在这里：<a href="https://ctan.org/" target="_blank" rel="noopener">https://ctan.org/</a></p>
+<p>这样做的原因非常简单，中文互联网社区中给出的解决方案很多都已经很老了，其中运用的命令不一定在宏包的新版本中仍旧实用；同时竟然还有人用CJK来解决中文输入的问题，这实在是害人不浅。</p>
+<h2 id="用模板"><a href="#用模板" class="headerlink" title="用模板"></a>用模板</h2><p>另外一种预防办法是从别人给出的模板开始写作，例如overleaf上的许多模板。overleaf是一个非常优秀的在线LaTeX协同编辑网站，有了它，你可以不在电脑上装TeX Live；也可以和很多人一同编辑一个项目。</p>
+<p>其他的模板包括国内外大学的学位论文模板和期刊投稿用模板等，都是非常好的学习资料。</p>
+<h1 id="找解决方案"><a href="#找解决方案" class="headerlink" title="找解决方案"></a>找解决方案</h1><p>最佳的LaTeX问答社区是stackexchange的TeX板块，面对英文文档排版中可能遇到的各种问题，你都能在这里找到你想要的答案，并且答案的质量远远高于国内社区。</p>
+<p>它的网址是：<a href="https://tex.stackexchange.com" target="_blank" rel="noopener">https://tex.stackexchange.com</a></p>
+<p>自然，在问答社区寻找答案比起使用搜索引擎还是不方便了一些。有条件的小伙伴可以用一个不存在的搜索引擎来搜索和LaTeX相关的问题，经亲测效果还是非常可喜的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/06/latextroubleshooting/" data-id="cjyzoiibl0006qsi1vaj95af4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/06/latex组织结构/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/06/latex基础知识/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/06/latextext/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latex-skills2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latexskills-1/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latexmath/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latex-cite/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jian-Qing Qi<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

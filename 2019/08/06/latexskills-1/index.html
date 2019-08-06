@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Alexander-Qi&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文开始先和大家闲聊几句。之前的《从零开始的LaTeX教程》系列承蒙大家的照顾，阅读量还是很多的呢！甚至收到了不少打赏，开心！之后的文章我还是会采用GitHub Markdown的风格来排版，毕竟还算是有一点代码教学的嘛。 从这篇文章开始的《LaTeX使用技巧》系列会教大家应对一些在论文写作过程中比较常见的需求，让大家的LaTeX之旅更加顺利~ 本文的主要内容：  如何绘制论文需要的三线表 如何并">
+<meta name="keywords" content="LaTeX, Gaussian">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alexander-Qi&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/2019/08/06/latexskills-1/index.html">
+<meta property="og:site_name" content="Alexander-Qi&#39;s Blog">
+<meta property="og:description" content="本文开始先和大家闲聊几句。之前的《从零开始的LaTeX教程》系列承蒙大家的照顾，阅读量还是很多的呢！甚至收到了不少打赏，开心！之后的文章我还是会采用GitHub Markdown的风格来排版，毕竟还算是有一点代码教学的嘛。 从这篇文章开始的《LaTeX使用技巧》系列会教大家应对一些在论文写作过程中比较常见的需求，让大家的LaTeX之旅更加顺利~ 本文的主要内容：  如何绘制论文需要的三线表 如何并">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2019-07-15T12:20:12.559Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alexander-Qi&#39;s Blog">
+<meta name="twitter:description" content="本文开始先和大家闲聊几句。之前的《从零开始的LaTeX教程》系列承蒙大家的照顾，阅读量还是很多的呢！甚至收到了不少打赏，开心！之后的文章我还是会采用GitHub Markdown的风格来排版，毕竟还算是有一点代码教学的嘛。 从这篇文章开始的《LaTeX使用技巧》系列会教大家应对一些在论文写作过程中比较常见的需求，让大家的LaTeX之旅更加顺利~ 本文的主要内容：  如何绘制论文需要的三线表 如何并">
+  
+    <link rel="alternate" href="/atom.xml" title="Alexander-Qi&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Alexander-Qi&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">LaTeX, Gaussian and More...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-latexskills-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/06/latexskills-1/" class="article-date">
+  <time datetime="2019-08-06T10:26:36.026Z" itemprop="datePublished">2019-08-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文开始先和大家闲聊几句。之前的《从零开始的LaTeX教程》系列承蒙大家的照顾，阅读量还是很多的呢！甚至收到了不少打赏，开心！之后的文章我还是会采用GitHub Markdown的风格来排版，毕竟还算是有一点代码教学的嘛。</p>
+<p>从这篇文章开始的《LaTeX使用技巧》系列会教大家应对一些在论文写作过程中比较常见的需求，让大家的LaTeX之旅更加顺利~</p>
+<p>本文的主要内容：</p>
+<ul>
+<li>如何绘制论文需要的三线表</li>
+<li>如何并置多张图片</li>
+<li>如何不让图片和表格“乱跑”</li>
+</ul>
+<h1 id="画三线表"><a href="#画三线表" class="headerlink" title="画三线表"></a>画三线表</h1><p>三线表是大家在写实验报告和论文的时候非常常见的表格样式。三线表通常只有三条线，即顶线、底线和栏目线，这三条线都是横线，表格中没有任何竖线。其中顶线和底线为粗线，栏目线为细线。</p>
+<p>在LaTeX中实现三线表的效果非常简单。我们首先需要进入<code>tabular</code>环境，随后在对应的位置加入相应的横线：顶线是<code>\toprule</code>，栏目线是<code>\midrule</code>，底线是<code>\bottomrule</code>。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;tabular&#125;&#123;ccccc&#125;</span><br><span class="line">	\toprule</span><br><span class="line">		Year  &amp; NME   &amp; New BLA &amp; Total&amp; Rate/\% \\</span><br><span class="line">	\midrule</span><br><span class="line">		2008  &amp; 21    &amp; 3     &amp; 95    &amp; 25.3 \\</span><br><span class="line">		2009  &amp; 20    &amp; 6     &amp; 98    &amp; 26.5 \\</span><br><span class="line">		2010  &amp; 15    &amp; 6     &amp; 93    &amp; 22.6 \\</span><br><span class="line">		2011  &amp; 24    &amp; 6     &amp; 100   &amp; 30 \\</span><br><span class="line">		2012  &amp; 33    &amp; 6     &amp; 101   &amp; 38.6 \\</span><br><span class="line">		2013  &amp; 25    &amp; 4     &amp; 102   &amp; 28.4 \\</span><br><span class="line">		2014  &amp; 30    &amp; 11    &amp; 119   &amp; 34.4 \\</span><br><span class="line">		2015  &amp; 33    &amp; 12    &amp; 127   &amp; 35.4 \\</span><br><span class="line">		2016  &amp; 15    &amp; 7     &amp; 102   &amp; 21.6 \\</span><br><span class="line">		2017  &amp; 34    &amp; 12    &amp; 150   &amp; 30.7 \\</span><br><span class="line">		2018  &amp; 42    &amp; 17    &amp; 151   &amp; 39.1 \\</span><br><span class="line">	\bottomrule</span><br><span class="line">\end&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+<p>当然，一张完整的表格是需要标题和注释的。这一点需要在<code>table</code>环境中实现。我们可以用<code>\caption{·}</code>命令来为表格添加标题，以及用<code>\label{·}</code>命令添加标签以方便交叉引用。</p>
+<p>但是为表格添加脚注是一件LaTeX经典难题。在脚注不太多的情况下我们可以手动在表格下面硬编码一条脚注。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[htbp]</span><br><span class="line">	\centering</span><br><span class="line">	\caption&#123;2008-2018年FDA审核通过的NME,BLA,NDA及创新药比例&#125;</span><br><span class="line">	\begin&#123;tabular&#125;&#123;ccccc&#125;</span><br><span class="line">		\toprule</span><br><span class="line">		Year  &amp; NME   &amp; New BLA &amp; Total*&amp; Rate/\% \\</span><br><span class="line">		\midrule</span><br><span class="line">		2008  &amp; 21    &amp; 3     &amp; 95    &amp; 25.3 \\</span><br><span class="line">		2009  &amp; 20    &amp; 6     &amp; 98    &amp; 26.5 \\</span><br><span class="line">		2010  &amp; 15    &amp; 6     &amp; 93    &amp; 22.6 \\</span><br><span class="line">		2011  &amp; 24    &amp; 6     &amp; 100   &amp; 30 \\</span><br><span class="line">		2012  &amp; 33    &amp; 6     &amp; 101   &amp; 38.6 \\</span><br><span class="line">		2013  &amp; 25    &amp; 4     &amp; 102   &amp; 28.4 \\</span><br><span class="line">		2014  &amp; 30    &amp; 11    &amp; 119   &amp; 34.4 \\</span><br><span class="line">		2015  &amp; 33    &amp; 12    &amp; 127   &amp; 35.4 \\</span><br><span class="line">		2016  &amp; 15    &amp; 7     &amp; 102   &amp; 21.6 \\</span><br><span class="line">		2017  &amp; 34    &amp; 12    &amp; 150   &amp; 30.7 \\</span><br><span class="line">		2018  &amp; 42    &amp; 17    &amp; 151   &amp; 39.1 \\</span><br><span class="line">		\bottomrule</span><br><span class="line">	\end&#123;tabular&#125;</span><br><span class="line"></span><br><span class="line">    \footnotesize&#123;*注：表中Total一栏指NDA+BLA的数量。&#125;</span><br><span class="line">	\label&#123;tab:table1&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+<p>在脚注比较多的时候，就可以使用来自<code>tablefootnote</code>宏包的<code>\tablefootnote{·}</code>命令来生成显示在表格下面的脚注。</p>
+<h1 id="并置多张图片"><a href="#并置多张图片" class="headerlink" title="并置多张图片"></a>并置多张图片</h1><p>并置多张图片是我在写植物组织培养的实验报告的时候才第一次遇到的需求。不论是在论文、简历、PPT还是实验报告中，你都会常常遇到这种需求。在Microsoft Word里这个问题似乎看起来非常容易解决，但是在LaTeX里，解决方法就没有那么显然了。（当然，在你走头无路的时候总是能用Adobe Photoshop解决一切！大家想学PS的话，推荐大家关注公众号“HF的树洞”！）</p>
+<p>在LaTeX中实现多张图片并置其实也不难。我们只需要用<code>subfigure</code>宏包提供的<code>\subfigure[name-of-subfigure]{include-figure-file}</code>命令即可。</p>
+<p>大家可能要问了，如果有很多张图片不仅仅需要放一行该怎么办？LaTeX是非常奇妙的，我们只需要想输入文本时一样，打两个换行符或者用<code>\\</code>就可以了。下面是实战例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;</span><br><span class="line">		\centering</span><br><span class="line">		\subfigure[Week 1-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 1-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 1-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 1-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 2-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 2-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 2-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 2-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 3-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 3-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 3-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 3-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 4-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 4-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 4-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 4-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 5-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 5-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 5-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 5-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t3&#125;&#125;</span><br><span class="line">		\caption&#123;植物生长调节剂诱导烟草叶片器官分化结果&#125;</span><br><span class="line">		\label&#123;fig:1&#125;</span><br><span class="line">	\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+<h1 id="“固定”你的图片和表格"><a href="#“固定”你的图片和表格" class="headerlink" title="“固定”你的图片和表格"></a>“固定”你的图片和表格</h1><p>如果有试过排版有多张图片或者表格的小伙伴一定有过这样的疑惑：图片和表格怎么老是乱跑呢？到底怎么做才能固定住我的表格在我想要的位置呢？</p>
+<p>其实，LaTeX原生支持对于浮动体位置的某种程度上的设置。在<code>\begin{figure}</code>后面我们可以加上类似<code>[htbp]</code>或者<code>[tp]</code>这样的参数。其中每一个字母都代表不同的位置：h代表“这里”；t代表页面最上端；b代表页面最底端；p代表下一页。</p>
+<p>当你问出“我的图片怎么老是乱跑？”这个问题时，大部分情况下你是希望图片老老实实呆在你安插的文字中间。这个时候，我们可以结合<code>float</code>宏包提供的<code>[H]</code>（注意这里是大写的）选项来禁用浮动。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">The routine way to name compounds with heteroatoms can be identically to the naming of spiro compounds, like what is shown in Figure \ref&#123;fig:7-azaspiro4&#125;. In addition, unsaturation is also indicated in the traditional way.</span><br><span class="line">		</span><br><span class="line">\begin&#123;figure&#125;[H]</span><br><span class="line">	\centering</span><br><span class="line">	\includegraphics[width=0.5\linewidth]&#123;7-azaspiro45dec-2-ene&#125;</span><br><span class="line">	\caption&#123;The conventional way to name heteroatoms and unsaturation is still available.&#125;</span><br><span class="line">	\label&#123;fig:7-azaspiro4&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br><span class="line">		</span><br><span class="line">If a choice of nomenclature or numbering occurs because of heteroatoms, functional groups or substituents the following criteria are considered in order until a decision is made.</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/06/latexskills-1/" data-id="cjyzoiibg0003qsi1l14b1mat" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/06/latex-skills2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/06/latexmath/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/06/latextext/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latex-skills2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latexskills-1/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latexmath/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/06/latex-cite/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Jian-Qing Qi<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
