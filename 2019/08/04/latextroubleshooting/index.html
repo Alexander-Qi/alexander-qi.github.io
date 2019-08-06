@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+    <meta name="author" content="Jian-Qing Qi">
+    <meta name="keywords" content="LaTeX, Gaussian">
+    <title>LaTeX中遇到问题如何求助 ~ Alexander-Qi&#39;s Blog</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Alexander-Qi&#39;s Blog</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+            <br>
+            
+            <p>星期日, 八月 4日 2019, 12:00 凌晨</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <link rel="stylesheet" href="/css/post.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-md-8 m-auto board-cntr">
+            <div class="py-5 z-depth-3 board">
+                <div class="post-content markdown-body m-auto">
+                    <p>有些时候，你会不幸地在编译自己的<code>.tex</code>文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的<code>.tex</code>文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。</p>
+<h1 id="预防方法"><a href="#预防方法" class="headerlink" title="预防方法"></a>预防方法</h1><p>预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。</p>
+<h2 id="看官方文档"><a href="#看官方文档" class="headerlink" title="看官方文档"></a>看官方文档</h2><p>很多时候我们会百度自己的需求，然后照搬网上的解决方案，但这样很多时候是不合适的。我个人建议的做法是去Comprehensive TeX Archive Network上寻找网上查到的宏包的官方文档，随后模仿官方文档中的例子去解决自己的需求。</p>
+<p>CTAN的官网在这里：<a href="https://ctan.org/" target="_blank" rel="noopener">https://ctan.org/</a></p>
+<p>这样做的原因非常简单，中文互联网社区中给出的解决方案很多都已经很老了，其中运用的命令不一定在宏包的新版本中仍旧实用；同时竟然还有人用CJK来解决中文输入的问题，这实在是害人不浅。</p>
+<h2 id="用模板"><a href="#用模板" class="headerlink" title="用模板"></a>用模板</h2><p>另外一种预防办法是从别人给出的模板开始写作，例如overleaf上的许多模板。overleaf是一个非常优秀的在线LaTeX协同编辑网站，有了它，你可以不在电脑上装TeX Live；也可以和很多人一同编辑一个项目。</p>
+<p>其他的模板包括国内外大学的学位论文模板和期刊投稿用模板等，都是非常好的学习资料。</p>
+<h1 id="找解决方案"><a href="#找解决方案" class="headerlink" title="找解决方案"></a>找解决方案</h1><p>最佳的LaTeX问答社区是stackexchange的TeX板块，面对英文文档排版中可能遇到的各种问题，你都能在这里找到你想要的答案，并且答案的质量远远高于国内社区。</p>
+<p>它的网址是：<a href="https://tex.stackexchange.com" target="_blank" rel="noopener">https://tex.stackexchange.com</a></p>
+<p>自然，在问答社区寻找答案比起使用搜索引擎还是不方便了一些。有条件的小伙伴可以用一个不存在的搜索引擎来搜索和LaTeX相关的问题，经亲测效果还是非常可喜的。</p>
+
+                    <hr>
+                    <div>
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <br>
+                    
+                        <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "LaTeX中遇到问题如何求助&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
+</body>
+</html>

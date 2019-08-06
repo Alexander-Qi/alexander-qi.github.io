@@ -98,31 +98,32 @@
   
   
     <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/06/latex组织结构/">
-            <p class="h4 index-header"></p>
+        <a href="/2019/06/27/latextext/">
+            <p class="h4 index-header">LaTeX基本文本输入</p>
             <div class="index-excerpt">
               
-                <div class="index-text mb-1">本文的主要内容有：
+                <div class="index-text mb-1">这篇文章的主要内容有：
 
-LaTeX的基本文章结构
-生成目录的方法
-交叉引用的方法
-插入列表、表格、图片的方法
+导言区、正文区的含义
+控制序列的特点
+文档类型
+基础文本输入方法
 
-组织结构LaTeX提供了许多让文章更加有序的方法，比如支持标记文章的章节、自动生成目录等。接下来将逐一介绍这些方法。
-章、节和段落在我们比较常用的article类里，LaTeX支持通过以下的命令来标记文章的组织结构：\section{·}、\subsection{·}、\subsubsection{·}、\paragraph{·}、\subparagraph{·}。他们的相对大小从左到右依次减小。
-在不太多用的book中，还有\chapter{·}和\part{·}。
-下面是一个例子。
-12345\section&#123;一级标题&#125;    \subsection&#123;二级标题&#125;        \subsubsection&#123;三级标题&#125;            \paragraph&#123;段落标题&#125;段落内容                \subparagraph&#123;子段落标题&#125;子段落内容
+LaTeX文档概述安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！
+大家可以先回忆一下上一次最后我们在.tex文档里面输入的代码。
+1234\documentclass&#123;article&#125;\begin&#123;document&#125;    Hello, \LaTeX\ !\end&#123;document&#125;
 
-目录在文中引</div>
+接下来我将向大家解释一下这些代码的含义。
+导言区与正文区.tex文档可以分成两个部分，分别是导言区和正文区。
+从\documentclass{article}到\begin{document}中间的所有部分被称为.tex文档的导言区。在导言区里，我们需要“声明”一些和文档整体有关的参数，例如：文档类型、需要使用的宏包、为宏包设定参数、设定目录样式、页面大小、页眉页脚、章节标题样式等等。
+LaTeX的文档类型多种多样，符合不同人群的需要。常见的文档类型有article，book，ctexart（一种原生支持中文、对中文排版做了特殊优化的文档类</div>
               
             </div>
         </a>
       
       
         <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-06
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-06-27
           &nbsp;&nbsp;&nbsp;&nbsp;
           
         </div>
@@ -134,36 +135,8 @@ LaTeX的基本文章结构
   
   
     <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/06/latextroubleshooting/">
-            <p class="h4 index-header"></p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">有些时候，你会不幸地在编译自己的.tex文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的.tex文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。
-预防方法预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。
-看官方文档很多时候我们会百度自己的需求，然后照搬网上的解决方案，但这样很多时候是不合适的。我个人建议的做法是去Comprehensive TeX Archive Network上寻找网上查到的宏包的官方文档，随后模仿官方文档中的例子去解决自己的需求。
-CTAN的官网在这里：https://ctan.org/
-这样做的原因非常简单，中文互联网社区中给出的解决方案很多都已经很老了，其中运用的命令不一定在宏包的新版本中仍旧实用；同时竟然还有人用CJK来解决中文输入的问题，这实在是害人不浅。
-用模板另外一种预防办法是从别人给出的模板开始写作，例如overleaf上的许多模板。overleaf是一个非常优秀的在线LaTeX协同编辑网站，有了它，你可以不在</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-06
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/06/latex基础知识/">
-            <p class="h4 index-header"></p>
+        <a href="/2019/06/26/latex基础知识/">
+            <p class="h4 index-header">LaTeX是什么？有什么用？</p>
             <div class="index-excerpt">
               
                 <div class="index-text mb-1">什么是LaTeX？LaTeX是一种基于ΤΕΧ的排版系统，常被用于排版期刊文章、书籍、学位论文。LaTeX和它的前身TeX都是自由软件，因而被广泛使用，是排版高质量科技类文档的标准应用。
@@ -180,43 +153,7 @@ pdfTeX: 在TeX的基础上将生</div>
       
       
         <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-06
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/06/hello-world/">
-            <p class="h4 index-header">Hello World</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-06
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-06-26
           &nbsp;&nbsp;&nbsp;&nbsp;
           
         </div>
