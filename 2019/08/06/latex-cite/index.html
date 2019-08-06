@@ -1,87 +1,101 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+<html lang="zh-CN">
 
-  
-  <title>Alexander-Qi&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文的主要内容：  最基础的引用方式 如何使用BibTeX 如何方便地使用BibTeX  论文写作的过程中免不了引用文献。在Microsoft Word下我们可以通过像EndNote一样的工具来完成方便快捷地引用（但这两个工具都是收费的），那么在免费开源的LaTeX中，我们该如何实现引用呢？ 最基础的引用方法在LaTeX中，最为原始而基础的引用方式需要在.tex文件最后输入一个thebibliog">
-<meta name="keywords" content="LaTeX, Gaussian">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Alexander-Qi&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/2019/08/06/latex-cite/index.html">
-<meta property="og:site_name" content="Alexander-Qi&#39;s Blog">
-<meta property="og:description" content="本文的主要内容：  最基础的引用方式 如何使用BibTeX 如何方便地使用BibTeX  论文写作的过程中免不了引用文献。在Microsoft Word下我们可以通过像EndNote一样的工具来完成方便快捷地引用（但这两个工具都是收费的），那么在免费开源的LaTeX中，我们该如何实现引用呢？ 最基础的引用方法在LaTeX中，最为原始而基础的引用方式需要在.tex文件最后输入一个thebibliog">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-07-19T00:41:08.278Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alexander-Qi&#39;s Blog">
-<meta name="twitter:description" content="本文的主要内容：  最基础的引用方式 如何使用BibTeX 如何方便地使用BibTeX  论文写作的过程中免不了引用文献。在Microsoft Word下我们可以通过像EndNote一样的工具来完成方便快捷地引用（但这两个工具都是收费的），那么在免费开源的LaTeX中，我们该如何实现引用呢？ 最基础的引用方法在LaTeX中，最为原始而基础的引用方式需要在.tex文件最后输入一个thebibliog">
-  
-    <link rel="alternate" href="/atom.xml" title="Alexander-Qi&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+    <meta name="author" content="Jian-Qing Qi">
+    <meta name="keywords" content="LaTeX, Gaussian">
+    <title>Alexander-Qi&#39;s Blog</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
 </head>
-</html>
+
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Alexander-Qi&#39;s Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">LaTeX, Gaussian and More...</a>
-        </h2>
-      
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Alexander-Qi&#39;s Blog</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+            <br>
+            
+            <p>星期二, 八月 6日 2019, 6:26 晚上</p>
+            
+        </div>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-latex-cite" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/06/latex-cite/" class="article-date">
-  <time datetime="2019-08-06T10:26:35.994Z" itemprop="datePublished">2019-08-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文的主要内容：</p>
+    </div>
+  </header>
+
+  <main>
+  
+  <link rel="stylesheet" href="/css/post.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-md-8 m-auto board-cntr">
+            <div class="py-5 z-depth-3 board">
+                <div class="post-content markdown-body m-auto">
+                    <p>本文的主要内容：</p>
 <ul>
 <li>最基础的引用方式</li>
 <li>如何使用BibTeX</li>
@@ -288,124 +302,97 @@
 <h1 id="使用natbib"><a href="#使用natbib" class="headerlink" title="使用natbib"></a>使用natbib</h1><p><code>natbib</code>让我们引用的样式更多并且更加方便了。我们首先需要在导言区加载<code>natbib</code>宏包。随后同样在导言区输入<code>\bibliographystyle{apalike}</code>（只是个例子，花括号内的内容可以改），最后在正文的最后，输入<code>\bibliography{·}</code>就能引用啦！</p>
 <p>使用<code>natbib</code>可以明显提升BibTeX的鲁棒性，对于非英语文献的支持性更好，一般来说是非常推荐使用<code>natbib</code>的。</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/06/latex-cite/" data-id="cjyzoiibs000aqsi190zgber3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/08/06/latexmath/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/08/06/latexchemfig/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
-    </div>
+                    <hr>
+                    <div>
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <br>
+                    
+                        <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
   </div>
 
+        </div>
+    </div>
+</div>
 
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
   
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/08/06/latextext/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latex-skills2/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latexskills-1/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latexmath/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latex-cite/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 Jian-Qing Qi<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
   </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
 </body>
 </html>

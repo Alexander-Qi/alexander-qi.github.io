@@ -1,87 +1,101 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+<html lang="zh-CN">
 
-  
-  <title>Alexander-Qi&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文的主要内容有：  如何输入行内公式 如何输入行间公式、多行公式 常用的数学符号输入方法  相信观察力敏锐的同学一定已经注意到在上一次的推送里的这段代码： 12345678\documentclass[a4paper,12pt,landscape,twocolumn]&amp;#123;book&amp;#125;\usepackage&amp;#123;amsmath&amp;#125;\begin&amp;#123;documen">
-<meta name="keywords" content="LaTeX, Gaussian">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Alexander-Qi&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/2019/08/06/latexmath/index.html">
-<meta property="og:site_name" content="Alexander-Qi&#39;s Blog">
-<meta property="og:description" content="本文的主要内容有：  如何输入行内公式 如何输入行间公式、多行公式 常用的数学符号输入方法  相信观察力敏锐的同学一定已经注意到在上一次的推送里的这段代码： 12345678\documentclass[a4paper,12pt,landscape,twocolumn]&amp;#123;book&amp;#125;\usepackage&amp;#123;amsmath&amp;#125;\begin&amp;#123;documen">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-06-29T03:57:54.608Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alexander-Qi&#39;s Blog">
-<meta name="twitter:description" content="本文的主要内容有：  如何输入行内公式 如何输入行间公式、多行公式 常用的数学符号输入方法  相信观察力敏锐的同学一定已经注意到在上一次的推送里的这段代码： 12345678\documentclass[a4paper,12pt,landscape,twocolumn]&amp;#123;book&amp;#125;\usepackage&amp;#123;amsmath&amp;#125;\begin&amp;#123;documen">
-  
-    <link rel="alternate" href="/atom.xml" title="Alexander-Qi&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+    <meta name="author" content="Jian-Qing Qi">
+    <meta name="keywords" content="LaTeX, Gaussian">
+    <title>Alexander-Qi&#39;s Blog</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
 </head>
-</html>
+
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Alexander-Qi&#39;s Blog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">LaTeX, Gaussian and More...</a>
-        </h2>
-      
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Alexander-Qi&#39;s Blog</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+            <br>
+            
+            <p>星期二, 八月 6日 2019, 6:26 晚上</p>
+            
+        </div>
+        </div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-latexmath" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/06/latexmath/" class="article-date">
-  <time datetime="2019-08-06T10:26:36.010Z" itemprop="datePublished">2019-08-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文的主要内容有：</p>
+    </div>
+  </header>
+
+  <main>
+  
+  <link rel="stylesheet" href="/css/post.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-md-8 m-auto board-cntr">
+            <div class="py-5 z-depth-3 board">
+                <div class="post-content markdown-body m-auto">
+                    <p>本文的主要内容有：</p>
 <ul>
 <li>如何输入行内公式</li>
 <li>如何输入行间公式、多行公式</li>
@@ -143,124 +157,97 @@
 <h3 id="重音符"><a href="#重音符" class="headerlink" title="重音符"></a>重音符</h3><h3 id="小写的希腊字母"><a href="#小写的希腊字母" class="headerlink" title="小写的希腊字母"></a>小写的希腊字母</h3><h3 id="大写的希腊字母"><a href="#大写的希腊字母" class="headerlink" title="大写的希腊字母"></a>大写的希腊字母</h3><h3 id="二元关系符号"><a href="#二元关系符号" class="headerlink" title="二元关系符号"></a>二元关系符号</h3><h3 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符"></a>二元运算符</h3><h3 id="大运算符"><a href="#大运算符" class="headerlink" title="大运算符"></a>大运算符</h3><h3 id="箭头"><a href="#箭头" class="headerlink" title="箭头"></a>箭头</h3><h3 id="定界符"><a href="#定界符" class="headerlink" title="定界符"></a>定界符</h3><h3 id="其他数学符号"><a href="#其他数学符号" class="headerlink" title="其他数学符号"></a>其他数学符号</h3><h3 id="非数学符号"><a href="#非数学符号" class="headerlink" title="非数学符号"></a>非数学符号</h3><h3 id="AMS符号"><a href="#AMS符号" class="headerlink" title="AMS符号"></a>AMS符号</h3><p>以下的符号使用需要事先安装AMS数学字库，同时在导言区加载宏包<code>amssymb</code>。</p>
 <h4 id="定界符-1"><a href="#定界符-1" class="headerlink" title="定界符"></a>定界符</h4><h4 id="希伯来字母"><a href="#希伯来字母" class="headerlink" title="希伯来字母"></a>希伯来字母</h4><h4 id="二元关系符"><a href="#二元关系符" class="headerlink" title="二元关系符"></a>二元关系符</h4><h4 id="箭头-1"><a href="#箭头-1" class="headerlink" title="箭头"></a>箭头</h4><h4 id="二元否定关系符和箭头"><a href="#二元否定关系符和箭头" class="headerlink" title="二元否定关系符和箭头"></a>二元否定关系符和箭头</h4><h4 id="二元运算符-1"><a href="#二元运算符-1" class="headerlink" title="二元运算符"></a>二元运算符</h4><h4 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h4><h4 id="数学字体说明"><a href="#数学字体说明" class="headerlink" title="数学字体说明"></a>数学字体说明</h4><h1 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h1><p>下一篇推送是关于文档组织结构和各类常用环境的，请大家敬请期待！</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/06/latexmath/" data-id="cjyzoiibt000bqsi1ruq5zyq3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/08/06/latexskills-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/08/06/latex-cite/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
-    </div>
+                    <hr>
+                    <div>
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <br>
+                    
+                        <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
   </div>
 
+        </div>
+    </div>
+</div>
 
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
   
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/08/06/latextext/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latex-skills2/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latexskills-1/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latexmath/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/06/latex-cite/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 Jian-Qing Qi<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
   </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
 </body>
 </html>
