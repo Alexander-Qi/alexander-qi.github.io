@@ -1,500 +1,1994 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-
-
-
-      
 
 
 
 
 
+<html class="theme-next mist use-motion" lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/catwalk.svg?v=7.3.0" color="#222">
 
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/sign.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
-    <meta name="author" content="Jian-Qing Qi">
-    <meta name="keywords" content="LaTeX, Gaussian">
-    <title>Alexander-Qi&#39;s Blog</title>
-    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
-    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
-    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
-    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
-    
-        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
-    
-    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
 
-    
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
+    }
+  };
+</script>
+
+  <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+<meta name="keywords" content="LaTeX, Gaussian">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alexander-Qi&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Alexander-Qi&#39;s Blog">
+<meta property="og:description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alexander-Qi&#39;s Blog">
+<meta name="twitter:description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Alexander-Qi's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN">
 
-<body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-<div class="container">
-    <a class="navbar-brand" href="/"><strong>Alexander-Qi&#39;s Blog</strong></a>
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto text-center">
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/archives/">Archives</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/about/">About</a>
-            </li>
-            
-        </ul>
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Alexander-Qi's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
+        <p class="site-subtitle">LaTeX, Gaussian and More...</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>Über</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Suche</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Suche..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
 </nav>
-    <div class="view intro-2" style="background: url('/img/index.jpg')no-repeat center center;background-size: cover;">
-    <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
-        <div class="container text-center white-text wow fadeInUp">
-            <span class="h2" id="subtitle">
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-home">
+            
+  <section id="posts" class="posts-expand">
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/06/beamer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/06/beamer/" class="post-title-link" itemprop="url">用LaTeX制作幻灯片</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-06 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-06T00:00:00+08:00">2019-08-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:08:24" itemprop="dateModified" datetime="2019-08-07T15:08:24+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
               
             </span>
-            <br>
-            
-        </div>
-        </div>
-    </div>
-    </div>
-  </header>
-
-  <main>
-  
-  <div class="container board-cntr">
-    <div class="py-5 z-depth-3 board">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-10 m-auto">
-            <link rel="stylesheet" href="/css/index.css">
-
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/06/beamer/">
-            <p class="h4 index-header">用LaTeX制作幻灯片</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">说到制作幻灯片，大家首先想到的当然是Microsoft PowerPoint，或是预装于所有Mac OS中的KeyNote，也许还有Prezi等较为年轻的工具。但是事实上，LaTeX也可以用于制作幻灯片哦！
-LaTeX制作的幻灯片，说到底还是.pdf格式的，而且生成方式也是通过TeX排版引擎编译而成。故而有几个比较大的硬伤：
-
-没有华丽的动画
-艺术字等衍生功能缺失
-没有图片繁多的模板套用
-
-但是相对的，也有一些独到的优点：
-
-公式编号非常方便
-幻灯片文件在所有系统所有环境下都可以查看
-更换模板只需要修改一条命令
-一条命令就可以生成相应的讲义
-
-当然啦，也有着完全不需要图形界面就能完成幻灯片编辑的优点。
-开始主流的使用LaTeX制作幻灯片的工具是被称为beamer的宏包。在TeX Live中已经预置好了。如果你的发行版没有这个宏包，你可以在
-https://ctan.org/pkg/beamer
-获取到这个宏包的源码并自行安装。为了使beamer正常工作，或者说达到最佳的输出效果，最好同时使用以下宏包：at­begshi, etool­box, hy­per­ref, if­pdf, m</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-06
-          &nbsp;&nbsp;&nbsp;&nbsp;
           
-        </div>
-      
-    </div>
-  </div>
 
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/05/largedocs/">
-            <p class="h4 index-header">LaTeX中长文档的处理</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">当你需要排版一个非常大的文档，或者涉及到多人协同的时候，我们就希望能将一个庞大的.tex文件分成很多部分以方便我们的管理。那么该如何做到这一点呢？
-最简单的分开输出的方式我们可以使用\input{filename.tex}这个命令来将另外一个.tex文档中的内容插入到一个.tex文件中。
-首先我们来创建一系列.tex文档。新建一个.tex文件，输入且仅输入以下的内容：
-1234567891011121314\usepackage&#123;chemfig&#125;\usepackage&#123;ctex&#125;\usepackage&#123;amsmath&#125;\usepackage&#123;array&#125;\usepackage&#123;booktabs&#125;\usepackage&#123;hypdoc&#125;\usepackage&#123;listings&#125;\usepackage&#123;lmodern&#125;\usepackage&#123;mathpazo&#125;\usepackage&#123;microtype&#</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-05
-          &nbsp;&nbsp;&nbsp;&nbsp;
           
+
         </div>
-      
-    </div>
-  </div>
+      </header>
 
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/04/latextroubleshooting/">
-            <p class="h4 index-header">LaTeX中遇到问题如何求助</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">有些时候，你会不幸地在编译自己的.tex文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的.tex文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。
-预防方法预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。
-看官方文档很多时候我们会百度自己的需求，然后照搬网上的解决方案，但这样很多时候是不合适的。我个人建议的做法是去Comprehensive TeX Archive Network上寻找网上查到的宏包的官方文档，随后模仿官方文档中的例子去解决自己的需求。
-CTAN的官网在这里：https://ctan.org/
-这样做的原因非常简单，中文互联网社区中给出的解决方案很多都已经很老了，其中运用的命令不一定在宏包的新版本中仍旧实用；同时竟然还有人用CJK来解决中文输入的问题，这实在是害人不浅。
-用模板另外一种预防办法是从别人给出的模板开始写作，例如overleaf上的许多模板。overleaf是一个非常优秀的在线LaTeX协同编辑网站，有了它，你可以不在</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-04
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/08/03/newcommand/">
-            <p class="h4 index-header">LaTeX中自定义命令</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">本文的主要内容是关于如何自定义一个自己的命令的。
-在编写LaTeX文档的过程中，有时你会需要经常输入一个不太常见的专有名词，或者需要频繁实现一个比较特殊的效果。这个时候我们可以在一个LaTeX文档中自定义自己的命令！
-最简单的自定义命令如果你只是需要输入一段特定样式的特定文字，你可以在导言区这么做：
-1\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;
-
-通过\newcommand{·}{·}命令，我们成功地自定义了一个名叫\MyC的新命令。当你在正文区输入这个命令的时候，你就相当于在这个位置输入了\textit{Customize your own command!}。让我们来看看一个实例：
-12345\documentclass&#123;ctexart&#125;\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;\begin&#123;docu</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-03
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/07/22/latex-skills2/">
-            <p class="h4 index-header">LaTeX中三分钟搞定引用</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">一句代码也不写也能在LaTeX里搞定引用吗？
-答案是肯定的。
-本期推送就将教会大家如何用最简单最图形界面的方法在LaTeX里解决引用的问题。
-为了做到这一点，我们需要在你的计算机上安装如下工具：
-
-操作系统
-文献管理工具
-TeX发行版
-TeX编辑器
-
-本文中我使用的例子基于以下工具的组合：Windows 10+EndNote X9+TeX Live 2018+TeXstudio。其中Windows 10和EndNote X9都是收费软件（THU为师生准备了这两款软件的批量授权版，大家可以在its上获取）。也有完全免费的组合，比如Debian 10+Mendeley+TeX Live 2019+TeXstudio。
-让我们从引用的源头讲起吧。
-查找文献一般来说大家比较常用的文献检索网站有知网，Web of Science等等。这些网站都支持导出参考文献。
-我们先以知网为例，我们找到自己想要的文献后单击文献标题右下方的“导出/参考文献”，随后在弹出的页面左侧选择“EndNote”并单击蓝色的导出按钮，就能得到包含着文献信息的一个.txt文档。
-我们再以Web of Science为例，在找</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-07-22
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/07/19/latex-cite/">
-            <p class="h4 index-header">在LaTeX里处理引用</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">本文的主要内容：
-
-最基础的引用方式
-如何使用BibTeX
-如何方便地使用BibTeX
-
-论文写作的过程中免不了引用文献。在Microsoft Word下我们可以通过像EndNote一样的工具来完成方便快捷地引用（但这两个工具都是收费的），那么在免费开源的LaTeX中，我们该如何实现引用呢？
-最基础的引用方法在LaTeX中，最为原始而基础的引用方式需要在.tex文件最后输入一个thebibliography环境，将我们要引用的文献信息硬编码在.tex文件中。
-下面是一个例子：
-123456789\documentclass&#123;ctexart&#125;\begin&#123;document&#125;\section&#123;最为基础的引用方法&#125;在这种环境下，你既可以引用英文的文献\cite&#123;moss&#125;，也可以引用中文的文献\cite&#123;505&#125;。相信你已经发现了，在\verb|\bibitem[·]&#123;citekey&#125;|前面的中括号里加东西可以改变文章中引用括号里的内容。\begin&#123;thebib</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-07-19
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/07/15/latexskills-1/">
-            <p class="h4 index-header">LaTeX中三线表、并置图片、固定表格</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">本文开始先和大家闲聊几句。之前的《从零开始的LaTeX教程》系列承蒙大家的照顾，阅读量还是很多的呢！甚至收到了不少打赏，开心！之后的文章我还是会采用GitHub Markdown的风格来排版，毕竟还算是有一点代码教学的嘛。
-从这篇文章开始的《LaTeX使用技巧》系列会教大家应对一些在论文写作过程中比较常见的需求，让大家的LaTeX之旅更加顺利~
-本文的主要内容：
-
-如何绘制论文需要的三线表
-如何并置多张图片
-如何不让图片和表格“乱跑”
-
-画三线表三线表是大家在写实验报告和论文的时候非常常见的表格样式。三线表通常只有三条线，即顶线、底线和栏目线，这三条线都是横线，表格中没有任何竖线。其中顶线和底线为粗线，栏目线为细线。
-在LaTeX中实现三线表的效果非常简单。我们首先需要进入tabular环境，随后在对应的位置加入相应的横线：顶线是\toprule，栏目线是\midrule，底线是\bottomrule。下面是一个例子：
-1234567891011121314151617\begin&#123;tabular&#125;&#123;ccccc&#125;	\toprule		Year  </div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-07-15
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/07/07/latexchemfig/">
-            <p class="h4 index-header">LaTeX绘制化学结构式</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">本文的主要内容有：
-
-如何直接输入结构式
-好用的辅助在线工具
-如何将用其他工具绘制的结构式完美地导入LaTeX
-
-前面的四篇推送已经介绍了LaTeX的基本使用方法，相信大家已经能够排版出内容较为简单的文档了。在论文中我们常常会需要插入一个化合物的结构，而仅仅插入从网上找来或者自己绘制的.jpg和.png格式的图片往往会让LaTeX输出的.pdf文档的大小急剧增大，同时也并不是非常好看。这篇推送将简要介绍在LaTeX中最为基础的绘制结构式的方法。
-直接绘制结构式在LaTeX中，我们可以通过一个名叫chemfig的宏包来直接在正文中绘制矢量格式的结构式。这种结构式不仅美观好看，而且不会让文件内容增大很多，是排版论文时的最佳选择。chemfig宏包极其强大，能够绘制复杂的反应路线图和机理，但是高级功能的语法较为复杂，本篇推送仅仅介绍其最为基础的使用方法：绘制单个分子的结构式。
-在使用chemfig宏包的时候，需要先在导言区加载它。具体而言，需要输入这样的命令：
-1\usepackage&#123;chemfig&#125;
-
-用chemfig宏包绘制结构的基础命令是\chemfig{&lt;</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-07-07
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/07/01/latex组织结构/">
-            <p class="h4 index-header">LaTeX文档组织结构</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">本文的主要内容有：
-
-LaTeX的基本文章结构
-生成目录的方法
-交叉引用的方法
-插入列表、表格、图片的方法
-
-组织结构LaTeX提供了许多让文章更加有序的方法，比如支持标记文章的章节、自动生成目录等。接下来将逐一介绍这些方法。
-章、节和段落在我们比较常用的article类里，LaTeX支持通过以下的命令来标记文章的组织结构：\section{·}、\subsection{·}、\subsubsection{·}、\paragraph{·}、\subparagraph{·}。他们的相对大小从左到右依次减小。
-在不太多用的book中，还有\chapter{·}和\part{·}。
-下面是一个例子。
-12345\section&#123;一级标题&#125;    \subsection&#123;二级标题&#125;        \subsubsection&#123;三级标题&#125;            \paragraph&#123;段落标题&#125;段落内容                \subparagraph&#123;子段落标题&#125;子段落内容
-
-目录在文中引</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-07-01
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="row mb-4">
-  
-  
-    <div class="col-12 col-md-8 m-auto">
-        <a href="/2019/06/29/latexmath/">
-            <p class="h4 index-header">LaTeX中输入数学公式</p>
-            <div class="index-excerpt">
-              
-                <div class="index-text mb-1">本文的主要内容有：
-
-如何输入行内公式
-如何输入行间公式、多行公式
-常用的数学符号输入方法
-
-相信观察力敏锐的同学一定已经注意到在上一次的推送里的这段代码：
-12345678\documentclass[a4paper,12pt,landscape,twocolumn]&#123;book&#125;\usepackage&#123;amsmath&#125;\begin&#123;document&#125;    $\frac&#123;x&#125;&#123;y&#125;$    \[        \iiint\limits_&#123;\Omega_&#123;r&#125;&#125; f(x,y,z) dxdydz    \]\end&#123;document&#125;
-
-这段代码里面有着意义不明的$和\[、\]符号。如果你尝试过将这些符号删除的话，TeXstudio会报错，并告诉你这些内容“不在数学环境里”。那么，什么是数学环境呢？
-数学环境概述LaTeX有一种数学环境废话，在这种环境之下，输入的字母会被当做数学符号，用专用的数学字体（通常来说就是斜体，不过确实</div>
-              
-            </div>
-        </a>
-      
-      
-        <div>
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-06-29
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          
-        </div>
-      
-    </div>
-  </div>
-
-
-
-<nav aria-label="index posts navigation">
-<ul class="pagination pg-blue justify-content-center mt-5">
     
     
-        <li class="page-item">
-        <a class="page-link" href="/page/2/">Next</a>
-        </li>
     
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>说到制作幻灯片，大家首先想到的当然是Microsoft PowerPoint，或是预装于所有Mac OS中的KeyNote，也许还有Prezi等较为年轻的工具。但是事实上，LaTeX也可以用于制作幻灯片哦！</p>
+<p>LaTeX制作的幻灯片，说到底还是<code>.pdf</code>格式的，而且生成方式也是通过TeX排版引擎编译而成。故而有几个比较大的硬伤：</p>
+<ul>
+<li>没有华丽的动画</li>
+<li>艺术字等衍生功能缺失</li>
+<li>没有图片繁多的模板套用</li>
 </ul>
-</nav>
+<p>但是相对的，也有一些独到的优点：</p>
+<ul>
+<li>公式编号非常方便</li>
+<li>幻灯片文件在所有系统所有环境下都可以查看</li>
+<li>更换模板只需要修改一条命令</li>
+<li>一条命令就可以生成相应的讲义</li>
+</ul>
+<p>当然啦，也有着完全不需要图形界面就能完成幻灯片编辑的优点。</p>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>主流的使用LaTeX制作幻灯片的工具是被称为<code>beamer</code>的宏包。在TeX Live中已经预置好了。如果你的发行版没有这个宏包，你可以在</p>
+<p><a href="https://ctan.org/pkg/beamer" target="_blank" rel="noopener">https://ctan.org/pkg/beamer</a></p>
+<p>获取到这个宏包的源码并自行安装。为了使<code>beamer</code>正常工作，或者说达到最佳的输出效果，最好同时使用以下宏包：<code>at­begshi</code>, <code>etool­box</code>, <code>hy­per­ref</code>, <code>if­pdf</code>, <code>multimedia</code>, <code>pgf</code>, 和 <code>trans­la­tor</code>。</p>
+<p>我们首先在导言区中输入以下代码以使用<code>beamer</code>宏包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;beamer&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当然，如果你的文档内容包含中文而且不满足于仅仅加载<code>ctex</code>宏包带来的汉化效果，你也可以直接使用<code>ctexbeamer</code>这个中文文档类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;ctexbeamer&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在导言区输入完那些常规的信息（加载你需要的宏包，设置作者标题日期等）之后，我们就可以进入正文区啦！</p>
+<h1 id="正文排版"><a href="#正文排版" class="headerlink" title="正文排版"></a>正文排版</h1><p>幻灯片嘛，肯定是由一张张幻灯片组成的（这不是废话嘛喂），在<code>beamer</code>中，<code>frame</code>环境就代表了一张幻灯片。</p>
+<p>让我们来看看幻灯片标题页的写法吧！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;</span><br><span class="line">    \titlepage</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是我们不再使用常规的<code>\maketitle</code>命令而是稍少见的<code>\titlepage</code>命令来生成标题页。</p>
+<p>同样，每一页的幻灯片总是需要一个标题的吧？以及要是需要生成目录该怎么办？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;</span><br><span class="line">    \frametitle&#123;Catalogue&#125;</span><br><span class="line">    \tableofcontents</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你会发现常规的<code>\tableofcontents</code>仍然是可以用的。需要注意的是，此处的目录，仍然是根据你的<code>\section{·}</code>以及<code>\subsection{·}</code>来生成的。但是这些命令必须写在<code>frame</code>环境的外面！</p>
+<p>在<code>frame</code>中，你仍旧可以使用之前就已经熟悉的环境来输入文字，比如<code>itemize</code>、<code>enumerate</code>等；也可以照常插入表格和图片。不过由于幻灯片不同寻常的比例，记得调整表格和图片的输出效果哦！</p>
+<p>同时，你也可以使用类似<code>block</code>这种带标题的“文本框”来达到比较好的展示效果，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;</span><br><span class="line">    \frametitle&#123;Just Another Heading&#125;</span><br><span class="line">    \begin&#123;block&#125;&#123;Your Paragraph Title&#125;</span><br><span class="line">        Input whatever you want!</span><br><span class="line">    \end&#123;block&#125;</span><br><span class="line">    \begin&#123;itemize&#125;</span><br><span class="line">        \item An Example.</span><br><span class="line">    \end&#123;itemize&#125;</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你也可以在<code>beamer</code>中使用<code>verbatim</code>环境来方便地进行代码教学！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[X, Y] = meshgrid(0.01:0.01:1, 0.01:0.01:1); </span><br><span class="line">Zfun =@(x,y)12.5*x.*log10(x).*y.*(y-1)+exp(-((25 ... </span><br><span class="line">*x - 25/exp(1)).^2+(25*y-25/2).^2).^3)./25; </span><br><span class="line">Z = Zfun(X,Y); </span><br><span class="line">figure; </span><br><span class="line">surf(Y,Z,X,&apos;FaceColor&apos;,[1 0.75 0.65],&apos;linestyle&apos;,&apos;none&apos;); </span><br><span class="line">hold on </span><br><span class="line">surf(Y+0.98,Z,X,&apos;FaceColor&apos;,[1 0.75 0.65],&apos;linestyle&apos;,&apos;none&apos;); </span><br><span class="line">axis equal; </span><br><span class="line">view([116 30]); </span><br><span class="line">camlight;</span><br></pre></td></tr></table></figure>
+
+<p>你也自然可以使用BibTeX来进行引用！</p>
+<h1 id="样式调整"><a href="#样式调整" class="headerlink" title="样式调整"></a>样式调整</h1><p>相比较于Microsoft PowerPoint，<code>beamer</code>虽然没有那么多第三方的模板和主题，但仍然有许多快速美化幻灯片的方法。</p>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p><code>beamer</code>拥有超过200种主题供你选择。你也可以自定义你自己的主题。</p>
+<p>我们可以在导言区更改<code>beamer</code>的主题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usetheme&#123;Berlin&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你也可以单独自定义颜色的主题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usecolortheme&#123;whale&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你对标题和功能键的布局不甚满意，也可以通过再次更改<code>outer theme</code>来达到自定义幻灯片的效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\useoutertheme&#123;sidebar&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体可见：<a href="https://hartwork.org/beamer-theme-matrix/" target="_blank" rel="noopener">https://hartwork.org/beamer-theme-matrix/</a></p>
+<h2 id="字体和颜色"><a href="#字体和颜色" class="headerlink" title="字体和颜色"></a>字体和颜色</h2><p>假如你想更换标题的字体和颜色，那该怎么办呢？在<code>beamer</code>中提供两个非常简单的命令让你自定义标题的输出效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\setbeamerfont&#123;title&#125;&#123;shape=\itshape,family=\rmfamily&#125;</span><br><span class="line">\setbeamercolor&#123;title&#125;&#123;fg=red!80!black,bg=red!20!white&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="讲义制作"><a href="#讲义制作" class="headerlink" title="讲义制作"></a>讲义制作</h2><p>在LaTeX中你只需要在导言区加入这几句命令就可以将你的幻灯片转换成讲义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;pgfpages&#125;</span><br><span class="line">\pgfpagesuselayout&#123;resize to&#125;[a4paper,border shrink=5mm,landscape]</span><br><span class="line">\mode&lt;handout&gt;&#123;\setbeamercolor&#123;background canvas&#125;&#123;bg=black!5&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/largedocs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/05/largedocs/" class="post-title-link" itemprop="url">LaTeX中长文档的处理</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-05 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-05T00:00:00+08:00">2019-08-05</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:09:12" itemprop="dateModified" datetime="2019-08-07T15:09:12+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>当你需要排版一个非常大的文档，或者涉及到多人协同的时候，我们就希望能将一个庞大的<code>.tex</code>文件分成很多部分以方便我们的管理。那么该如何做到这一点呢？</p>
+<h1 id="最简单的分开输出的方式"><a href="#最简单的分开输出的方式" class="headerlink" title="最简单的分开输出的方式"></a>最简单的分开输出的方式</h1><p>我们可以使用<code>\input{filename.tex}</code>这个命令来将另外一个<code>.tex</code>文档中的内容插入到一个<code>.tex</code>文件中。</p>
+<p>首先我们来创建一系列<code>.tex</code>文档。新建一个<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;chemfig&#125;</span><br><span class="line">\usepackage&#123;ctex&#125;</span><br><span class="line">\usepackage&#123;amsmath&#125;</span><br><span class="line">\usepackage&#123;array&#125;</span><br><span class="line">\usepackage&#123;booktabs&#125;</span><br><span class="line">\usepackage&#123;hypdoc&#125;</span><br><span class="line">\usepackage&#123;listings&#125;</span><br><span class="line">\usepackage&#123;lmodern&#125;</span><br><span class="line">\usepackage&#123;mathpazo&#125;</span><br><span class="line">\usepackage&#123;microtype&#125;</span><br><span class="line">\usepackage&#123;graphicx&#125;</span><br><span class="line">\usepackage&#123;makeidx&#125;</span><br><span class="line">\author&#123;Your Name&#125;</span><br><span class="line">\title&#123;Developing Large Documents&#125;</span><br></pre></td></tr></table></figure>
+
+<p>随后保存为<code>preamble.tex</code>（具体文件名随意，但绝对不能包含中文）。</p>
+<p>接着再新建一个<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\chapter&#123;文本&#125;</span><br><span class="line">    这一章包含了关于基础文字输入的内容。</span><br><span class="line">\section&#123;一个标题&#125;</span><br><span class="line">    首先是段落：</span><br><span class="line">    \paragraph&#123;段落标题&#125;这是段落的内容。</span><br><span class="line"></span><br><span class="line">    图表表格也都可以照常使用！</span><br></pre></td></tr></table></figure>
+
+<p>保存为<code>chpt1.tex</code>。</p>
+<p>随后再新建一个<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\chapter&#123;结构式&#125;</span><br><span class="line">    这一章就随便画画结构式好了。</span><br><span class="line">\section&#123;chemfig&#125;</span><br><span class="line">    \chemfig&#123;A-B-[1]C-[3]-D-[7]E-[6]F&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存为<code>chpt2.tex</code></p>
+<p>最后，新建<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[twocolumn,openany]&#123;ctexbook&#125;</span><br><span class="line">\input&#123;preamble&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \maketitle</span><br><span class="line">    \tableofcontents</span><br><span class="line">    \input&#123;chpt1&#125;</span><br><span class="line">    \input&#123;chpt2&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存为<code>main.tex</code>。并将之前的所有文件都放在同一目录下，随后对<code>main.tex</code>进行编译即可。</p>
+<h1 id="处理更复杂的文档"><a href="#处理更复杂的文档" class="headerlink" title="处理更复杂的文档"></a>处理更复杂的文档</h1><p>之前所涉及到的内容还没有满足以下需求：</p>
+<ul>
+<li>插入更长的内容的时候效果不佳</li>
+<li>工作文件夹很乱</li>
+<li>需要封面和附录</li>
+</ul>
+<p>接下来我将简单地介绍一下解决这些问题的方法。</p>
+<h2 id="插入更长的内容"><a href="#插入更长的内容" class="headerlink" title="插入更长的内容"></a>插入更长的内容</h2><p>刚刚提到的<code>\input</code>命令其实比较适合插入结构简单或者内容较少的<code>.tex</code>文档，面对较长而且排版复杂的<code>.tex</code>文档就稍显力不从心。</p>
+<p>这个时候我们可以用<code>\include</code>命令来代替<code>\input</code>。相较于<code>\input</code>，<code>\include</code>有以下特点：</p>
+<ul>
+<li>可以用相对路径引用外部文件</li>
+<li>默认换页，不会破坏原来的排版</li>
+<li>不能嵌套</li>
+</ul>
+<h2 id="整理工作文件夹"><a href="#整理工作文件夹" class="headerlink" title="整理工作文件夹"></a>整理工作文件夹</h2><p>你可以在你的工作文件夹里新建几个文件夹，分别叫<code>bin</code>，<code>fig</code>，<code>ref</code>。</p>
+<p>在<code>data</code>文件夹中你可以存放你的所有的内容相关的<code>.tex</code>文件，在<code>main.tex</code>中引用的时候你需要这样用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\input&#123;bin/preamble&#125;</span><br><span class="line">\include&#123;bin/chpt1&#125;</span><br></pre></td></tr></table></figure>
+
+<p>随后你需要在导言区中加上这样的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\graphicspath&#123;&#123;fig/&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样你在使用<code>\includegraphics</code>命令的时候就可以照旧直接输入文件名了。</p>
+<p>接着，在参考文献处，你可以这样使用<code>ref</code>文件夹里的<code>refs.bib</code>文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\bibliography&#123;ref/refs&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样，你就可以获得一个干净漂亮的工作文件夹了！</p>
+<h2 id="序言和附录"><a href="#序言和附录" class="headerlink" title="序言和附录"></a>序言和附录</h2><p>在排版书籍的过程中，常常遇到这样一种需求：需要用罗马数字标记序言、目录等内容；在书籍的最后需要加上后记等内容。而这些内容都不算正文，你不希望让LaTeX给予这些章节序号。</p>
+<p>在这个时候，我们就可以利用<code>\frontmatter</code>和<code>\backmatter</code>。具体而言，前言部分是<code>\frontmatter</code>，正文是<code>\mainmatter</code>而后记等内容是<code>\backmatter</code>。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[twocolumn,openany]&#123;ctexbook&#125;</span><br><span class="line">\input&#123;preamble&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \frontmatter</span><br><span class="line">        \maketitle</span><br><span class="line">        \chapter&#123;前言&#125;</span><br><span class="line">            此书献给伟大的思想家马克思。</span><br><span class="line">        \tableofcontents</span><br><span class="line">    \mainmatter</span><br><span class="line">        \input&#123;chpt1&#125;</span><br><span class="line">        \input&#123;chpt2&#125;</span><br><span class="line">    \backmatter</span><br><span class="line">        \chapter&#123;后记&#125;</span><br><span class="line">            自强不息，厚德载物。</span><br><span class="line">        \bibliography&#123;ref/refs&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>仔细观察编译出的文件，你会发现以下几点：</p>
+<ul>
+<li><code>\frontmatter</code>中页码是小写罗马数字，章节会出现在目录里但是没有序号。</li>
+<li><code>\mainmatter</code>中页码是阿拉伯数字，章节有编号</li>
+<li><code>\backmatter</code>中页码是阿拉伯数字，章节会出现在目录里但是没有序号。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/04/latextroubleshooting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/04/latextroubleshooting/" class="post-title-link" itemprop="url">LaTeX中遇到问题如何求助</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-04 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-04T00:00:00+08:00">2019-08-04</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:08:51" itemprop="dateModified" datetime="2019-08-07T15:08:51+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>有些时候，你会不幸地在编译自己的<code>.tex</code>文件的时候遇到报错。没有任何一本书或者教程能够覆盖你所需要用到的所有宏包和命令，更不可能了解到你的<code>.tex</code>文件里有着什么样的环境。因此如何自己寻找到解决问题的方法在你入门了LaTeX之后是及其重要的。</p>
+<h1 id="预防方法"><a href="#预防方法" class="headerlink" title="预防方法"></a>预防方法</h1><p>预防问题才是杜绝报错的第一选择。我们该如何预防问题呢？首先我们需要掌握自己需要的命令的正确用法。</p>
+<h2 id="看官方文档"><a href="#看官方文档" class="headerlink" title="看官方文档"></a>看官方文档</h2><p>很多时候我们会百度自己的需求，然后照搬网上的解决方案，但这样很多时候是不合适的。我个人建议的做法是去Comprehensive TeX Archive Network上寻找网上查到的宏包的官方文档，随后模仿官方文档中的例子去解决自己的需求。</p>
+<p>CTAN的官网在这里：<a href="https://ctan.org/" target="_blank" rel="noopener">https://ctan.org/</a></p>
+<p>这样做的原因非常简单，中文互联网社区中给出的解决方案很多都已经很老了，其中运用的命令不一定在宏包的新版本中仍旧实用；同时竟然还有人用CJK来解决中文输入的问题，这实在是害人不浅。</p>
+<h2 id="用模板"><a href="#用模板" class="headerlink" title="用模板"></a>用模板</h2><p>另外一种预防办法是从别人给出的模板开始写作，例如overleaf上的许多模板。overleaf是一个非常优秀的在线LaTeX协同编辑网站，有了它，你可以不在电脑上装TeX Live；也可以和很多人一同编辑一个项目。</p>
+<p>其他的模板包括国内外大学的学位论文模板和期刊投稿用模板等，都是非常好的学习资料。</p>
+<h1 id="找解决方案"><a href="#找解决方案" class="headerlink" title="找解决方案"></a>找解决方案</h1><p>最佳的LaTeX问答社区是stackexchange的TeX板块，面对英文文档排版中可能遇到的各种问题，你都能在这里找到你想要的答案，并且答案的质量远远高于国内社区。</p>
+<p>它的网址是：<a href="https://tex.stackexchange.com" target="_blank" rel="noopener">https://tex.stackexchange.com</a></p>
+<p>自然，在问答社区寻找答案比起使用搜索引擎还是不方便了一些。有条件的小伙伴可以用一个不存在的搜索引擎来搜索和LaTeX相关的问题，经亲测效果还是非常可喜的。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/03/newcommand/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/03/newcommand/" class="post-title-link" itemprop="url">LaTeX中自定义命令</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-08-03 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-03T00:00:00+08:00">2019-08-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:08:40" itemprop="dateModified" datetime="2019-08-07T15:08:40+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>本文的主要内容是关于如何自定义一个自己的命令的。</p>
+<p>在编写LaTeX文档的过程中，有时你会需要经常输入一个不太常见的专有名词，或者需要频繁实现一个比较特殊的效果。这个时候我们可以在一个LaTeX文档中自定义自己的命令！</p>
+<h1 id="最简单的自定义命令"><a href="#最简单的自定义命令" class="headerlink" title="最简单的自定义命令"></a>最简单的自定义命令</h1><p>如果你只是需要输入一段特定样式的特定文字，你可以在导言区这么做：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过<code>\newcommand{·}{·}</code>命令，我们成功地自定义了一个名叫<code>\MyC</code>的新命令。当你在正文区输入这个命令的时候，你就相当于在这个位置输入了<code>\textit{Customize your own command!}</code>。让我们来看看一个实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    来看看新的命令&#123;\MyC&#125;吧！</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="复杂一些的自定义命令"><a href="#复杂一些的自定义命令" class="headerlink" title="复杂一些的自定义命令"></a>复杂一些的自定义命令</h1><p>当然，如果自定义命令只能做到这种程度那也太鸡肋了。我们可以通过添加参数来让我们的新命令可以接受信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\twoword&#125;[2]&#123;\textsc&#123;#1&#125;, \textit&#123;#2&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中，被中括号包裹的数字是新命令能接受的参数数量，范围1-9；最后的花括号内的<code>#1</code>和<code>#2</code>分别是输入的第一个参数和第二个参数。</p>
+<p>来看看实例吧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br><span class="line">\newcommand&#123;\twoword&#125;[2]&#123;\Large&#123;\textsc&#123;#1&#125;&#125;, \small&#123;\textit&#123;#2&#125;&#125;&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    来看看新的命令&#123;\MyC&#125;吧！</span><br><span class="line"></span><br><span class="line">    再来看看这个命令：\twoword&#123;Large&#125;&#123;small&#125;。</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="更复杂的自定义命令"><a href="#更复杂的自定义命令" class="headerlink" title="更复杂的自定义命令"></a>更复杂的自定义命令</h1><p>我们也可以给我们的新命令加上被方括号包裹的参数来进一步调控输出，增强新命令的适用范围。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\adv&#125;[1][\bfseries]&#123;&#123;#1&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>大家可以发现，在中间多了一个方括号，这个方括号内就是我们的新命令的默认参数，我们可以通过手动更改来达到不同的排版效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br><span class="line">\newcommand&#123;\twoword&#125;[2]&#123;\Large&#123;\textsc&#123;#1&#125;&#125;, \small&#123;\textit&#123;#2&#125;&#125;&#125;</span><br><span class="line">\newcommand&#123;\adv&#125;[2][\bfseries]&#123;&#123;#1#2&#125;&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    来看看新的命令&#123;\MyC&#125;吧！</span><br><span class="line"></span><br><span class="line">    再来看看这个命令：\twoword&#123;Large&#125;&#123;small&#125;。</span><br><span class="line"></span><br><span class="line">    新命令的默认情况是这样的\adv&#123;加粗&#125;，</span><br><span class="line">    但是也可以加参数来变成\adv[\itshape]&#123;这样&#125;。</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>必须注意这样使用时方括号内的参数也计算入总参数数量。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/22/latex-skills2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/07/22/latex-skills2/" class="post-title-link" itemprop="url">LaTeX中三分钟搞定引用</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-22 00:00:00" itemprop="dateCreated datePublished" datetime="2019-07-22T00:00:00+08:00">2019-07-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:08:58" itemprop="dateModified" datetime="2019-08-07T15:08:58+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>一句代码也不写也能在LaTeX里搞定引用吗？</p>
+<p>答案是肯定的。</p>
+<p>本期推送就将教会大家如何用最简单最图形界面的方法在LaTeX里解决引用的问题。</p>
+<p>为了做到这一点，我们需要在你的计算机上安装如下工具：</p>
+<ul>
+<li>操作系统</li>
+<li>文献管理工具</li>
+<li>TeX发行版</li>
+<li>TeX编辑器</li>
+</ul>
+<p>本文中我使用的例子基于以下工具的组合：Windows 10+EndNote X9+TeX Live 2018+TeXstudio。其中Windows 10和EndNote X9都是收费软件（THU为师生准备了这两款软件的批量授权版，大家可以在its上获取）。也有完全免费的组合，比如Debian 10+Mendeley+TeX Live 2019+TeXstudio。</p>
+<p>让我们从引用的源头讲起吧。</p>
+<h1 id="查找文献"><a href="#查找文献" class="headerlink" title="查找文献"></a>查找文献</h1><p>一般来说大家比较常用的文献检索网站有知网，Web of Science等等。这些网站都支持导出参考文献。</p>
+<p>我们先以知网为例，我们找到自己想要的文献后单击文献标题右下方的“导出/参考文献”，随后在弹出的页面左侧选择“EndNote”并单击蓝色的导出按钮，就能得到包含着文献信息的一个<code>.txt</code>文档。</p>
+<p>我们再以Web of Science为例，在找到我们需要的文献之后，单击“导出”并选择你使用的文献管理工具，就能得到包含着文献信息的<code>.ciw</code>文档。</p>
+<p>当然，能找到文献的地方还有很多，比如各大出版商的网站等等，在那些网站上一般也可以找到类似于导出引文的选项，在此不再赘述。</p>
+<h1 id="管理你的文献"><a href="#管理你的文献" class="headerlink" title="管理你的文献"></a>管理你的文献</h1><p>下载好文献信息后，我们就需要将信息导入你的文献管理软件。下面的教程基于EndNote X9。</p>
+<p>首先新建一个<code>.enl</code>文件，这个文件是你的一个“文献图书馆”，用于管理与你的某篇文章相关的所有文献。随后单击“Import”从外部导入我们刚刚从知网得到的<code>.txt</code>文件。</p>
+<p>需要注意的是，知网这样输出的文件并不能被EndNote正确识别，比如关于期刊名称的信息会像这样附在文献标题这一栏，这时候我们需要手动调整。</p>
+<p>当然也有更简单的方式，比如你可以直接双击<code>.ciw</code>文件来将文献信息导入你的EndNote。</p>
+<h1 id="导出-bib文件"><a href="#导出-bib文件" class="headerlink" title="导出.bib文件"></a>导出<code>.bib</code>文件</h1><p>前面的步骤都完成后，选中<code>.enl</code>文件中的所有文献，并点击”Export”。随后在弹出的窗口中将”Output Style”更改为”BibTeX Export”，就可以得到一个包含着BibTeX能理解的文献信息的<code>.txt</code>文档。将这个文档的后缀名改为<code>.bib</code>后，这就是我们需要的<code>.bib</code>文件啦！</p>
+<p>将这个文件放到与你的<code>.tex</code>文件同一目录下。随后确保你的<code>.tex</code>文件形似下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125; % 文档类型可根据自己需求选择</span><br><span class="line">\usepackage&#123;natbib&#125; % 这个是必需的</span><br><span class="line">\bibliographystyle&#123;apalike&#125; % 这条命令控制了引用的样式，可以根据需求自己更改</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">	清华化学系的本科生既发表过中文论文\citep&#123;RN1&#125;，也发表过英文论文\citep&#123;RN2&#125;。</span><br><span class="line">	\bibliography&#123;latexshowcase&#125; % 花括号内是bib文件的文件名</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面内容的输出：</p>
+<p>如果大家觉得关于引用还有一些疑问，可以看这篇文章。这篇文章里包含了在LaTeX中引用的大部分基础知识。</p>
+<p>也欢迎大家关注我并阅读我以前发布的一些文章！</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/19/latex-cite/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/07/19/latex-cite/" class="post-title-link" itemprop="url">在LaTeX里处理引用</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2019-07-19T00:00:00+08:00">2019-07-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:09:06" itemprop="dateModified" datetime="2019-08-07T15:09:06+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>本文的主要内容：</p>
+<ul>
+<li>最基础的引用方式</li>
+<li>如何使用BibTeX</li>
+<li>如何方便地使用BibTeX</li>
+</ul>
+<p>论文写作的过程中免不了引用文献。在Microsoft Word下我们可以通过像EndNote一样的工具来完成方便快捷地引用（但这两个工具都是收费的），那么在免费开源的LaTeX中，我们该如何实现引用呢？</p>
+<h1 id="最基础的引用方法"><a href="#最基础的引用方法" class="headerlink" title="最基础的引用方法"></a>最基础的引用方法</h1><p>在LaTeX中，最为原始而基础的引用方式需要在<code>.tex</code>文件最后输入一个<code>thebibliography</code>环境，将我们要引用的文献信息硬编码在<code>.tex</code>文件中。</p>
+<p>下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\section&#123;最为基础的引用方法&#125;</span><br><span class="line">在这种环境下，你既可以引用英文的文献\cite&#123;moss&#125;，也可以引用中文的文献\cite&#123;505&#125;。相信你已经发现了，在\verb|\bibitem[·]&#123;citekey&#125;|前面的中括号里加东西可以改变文章中引用括号里的内容。</span><br><span class="line">\begin&#123;thebibliography&#125;&#123;widest label&#125;</span><br><span class="line">\bibitem&#123;moss&#125; G.P. Moss, \emph&#123;Extension and revision of the nomenclature for spiro compounds&#125;, 1999</span><br><span class="line">\bibitem[Wu, 2008]&#123;505&#125; 吴哲明, \emph&#123;我国制药企业创新药物研发战略研究&#125;, 2008</span><br><span class="line">\end&#123;thebibliography&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面那个例子的输出：</p>
+<p>这种方式如果不自定义标签，引用的形式就都是嵌在正文里，被方括号包裹的数字。这样明显达不到“方便”的程度。还好我们现在已经拥有了更加简便的工具。</p>
+<h1 id="BibTeX的基础用法"><a href="#BibTeX的基础用法" class="headerlink" title="BibTeX的基础用法"></a>BibTeX的基础用法</h1><p>BibTeX是一个和LaTeX联用的管理文献和引用样式的工具。这时候我们会接触到一个新的文件格式，<code>.bib</code>格式。</p>
+<p>如何新建一个<code>.bib</code>文件呢？非常简单。首先，打开记事本（Windows下的话，其他系统打开任意文本编辑器即可），随后输入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">@article&#123;patterson1917system,</span><br><span class="line">  title=&#123;A SYSTEM OF ORGANIC NOMENCLATURE.&#125;,</span><br><span class="line">  author=&#123;Patterson, Austin M and Curran, Carleton E&#125;,</span><br><span class="line">  journal=&#123;Journal of the American Chemical Society&#125;,</span><br><span class="line">  volume=&#123;39&#125;,</span><br><span class="line">  number=&#123;8&#125;,</span><br><span class="line">  pages=&#123;1623--1638&#125;,</span><br><span class="line">  year=&#123;1917&#125;,</span><br><span class="line">  publisher=&#123;ACS Publications&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@article&#123;radulescu1911nomenklatur,</span><br><span class="line">  title=&#123;&#123;\&quot;U&#125;ber die Nomenklatur der Spirane&#125;,</span><br><span class="line">  author=&#123;Radulescu, Dan&#125;,</span><br><span class="line">  journal=&#123;Berichte der deutschen chemischen Gesellschaft&#125;,</span><br><span class="line">  volume=&#123;44&#125;,</span><br><span class="line">  number=&#123;1&#125;,</span><br><span class="line">  pages=&#123;1023--1026&#125;,</span><br><span class="line">  year=&#123;1911&#125;,</span><br><span class="line">  publisher=&#123;Wiley Online Library&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@article&#123;rigaudy1979nomenclature,</span><br><span class="line">  title=&#123;Nomenclature of organic chemistry: sections A, B, C, D, E, F and H-1979 ed.&#125;,</span><br><span class="line">  author=&#123;Rigaudy, J and Klesney, SP and others&#125;,</span><br><span class="line">  year=&#123;1979&#125;,</span><br><span class="line">  publisher=&#123;Oxford (UK) Pergamon Press&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@article&#123;畑一夫1979多環化合物の,</span><br><span class="line">  title=&#123;多環化合物の IUPAC 命名法&#125;,</span><br><span class="line">  author=&#123;畑一夫&#125;,</span><br><span class="line">  journal=&#123;有機合成化学協会誌&#125;,</span><br><span class="line">  volume=&#123;37&#125;,</span><br><span class="line">  number=&#123;2&#125;,</span><br><span class="line">  pages=&#123;148--160&#125;,</span><br><span class="line">  year=&#123;1979&#125;,</span><br><span class="line">  publisher=&#123;The Society of Synthetic Organic Chemistry, Japan&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@article&#123;powell1984treatment,</span><br><span class="line">  title=&#123;Treatment of variable valence in organic nomenclature (lambda convention)(Recommendations 1983)&#125;,</span><br><span class="line">  author=&#123;Powell, WH&#125;,</span><br><span class="line">  journal=&#123;Pure and applied chemistry&#125;,</span><br><span class="line">  volume=&#123;56&#125;,</span><br><span class="line">  number=&#123;6&#125;,</span><br><span class="line">  pages=&#123;769--778&#125;,</span><br><span class="line">  year=&#123;1984&#125;,</span><br><span class="line">  publisher=&#123;De Gruyter&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>单击“保存”，随后将文件名字改为<code>ref.bib</code>即可（前面的文件名可以随便取）。</p>
+<p>我们刚刚干了什么呢？我们刚刚已将一堆文献的信息用一定的格式手动地集体存储至一个独立于<code>.tex</code>文件的文本文档里。</p>
+<p>每一段花括号内最开头的一段文字，如<code>rigaudy1979nomenclature</code>就是我们刚刚接触过的“citekey”，在正文内我们只需要使用形似<code>\cite{powell1984treatment}</code>的代码就可以引用啦！</p>
+<p>而每一个文件中需要输入的内容大致有这些：</p>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>address</td>
+<td>Usually the address of the publisher. At least for small publishers, this</td>
+</tr>
+<tr>
+<td>information</td>
+<td>might be useful.</td>
+</tr>
+<tr>
+<td>annote</td>
+<td>An annotation, not used by the standard bibliography styles. Other styles or</td>
+</tr>
+<tr>
+<td>macros</td>
+<td>might use this.</td>
+</tr>
+<tr>
+<td>author</td>
+<td>The name(s) of the author(s).</td>
+</tr>
+<tr>
+<td>booktitle</td>
+<td>The title of a book, if you cite a part of that. For a book, use the title field instead.</td>
+</tr>
+<tr>
+<td>chapter</td>
+<td>A chapter number.</td>
+</tr>
+<tr>
+<td>crossref</td>
+<td>The key of the database entry being cross referenced.</td>
+</tr>
+<tr>
+<td>edition</td>
+<td>The edition (First, Second, and alike) of a book. Commonly it’s capitalized.</td>
+</tr>
+<tr>
+<td>editor</td>
+<td>The name(s) of the editor(s).</td>
+</tr>
+<tr>
+<td>howpublished</td>
+<td>The way of publishing, especially if it’s unusual. Capitalize the first word.</td>
+</tr>
+<tr>
+<td>institution</td>
+<td>Could be a sponsoring institution.</td>
+</tr>
+<tr>
+<td>journal</td>
+<td>A journal name; you may use common abbreviations.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>Used for alphabetizing, cross-referencing, and labeling if the author information is missing. Don’t confuse it with the key used in the \cite command which corresponds to the beginning of the entry.</td>
+</tr>
+<tr>
+<td>month</td>
+<td>The month in which the work was published or written if it’s not yet published. Usually a three letter abbreviation is used.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>Any additional useful information. Capitalize the first word.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>The number of a journal or another kind of work in a series.</td>
+</tr>
+<tr>
+<td>organization</td>
+<td>Might be a sponsoring organization.</td>
+</tr>
+<tr>
+<td>pages</td>
+<td>A page number or range of page numbers, like 12-18 or 22+.</td>
+</tr>
+<tr>
+<td>publisher</td>
+<td>The name of the publisher.</td>
+</tr>
+<tr>
+<td>school</td>
+<td>Could be the name of the school where the document was written.</td>
+</tr>
+<tr>
+<td>series</td>
+<td>The name of a series of books or its number of a multi-volume set.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>The title of the work.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>The type of the publication.</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>The volume of a journal or multi-volume book.</td>
+</tr>
+<tr>
+<td>year</td>
+<td>The year of the publication or the year when it was written if it hasn’t been published yet. Commonly four numerals are used, such as 2010.</td>
+</tr>
+</tbody></table>
+<p>但是你会发现，很多时候你根本不需要怎么多信息啊！一般来说BibTeX所需的信息和文献的类型有关，就是每一个开头<code>@</code>后面的那个单词。</p>
+<p>BibTeX里的文档类型有:</p>
+<table>
+<thead>
+<tr>
+<th>文档类型</th>
+<th>需要的关键词</th>
+<th>可选的关键词</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>article</td>
+<td>author, title, journal, year</td>
+<td>volume, number, pages, month, note</td>
+</tr>
+<tr>
+<td>book</td>
+<td>author or editor, title, publisher, year</td>
+<td>volume or number, series, address, edition, month, note</td>
+</tr>
+<tr>
+<td>booklet</td>
+<td>title</td>
+<td>author, howpublished, address, month, year, note</td>
+</tr>
+<tr>
+<td>conference</td>
+<td>author, title, booktitle, year</td>
+<td>editor, volume or number, series, pages, address, month, organization, publisher, note</td>
+</tr>
+<tr>
+<td>manual</td>
+<td>title</td>
+<td>author, organization, address, edition, month, year, note</td>
+</tr>
+<tr>
+<td>mastersthesis</td>
+<td>author, title, school, year</td>
+<td>type, address, month, note</td>
+</tr>
+<tr>
+<td>misc</td>
+<td>none</td>
+<td>author, title, howpublished, month, year, note</td>
+</tr>
+<tr>
+<td>phdthesis</td>
+<td>author, title, school, year</td>
+<td>type, address, month, note</td>
+</tr>
+<tr>
+<td>proceedings</td>
+<td>title, year</td>
+<td>editor, volume or number, series, address, month, organization, publisher, note</td>
+</tr>
+<tr>
+<td>techreport</td>
+<td>author, title, institution, year</td>
+<td>type, number, address, month, note</td>
+</tr>
+<tr>
+<td>unpublished</td>
+<td>author, title, note</td>
+<td>month, year</td>
+</tr>
+</tbody></table>
+<p>下面是一个例子（需要将刚刚生成的<code>ref.bib</code>和下面这个<code>.tex</code>文件放在同一目录下）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">	\section&#123;BibTeX实例&#125;</span><br><span class="line">	哇有好多文献要引用啊。</span><br><span class="line">    那只能随便写写啦~</span><br><span class="line">	第一个文献是这个\cite&#123;patterson1917system&#125;。</span><br><span class="line">    然后是这个\cite&#123;radulescu1911nomenklatur&#125;。</span><br><span class="line">    你\cite&#123;rigaudy1979nomenclature&#125;可能会好奇：</span><br><span class="line">    什么样式适合你\cite&#123;畑一夫1979多環化合物の&#125;？</span><br><span class="line">	别急，后面就会讲到\cite&#123;powell1984treatment&#125;。</span><br><span class="line">	（本文是不严谨的错误示范，真正写论文的时候千万别这样）</span><br><span class="line">	\bibliographystyle&#123;authordate3&#125;</span><br><span class="line">	\bibliography&#123;ref&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你没有使用TeXstudio这样的工具，而是手动编译<code>.tex</code>文件的话，你需要先运行一遍XeLaTeX，再运行一遍BibTeX，再运行两边XeLaTeX。</p>
+<p>我们可以通过改变<code>\bibliographystyle{·}</code>中花括号内的内容来改变引用文献的样式。大家可以到这个网站寻找自己需要的样式：<a href="http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html" target="_blank" rel="noopener">http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html</a></p>
+<h1 id="使用natbib"><a href="#使用natbib" class="headerlink" title="使用natbib"></a>使用natbib</h1><p><code>natbib</code>让我们引用的样式更多并且更加方便了。我们首先需要在导言区加载<code>natbib</code>宏包。随后同样在导言区输入<code>\bibliographystyle{apalike}</code>（只是个例子，花括号内的内容可以改），最后在正文的最后，输入<code>\bibliography{·}</code>就能引用啦！</p>
+<p>使用<code>natbib</code>可以明显提升BibTeX的鲁棒性，对于非英语文献的支持性更好，一般来说是非常推荐使用<code>natbib</code>的。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/latexskills-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/07/15/latexskills-1/" class="post-title-link" itemprop="url">LaTeX中三线表、并置图片、固定表格</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-07-15T00:00:00+08:00">2019-07-15</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:09:01" itemprop="dateModified" datetime="2019-08-07T15:09:01+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>本文开始先和大家闲聊几句。之前的《从零开始的LaTeX教程》系列承蒙大家的照顾，阅读量还是很多的呢！甚至收到了不少打赏，开心！之后的文章我还是会采用GitHub Markdown的风格来排版，毕竟还算是有一点代码教学的嘛。</p>
+<p>从这篇文章开始的《LaTeX使用技巧》系列会教大家应对一些在论文写作过程中比较常见的需求，让大家的LaTeX之旅更加顺利~</p>
+<p>本文的主要内容：</p>
+<ul>
+<li>如何绘制论文需要的三线表</li>
+<li>如何并置多张图片</li>
+<li>如何不让图片和表格“乱跑”</li>
+</ul>
+<h1 id="画三线表"><a href="#画三线表" class="headerlink" title="画三线表"></a>画三线表</h1><p>三线表是大家在写实验报告和论文的时候非常常见的表格样式。三线表通常只有三条线，即顶线、底线和栏目线，这三条线都是横线，表格中没有任何竖线。其中顶线和底线为粗线，栏目线为细线。</p>
+<p>在LaTeX中实现三线表的效果非常简单。我们首先需要进入<code>tabular</code>环境，随后在对应的位置加入相应的横线：顶线是<code>\toprule</code>，栏目线是<code>\midrule</code>，底线是<code>\bottomrule</code>。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;tabular&#125;&#123;ccccc&#125;</span><br><span class="line">	\toprule</span><br><span class="line">		Year  &amp; NME   &amp; New BLA &amp; Total&amp; Rate/\% \\</span><br><span class="line">	\midrule</span><br><span class="line">		2008  &amp; 21    &amp; 3     &amp; 95    &amp; 25.3 \\</span><br><span class="line">		2009  &amp; 20    &amp; 6     &amp; 98    &amp; 26.5 \\</span><br><span class="line">		2010  &amp; 15    &amp; 6     &amp; 93    &amp; 22.6 \\</span><br><span class="line">		2011  &amp; 24    &amp; 6     &amp; 100   &amp; 30 \\</span><br><span class="line">		2012  &amp; 33    &amp; 6     &amp; 101   &amp; 38.6 \\</span><br><span class="line">		2013  &amp; 25    &amp; 4     &amp; 102   &amp; 28.4 \\</span><br><span class="line">		2014  &amp; 30    &amp; 11    &amp; 119   &amp; 34.4 \\</span><br><span class="line">		2015  &amp; 33    &amp; 12    &amp; 127   &amp; 35.4 \\</span><br><span class="line">		2016  &amp; 15    &amp; 7     &amp; 102   &amp; 21.6 \\</span><br><span class="line">		2017  &amp; 34    &amp; 12    &amp; 150   &amp; 30.7 \\</span><br><span class="line">		2018  &amp; 42    &amp; 17    &amp; 151   &amp; 39.1 \\</span><br><span class="line">	\bottomrule</span><br><span class="line">\end&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+<p>当然，一张完整的表格是需要标题和注释的。这一点需要在<code>table</code>环境中实现。我们可以用<code>\caption{·}</code>命令来为表格添加标题，以及用<code>\label{·}</code>命令添加标签以方便交叉引用。</p>
+<p>但是为表格添加脚注是一件LaTeX经典难题。在脚注不太多的情况下我们可以手动在表格下面硬编码一条脚注。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;[htbp]</span><br><span class="line">	\centering</span><br><span class="line">	\caption&#123;2008-2018年FDA审核通过的NME,BLA,NDA及创新药比例&#125;</span><br><span class="line">	\begin&#123;tabular&#125;&#123;ccccc&#125;</span><br><span class="line">		\toprule</span><br><span class="line">		Year  &amp; NME   &amp; New BLA &amp; Total*&amp; Rate/\% \\</span><br><span class="line">		\midrule</span><br><span class="line">		2008  &amp; 21    &amp; 3     &amp; 95    &amp; 25.3 \\</span><br><span class="line">		2009  &amp; 20    &amp; 6     &amp; 98    &amp; 26.5 \\</span><br><span class="line">		2010  &amp; 15    &amp; 6     &amp; 93    &amp; 22.6 \\</span><br><span class="line">		2011  &amp; 24    &amp; 6     &amp; 100   &amp; 30 \\</span><br><span class="line">		2012  &amp; 33    &amp; 6     &amp; 101   &amp; 38.6 \\</span><br><span class="line">		2013  &amp; 25    &amp; 4     &amp; 102   &amp; 28.4 \\</span><br><span class="line">		2014  &amp; 30    &amp; 11    &amp; 119   &amp; 34.4 \\</span><br><span class="line">		2015  &amp; 33    &amp; 12    &amp; 127   &amp; 35.4 \\</span><br><span class="line">		2016  &amp; 15    &amp; 7     &amp; 102   &amp; 21.6 \\</span><br><span class="line">		2017  &amp; 34    &amp; 12    &amp; 150   &amp; 30.7 \\</span><br><span class="line">		2018  &amp; 42    &amp; 17    &amp; 151   &amp; 39.1 \\</span><br><span class="line">		\bottomrule</span><br><span class="line">	\end&#123;tabular&#125;</span><br><span class="line"></span><br><span class="line">    \footnotesize&#123;*注：表中Total一栏指NDA+BLA的数量。&#125;</span><br><span class="line">	\label&#123;tab:table1&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+<p>在脚注比较多的时候，就可以使用来自<code>tablefootnote</code>宏包的<code>\tablefootnote{·}</code>命令来生成显示在表格下面的脚注。</p>
+<h1 id="并置多张图片"><a href="#并置多张图片" class="headerlink" title="并置多张图片"></a>并置多张图片</h1><p>并置多张图片是我在写植物组织培养的实验报告的时候才第一次遇到的需求。不论是在论文、简历、PPT还是实验报告中，你都会常常遇到这种需求。在Microsoft Word里这个问题似乎看起来非常容易解决，但是在LaTeX里，解决方法就没有那么显然了。（当然，在你走头无路的时候总是能用Adobe Photoshop解决一切！大家想学PS的话，推荐大家关注公众号“HF的树洞”！）</p>
+<p>在LaTeX中实现多张图片并置其实也不难。我们只需要用<code>subfigure</code>宏包提供的<code>\subfigure[name-of-subfigure]{include-figure-file}</code>命令即可。</p>
+<p>大家可能要问了，如果有很多张图片不仅仅需要放一行该怎么办？LaTeX是非常奇妙的，我们只需要想输入文本时一样，打两个换行符或者用<code>\\</code>就可以了。下面是实战例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;</span><br><span class="line">		\centering</span><br><span class="line">		\subfigure[Week 1-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 1-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 1-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 1-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week1t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 2-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 2-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 2-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 2-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week2t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 3-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 3-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 3-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 3-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week3t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 4-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 4-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 4-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 4-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week4t3&#125;&#125;</span><br><span class="line">		\\</span><br><span class="line">		\subfigure[Week 5-$t_0$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t0&#125;&#125;</span><br><span class="line">		\subfigure[Week 5-$t_1$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t1&#125;&#125;</span><br><span class="line">		\subfigure[Week 5-$t_2$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t2&#125;&#125;</span><br><span class="line">		\subfigure[Week 5-$t_3$]&#123;\includegraphics[width=0.22\linewidth]&#123;week5t3&#125;&#125;</span><br><span class="line">		\caption&#123;植物生长调节剂诱导烟草叶片器官分化结果&#125;</span><br><span class="line">		\label&#123;fig:1&#125;</span><br><span class="line">	\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+<h1 id="“固定”你的图片和表格"><a href="#“固定”你的图片和表格" class="headerlink" title="“固定”你的图片和表格"></a>“固定”你的图片和表格</h1><p>如果有试过排版有多张图片或者表格的小伙伴一定有过这样的疑惑：图片和表格怎么老是乱跑呢？到底怎么做才能固定住我的表格在我想要的位置呢？</p>
+<p>其实，LaTeX原生支持对于浮动体位置的某种程度上的设置。在<code>\begin{figure}</code>后面我们可以加上类似<code>[htbp]</code>或者<code>[tp]</code>这样的参数。其中每一个字母都代表不同的位置：h代表“这里”；t代表页面最上端；b代表页面最底端；p代表下一页。</p>
+<p>当你问出“我的图片怎么老是乱跑？”这个问题时，大部分情况下你是希望图片老老实实呆在你安插的文字中间。这个时候，我们可以结合<code>float</code>宏包提供的<code>[H]</code>（注意这里是大写的）选项来禁用浮动。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">The routine way to name compounds with heteroatoms can be identically to the naming of spiro compounds, like what is shown in Figure \ref&#123;fig:7-azaspiro4&#125;. In addition, unsaturation is also indicated in the traditional way.</span><br><span class="line">		</span><br><span class="line">\begin&#123;figure&#125;[H]</span><br><span class="line">	\centering</span><br><span class="line">	\includegraphics[width=0.5\linewidth]&#123;7-azaspiro45dec-2-ene&#125;</span><br><span class="line">	\caption&#123;The conventional way to name heteroatoms and unsaturation is still available.&#125;</span><br><span class="line">	\label&#123;fig:7-azaspiro4&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br><span class="line">		</span><br><span class="line">If a choice of nomenclature or numbering occurs because of heteroatoms, functional groups or substituents the following criteria are considered in order until a decision is made.</span><br></pre></td></tr></table></figure>
+
+<p>下面是这个例子的输出效果：</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/07/latexchemfig/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/07/07/latexchemfig/" class="post-title-link" itemprop="url">LaTeX绘制化学结构式</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-07 00:00:00" itemprop="dateCreated datePublished" datetime="2019-07-07T00:00:00+08:00">2019-07-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:09:09" itemprop="dateModified" datetime="2019-08-07T15:09:09+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>本文的主要内容有：</p>
+<ul>
+<li>如何直接输入结构式</li>
+<li>好用的辅助在线工具</li>
+<li>如何将用其他工具绘制的结构式完美地导入LaTeX</li>
+</ul>
+<p>前面的四篇推送已经介绍了LaTeX的基本使用方法，相信大家已经能够排版出内容较为简单的文档了。在论文中我们常常会需要插入一个化合物的结构，而仅仅插入从网上找来或者自己绘制的<code>.jpg</code>和<code>.png</code>格式的图片往往会让LaTeX输出的<code>.pdf</code>文档的大小急剧增大，同时也并不是非常好看。这篇推送将简要介绍在LaTeX中最为基础的绘制结构式的方法。</p>
+<h1 id="直接绘制结构式"><a href="#直接绘制结构式" class="headerlink" title="直接绘制结构式"></a>直接绘制结构式</h1><p>在LaTeX中，我们可以通过一个名叫<code>chemfig</code>的宏包来直接在正文中绘制矢量格式的结构式。这种结构式不仅美观好看，而且不会让文件内容增大很多，是排版论文时的最佳选择。<code>chemfig</code>宏包极其强大，能够绘制复杂的反应路线图和机理，但是高级功能的语法较为复杂，本篇推送仅仅介绍其最为基础的使用方法：绘制单个分子的结构式。</p>
+<p>在使用<code>chemfig</code>宏包的时候，需要先在导言区加载它。具体而言，需要输入这样的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;chemfig&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用<code>chemfig</code>宏包绘制结构的基础命令是<code>\chemfig{&lt;atom-1&gt; &lt;bond type&gt; [&lt;bond angle&gt;, &lt;bond length coefficient&gt;, &lt;name-1&gt;, &lt;name-2&gt;, &lt;tikz code&gt;]&lt;atom-2&gt;}</code>，花括号内部的信息是结构式的信息。其中<code>&lt;atom-1&gt;</code>和<code>&lt;atom-2&gt;</code>是需要相连的官能团；<code>&lt;bond type&gt;</code>是键的类型；中括号里的<code>&lt;bond angle&gt;</code>用于调整键角，<code>&lt;bond length coefficient&gt;</code>是用于调整键的长度的系数，而<code>&lt;name-1&gt;</code>和<code>&lt;name-2&gt;</code>是连线的两点的名称；<code>&lt;tikz code&gt;</code>则是用<code>tikz</code>宏包的命令调整键的颜色和形状的代码。</p>
+<p>下面将简要介绍如何将我们想要绘制的结构式转化成<code>chemfig</code>能理解的信息。</p>
+<h2 id="输入官能团"><a href="#输入官能团" class="headerlink" title="输入官能团"></a>输入官能团</h2><p>在<code>chemfig</code>宏包中，输入原子团的方法是非常简单的，我们只需要按照书写原子团的方法，将数字放在<code>_</code>后面，将电荷放在<code>^</code>后面，<code>chemfig</code>就能够理解我们输入的信息（但数字和电荷都需要被花括号包裹，不然会报错！）。需要注意的是，如果我们想要输入一个比较长的容易引起歧义的原子团，可以用圆括号括起来。每个原子会自动和下一个大写字母或者以一下特殊符号开头的内容连起来：<code>-, =, ~, (, !, *, &lt;, &gt;, @</code>。</p>
+<h2 id="键"><a href="#键" class="headerlink" title="键"></a>键</h2><p>化学中非常重要的一个概念就是键了。我们可以用形同<code>\chemfig{A-B}</code>的命令来将A和B这两个原子团用一根单键相联起来。而键也有许多参数，如键型、键长、键角等。接下来将简要介绍一下如何在<code>chemfig</code>中自定义一根你想要的键。</p>
+<h3 id="键型"><a href="#键型" class="headerlink" title="键型"></a>键型</h3><p>在<code>chemfig</code>中，有非常多种类的键。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">单键是\chemfig&#123;A-B&#125;；</span><br><span class="line">双键是\chemfig&#123;A=B&#125;；</span><br><span class="line">叁键是\chemfig&#123;A~B&#125;。\\</span><br><span class="line">如果想画楔形键，可以用下面的几组命令：</span><br><span class="line">\chemfig&#123;A&gt;B&#125;和\chemfig&#123;A&lt;B&#125;，</span><br><span class="line">分别代表向左和向右的实心楔形键；</span><br><span class="line">\chemfig&#123;A&gt;:B&#125;和\chemfig&#123;A&lt;:B&#125;，</span><br><span class="line">分别代表向左和向右的虚线楔形键；</span><br><span class="line">\chemfig&#123;A&gt;|B&#125;和\chemfig&#123;A&lt;|B&#125;，</span><br><span class="line">分别代表向左和向右的空心楔形键。</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<h3 id="键角"><a href="#键角" class="headerlink" title="键角"></a>键角</h3><p>通过在原子团前面输入一个被方括号包裹的数字，我们可以人为地制定键的角度。有一些角度已经是实现设定好的了，比如<code>[0]</code>代表零度，<code>[1]</code>代表45度等。</p>
+<p>下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;A-B-[1]C-[3]-D-[7]E-[6]F&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<p>我们也可以改变这些预设好的角度，比如将<code>[1]</code>设定为30度。下面是一个例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\setchemfig&#123;angle increment=30&#125;</span><br><span class="line">\chemfig&#123;-[1]-[-1]-[1]-[-1]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<p>当然，我们也可以输入绝对的角度，这时候我们需要在方括号的第一个参数前面加上一个冒号。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;A-[:30]B=[:-75]C-[:10]D-[:90]&gt;|[:60]-[:-20]E-[:0]~[:-75]F&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<p>有时候，考虑绝对的角度是非常繁琐的，<code>chemfig</code>宏包提供了设定相对于上一根键的相对角度的方法。我们只需要在方括号中第一个参数的前面加上两个冒号，就能够设定相对的角度，像下面那个例子展示的一样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;A-[:-5]-[::20]-[::20]B-[7]-[::20]C-[::20]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<h3 id="键长"><a href="#键长" class="headerlink" title="键长"></a>键长</h3><p>我们可以在前面提到的原子团前面的方括号中加入第二个参数，这就设定了括号前面的键的长度。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;-=[,1.5]-[,0.75]=[:-20,2]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<p>默认情况下，<code>chemfig</code>使用的键长是相对键长而非固定键长。固定键长和相对键长的关系如下图所示：</p>
+<p>由于某些原子团太过庞大导致显示效果不佳时，我们可以尝试使用固定键长的方法来调整输出的效果。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\setchemfig&#123;fixed length=true&#125;\chemfig&#123;Cl-Cl&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<p>当然也可以直接调整整个分子的大小来改变输出的效果，下面是另外一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\normalsize \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\setchemfig&#123;atom sep=2.5em&#125;</span><br><span class="line">\chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\small \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\footnotesize \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\scriptsize \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\tiny \chemfig&#123;H-[:30]O-[:-30]H&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是上面的例子的输出结果。</p>
+<h1 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h1><p><code>chemfig</code>的语法非常复杂，尤其是在涉及到较大的分子的时候，非常难以用人工的方法来绘制出一个分子。还好，现在有一个非常方便的在线工具，可以让大家方便地绘制出自己想要的分子的结构式。</p>
+<p>这个工具就是<a href="https://py-chemist.com/mol_2_chemfig/home" target="_blank" rel="noopener">Mol2chemfig Web</a>，它使得我们能够简单地得到我们想要的结构的<code>chemfig</code>命令。这是这个网页的界面。</p>
+<p>我们可以看到，左边是一个非常好用的绘制结构式的工具。当然，我们也可以点击上方功能栏最左侧的按钮，加载我们已经绘制好的结构的信息文件。该网站支持的格式有<code>.cml</code>和<code>.mol</code>等非常常用的格式。画完后点击下面的GET MOL，就可以在中间那一栏得到化合物的mol信息，随后点击中下方的CONVERT按钮，就可以得到我们需要的<code>chemfig</code>命令了。</p>
+<p>我们也可以在中间的那一栏搜索我们想要的化合物，然后直接得到mol信息。</p>
+<p>右面的一栏允许我们自定义我们生成的结构式的细节，大家在使用的时候可以根据自己的需求进行勾选。</p>
+<h1 id="其他工具绘制结构式插入LaTeX的方法"><a href="#其他工具绘制结构式插入LaTeX的方法" class="headerlink" title="其他工具绘制结构式插入LaTeX的方法"></a>其他工具绘制结构式插入LaTeX的方法</h1><p>我们在这里以ChemDraw为例。如果是单个化合物，我们可以选择将文件另存为<code>.cml</code>或者<code>.mol</code>文件，随后用刚刚提到的在线工具进行转换。</p>
+<p>如果我们绘制了非常复杂的多步反应或者绘制了机理，不方便另存为<code>.cml</code>文件，我们可以直接将文件另存为<code>.eps</code>文件，并用插入图片的方法将我们绘制的反应路线插入LaTeX。</p>
+<p>顺便一提，TeXstudio（在Windows下）支持直接单击图片文件并复制后，点击<code>.tex</code>文件内合适的位置直接黏贴以插入图片，完全不需要输入代码。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/01/latex组织结构/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/07/01/latex组织结构/" class="post-title-link" itemprop="url">LaTeX文档组织结构</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-01 00:00:00" itemprop="dateCreated datePublished" datetime="2019-07-01T00:00:00+08:00">2019-07-01</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:08:44" itemprop="dateModified" datetime="2019-08-07T15:08:44+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>本文的主要内容有：</p>
+<ul>
+<li>LaTeX的基本文章结构</li>
+<li>生成目录的方法</li>
+<li>交叉引用的方法</li>
+<li>插入列表、表格、图片的方法</li>
+</ul>
+<h1 id="组织结构"><a href="#组织结构" class="headerlink" title="组织结构"></a>组织结构</h1><p>LaTeX提供了许多让文章更加有序的方法，比如支持标记文章的章节、自动生成目录等。接下来将逐一介绍这些方法。</p>
+<h2 id="章、节和段落"><a href="#章、节和段落" class="headerlink" title="章、节和段落"></a>章、节和段落</h2><p>在我们比较常用的<code>article</code>类里，LaTeX支持通过以下的命令来标记文章的组织结构：<code>\section{·}</code>、<code>\subsection{·}</code>、<code>\subsubsection{·}</code>、<code>\paragraph{·}</code>、<code>\subparagraph{·}</code>。他们的相对大小从左到右依次减小。</p>
+<p>在不太多用的<code>book</code>中，还有<code>\chapter{·}</code>和<code>\part{·}</code>。</p>
+<p>下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\section&#123;一级标题&#125;</span><br><span class="line">    \subsection&#123;二级标题&#125;</span><br><span class="line">        \subsubsection&#123;三级标题&#125;</span><br><span class="line">            \paragraph&#123;段落标题&#125;段落内容</span><br><span class="line">                \subparagraph&#123;子段落标题&#125;子段落内容</span><br></pre></td></tr></table></figure>
+
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>在文中引入了章、节的标记后，我们就可以通过在正文区中使用<code>\tableofcontents</code>来让LaTeX自动生成文章的目录。</p>
+<p>下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">    \title&#123;从零开始的LaTeX教程（四）：组织结构&#125;</span><br><span class="line">    \author&#123;墘青&#125;</span><br><span class="line">    \date&#123;\today&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \maketitle</span><br><span class="line">    \tableofcontents</span><br><span class="line"></span><br><span class="line">    \section&#123;学化学的理由&#125;</span><br><span class="line">        化学是中心学科。</span><br><span class="line">        \subsection&#123;学化学哪家强&#125;</span><br><span class="line">            来五道口找清华化学系。</span><br><span class="line">            \subsubsection&#123;清华化学系有多强&#125;</span><br><span class="line">                \paragraph&#123;US News排名&#125;</span><br><span class="line">                    全球第十，远超隔壁。</span><br><span class="line">                        \subparagraph&#123;清华化学系的其他优势&#125;</span><br><span class="line">                            师资雄厚。</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="交叉引用"><a href="#交叉引用" class="headerlink" title="交叉引用"></a>交叉引用</h2><p>在编写文章的时候总是会遇到类似“如下图所示”的表达需要。在LaTeX中你可以更加简单并且精确地做到这一点。我们可以用<code>\label{marker}</code>，<code>\ref{marker}</code>和<code>\pageref{marker}</code>来对于我们的图表、公式、段落来进行交叉引用。其中被花括号包裹的<code>marker</code>是我们自己为某个对象选择的代号，在交叉引用的时候请务必确保输入了正确的代号。</p>
+<h1 id="环境和浮动体"><a href="#环境和浮动体" class="headerlink" title="环境和浮动体"></a>环境和浮动体</h1><p>环境是LaTeX为了达到特殊的排版目的而设计的一个内容载体。我们在LaTeX中使用这样的语句来达到自己的目的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;environment&#125;</span><br><span class="line">    相应的内容，形式多种多样。 </span><br><span class="line">\end&#123;environment&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>我们有三种列表环境，分别是生成无序号列表的<code>itemize</code>，生成有序号列表的<code>enumerate</code>和能添加描述的<code>description</code>环境。这些列表是可以嵌套的（虽然有时候效果不好），就像下面这个例子所展示的一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">    \item 第一层是有序号的列表。</span><br><span class="line">        \begin&#123;itemize&#125;</span><br><span class="line">          \item 第二层是无序号列表，</span><br><span class="line">          \item[记住] 用方括号括起来的内容可以是“小标题”</span><br><span class="line">        \end&#123;itemize&#125;</span><br><span class="line">    \item 你必须记住：</span><br><span class="line">        \begin&#123;description&#125;</span><br><span class="line">            \item[列表不会] 让所有事情都看起来很漂亮有序</span><br><span class="line">            \item[但是它能够] 让一些东西以非常美丽的方式展现出来</span><br><span class="line">        \end&#123;description&#125;</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><p>LaTeX中有三种基础的用于对齐的环境，分别是<code>flushleft</code>、<code>flushright</code>和<code>center</code>，它们使用起来和Microsoft Word中的对齐没有太大差别，较为简单直观。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;flushleft&#125;</span><br><span class="line">    这行字是向左对齐的。你可以手动换行，像这样\\</span><br><span class="line">    或者输入两个换行符。像下面那样。</span><br><span class="line">\end&#123;flushleft&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;flushright&#125;</span><br><span class="line">    这行字是向右对齐的。</span><br><span class="line"></span><br><span class="line">    \LaTeX\ 会自动调整字符的位置，文字太长会在合适的地方换行。</span><br><span class="line">\end&#123;flushright&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;center&#125;</span><br><span class="line">    吾校庄严，巍然中央。</span><br><span class="line">\end&#123;center&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在LaTeX中，有几个被事先设定好的环境简化作者引用内容时的排版工作量。在引用较短的句子的时候，我们可以使用<code>quote</code>环境；引用较长的多个段落的时候，我们可以用<code>quotation</code>环境，这个环境会对段落进行缩进；引用诗歌的时候，我们可以用<code>verse</code>环境。下面这个是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">总工程师曾说：</span><br><span class="line">\begin&#123;quote&#125;</span><br><span class="line">    不管黑猫白猫，能捉老鼠的就是好猫。</span><br><span class="line">\end&#123;quote&#125;</span><br><span class="line">在《在武昌、深圳、珠海、上海等地的谈话要点》中，他指出：</span><br><span class="line">\begin&#123;quotation&#125;</span><br><span class="line">抓住时机，发展自己，关键是发展经济。现在，周边一些国家和地区经济发展比我们快，如果我们不发展或发展得太慢，老百姓一比较就有问题了。所以，能发展就不要阻挡，有条件的地方要尽可能搞快点，只要是讲效益，讲质量，搞外向型经济，就没有什么可以担心的。低速度就等于停步，甚至等于后退。要抓住机会，现在就是好机会。我就担心丧失机会。不抓呀，看到的机会就丢掉了，时间一晃就过去了。</span><br><span class="line"></span><br><span class="line">我国的经济发展，总要力争隔几年上一个台阶。当然，不是鼓励不切实际的高速度，还是要扎扎实实，讲求效益，稳步协调地发展。比如广东，要上几个台阶，力争用二十年的时间赶上亚洲“四小龙”。比如江苏等发展比较好的地区，就应该比全国平均速度快。又比如上海，目前完全有条件搞得更快一点。上海在人才、技术和管理方面都有明显的优势，辐射面宽。回过头看，我的一个大失误就是搞四个经济特区时没有加上上海。要不然，现在长江三角洲，整个长江流域，乃至全国改革开放的局面，都会不一样。</span><br><span class="line">\end&#123;quotation&#125;</span><br><span class="line">文章写得极为接地气，令人想吟诗一首：</span><br><span class="line">\begin&#123;flushleft&#125;</span><br><span class="line">\begin&#123;verse&#125;</span><br><span class="line">力微任重久神疲，再竭衰庸定不支。\\</span><br><span class="line">苟利国家生死以，岂因祸福避趋之？\\</span><br><span class="line">谪居正是君恩厚，养拙刚于戍卒宜。\\</span><br><span class="line">戏与山妻谈故事，试吟断送老头皮。</span><br><span class="line">\end&#123;verse&#125;</span><br><span class="line">\end&#123;flushleft&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="逐字输出"><a href="#逐字输出" class="headerlink" title="逐字输出"></a>逐字输出</h2><p>有些时候（比如编程教程），我们需要将一些字符原封不动地输出，让LaTeX无视其中的所有命令。这个时候<code>verbatim</code>环境就非常有用了。在<code>\begin{verbatim}</code>和<code>\end{verbatim}</code>之间的文本将直接输出，包括所有的换行符和空格，就像在打字机上键入一样，不会执行任何LaTeX命令。当然，如果只是需要在一个段落中使用这个环境，也有相应的简化版命令<code>\verb+·+</code>来完成，下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在段落中，该功能可由\verb|\verb+text+|完成。+仅是分隔符的一个例子。除了\*或空格，可以使用任意一个字符。</span><br><span class="line">\begin&#123;verbatim&#125;</span><br><span class="line">    \begin&#123;document&#125;</span><br><span class="line">        \Hello, verbatim!</span><br><span class="line">    \end&#123;document&#125;</span><br><span class="line">\end&#123;verbatim&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="浮动体"><a href="#浮动体" class="headerlink" title="浮动体"></a>浮动体</h2><p>在一篇文章中，插图和表格通常需要占据大块空间，同时也不可被分割；所以在文字处理软件中我们经常需要调整他们的位置。figure 和 table 环境可以自动完成这样的任务；这种自动调整位置的环境称作浮动体(float)。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>在LaTeX中，<code>tabular</code>环境能够用来绘制最基础的表格。我们可以用这样的命令来进入<code>tabular</code>环境：<code>\begin{tabular}{table spec}</code>。其中第二个花括号里面的<code>table spec</code>定义了表格的样式。</p>
+<p>在这个环境中：<code>\hline</code>命令表示横线，<code>|</code>表示竖线；用<code>&amp;</code>来分列，用<code>\\</code>来换行；每列可以分别采用居左、居中、居右等横向对齐方式，分别在<code>{table spec}</code>里面用l、c、r来表示。</p>
+<p>下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;tabular&#125;&#123;|l|c|r|&#125;</span><br><span class="line">\hline</span><br><span class="line">操作系统 &amp; 发行版&amp; 编辑器\\</span><br><span class="line">\hline</span><br><span class="line">Windows &amp; TeX Live &amp; Texstudio \\</span><br><span class="line">Unix/Linux &amp; teTeX &amp; Kile \\</span><br><span class="line">Mac OS &amp; MacTeX &amp; TeXShop \\</span><br><span class="line">\hline</span><br><span class="line">\end&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<p>而进阶的<code>table</code>环境则支持增加标题、标签，并且是一个浮动体，在排版上更加智能。</p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>在LaTeX中插入图片建议使用<code>graphicx</code>宏包。插入图片的基础命令是：<code>\includegraphics[key=value, ...]{filename}</code>。在插入图片时，有几种可选参数可以调节，分别是：</p>
+<ul>
+<li>width：把图形缩放到指定的宽度</li>
+<li>height：把图形缩放到指定的高度</li>
+<li>angle：逆时针旋转图形</li>
+<li>scale：缩放图形</li>
+</ul>
+<p>下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;</span><br><span class="line">    \centering</span><br><span class="line">        \includegraphics[angle=45, width=0.7\textwidth]&#123;sign.eps&#125;</span><br><span class="line">    \caption&#123;Signature&#125;</span><br><span class="line">    \label&#123;fig:sign&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h1 id="重磅预告"><a href="#重磅预告" class="headerlink" title="重磅预告"></a>重磅预告</h1><p>下一期教大家如何快速简便地在LaTeX里画结构式和反应式，请大家敬请期待！！！</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/29/latexmath/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jian-Qing Qi">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alexander-Qi's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/06/29/latexmath/" class="post-title-link" itemprop="url">LaTeX中输入数学公式</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-06-29 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-29T00:00:00+08:00">2019-06-29</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2019-08-07 15:09:04" itemprop="dateModified" datetime="2019-08-07T15:09:04+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>本文的主要内容有：</p>
+<ul>
+<li>如何输入行内公式</li>
+<li>如何输入行间公式、多行公式</li>
+<li>常用的数学符号输入方法</li>
+</ul>
+<p>相信观察力敏锐的同学一定已经注意到在上一次的推送里的这段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[a4paper,12pt,landscape,twocolumn]&#123;book&#125;</span><br><span class="line">\usepackage&#123;amsmath&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    $\frac&#123;x&#125;&#123;y&#125;$</span><br><span class="line">    \[</span><br><span class="line">        \iiint\limits_&#123;\Omega_&#123;r&#125;&#125; f(x,y,z) dxdydz</span><br><span class="line">    \]</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码里面有着意义不明的<code>$</code>和<code>\[</code>、<code>\]</code>符号。如果你尝试过将这些符号删除的话，TeXstudio会报错，并告诉你这些内容“不在数学环境里”。那么，什么是数学环境呢？</p>
+<h1 id="数学环境概述"><a href="#数学环境概述" class="headerlink" title="数学环境概述"></a>数学环境概述</h1><p>LaTeX有一种数学环境<del>废话</del>，在这种环境之下，输入的字母会被当做数学符号，用专用的数学字体（通常来说就是斜体，不过确实并不全是）显示出来。上面所说的，用<code>$</code>、<code>\[</code>和<code>\]</code>包裹起来的就会被LaTeX当成数学环境。在这种环境之内，LaTeX支持输入根号、幂、求和号、连乘号、积分号等多种多样的数学符号。</p>
+<p>首先，为了取得输入数学公式时的最佳体验，建议大家在导言区加载<code>amsmath</code>宏包。正如上一篇推送所说，只要在导言区输入<code>\usepackage{amsmath}</code>就可以了。</p>
+<h2 id="行内公式"><a href="#行内公式" class="headerlink" title="行内公式"></a>行内公式</h2><p>LaTeX进入行内公式最为简单的方式是输入用一个<code>$</code>包裹的表达式。其实，用<code>\(</code>和<code>\)</code>包裹也会有一样的效果。但其实它们两个都是一种“环境”的简便表达。这个环境就是<code>math</code>。总的而言，下面这三个表达方式是等价的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$\sin&#123;x&#125;$</span><br><span class="line">\( \cos&#123;y&#125; \)</span><br><span class="line">\begin&#123;math&#125;</span><br><span class="line">\tan&#123;z&#125;</span><br><span class="line">\end&#123;math&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面的代码的输出效果（这只是代码片段，不是完整<code>.tex</code>文档的内容，代入自己的文档时记得使用<code>amsmath</code>宏包）。</p>
+<h2 id="行间公式"><a href="#行间公式" class="headerlink" title="行间公式"></a>行间公式</h2><p>行间公式往往用来展示比较长，或者对于文章而言比较重要的公式。</p>
+<h2 id="单行公式"><a href="#单行公式" class="headerlink" title="单行公式"></a>单行公式</h2><p>最为基础的行间公式的输出方式有三种，分别是用<code>$$</code>、<code>\[</code>和<code>\]</code>以及<code>displaymath</code>环境。</p>
+<p>这是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$$\lim\limits_&#123;r\rightarrow&#123;0^&#123;+&#125;&#125;&#125;&#123;\frac&#123;1&#125;&#123;r^&#123;3&#125;&#125; \iiint\limits_&#123;\Omega_&#123;r&#125;&#125; f(x,y,z) dxdydz = \frac&#123;4&#125;&#123;3&#125; \pi f(P)&#125;$$</span><br><span class="line"></span><br><span class="line">\[</span><br><span class="line">    \forall \epsilon &gt; 0, \exists \delta &gt; 0, \forall Q \in \Omega_&#123;\delta&#125;, \vert&#123;f(Q)-f(P)&#125;\vert&lt;\epsilon</span><br><span class="line">\]</span><br><span class="line"></span><br><span class="line">\begin&#123;displaymath&#125;</span><br><span class="line">    \frac&#123;4&#125;&#123;3&#125;\pi \delta^&#123;3&#125; (f(P)-\epsilon) &lt; \iiint\limits_&#123;\Omega_&#123;\delta&#125;&#125; f(x,y,z)dxdydz &lt; \frac&#123;4&#125;&#123;3&#125;\pi \delta^&#123;3&#125;(f(P)+\epsilon)</span><br><span class="line">\end&#123;displaymath&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面的例子的输出效果。</p>
+<p>其中，第一种方式不推荐使用。这是plain TeX时代就存在的命令，使用的是固定行距，不利于文章的后期调整。一般而言使用较多的是第二种方法，即用<code>\[</code>和<code>\]</code>来进入行间的数学模式。</p>
+<p>当然，除了这种最为基础的行间公式，也存在较为高级的环境。</p>
+<p>我们可以使用<code>amsmath</code>提供的<code>equation</code>环境来达到为自己的公式编号的目的。这样在交叉引用以及后期编辑的时候都有更大的优势。</p>
+<h2 id="多行公式"><a href="#多行公式" class="headerlink" title="多行公式"></a>多行公式</h2><p>有些时候我们需要输入的公式特别长，导致我们不得不手动为他们换行；或者某几个公式是一组，我们需要将他们放在一起；还有些时候我们需要输入分段函数，给公式加上一个在左边的大括号。这些需求都可以通过<code>amsmath</code>宏包提供的丰富环境达成。（后文中的大量环境都需要<code>amsmath</code>宏包，大家自己尝试时一定不要忘记使用！）</p>
+<p>对于那些特别长的但是不需要对齐的公式，我们可以使用<code>multiline</code>环境，同时需要注意，这个环境也是默认有编号的。而对于那些需要对齐的公式，我们就需要使用<code>aligned</code>次环境来达到目的。使用<code>alinged</code>次环境的时候需要先进入化学环境；另外，在<code>aligned</code>环境中有着一个特殊的符号<code>&amp;</code>，这个符号是用于对齐的，LaTeX会自动地以<code>&amp;</code>为标准对齐两边的内容。在<code>multiline</code>和<code>aligned</code>这两个环境中，符号<code>\\</code>是用来换行的。以下是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;multline&#125;</span><br><span class="line">x = a+b+c+&#123;&#125; \\</span><br><span class="line">d+e+f</span><br><span class="line">\end&#123;multline&#125;</span><br><span class="line"></span><br><span class="line">\[\begin&#123;aligned&#125;</span><br><span class="line">x =&#123;&#125;&amp; a+b+c+&#123;&#125; \\</span><br><span class="line">&amp;d+e+f</span><br><span class="line">\end&#123;aligned&#125;\]</span><br></pre></td></tr></table></figure>
+
+<p>这是上面的例子的输出效果。</p>
+<p>有些时候我们需要将几个公式组成一组。这个时候我们可以使用两种环境，分别是<code>gather</code>和<code>align</code>。其中，<code>gather</code>环境是不对齐的，而<code>align</code>环境是对齐的。在默认条件下它们都带有编号。如果不需要编号可在一行的最后加入<code>\notag</code>命令，也可以使用<code>tag{·}</code>来自定义改行的公式的编号。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;gather&#125;</span><br><span class="line">    U = Q + W \tag&#123;1.1&#125; \\</span><br><span class="line">    pV = nRT</span><br><span class="line">\end&#123;gather&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;align&#125;</span><br><span class="line">    U &amp;= Q + W \notag \\ </span><br><span class="line">    (p + \frac&#123;a&#125;&#123;&#123;V_m&#125;^2&#125;)(V_m + b) &amp;= RT</span><br><span class="line">\end&#123;align&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面那个例子的输出效果。</p>
+<p>如果大家需要输入一个分段的函数，则需要使用一个叫做<code>cases</code>的次环境，使用它时也要先进入数学环境。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\[ f(x)= </span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">    -x + 1 , \quad x \leq 1 \\</span><br><span class="line">    x - 1 , \quad x &gt; 1</span><br><span class="line">\end&#123;cases&#125; </span><br><span class="line">\]</span><br></pre></td></tr></table></figure>
+
+<p>这是上面这个例子的输出效果。</p>
+<p>以上就是一些比较常用的基础的数学环境，可以用于输入一些不太复杂的行内公式和行间公式。接下来我们来简要地介绍以下大家常用的数学符号的输入方法。</p>
+<h1 id="数学符号的输入"><a href="#数学符号的输入" class="headerlink" title="数学符号的输入"></a>数学符号的输入</h1><p>首先，为了取得输入数学公式时的最佳体验，建议大家在导言区加载<code>amsmath</code>宏包。正如上一篇推送所说，只要在导言区输入<code>\usepackage{amsmath}</code>就可以了。</p>
+<h2 id="分数"><a href="#分数" class="headerlink" title="分数"></a>分数</h2><p>输入分数的基础命令是<code>\frac{·}{·}</code>，其中前面的花括号内是分子，后面的花括号内是分母。在行间公式和行内公式中，<code>\frac</code>命令的输出效果是有不同的。如果想要客制化输出效果，可以用<code>\dfrac</code>命令强制输出行间公式下的分式样式；反之，可以用<code>\tfrac</code>命令强制输出行内公式的分式样式。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$n=\frac&#123;p&#125;&#123;kT&#125;$</span><br><span class="line">\[</span><br><span class="line">    \lambda = \frac&#123;kT&#125;&#123;\sqrt&#123;2&#125; \pi d^2 p&#125;</span><br><span class="line">\]</span><br><span class="line">$n=\dfrac&#123;p&#125;&#123;kT&#125;$</span><br><span class="line">\[</span><br><span class="line">    \lambda = \tfrac&#123;kT&#125;&#123;\sqrt&#123;2&#125; \pi d^2 p&#125;</span><br><span class="line">\]</span><br></pre></td></tr></table></figure>
+
+<p>这是上面这个例子的输出效果。</p>
+<h2 id="根号和上下标"><a href="#根号和上下标" class="headerlink" title="根号和上下标"></a>根号和上下标</h2><p>上标是通过符号<code>^</code>来生成的；下标是用符号<code>_</code>生成的。需要注意的是LaTeX只会默认将上下标符号后的第一个字符当作是上下标的内容，需要在上下标内输入很多内容的时候要记得用花括号将内容包裹起来。</p>
+<p>根号是用<code>\sqrt{·}</code>来生成的，需要输入n次根式的时候，需要再输入一个用中括号包裹的参数，像这样<code>\sqrt[n]{·}</code>。方根符号的大小是由LaTeX自动调整的，也可以用<code>\surd</code>命令仅仅给出符号。</p>
+<p>下面是一个比较综合的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\[</span><br><span class="line">    \sqrt[n]&#123;&#123;a_&#123;ij&#125;&#125;^&#123;e\surd&#123;2&#125;&#125;&#125;    </span><br><span class="line">\]</span><br></pre></td></tr></table></figure>
+
+<p>这是上面这个例子的输出效果。</p>
+<h2 id="最常用的运算符"><a href="#最常用的运算符" class="headerlink" title="最常用的运算符"></a>最常用的运算符</h2><p>比较常用的运算符有极限<code>\lim</code>；求和<code>\sum_{·}^{·}</code>；连乘<code>\prod_{·}^{·}</code>；以及各类积分<code>\int_{·}^{·}</code>、<code>\iint</code>、<code>\iiint</code>。它们的上下标在行间公式内默认是写在右侧以适应行高的，我们可以用<code>\limits</code>来强制不压缩上下标；反之可以用<code>\nolimits</code>来压缩上下标。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$\lim_&#123;x \to 0&#125; &#123;\sin x&#125; = 0$</span><br><span class="line">\[</span><br><span class="line">    \sum\nolimits_&#123;i=1&#125;^n i  \quad  \prod_&#123;i=1&#125;^n</span><br><span class="line">\]</span><br><span class="line">$\lim\limits_&#123;r \to &#123;0^&#123;+&#125;&#125;&#125;&#123;\frac&#123;1&#125;&#123;r^&#123;3&#125;&#125; \iiint_&#123;\Omega_&#123;r&#125;&#125; f(x,y,z) dxdydz = \frac&#123;4&#125;&#123;3&#125; \pi f(P)&#125;$</span><br></pre></td></tr></table></figure>
+
+<p>这是上面这个例子的输出效果。</p>
+<h2 id="在表达式上下方画线和括号"><a href="#在表达式上下方画线和括号" class="headerlink" title="在表达式上下方画线和括号"></a>在表达式上下方画线和括号</h2><p>我们可以用命令<code>\overline</code>和<code>\underline</code>在表达式的上、下方画出水平线；可以用<code>\vec</code>命令来画向量；可以用<code>\overbrace{·}^{·}</code>和<code>\underbrace{·}_{·}</code>在表达式的上、下方给出一水平的大括号。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\[</span><br><span class="line">    \overline&#123;\alpha + \beta&#125;=\underbrace&#123;\vec&#123;a&#125;+b+...+z&#125;_&#123;26&#125;</span><br><span class="line">\]</span><br></pre></td></tr></table></figure>
+
+<p>这是上面这个例子的输出效果。</p>
+<h2 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h2><p>以下的表格是一份比较完整的关于数学模式中常用的数学符号的总结。</p>
+<h3 id="重音符"><a href="#重音符" class="headerlink" title="重音符"></a>重音符</h3><h3 id="小写的希腊字母"><a href="#小写的希腊字母" class="headerlink" title="小写的希腊字母"></a>小写的希腊字母</h3><h3 id="大写的希腊字母"><a href="#大写的希腊字母" class="headerlink" title="大写的希腊字母"></a>大写的希腊字母</h3><h3 id="二元关系符号"><a href="#二元关系符号" class="headerlink" title="二元关系符号"></a>二元关系符号</h3><h3 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符"></a>二元运算符</h3><h3 id="大运算符"><a href="#大运算符" class="headerlink" title="大运算符"></a>大运算符</h3><h3 id="箭头"><a href="#箭头" class="headerlink" title="箭头"></a>箭头</h3><h3 id="定界符"><a href="#定界符" class="headerlink" title="定界符"></a>定界符</h3><h3 id="其他数学符号"><a href="#其他数学符号" class="headerlink" title="其他数学符号"></a>其他数学符号</h3><h3 id="非数学符号"><a href="#非数学符号" class="headerlink" title="非数学符号"></a>非数学符号</h3><h3 id="AMS符号"><a href="#AMS符号" class="headerlink" title="AMS符号"></a>AMS符号</h3><p>以下的符号使用需要事先安装AMS数学字库，同时在导言区加载宏包<code>amssymb</code>。</p>
+<h4 id="定界符-1"><a href="#定界符-1" class="headerlink" title="定界符"></a>定界符</h4><h4 id="希伯来字母"><a href="#希伯来字母" class="headerlink" title="希伯来字母"></a>希伯来字母</h4><h4 id="二元关系符"><a href="#二元关系符" class="headerlink" title="二元关系符"></a>二元关系符</h4><h4 id="箭头-1"><a href="#箭头-1" class="headerlink" title="箭头"></a>箭头</h4><h4 id="二元否定关系符和箭头"><a href="#二元否定关系符和箭头" class="headerlink" title="二元否定关系符和箭头"></a>二元否定关系符和箭头</h4><h4 id="二元运算符-1"><a href="#二元运算符-1" class="headerlink" title="二元运算符"></a>二元运算符</h4><h4 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h4><h4 id="数学字体说明"><a href="#数学字体说明" class="headerlink" title="数学字体说明"></a>数学字体说明</h4><h1 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h1><p>下一篇推送是关于文档组织结构和各类常用环境的，请大家敬请期待！</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
+  </nav>
+
 
           </div>
+          
+
         </div>
-      </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
-  
-  </main>
 
-<footer class="mt-5">
-  <div class="text-center py-3">
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
-    <br>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avator.png"
+      alt="Jian-Qing Qi">
+  <p class="site-author-name" itemprop="name">Jian-Qing Qi</p>
+  <div class="site-description motion-element" itemprop="description">Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">Artikel</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">Kategorien</span>
+        
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:alexanderqi126@outlook.com" title="E-Mail &rarr; mailto:alexanderqi126@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
     
   </div>
-</footer>
 
-  <!-- SCRIPTS -->
-  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
-  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
-  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
-  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
-  <script src="/js/main.js"></script>
-  
-  
-    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
-    <script>
-      $(document).ready(function(){
-        $('pre').addClass('prettyprint linenums');
-        prettyPrint();
-      })
-    </script>
-  
-  
-    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
-    <script>
-        var typed = new Typed('#subtitle', {
-          strings: [
-            '  ',
-            "LaTeX, Gaussian and More...&nbsp;",
-        ],
-        cursorChar: "_",
-        typeSpeed: 70,
-        startDelay: 300, //开始之前延迟300毫秒
-        loop: false,
-        });
-        $(".typed-cursor").addClass("h2");
-    </script>
-  
-  
-    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
-    <script>
-      anchors.options = {
-        placement: "right",
-        visible: "false",
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jian-Qing Qi</span>
+</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+
         
-      };
-      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
-    </script>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
   
 </body>
 </html>
