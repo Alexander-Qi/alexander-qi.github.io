@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/sign.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+    <meta name="author" content="Jian-Qing Qi">
+    <meta name="keywords" content="LaTeX, Gaussian">
+    <title>LaTeX中自定义命令 # Alexander-Qi&#39;s Blog</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Alexander-Qi&#39;s Blog</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+            <br>
+            
+            <p>星期六, 八月 3日 2019, 12:00 凌晨</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <link rel="stylesheet" href="/css/post.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-md-8 m-auto board-cntr">
+            <div class="py-5 z-depth-3 board">
+                <div class="post-content markdown-body m-auto">
+                    <p>本文的主要内容是关于如何自定义一个自己的命令的。</p>
+<p>在编写LaTeX文档的过程中，有时你会需要经常输入一个不太常见的专有名词，或者需要频繁实现一个比较特殊的效果。这个时候我们可以在一个LaTeX文档中自定义自己的命令！</p>
+<h1 id="最简单的自定义命令"><a href="#最简单的自定义命令" class="headerlink" title="最简单的自定义命令"></a>最简单的自定义命令</h1><p>如果你只是需要输入一段特定样式的特定文字，你可以在导言区这么做：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过<code>\newcommand{·}{·}</code>命令，我们成功地自定义了一个名叫<code>\MyC</code>的新命令。当你在正文区输入这个命令的时候，你就相当于在这个位置输入了<code>\textit{Customize your own command!}</code>。让我们来看看一个实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    来看看新的命令&#123;\MyC&#125;吧！</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="复杂一些的自定义命令"><a href="#复杂一些的自定义命令" class="headerlink" title="复杂一些的自定义命令"></a>复杂一些的自定义命令</h1><p>当然，如果自定义命令只能做到这种程度那也太鸡肋了。我们可以通过添加参数来让我们的新命令可以接受信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\twoword&#125;[2]&#123;\textsc&#123;#1&#125;, \textit&#123;#2&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中，被中括号包裹的数字是新命令能接受的参数数量，范围1-9；最后的花括号内的<code>#1</code>和<code>#2</code>分别是输入的第一个参数和第二个参数。</p>
+<p>来看看实例吧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br><span class="line">\newcommand&#123;\twoword&#125;[2]&#123;\Large&#123;\textsc&#123;#1&#125;&#125;, \small&#123;\textit&#123;#2&#125;&#125;&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    来看看新的命令&#123;\MyC&#125;吧！</span><br><span class="line"></span><br><span class="line">    再来看看这个命令：\twoword&#123;Large&#125;&#123;small&#125;。</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="更复杂的自定义命令"><a href="#更复杂的自定义命令" class="headerlink" title="更复杂的自定义命令"></a>更复杂的自定义命令</h1><p>我们也可以给我们的新命令加上被方括号包裹的参数来进一步调控输出，增强新命令的适用范围。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\adv&#125;[1][\bfseries]&#123;&#123;#1&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>大家可以发现，在中间多了一个方括号，这个方括号内就是我们的新命令的默认参数，我们可以通过手动更改来达到不同的排版效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\newcommand&#123;\MyC&#125;&#123;\textit&#123;Customize your own command!&#125;&#125;</span><br><span class="line">\newcommand&#123;\twoword&#125;[2]&#123;\Large&#123;\textsc&#123;#1&#125;&#125;, \small&#123;\textit&#123;#2&#125;&#125;&#125;</span><br><span class="line">\newcommand&#123;\adv&#125;[2][\bfseries]&#123;&#123;#1#2&#125;&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    来看看新的命令&#123;\MyC&#125;吧！</span><br><span class="line"></span><br><span class="line">    再来看看这个命令：\twoword&#123;Large&#125;&#123;small&#125;。</span><br><span class="line"></span><br><span class="line">    新命令的默认情况是这样的\adv&#123;加粗&#125;，</span><br><span class="line">    但是也可以加参数来变成\adv[\itshape]&#123;这样&#125;。</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>必须注意这样使用时方括号内的参数也计算入总参数数量。</p>
+
+                    <hr>
+                    <div>
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <br>
+                    
+                        <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "LaTeX中自定义命令&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
+</body>
+</html>

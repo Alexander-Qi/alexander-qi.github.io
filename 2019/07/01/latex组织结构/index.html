@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/sign.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+    <meta name="author" content="Jian-Qing Qi">
+    <meta name="keywords" content="LaTeX, Gaussian">
+    <title>LaTeX文档组织结构 # Alexander-Qi&#39;s Blog</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Alexander-Qi&#39;s Blog</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+            <br>
+            
+            <p>星期一, 七月 1日 2019, 12:00 凌晨</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <link rel="stylesheet" href="/css/post.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-md-8 m-auto board-cntr">
+            <div class="py-5 z-depth-3 board">
+                <div class="post-content markdown-body m-auto">
+                    <p>本文的主要内容有：</p>
+<ul>
+<li>LaTeX的基本文章结构</li>
+<li>生成目录的方法</li>
+<li>交叉引用的方法</li>
+<li>插入列表、表格、图片的方法</li>
+</ul>
+<h1 id="组织结构"><a href="#组织结构" class="headerlink" title="组织结构"></a>组织结构</h1><p>LaTeX提供了许多让文章更加有序的方法，比如支持标记文章的章节、自动生成目录等。接下来将逐一介绍这些方法。</p>
+<h2 id="章、节和段落"><a href="#章、节和段落" class="headerlink" title="章、节和段落"></a>章、节和段落</h2><p>在我们比较常用的<code>article</code>类里，LaTeX支持通过以下的命令来标记文章的组织结构：<code>\section{·}</code>、<code>\subsection{·}</code>、<code>\subsubsection{·}</code>、<code>\paragraph{·}</code>、<code>\subparagraph{·}</code>。他们的相对大小从左到右依次减小。</p>
+<p>在不太多用的<code>book</code>中，还有<code>\chapter{·}</code>和<code>\part{·}</code>。</p>
+<p>下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\section&#123;一级标题&#125;</span><br><span class="line">    \subsection&#123;二级标题&#125;</span><br><span class="line">        \subsubsection&#123;三级标题&#125;</span><br><span class="line">            \paragraph&#123;段落标题&#125;段落内容</span><br><span class="line">                \subparagraph&#123;子段落标题&#125;子段落内容</span><br></pre></td></tr></table></figure>
+
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>在文中引入了章、节的标记后，我们就可以通过在正文区中使用<code>\tableofcontents</code>来让LaTeX自动生成文章的目录。</p>
+<p>下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">    \title&#123;从零开始的LaTeX教程（四）：组织结构&#125;</span><br><span class="line">    \author&#123;墘青&#125;</span><br><span class="line">    \date&#123;\today&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \maketitle</span><br><span class="line">    \tableofcontents</span><br><span class="line"></span><br><span class="line">    \section&#123;学化学的理由&#125;</span><br><span class="line">        化学是中心学科。</span><br><span class="line">        \subsection&#123;学化学哪家强&#125;</span><br><span class="line">            来五道口找清华化学系。</span><br><span class="line">            \subsubsection&#123;清华化学系有多强&#125;</span><br><span class="line">                \paragraph&#123;US News排名&#125;</span><br><span class="line">                    全球第十，远超隔壁。</span><br><span class="line">                        \subparagraph&#123;清华化学系的其他优势&#125;</span><br><span class="line">                            师资雄厚。</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="交叉引用"><a href="#交叉引用" class="headerlink" title="交叉引用"></a>交叉引用</h2><p>在编写文章的时候总是会遇到类似“如下图所示”的表达需要。在LaTeX中你可以更加简单并且精确地做到这一点。我们可以用<code>\label{marker}</code>，<code>\ref{marker}</code>和<code>\pageref{marker}</code>来对于我们的图表、公式、段落来进行交叉引用。其中被花括号包裹的<code>marker</code>是我们自己为某个对象选择的代号，在交叉引用的时候请务必确保输入了正确的代号。</p>
+<h1 id="环境和浮动体"><a href="#环境和浮动体" class="headerlink" title="环境和浮动体"></a>环境和浮动体</h1><p>环境是LaTeX为了达到特殊的排版目的而设计的一个内容载体。我们在LaTeX中使用这样的语句来达到自己的目的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;environment&#125;</span><br><span class="line">    相应的内容，形式多种多样。 </span><br><span class="line">\end&#123;environment&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>我们有三种列表环境，分别是生成无序号列表的<code>itemize</code>，生成有序号列表的<code>enumerate</code>和能添加描述的<code>description</code>环境。这些列表是可以嵌套的（虽然有时候效果不好），就像下面这个例子所展示的一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">    \item 第一层是有序号的列表。</span><br><span class="line">        \begin&#123;itemize&#125;</span><br><span class="line">          \item 第二层是无序号列表，</span><br><span class="line">          \item[记住] 用方括号括起来的内容可以是“小标题”</span><br><span class="line">        \end&#123;itemize&#125;</span><br><span class="line">    \item 你必须记住：</span><br><span class="line">        \begin&#123;description&#125;</span><br><span class="line">            \item[列表不会] 让所有事情都看起来很漂亮有序</span><br><span class="line">            \item[但是它能够] 让一些东西以非常美丽的方式展现出来</span><br><span class="line">        \end&#123;description&#125;</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><p>LaTeX中有三种基础的用于对齐的环境，分别是<code>flushleft</code>、<code>flushright</code>和<code>center</code>，它们使用起来和Microsoft Word中的对齐没有太大差别，较为简单直观。下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;flushleft&#125;</span><br><span class="line">    这行字是向左对齐的。你可以手动换行，像这样\\</span><br><span class="line">    或者输入两个换行符。像下面那样。</span><br><span class="line">\end&#123;flushleft&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;flushright&#125;</span><br><span class="line">    这行字是向右对齐的。</span><br><span class="line"></span><br><span class="line">    \LaTeX\ 会自动调整字符的位置，文字太长会在合适的地方换行。</span><br><span class="line">\end&#123;flushright&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;center&#125;</span><br><span class="line">    吾校庄严，巍然中央。</span><br><span class="line">\end&#123;center&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在LaTeX中，有几个被事先设定好的环境简化作者引用内容时的排版工作量。在引用较短的句子的时候，我们可以使用<code>quote</code>环境；引用较长的多个段落的时候，我们可以用<code>quotation</code>环境，这个环境会对段落进行缩进；引用诗歌的时候，我们可以用<code>verse</code>环境。下面这个是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">总工程师曾说：</span><br><span class="line">\begin&#123;quote&#125;</span><br><span class="line">    不管黑猫白猫，能捉老鼠的就是好猫。</span><br><span class="line">\end&#123;quote&#125;</span><br><span class="line">在《在武昌、深圳、珠海、上海等地的谈话要点》中，他指出：</span><br><span class="line">\begin&#123;quotation&#125;</span><br><span class="line">抓住时机，发展自己，关键是发展经济。现在，周边一些国家和地区经济发展比我们快，如果我们不发展或发展得太慢，老百姓一比较就有问题了。所以，能发展就不要阻挡，有条件的地方要尽可能搞快点，只要是讲效益，讲质量，搞外向型经济，就没有什么可以担心的。低速度就等于停步，甚至等于后退。要抓住机会，现在就是好机会。我就担心丧失机会。不抓呀，看到的机会就丢掉了，时间一晃就过去了。</span><br><span class="line"></span><br><span class="line">我国的经济发展，总要力争隔几年上一个台阶。当然，不是鼓励不切实际的高速度，还是要扎扎实实，讲求效益，稳步协调地发展。比如广东，要上几个台阶，力争用二十年的时间赶上亚洲“四小龙”。比如江苏等发展比较好的地区，就应该比全国平均速度快。又比如上海，目前完全有条件搞得更快一点。上海在人才、技术和管理方面都有明显的优势，辐射面宽。回过头看，我的一个大失误就是搞四个经济特区时没有加上上海。要不然，现在长江三角洲，整个长江流域，乃至全国改革开放的局面，都会不一样。</span><br><span class="line">\end&#123;quotation&#125;</span><br><span class="line">文章写得极为接地气，令人想吟诗一首：</span><br><span class="line">\begin&#123;flushleft&#125;</span><br><span class="line">\begin&#123;verse&#125;</span><br><span class="line">力微任重久神疲，再竭衰庸定不支。\\</span><br><span class="line">苟利国家生死以，岂因祸福避趋之？\\</span><br><span class="line">谪居正是君恩厚，养拙刚于戍卒宜。\\</span><br><span class="line">戏与山妻谈故事，试吟断送老头皮。</span><br><span class="line">\end&#123;verse&#125;</span><br><span class="line">\end&#123;flushleft&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="逐字输出"><a href="#逐字输出" class="headerlink" title="逐字输出"></a>逐字输出</h2><p>有些时候（比如编程教程），我们需要将一些字符原封不动地输出，让LaTeX无视其中的所有命令。这个时候<code>verbatim</code>环境就非常有用了。在<code>\begin{verbatim}</code>和<code>\end{verbatim}</code>之间的文本将直接输出，包括所有的换行符和空格，就像在打字机上键入一样，不会执行任何LaTeX命令。当然，如果只是需要在一个段落中使用这个环境，也有相应的简化版命令<code>\verb+·+</code>来完成，下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在段落中，该功能可由\verb|\verb+text+|完成。+仅是分隔符的一个例子。除了\*或空格，可以使用任意一个字符。</span><br><span class="line">\begin&#123;verbatim&#125;</span><br><span class="line">    \begin&#123;document&#125;</span><br><span class="line">        \Hello, verbatim!</span><br><span class="line">    \end&#123;document&#125;</span><br><span class="line">\end&#123;verbatim&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h2 id="浮动体"><a href="#浮动体" class="headerlink" title="浮动体"></a>浮动体</h2><p>在一篇文章中，插图和表格通常需要占据大块空间，同时也不可被分割；所以在文字处理软件中我们经常需要调整他们的位置。figure 和 table 环境可以自动完成这样的任务；这种自动调整位置的环境称作浮动体(float)。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>在LaTeX中，<code>tabular</code>环境能够用来绘制最基础的表格。我们可以用这样的命令来进入<code>tabular</code>环境：<code>\begin{tabular}{table spec}</code>。其中第二个花括号里面的<code>table spec</code>定义了表格的样式。</p>
+<p>在这个环境中：<code>\hline</code>命令表示横线，<code>|</code>表示竖线；用<code>&amp;</code>来分列，用<code>\\</code>来换行；每列可以分别采用居左、居中、居右等横向对齐方式，分别在<code>{table spec}</code>里面用l、c、r来表示。</p>
+<p>下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;tabular&#125;&#123;|l|c|r|&#125;</span><br><span class="line">\hline</span><br><span class="line">操作系统 &amp; 发行版&amp; 编辑器\\</span><br><span class="line">\hline</span><br><span class="line">Windows &amp; TeX Live &amp; Texstudio \\</span><br><span class="line">Unix/Linux &amp; teTeX &amp; Kile \\</span><br><span class="line">Mac OS &amp; MacTeX &amp; TeXShop \\</span><br><span class="line">\hline</span><br><span class="line">\end&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<p>而进阶的<code>table</code>环境则支持增加标题、标签，并且是一个浮动体，在排版上更加智能。</p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>在LaTeX中插入图片建议使用<code>graphicx</code>宏包。插入图片的基础命令是：<code>\includegraphics[key=value, ...]{filename}</code>。在插入图片时，有几种可选参数可以调节，分别是：</p>
+<ul>
+<li>width：把图形缩放到指定的宽度</li>
+<li>height：把图形缩放到指定的高度</li>
+<li>angle：逆时针旋转图形</li>
+<li>scale：缩放图形</li>
+</ul>
+<p>下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;</span><br><span class="line">    \centering</span><br><span class="line">        \includegraphics[angle=45, width=0.7\textwidth]&#123;sign.eps&#125;</span><br><span class="line">    \caption&#123;Signature&#125;</span><br><span class="line">    \label&#123;fig:sign&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是上面例子的输出结果：</p>
+<h1 id="重磅预告"><a href="#重磅预告" class="headerlink" title="重磅预告"></a>重磅预告</h1><p>下一期教大家如何快速简便地在LaTeX里画结构式和反应式，请大家敬请期待！！！</p>
+
+                    <hr>
+                    <div>
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <br>
+                    
+                        <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "LaTeX文档组织结构&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
+</body>
+</html>

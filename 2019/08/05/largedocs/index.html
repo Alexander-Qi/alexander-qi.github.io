@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/sign.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+    <meta name="author" content="Jian-Qing Qi">
+    <meta name="keywords" content="LaTeX, Gaussian">
+    <title>LaTeX中长文档的处理 # Alexander-Qi&#39;s Blog</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Alexander-Qi&#39;s Blog</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+            <br>
+            
+            <p>星期一, 八月 5日 2019, 12:00 凌晨</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <link rel="stylesheet" href="/css/post.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-md-block col-md-2"></div>
+        <div class="col-md-8 m-auto board-cntr">
+            <div class="py-5 z-depth-3 board">
+                <div class="post-content markdown-body m-auto">
+                    <p>当你需要排版一个非常大的文档，或者涉及到多人协同的时候，我们就希望能将一个庞大的<code>.tex</code>文件分成很多部分以方便我们的管理。那么该如何做到这一点呢？</p>
+<h1 id="最简单的分开输出的方式"><a href="#最简单的分开输出的方式" class="headerlink" title="最简单的分开输出的方式"></a>最简单的分开输出的方式</h1><p>我们可以使用<code>\input{filename.tex}</code>这个命令来将另外一个<code>.tex</code>文档中的内容插入到一个<code>.tex</code>文件中。</p>
+<p>首先我们来创建一系列<code>.tex</code>文档。新建一个<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;chemfig&#125;</span><br><span class="line">\usepackage&#123;ctex&#125;</span><br><span class="line">\usepackage&#123;amsmath&#125;</span><br><span class="line">\usepackage&#123;array&#125;</span><br><span class="line">\usepackage&#123;booktabs&#125;</span><br><span class="line">\usepackage&#123;hypdoc&#125;</span><br><span class="line">\usepackage&#123;listings&#125;</span><br><span class="line">\usepackage&#123;lmodern&#125;</span><br><span class="line">\usepackage&#123;mathpazo&#125;</span><br><span class="line">\usepackage&#123;microtype&#125;</span><br><span class="line">\usepackage&#123;graphicx&#125;</span><br><span class="line">\usepackage&#123;makeidx&#125;</span><br><span class="line">\author&#123;Your Name&#125;</span><br><span class="line">\title&#123;Developing Large Documents&#125;</span><br></pre></td></tr></table></figure>
+
+<p>随后保存为<code>preamble.tex</code>（具体文件名随意，但绝对不能包含中文）。</p>
+<p>接着再新建一个<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\chapter&#123;文本&#125;</span><br><span class="line">    这一章包含了关于基础文字输入的内容。</span><br><span class="line">\section&#123;一个标题&#125;</span><br><span class="line">    首先是段落：</span><br><span class="line">    \paragraph&#123;段落标题&#125;这是段落的内容。</span><br><span class="line"></span><br><span class="line">    图表表格也都可以照常使用！</span><br></pre></td></tr></table></figure>
+
+<p>保存为<code>chpt1.tex</code>。</p>
+<p>随后再新建一个<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\chapter&#123;结构式&#125;</span><br><span class="line">    这一章就随便画画结构式好了。</span><br><span class="line">\section&#123;chemfig&#125;</span><br><span class="line">    \chemfig&#123;A-B-[1]C-[3]-D-[7]E-[6]F&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存为<code>chpt2.tex</code></p>
+<p>最后，新建<code>.tex</code>文件，输入且仅输入以下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[twocolumn,openany]&#123;ctexbook&#125;</span><br><span class="line">\input&#123;preamble&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \maketitle</span><br><span class="line">    \tableofcontents</span><br><span class="line">    \input&#123;chpt1&#125;</span><br><span class="line">    \input&#123;chpt2&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存为<code>main.tex</code>。并将之前的所有文件都放在同一目录下，随后对<code>main.tex</code>进行编译即可。</p>
+<h1 id="处理更复杂的文档"><a href="#处理更复杂的文档" class="headerlink" title="处理更复杂的文档"></a>处理更复杂的文档</h1><p>之前所涉及到的内容还没有满足以下需求：</p>
+<ul>
+<li>插入更长的内容的时候效果不佳</li>
+<li>工作文件夹很乱</li>
+<li>需要封面和附录</li>
+</ul>
+<p>接下来我将简单地介绍一下解决这些问题的方法。</p>
+<h2 id="插入更长的内容"><a href="#插入更长的内容" class="headerlink" title="插入更长的内容"></a>插入更长的内容</h2><p>刚刚提到的<code>\input</code>命令其实比较适合插入结构简单或者内容较少的<code>.tex</code>文档，面对较长而且排版复杂的<code>.tex</code>文档就稍显力不从心。</p>
+<p>这个时候我们可以用<code>\include</code>命令来代替<code>\input</code>。相较于<code>\input</code>，<code>\include</code>有以下特点：</p>
+<ul>
+<li>可以用相对路径引用外部文件</li>
+<li>默认换页，不会破坏原来的排版</li>
+<li>不能嵌套</li>
+</ul>
+<h2 id="整理工作文件夹"><a href="#整理工作文件夹" class="headerlink" title="整理工作文件夹"></a>整理工作文件夹</h2><p>你可以在你的工作文件夹里新建几个文件夹，分别叫<code>bin</code>，<code>fig</code>，<code>ref</code>。</p>
+<p>在<code>data</code>文件夹中你可以存放你的所有的内容相关的<code>.tex</code>文件，在<code>main.tex</code>中引用的时候你需要这样用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\input&#123;bin/preamble&#125;</span><br><span class="line">\include&#123;bin/chpt1&#125;</span><br></pre></td></tr></table></figure>
+
+<p>随后你需要在导言区中加上这样的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\graphicspath&#123;&#123;fig/&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样你在使用<code>\includegraphics</code>命令的时候就可以照旧直接输入文件名了。</p>
+<p>接着，在参考文献处，你可以这样使用<code>ref</code>文件夹里的<code>refs.bib</code>文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\bibliography&#123;ref/refs&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样，你就可以获得一个干净漂亮的工作文件夹了！</p>
+<h2 id="序言和附录"><a href="#序言和附录" class="headerlink" title="序言和附录"></a>序言和附录</h2><p>在排版书籍的过程中，常常遇到这样一种需求：需要用罗马数字标记序言、目录等内容；在书籍的最后需要加上后记等内容。而这些内容都不算正文，你不希望让LaTeX给予这些章节序号。</p>
+<p>在这个时候，我们就可以利用<code>\frontmatter</code>和<code>\backmatter</code>。具体而言，前言部分是<code>\frontmatter</code>，正文是<code>\mainmatter</code>而后记等内容是<code>\backmatter</code>。下面是一个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[twocolumn,openany]&#123;ctexbook&#125;</span><br><span class="line">\input&#123;preamble&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \frontmatter</span><br><span class="line">        \maketitle</span><br><span class="line">        \chapter&#123;前言&#125;</span><br><span class="line">            此书献给伟大的思想家马克思。</span><br><span class="line">        \tableofcontents</span><br><span class="line">    \mainmatter</span><br><span class="line">        \input&#123;chpt1&#125;</span><br><span class="line">        \input&#123;chpt2&#125;</span><br><span class="line">    \backmatter</span><br><span class="line">        \chapter&#123;后记&#125;</span><br><span class="line">            自强不息，厚德载物。</span><br><span class="line">        \bibliography&#123;ref/refs&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p>仔细观察编译出的文件，你会发现以下几点：</p>
+<ul>
+<li><code>\frontmatter</code>中页码是小写罗马数字，章节会出现在目录里但是没有序号。</li>
+<li><code>\mainmatter</code>中页码是阿拉伯数字，章节有编号</li>
+<li><code>\backmatter</code>中页码是阿拉伯数字，章节会出现在目录里但是没有序号。</li>
+</ul>
+
+                    <hr>
+                    <div>
+                        <p>
+                        
+                        </p>
+                    </div>
+                    <br>
+                    
+                        <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "LaTeX中长文档的处理&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
+</body>
+</html>
