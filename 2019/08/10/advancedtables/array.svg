@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 264 230" style="enable-background:new 0 0 264 230;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'LMRoman10-Regular-Identity-H';}
+	.st1{font-size:9.9626px;}
+	.st2{fill:none;stroke:#000000;stroke-width:0.2989;stroke-miterlimit:10;}
+	.st3{letter-spacing:16;}
+	.st4{letter-spacing:10;}
+	.st5{font-family:'LMRoman7-Regular-Identity-H';}
+	.st6{font-size:6.9738px;}
+	.st7{letter-spacing:28;}
+	.st8{letter-spacing:3;}
+	.st9{letter-spacing:11;}
+	.st10{letter-spacing:14;}
+	.st11{font-family:'MyriadPro-Regular';}
+	.st12{fill:none;}
+</style>
+<text transform="matrix(1 0 0 1 8.7119 21.1924)" class="st0 st1">Compiler</text>
+<text transform="matrix(1 0 0 1 93.9702 21.1924)" class="st0 st1">Input</text>
+<text transform="matrix(1 0 0 1 189.2539 21.1924)" class="st0 st1">Output</text>
+<line class="st2" x1="8.7" y1="28.8" x2="52.2" y2="28.8"/>
+<line class="st2" x1="62.2" y1="28.8" x2="149.8" y2="28.8"/>
+<line class="st2" x1="159.8" y1="28.8" x2="249.8" y2="28.8"/>
+<text transform="matrix(1 0 0 1 63.187 45.127)"><tspan x="0" y="0" class="st0 st1">Enc</tspan><tspan x="14.9" y="0" class="st0 st1">o</tspan><tspan x="20.2" y="0" class="st0 st1">din</tspan><tspan x="35.1" y="0" class="st0 st1 st3">g</tspan><tspan x="56.6" y="0" class="st0 st1">Image</tspan><tspan x="81.5" y="0" class="st0 st1 st4">s</tspan><tspan x="96.6" y="0" class="st0 st1">F</tspan><tspan x="100.7" y="0" class="st0 st1">o</tspan><tspan x="105.7" y="0" class="st0 st1">n</tspan><tspan x="110.4" y="0" class="st0 st1">ts</tspan></text>
+<text transform="matrix(1 0 0 1 218.1079 45.127)"><tspan x="0" y="0" class="st0 st1">F</tspan><tspan x="4.2" y="0" class="st0 st1">ormat</tspan></text>
+<line class="st2" x1="62.2" y1="52.7" x2="109.5" y2="52.7"/>
+<line class="st2" x1="119.5" y1="52.7" x2="149.8" y2="52.7"/>
+<line class="st2" x1="159.8" y1="52.7" x2="207.1" y2="52.7"/>
+<line class="st2" x1="217.1" y1="52.7" x2="249.8" y2="52.7"/>
+<text transform="matrix(1 0 0 1 8.7119 69.0635)" class="st0 st1">L</text>
+<text transform="matrix(1 0 0 1 11.352 67.291)" class="st5 st6">A</text>
+<text transform="matrix(1 0 0 1 15.7368 69.0635)" class="st0 st1">T</text>
+<text transform="matrix(1 0 0 1 21.269 71.21)" class="st0 st1">E</text>
+<text transform="matrix(1 0 0 1 26.8081 69.0635)"><tspan x="0" y="0" class="st0 st1 st7">X</tspan><tspan x="33.9" y="0" class="st0 st1">utf8</tspan><tspan x="53.8" y="0" class="st0 st1 st8">,</tspan><tspan x="62.3" y="0" class="st0 st1">ascii,</tspan></text>
+<text transform="matrix(1 0 0 1 63.187 81.0176)" class="st0 st1">applemac,</text>
+<text transform="matrix(1 0 0 1 63.187 92.9736)"><tspan x="0" y="0" class="st0 st1">latin1</tspan><tspan x="29.9" y="0" class="st0 st1 st8">,</tspan><tspan x="38.2" y="0" class="st0 st1">…</tspan></text>
+<text transform="matrix(1 0 0 1 129.7349 69.0635)"><tspan x="0" y="0" class="st0 st1">EP</tspan><tspan x="10" y="0" class="st0 st1 st9">S</tspan><tspan x="26.9" y="0" class="st0 st1">T</tspan><tspan x="31.6" y="0" class="st0 st1">y</tspan><tspan x="36.6" y="0" class="st0 st1">p</tspan><tspan x="41.8" y="0" class="st0 st1 st8">e</tspan><tspan x="50.1" y="0" class="st0 st1">1,</tspan></text>
+<text transform="matrix(1 0 0 1 160.7978 81.0176)"><tspan x="0" y="0" class="st0 st1">T</tspan><tspan x="4.7" y="0" class="st0 st1">y</tspan><tspan x="9.7" y="0" class="st0 st1">p</tspan><tspan x="14.9" y="0" class="st0 st1 st8">e</tspan><tspan x="23.2" y="0" class="st0 st1">3</tspan></text>
+<text transform="matrix(1 0 0 1 231.4277 69.0635)"><tspan x="0" y="0" class="st0 st1">D</tspan><tspan x="4.7" y="0" class="st0 st1">VI</tspan></text>
+<text transform="matrix(1 0 0 1 8.7119 112.1016)"><tspan x="0" y="0" class="st0 st1">p</tspan><tspan x="5.3" y="0" class="st0 st1">dfL</tspan></text>
+<text transform="matrix(1 0 0 1 25.7578 110.3301)" class="st5 st6">A</text>
+<text transform="matrix(1 0 0 1 30.1431 112.1016)" class="st0 st1">T</text>
+<text transform="matrix(1 0 0 1 35.6748 114.249)" class="st0 st1">E</text>
+<text transform="matrix(1 0 0 1 41.2139 112.1016)"><tspan x="0" y="0" class="st0 st1 st10">X</tspan><tspan x="19.5" y="0" class="st0 st1">utf8</tspan><tspan x="39.4" y="0" class="st0 st1 st8">,</tspan><tspan x="47.9" y="0" class="st0 st1">ascii,</tspan></text>
+<text transform="matrix(1 0 0 1 63.187 124.0566)" class="st0 st1">applemac,</text>
+<text transform="matrix(1 0 0 1 63.187 136.0117)"><tspan x="0" y="0" class="st0 st1">latin1</tspan><tspan x="29.9" y="0" class="st0 st1 st8">,</tspan><tspan x="38.2" y="0" class="st0 st1">…</tspan></text>
+<text transform="matrix(1 0 0 1 127.9419 112.1016)" class="st0 st1">PDF</text>
+<text transform="matrix(1 0 0 1 126.7661 124.0566)" class="st0 st1">PNG</text>
+<text transform="matrix(1 0 0 1 129.1172 136.0117)" class="st0 st1">JPG</text>
+<text transform="matrix(1 0 0 1 160.7978 112.1016)"><tspan x="0" y="0" class="st0 st1">T</tspan><tspan x="4.7" y="0" class="st0 st1">y</tspan><tspan x="9.7" y="0" class="st0 st1">p</tspan><tspan x="14.9" y="0" class="st0 st1 st8">e</tspan><tspan x="23.2" y="0" class="st0 st1">1,</tspan></text>
+<text transform="matrix(1 0 0 1 160.7978 124.0566)"><tspan x="0" y="0" class="st0 st1">T</tspan><tspan x="4.7" y="0" class="st0 st1">y</tspan><tspan x="9.7" y="0" class="st0 st1">p</tspan><tspan x="14.9" y="0" class="st0 st1 st8">e</tspan><tspan x="23.2" y="0" class="st0 st1">3</tspan></text>
+<text transform="matrix(1 0 0 1 228.9277 112.1016)" class="st0 st1">PDF</text>
+<text transform="matrix(1 0 0 1 8.7119 155.1406)" class="st0 st1">X</text>
+<text transform="matrix(1 0 0 1 14.939 157.2871)" class="st11 st1">Ǝ</text>
+<text transform="matrix(1 0 0 1 20.478 155.1406)" class="st0 st1">L</text>
+<text transform="matrix(1 0 0 1 23.1182 153.3682)" class="st5 st6">A</text>
+<text transform="matrix(1 0 0 1 27.5029 155.1406)" class="st0 st1">T</text>
+<text transform="matrix(1 0 0 1 33.0352 157.2871)" class="st0 st1">E</text>
+<text transform="matrix(1 0 0 1 38.5742 155.1406)" class="st0 st1">X,</text>
+<text transform="matrix(1 0 0 1 8.7119 167.0957)" class="st0 st1">LuaL</text>
+<text transform="matrix(1 0 0 1 28.1001 165.3232)" class="st5 st6">A</text>
+<text transform="matrix(1 0 0 1 32.4839 167.0957)" class="st0 st1">T</text>
+<text transform="matrix(1 0 0 1 38.0161 169.2432)" class="st0 st1">E</text>
+<text transform="matrix(1 0 0 1 43.5561 167.0957)" class="st0 st1">X</text>
+<text transform="matrix(1 0 0 1 63.187 155.1406)" class="st0 st1">utf8</text>
+<text transform="matrix(1 0 0 1 127.9419 155.1406)" class="st0 st1">PDF</text>
+<text transform="matrix(1 0 0 1 126.7661 167.0957)" class="st0 st1">PNG</text>
+<text transform="matrix(1 0 0 1 129.1172 179.0508)" class="st0 st1">JPG</text>
+<text transform="matrix(1 0 0 1 160.7978 155.1406)"><tspan x="0" y="0" class="st0 st1">T</tspan><tspan x="4.7" y="0" class="st0 st1">y</tspan><tspan x="9.7" y="0" class="st0 st1">p</tspan><tspan x="14.9" y="0" class="st0 st1 st8">e</tspan><tspan x="23.2" y="0" class="st0 st1">1,</tspan></text>
+<text transform="matrix(1 0 0 1 160.7978 167.0957)"><tspan x="0" y="0" class="st0 st1">T</tspan><tspan x="4.7" y="0" class="st0 st1">y</tspan><tspan x="9.7" y="0" class="st0 st1">p</tspan><tspan x="14.9" y="0" class="st0 st1 st8">e</tspan><tspan x="23.2" y="0" class="st0 st1">3,</tspan></text>
+<text transform="matrix(1 0 0 1 160.7978 179.0508)"><tspan x="0" y="0" class="st0 st1">O</tspan><tspan x="5" y="0" class="st0 st1">p</tspan><tspan x="10.2" y="0" class="st0 st1">en-</tspan></text>
+<text transform="matrix(1 0 0 1 160.7978 191.0059)"><tspan x="0" y="0" class="st0 st1">T</tspan><tspan x="4.7" y="0" class="st0 st1">y</tspan><tspan x="9.7" y="0" class="st0 st1">p</tspan><tspan x="14.9" y="0" class="st0 st1">e,</tspan></text>
+<text transform="matrix(1 0 0 1 160.7978 202.9609)" class="st0 st1">Graphite,</text>
+<text transform="matrix(1 0 0 1 160.7978 214.916)"><tspan x="0" y="0" class="st0 st1">T</tspan><tspan x="4.2" y="0" class="st0 st1">rue</tspan><tspan x="19.1" y="0" class="st0 st1">T</tspan><tspan x="23.8" y="0" class="st0 st1">y</tspan><tspan x="28.8" y="0" class="st0 st1">p</tspan><tspan x="34.1" y="0" class="st0 st1">e</tspan></text>
+<text transform="matrix(1 0 0 1 228.9277 155.1406)" class="st0 st1">PDF</text>
+<rect class="st12" width="264" height="230"/>
+</svg>
