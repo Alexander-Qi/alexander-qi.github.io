@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 651.3 541.6" style="enable-background:new 0 0 651.3 541.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'AdobeSongStd-Light-GBpc-EUC-H';}
+	.st1{font-size:24px;}
+	.st2{font-family:'ArialMT';}
+	.st3{font-size:36px;}
+	.st4{fill:none;stroke:#FF0000;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#0000FF;stroke-width:2;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#00FF00;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:11.8666,11.8666;}
+	.st7{fill:none;stroke:#00FF00;stroke-width:2.719;stroke-miterlimit:10;stroke-dasharray:10.8376,10.8376;}
+	.st8{fill:none;stroke:#000000;stroke-width:2.719;stroke-miterlimit:10;}
+</style>
+<text transform="matrix(1 0 0 1 14.125 284.6312)" class="st0 st1">输入文件</text>
+<text transform="matrix(1 0 0 1 541.125 275.8812)" class="st0 st1">输出文件</text>
+<text transform="matrix(1 0 0 1 278.9695 485.5686)" class="st0 st1">命令行界面</text>
+<text transform="matrix(1 0 0 1 262.9265 402.75)" class="st2 st3">Gaussian</text>
+<text transform="matrix(1 0 0 1 248.2576 45.25)" class="st2 st3">GaussView</text>
+<text transform="matrix(1 0 0 1 290.9695 136.8186)" class="st0 st1">图形界面</text>
+<rect x="1.5" y="252.1" class="st4" width="121.3" height="50"/>
+<rect x="528.5" y="243.4" class="st4" width="121.3" height="50"/>
+<rect x="260.2" y="452.4" class="st5" width="157.5" height="51.3"/>
+<rect x="260.2" y="103.7" class="st5" width="157.5" height="51.3"/>
+<g>
+	<path class="st6" d="M472.6,195.3H205.3c-6.6,0-12-5.4-12-12V13.5c0-6.6,5.4-12,12-12h267.3c6.6,0,12,5.4,12,12v169.8
+		C484.6,189.9,479.2,195.3,472.6,195.3z"/>
+</g>
+<g>
+	<path class="st7" d="M446.6,540.3H231.3c-6.6,0-12-5.4-12-12V358.5c0-6.6,5.4-12,12-12h215.3c6.6,0,12,5.4,12,12v169.8
+		C458.6,534.8,453.2,540.3,446.6,540.3z"/>
+</g>
+<line class="st8" x1="62.1" y1="129.3" x2="260.2" y2="129.3"/>
+<g>
+	<g>
+		<line class="st8" x1="434.1" y1="129.3" x2="589.1" y2="129.3"/>
+		<g>
+			<path d="M417.7,129.3c7.7,2.9,17.3,7.8,23.2,12.9l-4.7-12.9l4.7-12.9C435,121.6,425.4,126.4,417.7,129.3z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st8" x1="62.1" y1="129.3" x2="62.1" y2="235.7"/>
+		<g>
+			<path d="M62.1,252.1c-2.9-7.7-7.8-17.3-12.9-23.2l12.9,4.7l12.9-4.7C69.9,234.8,65,244.4,62.1,252.1z"/>
+		</g>
+	</g>
+</g>
+<line class="st8" x1="62.1" y1="302.1" x2="62.1" y2="478.1"/>
+<g>
+	<g>
+		<line class="st8" x1="62.1" y1="478.1" x2="243.8" y2="478.1"/>
+		<g>
+			<path d="M260.2,478.1c-7.7,2.9-17.3,7.8-23.2,12.9l4.7-12.9l-4.7-12.9C242.9,470.3,252.5,475.2,260.2,478.1z"/>
+		</g>
+	</g>
+</g>
+<line class="st8" x1="417.7" y1="478.1" x2="589.1" y2="478.1"/>
+<g>
+	<g>
+		<line class="st8" x1="589.1" y1="478.1" x2="589.1" y2="309.8"/>
+		<g>
+			<path d="M589.1,293.4c2.9,7.7,7.8,17.3,12.9,23.2l-12.9-4.7l-12.9,4.7C581.4,310.7,586.3,301.1,589.1,293.4z"/>
+		</g>
+	</g>
+</g>
+<line class="st8" x1="589.1" y1="243.4" x2="589.1" y2="129.3"/>
+</svg>
