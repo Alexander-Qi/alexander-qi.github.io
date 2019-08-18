@@ -57,18 +57,18 @@
   };
 </script>
 
-  <meta name="description" content="这篇文章的主要内容有：  导言区、正文区的含义 控制序列的特点 文档类型 基础文本输入方法  LaTeX文档概述安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！ 大家可以先回忆一下上一次最后我们在.tex文档里面输入的代码。 1234\documentclass&amp;#123;article&amp;#125;\begin&amp;#123;document&amp;#125;    Hello, \LaTeX\">
+  <meta name="description" content="这篇文章的主要内容有：  导言区、正文区的含义 控制序列的特点 文档类型 基础文本输入方法   LaTeX文档概述 安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！ 大家可以先回忆一下上一次最后我们在.tex文档里面输入的代码。 1234\documentclass&amp;#123;article&amp;#125;\begin&amp;#123;document&amp;#125;    Hello, \LaTeX">
 <meta name="keywords" content="LaTeX, Gaussian">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LaTeX基本文本输入">
 <meta property="og:url" content="http://yoursite.com/2019/06/27/latextext/index.html">
 <meta property="og:site_name" content="墘青">
-<meta property="og:description" content="这篇文章的主要内容有：  导言区、正文区的含义 控制序列的特点 文档类型 基础文本输入方法  LaTeX文档概述安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！ 大家可以先回忆一下上一次最后我们在.tex文档里面输入的代码。 1234\documentclass&amp;#123;article&amp;#125;\begin&amp;#123;document&amp;#125;    Hello, \LaTeX\">
+<meta property="og:description" content="这篇文章的主要内容有：  导言区、正文区的含义 控制序列的特点 文档类型 基础文本输入方法   LaTeX文档概述 安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！ 大家可以先回忆一下上一次最后我们在.tex文档里面输入的代码。 1234\documentclass&amp;#123;article&amp;#125;\begin&amp;#123;document&amp;#125;    Hello, \LaTeX">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:updated_time" content="2019-08-07T07:08:55.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LaTeX基本文本输入">
-<meta name="twitter:description" content="这篇文章的主要内容有：  导言区、正文区的含义 控制序列的特点 文档类型 基础文本输入方法  LaTeX文档概述安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！ 大家可以先回忆一下上一次最后我们在.tex文档里面输入的代码。 1234\documentclass&amp;#123;article&amp;#125;\begin&amp;#123;document&amp;#125;    Hello, \LaTeX\">
+<meta name="twitter:description" content="这篇文章的主要内容有：  导言区、正文区的含义 控制序列的特点 文档类型 基础文本输入方法   LaTeX文档概述 安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！ 大家可以先回忆一下上一次最后我们在.tex文档里面输入的代码。 1234\documentclass&amp;#123;article&amp;#125;\begin&amp;#123;document&amp;#125;    Hello, \LaTeX">
   <link rel="canonical" href="http://yoursite.com/2019/06/27/latextext/">
 
 
@@ -316,54 +316,55 @@
 <li>文档类型</li>
 <li>基础文本输入方法</li>
 </ul>
-<h1 id="LaTeX文档概述"><a href="#LaTeX文档概述" class="headerlink" title="LaTeX文档概述"></a>LaTeX文档概述</h1><p>安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！</p>
+<h1 id="latex文档概述"><a class="markdownIt-Anchor" href="#latex文档概述"></a> LaTeX文档概述</h1>
+<p>安装好所有需要的软件之后，我们就可以开始编辑自己的文档啦！</p>
 <p>大家可以先回忆一下上一次最后我们在<code>.tex</code>文档里面输入的代码。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    Hello, \LaTeX\ !</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
 <p>接下来我将向大家解释一下这些代码的含义。</p>
-<h2 id="导言区与正文区"><a href="#导言区与正文区" class="headerlink" title="导言区与正文区"></a>导言区与正文区</h2><p><code>.tex</code>文档可以分成两个部分，分别是导言区和正文区。</p>
+<h2 id="导言区与正文区"><a class="markdownIt-Anchor" href="#导言区与正文区"></a> 导言区与正文区</h2>
+<p><code>.tex</code>文档可以分成两个部分，分别是导言区和正文区。</p>
 <p>从<code>\documentclass{article}</code>到<code>\begin{document}</code>中间的所有部分被称为<code>.tex</code>文档的导言区。在导言区里，我们需要“声明”一些和文档整体有关的参数，例如：文档类型、需要使用的宏包、为宏包设定参数、设定目录样式、页面大小、页眉页脚、章节标题样式等等。</p>
 <p>LaTeX的文档类型多种多样，符合不同人群的需要。常见的文档类型有<code>article</code>，<code>book</code>，<code>ctexart</code>（一种原生支持中文、对中文排版做了特殊优化的文档类型）。当然，也有许多期刊杂志所要求的特殊排版方式，如：<code>apa6</code>，<code>achemso</code>，<code>amsart</code>等。这些文档类型预置了对于页边距、字体、页眉页脚、目录、章节标题、图表标题格式、引用与脚注样式的设定，找到对的文档类型将会大大节省我们用于排版的时间。</p>
 <p>而从<code>\begin{document}</code>到<code>\end{document}</code>的所有部分是<code>.tex</code>文档的正文区。在这里，我们输入自己创作的内容，并提交给TeX引擎排版。</p>
 <p>最后，在<code>\end{document}</code>之后的所有内容都会被TeX忽略。</p>
-<h3 id="导言区可以输入什么"><a href="#导言区可以输入什么" class="headerlink" title="导言区可以输入什么"></a>导言区可以输入什么</h3><p>导言区可以输入文章的作者、文章的标题、写作日期等基础信息。在文档的正文部分，需要使用<code>\maketitle</code>命令来输出这些信息。具体而言就像下面这样。</p>
+<h3 id="导言区可以输入什么"><a class="markdownIt-Anchor" href="#导言区可以输入什么"></a> 导言区可以输入什么</h3>
+<p>导言区可以输入文章的作者、文章的标题、写作日期等基础信息。在文档的正文部分，需要使用<code>\maketitle</code>命令来输出这些信息。具体而言就像下面这样。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\title&#123;Hello, \LaTeX\ !&#125;</span><br><span class="line">\author&#123;Qian-Qing&#125;</span><br><span class="line">\date&#123;\today&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\maketitle</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
 <p>也可以输入大家需要使用的宏包。宏包是一系列控制序列的集合。这些控制序列非常常用、或者需要时实现比较繁琐，所以开发者们将它们打包放在同一个文件中，成为所谓的宏包（package）。<code>\usepackage{}</code>可以用来调用宏包。</p>
 <p>大家会比较常用的宏包有：<code>ctex</code>用于中文输入；<code>amsmath</code>，用于一些数学输入；<code>graphicx</code>用于插入图片；<code>tikz</code>用于直接绘制矢量图象；<code>float</code>用于处理浮动体；<code>chemfig</code>用于绘制化学结构式；<code>natbib</code>用于定制引用格式等。实用的宏包还有很多，大家在自己的学习过程中可以慢慢琢磨使用各类宏包的技巧。当然，之后我也会分享一些这方面的小技巧。</p>
-<h2 id="控制序列"><a href="#控制序列" class="headerlink" title="控制序列"></a>控制序列</h2><p>LaTeX中的所有控制序列（或者称作命令）都是以反斜杠符号<code>\</code>开头的，并以之后第一个空格或者非英文字符结束的一串字符。它们不一定会被直接输出，但是这些控制序列一般都会影响文档输出的效果。</p>
+<h2 id="控制序列"><a class="markdownIt-Anchor" href="#控制序列"></a> 控制序列</h2>
+<p>LaTeX中的所有控制序列（或者称作命令）都是以反斜杠符号<code>\</code>开头的，并以之后第一个空格或者非英文字符结束的一串字符。它们不一定会被直接输出，但是这些控制序列一般都会影响文档输出的效果。</p>
 <p>以刚才在导言区出现过的<code>\documentclass{article}</code>为例子的话，<code>\document</code>就是一个控制序列，它告诉了TeX引擎文章需要套用哪一套“模板”；跟在后面的<code>{article}</code>是服务于这个控制序列的参数，是“模板”的内容。<code>\documentclass{article}</code>这个命令成功地调用了一个名为<code>article</code>的文档类型。</p>
 <p>控制序列需要的参数很多时候不止一个，也并不是所有的参数都被<code>{}</code>所包裹。举一个例子。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[a4paper,12pt,landscape,twocolumn]&#123;book&#125;</span><br><span class="line">\usepackage&#123;amsmath&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    $\frac&#123;x&#125;&#123;y&#125;$</span><br><span class="line">    \[</span><br><span class="line">        \iiint\limits_&#123;\Omega_&#123;r&#125;&#125; f(x,y,z) dxdydz</span><br><span class="line">    \]</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
 <p>在上面这个例子里，<code>\documentclass[a4paper,12pt,landscape,twocolumn]{book}</code>是关于文档类型的控制序列。大家可以发现，这回的控制序列参数有用花括号包裹的<code>{book}</code>，也有一串用中括号包裹的<code>[a4paper,12pt,landscape,twocolumn]</code>。其中，<code>{book}</code>声明了这篇文档的类型是“书籍”。而中括号里面的内容则是正对文档类型的更加详细的参数，比如<code>a4paper</code>规定了纸张的大小，<code>12pt</code>规定了正文字号的大小，<code>twocolumn</code>控制文档分成两栏等。</p>
 <p>同时，在下面那个输入分号的命令中，不仅仅有一个被花括号围起来的参数。前面的<code>{x}</code>代表了分子，后面的<code>{y}</code>代表了分母。</p>
-<h1 id="文本输入"><a href="#文本输入" class="headerlink" title="文本输入"></a>文本输入</h1><p>在了解完文档的结构之后，我们就可以开始着手输入<code>.tex</code>文档的正文内容啦~</p>
+<h1 id="文本输入"><a class="markdownIt-Anchor" href="#文本输入"></a> 文本输入</h1>
+<p>在了解完文档的结构之后，我们就可以开始着手输入<code>.tex</code>文档的正文内容啦~</p>
 <p>再提醒一句，所有的正文请输入在<code>\begin{document}</code>到<code>\end{document}</code>之间哦！</p>
-<h2 id="中英文混排"><a href="#中英文混排" class="headerlink" title="中英文混排"></a>中英文混排</h2><p>目前，最为理想的中英文混排方案是通过<code>ctex</code>宏包实现的。在导言区中输入<code>\usepackage{ctex}</code>即可使用该宏包来实现简单的中英文混排。</p>
+<h2 id="中英文混排"><a class="markdownIt-Anchor" href="#中英文混排"></a> 中英文混排</h2>
+<p>目前，最为理想的中英文混排方案是通过<code>ctex</code>宏包实现的。在导言区中输入<code>\usepackage{ctex}</code>即可使用该宏包来实现简单的中英文混排。</p>
 <p>当然，也可以直接使用文档类型<code>ctexart</code>来实现中英文的混排。大家不妨试试在自己的<code>.tex</code>文档里输入以下的代码。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    你好，\LaTeX\ ！</span><br><span class="line">    Hello, \LaTeX\ !</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="加粗、斜体"><a href="#加粗、斜体" class="headerlink" title="加粗、斜体"></a>加粗、斜体</h2><p>在LaTeX之中，有许多文字处理的方式。其中既有常见的加粗、斜体，也有不那么常见的Slanted和Small Caps效果。下面这个就是一个例子。</p>
+<h2 id="加粗-斜体"><a class="markdownIt-Anchor" href="#加粗-斜体"></a> 加粗、斜体</h2>
+<p>在LaTeX之中，有许多文字处理的方式。其中既有常见的加粗、斜体，也有不那么常见的Slanted和Small Caps效果。下面这个就是一个例子。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">Text can be \emph&#123;emphasized&#125;.</span><br><span class="line">Besides being \textit&#123;italic&#125; words could be \textbf&#123;bold&#125;,</span><br><span class="line">\textsl&#123;slanted&#125; or typeset in \textsc&#123;Small Caps&#125;.</span><br><span class="line">Such commands can be \textit&#123;\textbf&#123;nested&#125;&#125;.</span><br><span class="line">\emph&#123;See how \emph&#123;emphasizing&#125; looks when nested.&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
 <p>大家可以自己尝试将上面的这些命令运用到中文的排版之中，看看会有什么样的效果？</p>
 <p>更多的有关文字效果的命令如下图所示</p>
-<h2 id="字号"><a href="#字号" class="headerlink" title="字号"></a>字号</h2><p>LaTeX提供了许多文字大小的选项，详见下面这个例子。</p>
+<h2 id="字号"><a class="markdownIt-Anchor" href="#字号"></a> 字号</h2>
+<p>LaTeX提供了许多文字大小的选项，详见下面这个例子。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\noindent\tiny We \scriptsize start \footnotesize \small small,</span><br><span class="line">\normalsize get \large big \Large and \LARGE bigger,</span><br><span class="line">\huge huge and \Huge gigantic!</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h2><p>LaTeX中许多特殊符号由于和编程过程中使用的符号重合，输入的方法是非常规的，就如下面这个例子中所演示的。</p>
+<h2 id="符号"><a class="markdownIt-Anchor" href="#符号"></a> 符号</h2>
+<p>LaTeX中许多特殊符号由于和编程过程中使用的符号重合，输入的方法是非常规的，就如下面这个例子中所演示的。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;ctexart&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">称述 \#1:</span><br><span class="line">50\% 的 \$100 是 \$50 。</span><br><span class="line">其他的特殊符号包括 \&amp;, \_, \&#123; and \&#125;.</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="行距"><a href="#行距" class="headerlink" title="行距"></a>行距</h2><p>在LaTeX之中，你既可以对整篇文章的行距进行调整、也可以对于局部文本的行距进行调整。下面分别是这两种调整的例子。</p>
+<h2 id="行距"><a class="markdownIt-Anchor" href="#行距"></a> 行距</h2>
+<p>在LaTeX之中，你既可以对整篇文章的行距进行调整、也可以对于局部文本的行距进行调整。下面分别是这两种调整的例子。</p>
 <p>全局行距设置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage[onehalfspacing]&#123;setspace&#125;</span><br></pre></td></tr></table></figure>
-
-
 <p>局部行距设置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;spacing&#125;&#123;2.4&#125;</span><br><span class="line">	This text is stretched by a factor of 2.4.</span><br><span class="line">\end&#123;spacing&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="下期预告"><a href="#下期预告" class="headerlink" title="下期预告"></a>下期预告</h1><p>下一期是关于数学公式输入的内容，请大家敬请期待！</p>
+<h1 id="下期预告"><a class="markdownIt-Anchor" href="#下期预告"></a> 下期预告</h1>
+<p>下一期是关于数学公式输入的内容，请大家敬请期待！</p>
 
     </div>
 
@@ -519,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LaTeX文档概述"><span class="nav-number">1.</span> <span class="nav-text">LaTeX文档概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导言区与正文区"><span class="nav-number">1.1.</span> <span class="nav-text">导言区与正文区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导言区可以输入什么"><span class="nav-number">1.1.1.</span> <span class="nav-text">导言区可以输入什么</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制序列"><span class="nav-number">1.2.</span> <span class="nav-text">控制序列</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本输入"><span class="nav-number">2.</span> <span class="nav-text">文本输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#中英文混排"><span class="nav-number">2.1.</span> <span class="nav-text">中英文混排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加粗、斜体"><span class="nav-number">2.2.</span> <span class="nav-text">加粗、斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字号"><span class="nav-number">2.3.</span> <span class="nav-text">字号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#符号"><span class="nav-number">2.4.</span> <span class="nav-text">符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行距"><span class="nav-number">2.5.</span> <span class="nav-text">行距</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下期预告"><span class="nav-number">3.</span> <span class="nav-text">下期预告</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#latex文档概述"><span class="nav-number">1.</span> <span class="nav-text"> LaTeX文档概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导言区与正文区"><span class="nav-number">1.1.</span> <span class="nav-text"> 导言区与正文区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导言区可以输入什么"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 导言区可以输入什么</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制序列"><span class="nav-number">1.2.</span> <span class="nav-text"> 控制序列</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文本输入"><span class="nav-number">2.</span> <span class="nav-text"> 文本输入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#中英文混排"><span class="nav-number">2.1.</span> <span class="nav-text"> 中英文混排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加粗-斜体"><span class="nav-number">2.2.</span> <span class="nav-text"> 加粗、斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字号"><span class="nav-number">2.3.</span> <span class="nav-text"> 字号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#符号"><span class="nav-number">2.4.</span> <span class="nav-text"> 符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行距"><span class="nav-number">2.5.</span> <span class="nav-text"> 行距</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下期预告"><span class="nav-number">3.</span> <span class="nav-text"> 下期预告</span></a></li></ol></div>
             
 
           </div>
@@ -619,6 +620,8 @@
 
 
 
+
+  
 
   
 

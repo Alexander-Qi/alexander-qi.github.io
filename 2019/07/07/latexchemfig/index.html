@@ -316,54 +316,53 @@
 <li>如何将用其他工具绘制的结构式完美地导入LaTeX</li>
 </ul>
 <p>前面的四篇推送已经介绍了LaTeX的基本使用方法，相信大家已经能够排版出内容较为简单的文档了。在论文中我们常常会需要插入一个化合物的结构，而仅仅插入从网上找来或者自己绘制的<code>.jpg</code>和<code>.png</code>格式的图片往往会让LaTeX输出的<code>.pdf</code>文档的大小急剧增大，同时也并不是非常好看。这篇推送将简要介绍在LaTeX中最为基础的绘制结构式的方法。</p>
-<h1 id="直接绘制结构式"><a href="#直接绘制结构式" class="headerlink" title="直接绘制结构式"></a>直接绘制结构式</h1><p>在LaTeX中，我们可以通过一个名叫<code>chemfig</code>的宏包来直接在正文中绘制矢量格式的结构式。这种结构式不仅美观好看，而且不会让文件内容增大很多，是排版论文时的最佳选择。<code>chemfig</code>宏包极其强大，能够绘制复杂的反应路线图和机理，但是高级功能的语法较为复杂，本篇推送仅仅介绍其最为基础的使用方法：绘制单个分子的结构式。</p>
+<h1 id="直接绘制结构式"><a class="markdownIt-Anchor" href="#直接绘制结构式"></a> 直接绘制结构式</h1>
+<p>在LaTeX中，我们可以通过一个名叫<code>chemfig</code>的宏包来直接在正文中绘制矢量格式的结构式。这种结构式不仅美观好看，而且不会让文件内容增大很多，是排版论文时的最佳选择。<code>chemfig</code>宏包极其强大，能够绘制复杂的反应路线图和机理，但是高级功能的语法较为复杂，本篇推送仅仅介绍其最为基础的使用方法：绘制单个分子的结构式。</p>
 <p>在使用<code>chemfig</code>宏包的时候，需要先在导言区加载它。具体而言，需要输入这样的命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;chemfig&#125;</span><br></pre></td></tr></table></figure>
-
 <p>用<code>chemfig</code>宏包绘制结构的基础命令是<code>\chemfig{&lt;atom-1&gt; &lt;bond type&gt; [&lt;bond angle&gt;, &lt;bond length coefficient&gt;, &lt;name-1&gt;, &lt;name-2&gt;, &lt;tikz code&gt;]&lt;atom-2&gt;}</code>，花括号内部的信息是结构式的信息。其中<code>&lt;atom-1&gt;</code>和<code>&lt;atom-2&gt;</code>是需要相连的官能团；<code>&lt;bond type&gt;</code>是键的类型；中括号里的<code>&lt;bond angle&gt;</code>用于调整键角，<code>&lt;bond length coefficient&gt;</code>是用于调整键的长度的系数，而<code>&lt;name-1&gt;</code>和<code>&lt;name-2&gt;</code>是连线的两点的名称；<code>&lt;tikz code&gt;</code>则是用<code>tikz</code>宏包的命令调整键的颜色和形状的代码。</p>
 <p>下面将简要介绍如何将我们想要绘制的结构式转化成<code>chemfig</code>能理解的信息。</p>
-<h2 id="输入官能团"><a href="#输入官能团" class="headerlink" title="输入官能团"></a>输入官能团</h2><p>在<code>chemfig</code>宏包中，输入原子团的方法是非常简单的，我们只需要按照书写原子团的方法，将数字放在<code>_</code>后面，将电荷放在<code>^</code>后面，<code>chemfig</code>就能够理解我们输入的信息（但数字和电荷都需要被花括号包裹，不然会报错！）。需要注意的是，如果我们想要输入一个比较长的容易引起歧义的原子团，可以用圆括号括起来。每个原子会自动和下一个大写字母或者以一下特殊符号开头的内容连起来：<code>-, =, ~, (, !, *, &lt;, &gt;, @</code>。</p>
-<h2 id="键"><a href="#键" class="headerlink" title="键"></a>键</h2><p>化学中非常重要的一个概念就是键了。我们可以用形同<code>\chemfig{A-B}</code>的命令来将A和B这两个原子团用一根单键相联起来。而键也有许多参数，如键型、键长、键角等。接下来将简要介绍一下如何在<code>chemfig</code>中自定义一根你想要的键。</p>
-<h3 id="键型"><a href="#键型" class="headerlink" title="键型"></a>键型</h3><p>在<code>chemfig</code>中，有非常多种类的键。下面是一个例子：</p>
+<h2 id="输入官能团"><a class="markdownIt-Anchor" href="#输入官能团"></a> 输入官能团</h2>
+<p>在<code>chemfig</code>宏包中，输入原子团的方法是非常简单的，我们只需要按照书写原子团的方法，将数字放在<code>_</code>后面，将电荷放在<code>^</code>后面，<code>chemfig</code>就能够理解我们输入的信息（但数字和电荷都需要被花括号包裹，不然会报错！）。需要注意的是，如果我们想要输入一个比较长的容易引起歧义的原子团，可以用圆括号括起来。每个原子会自动和下一个大写字母或者以一下特殊符号开头的内容连起来：<code>-, =, ~, (, !, *, &lt;, &gt;, @</code>。</p>
+<h2 id="键"><a class="markdownIt-Anchor" href="#键"></a> 键</h2>
+<p>化学中非常重要的一个概念就是键了。我们可以用形同<code>\chemfig{A-B}</code>的命令来将A和B这两个原子团用一根单键相联起来。而键也有许多参数，如键型、键长、键角等。接下来将简要介绍一下如何在<code>chemfig</code>中自定义一根你想要的键。</p>
+<h3 id="键型"><a class="markdownIt-Anchor" href="#键型"></a> 键型</h3>
+<p>在<code>chemfig</code>中，有非常多种类的键。下面是一个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">单键是\chemfig&#123;A-B&#125;；</span><br><span class="line">双键是\chemfig&#123;A=B&#125;；</span><br><span class="line">叁键是\chemfig&#123;A~B&#125;。\\</span><br><span class="line">如果想画楔形键，可以用下面的几组命令：</span><br><span class="line">\chemfig&#123;A&gt;B&#125;和\chemfig&#123;A&lt;B&#125;，</span><br><span class="line">分别代表向左和向右的实心楔形键；</span><br><span class="line">\chemfig&#123;A&gt;:B&#125;和\chemfig&#123;A&lt;:B&#125;，</span><br><span class="line">分别代表向左和向右的虚线楔形键；</span><br><span class="line">\chemfig&#123;A&gt;|B&#125;和\chemfig&#123;A&lt;|B&#125;，</span><br><span class="line">分别代表向左和向右的空心楔形键。</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
-<h3 id="键角"><a href="#键角" class="headerlink" title="键角"></a>键角</h3><p>通过在原子团前面输入一个被方括号包裹的数字，我们可以人为地制定键的角度。有一些角度已经是实现设定好的了，比如<code>[0]</code>代表零度，<code>[1]</code>代表45度等。</p>
+<h3 id="键角"><a class="markdownIt-Anchor" href="#键角"></a> 键角</h3>
+<p>通过在原子团前面输入一个被方括号包裹的数字，我们可以人为地制定键的角度。有一些角度已经是实现设定好的了，比如<code>[0]</code>代表零度，<code>[1]</code>代表45度等。</p>
 <p>下面是一个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;A-B-[1]C-[3]-D-[7]E-[6]F&#125;</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
 <p>我们也可以改变这些预设好的角度，比如将<code>[1]</code>设定为30度。下面是一个例子</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\setchemfig&#123;angle increment=30&#125;</span><br><span class="line">\chemfig&#123;-[1]-[-1]-[1]-[-1]&#125;</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
 <p>当然，我们也可以输入绝对的角度，这时候我们需要在方括号的第一个参数前面加上一个冒号。下面是一个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;A-[:30]B=[:-75]C-[:10]D-[:90]&gt;|[:60]-[:-20]E-[:0]~[:-75]F&#125;</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
 <p>有时候，考虑绝对的角度是非常繁琐的，<code>chemfig</code>宏包提供了设定相对于上一根键的相对角度的方法。我们只需要在方括号中第一个参数的前面加上两个冒号，就能够设定相对的角度，像下面那个例子展示的一样：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;A-[:-5]-[::20]-[::20]B-[7]-[::20]C-[::20]&#125;</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
-<h3 id="键长"><a href="#键长" class="headerlink" title="键长"></a>键长</h3><p>我们可以在前面提到的原子团前面的方括号中加入第二个参数，这就设定了括号前面的键的长度。下面是一个例子：</p>
+<h3 id="键长"><a class="markdownIt-Anchor" href="#键长"></a> 键长</h3>
+<p>我们可以在前面提到的原子团前面的方括号中加入第二个参数，这就设定了括号前面的键的长度。下面是一个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\chemfig&#123;-=[,1.5]-[,0.75]=[:-20,2]&#125;</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
 <p>默认情况下，<code>chemfig</code>使用的键长是相对键长而非固定键长。固定键长和相对键长的关系如下图所示：</p>
 <p>由于某些原子团太过庞大导致显示效果不佳时，我们可以尝试使用固定键长的方法来调整输出的效果。下面是一个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\setchemfig&#123;fixed length=true&#125;\chemfig&#123;Cl-Cl&#125;</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
 <p>当然也可以直接调整整个分子的大小来改变输出的效果，下面是另外一个例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\normalsize \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\setchemfig&#123;atom sep=2.5em&#125;</span><br><span class="line">\chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\small \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\footnotesize \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\scriptsize \chemfig&#123;H-[:30]O-[:-30]H&#125;\par</span><br><span class="line">\tiny \chemfig&#123;H-[:30]O-[:-30]H&#125;</span><br></pre></td></tr></table></figure>
-
 <p>下面是上面的例子的输出结果。</p>
-<h1 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h1><p><code>chemfig</code>的语法非常复杂，尤其是在涉及到较大的分子的时候，非常难以用人工的方法来绘制出一个分子。还好，现在有一个非常方便的在线工具，可以让大家方便地绘制出自己想要的分子的结构式。</p>
+<h1 id="在线工具"><a class="markdownIt-Anchor" href="#在线工具"></a> 在线工具</h1>
+<p><code>chemfig</code>的语法非常复杂，尤其是在涉及到较大的分子的时候，非常难以用人工的方法来绘制出一个分子。还好，现在有一个非常方便的在线工具，可以让大家方便地绘制出自己想要的分子的结构式。</p>
 <p>这个工具就是<a href="https://py-chemist.com/mol_2_chemfig/home" target="_blank" rel="noopener">Mol2chemfig Web</a>，它使得我们能够简单地得到我们想要的结构的<code>chemfig</code>命令。这是这个网页的界面。</p>
 <p>我们可以看到，左边是一个非常好用的绘制结构式的工具。当然，我们也可以点击上方功能栏最左侧的按钮，加载我们已经绘制好的结构的信息文件。该网站支持的格式有<code>.cml</code>和<code>.mol</code>等非常常用的格式。画完后点击下面的GET MOL，就可以在中间那一栏得到化合物的mol信息，随后点击中下方的CONVERT按钮，就可以得到我们需要的<code>chemfig</code>命令了。</p>
 <p>我们也可以在中间的那一栏搜索我们想要的化合物，然后直接得到mol信息。</p>
 <p>右面的一栏允许我们自定义我们生成的结构式的细节，大家在使用的时候可以根据自己的需求进行勾选。</p>
-<h1 id="其他工具绘制结构式插入LaTeX的方法"><a href="#其他工具绘制结构式插入LaTeX的方法" class="headerlink" title="其他工具绘制结构式插入LaTeX的方法"></a>其他工具绘制结构式插入LaTeX的方法</h1><p>我们在这里以ChemDraw为例。如果是单个化合物，我们可以选择将文件另存为<code>.cml</code>或者<code>.mol</code>文件，随后用刚刚提到的在线工具进行转换。</p>
+<h1 id="其他工具绘制结构式插入latex的方法"><a class="markdownIt-Anchor" href="#其他工具绘制结构式插入latex的方法"></a> 其他工具绘制结构式插入LaTeX的方法</h1>
+<p>我们在这里以ChemDraw为例。如果是单个化合物，我们可以选择将文件另存为<code>.cml</code>或者<code>.mol</code>文件，随后用刚刚提到的在线工具进行转换。</p>
 <p>如果我们绘制了非常复杂的多步反应或者绘制了机理，不方便另存为<code>.cml</code>文件，我们可以直接将文件另存为<code>.eps</code>文件，并用插入图片的方法将我们绘制的反应路线插入LaTeX。</p>
 <p>顺便一提，TeXstudio（在Windows下）支持直接单击图片文件并复制后，点击<code>.tex</code>文件内合适的位置直接黏贴以插入图片，完全不需要输入代码。</p>
 
@@ -521,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#直接绘制结构式"><span class="nav-number">1.</span> <span class="nav-text">直接绘制结构式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入官能团"><span class="nav-number">1.1.</span> <span class="nav-text">输入官能团</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键"><span class="nav-number">1.2.</span> <span class="nav-text">键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#键型"><span class="nav-number">1.2.1.</span> <span class="nav-text">键型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键角"><span class="nav-number">1.2.2.</span> <span class="nav-text">键角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键长"><span class="nav-number">1.2.3.</span> <span class="nav-text">键长</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在线工具"><span class="nav-number">2.</span> <span class="nav-text">在线工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他工具绘制结构式插入LaTeX的方法"><span class="nav-number">3.</span> <span class="nav-text">其他工具绘制结构式插入LaTeX的方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#直接绘制结构式"><span class="nav-number">1.</span> <span class="nav-text"> 直接绘制结构式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入官能团"><span class="nav-number">1.1.</span> <span class="nav-text"> 输入官能团</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键"><span class="nav-number">1.2.</span> <span class="nav-text"> 键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#键型"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 键型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键角"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 键角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键长"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 键长</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在线工具"><span class="nav-number">2.</span> <span class="nav-text"> 在线工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他工具绘制结构式插入latex的方法"><span class="nav-number">3.</span> <span class="nav-text"> 其他工具绘制结构式插入LaTeX的方法</span></a></li></ol></div>
             
 
           </div>
@@ -621,6 +620,8 @@
 
 
 
+
+  
 
   
 
