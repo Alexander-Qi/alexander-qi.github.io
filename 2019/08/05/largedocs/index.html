@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="墘青">
 <meta property="og:description" content="当你需要排版一个非常大的文档，或者涉及到多人协同的时候，我们就希望能将一个庞大的.tex文件分成很多部分以方便我们的管理。那么该如何做到这一点呢？  最简单的分开输出的方式 我们可以使用\input{filename.tex}这个命令来将另外一个.tex文档中的内容插入到一个.tex文件中。 首先我们来创建一系列.tex文档。新建一个.tex文件，输入且仅输入以下的内容： 123456789101">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-08-07T07:09:12.821Z">
+<meta property="og:updated_time" content="2019-08-25T13:42:14.307Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LaTeX中长文档的处理">
 <meta name="twitter:description" content="当你需要排版一个非常大的文档，或者涉及到多人协同的时候，我们就希望能将一个庞大的.tex文件分成很多部分以方便我们的管理。那么该如何做到这一点呢？  最简单的分开输出的方式 我们可以使用\input{filename.tex}这个命令来将另外一个.tex文档中的内容插入到一个.tex文件中。 首先我们来创建一系列.tex文档。新建一个.tex文件，输入且仅输入以下的内容： 123456789101">
@@ -280,7 +280,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-07 15:09:12" itemprop="dateModified" datetime="2019-08-07T15:09:12+08:00">2019-08-07</time>
+                <time title="修改时间：2019-08-25 21:42:14" itemprop="dateModified" datetime="2019-08-25T21:42:14+08:00">2019-08-25</time>
               </span>
             
           
@@ -322,7 +322,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\chapter&#123;结构式&#125;</span><br><span class="line">    这一章就随便画画结构式好了。</span><br><span class="line">\section&#123;chemfig&#125;</span><br><span class="line">    \chemfig&#123;A-B-[1]C-[3]-D-[7]E-[6]F&#125;</span><br></pre></td></tr></table></figure>
 <p>保存为<code>chpt2.tex</code></p>
 <p>最后，新建<code>.tex</code>文件，输入且仅输入以下的内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[twocolumn,openany]&#123;ctexbook&#125;</span><br><span class="line">\input&#123;preamble&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \maketitle</span><br><span class="line">    \tableofcontents</span><br><span class="line">    \input&#123;chpt1&#125;</span><br><span class="line">    \input&#123;chpt2&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[openany]&#123;ctexbook&#125;</span><br><span class="line">\input&#123;preamble&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \maketitle</span><br><span class="line">    \tableofcontents</span><br><span class="line">    \input&#123;chpt1&#125;</span><br><span class="line">    \input&#123;chpt2&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <p>保存为<code>main.tex</code>。并将之前的所有文件都放在同一目录下，随后对<code>main.tex</code>进行编译即可。</p>
 <h1 id="处理更复杂的文档"><a class="markdownIt-Anchor" href="#处理更复杂的文档"></a> 处理更复杂的文档</h1>
 <p>之前所涉及到的内容还没有满足以下需求：</p>
@@ -341,9 +341,9 @@
 <li>不能嵌套</li>
 </ul>
 <h2 id="整理工作文件夹"><a class="markdownIt-Anchor" href="#整理工作文件夹"></a> 整理工作文件夹</h2>
-<p>你可以在你的工作文件夹里新建几个文件夹，分别叫<code>bin</code>，<code>fig</code>，<code>ref</code>。</p>
+<p>你可以在你的工作文件夹里新建几个文件夹，分别叫<code>data</code>，<code>fig</code>，<code>ref</code>。</p>
 <p>在<code>data</code>文件夹中你可以存放你的所有的内容相关的<code>.tex</code>文件，在<code>main.tex</code>中引用的时候你需要这样用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\input&#123;bin/preamble&#125;</span><br><span class="line">\include&#123;bin/chpt1&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\input&#123;data/preamble&#125;</span><br><span class="line">\include&#123;data/chpt1&#125;</span><br></pre></td></tr></table></figure>
 <p>随后你需要在导言区中加上这样的命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\graphicspath&#123;&#123;fig/&#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>这样你在使用<code>\includegraphics</code>命令的时候就可以照旧直接输入文件名了。</p>
@@ -539,10 +539,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">任之</span>
 </div>
-  <div class="powered-by"> <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 专属
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">闲言碎语
+  <div class="theme-info">胡言乱语
   </div>
 
         
