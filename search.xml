@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Gaussian视频教学]]></title>
+    <url>%2F2019%2F09%2F14%2Fgaussvideos%2F</url>
+    <content type="text"><![CDATA[本文的主要目的除了分享一些本人搬运到bilibili上的视频教程之外，也希望验证一下在hexo中利用html里的iframe控件插入视频的能力。 话不多说，让我们开始看视频吧！ GaussView 的使用 GaussView 是Gaussian的好帮手。运用GaussView能节省很多时间。 GaussView 入门 本视频介绍使用GaussView 6的基础知识： 主窗口和工具栏 查询模式 使用鼠标 修改显示 多视图Windows GaussView首选项 构建分子 本视频演示在GaussView中构建分子的基础知识： 使用模板 设置片段之间的角度 使用对称性 对接两个结构 进阶：快速构建分子 本视频讨论在GaussView 6中选择原子的方法： 使用鼠标 原子选择编辑器 扩展选择 通过PDB残留物选择 Atom列表编辑器 设置工作类型 本视频讨论使用GaussView设置和运行高斯作业： 单点能计算 结构优化 布居分析 溶液体系 可视化计算结果 本视频介绍如何可视化高斯计算的基本结果： 计算摘要 原子和键属性 IRC情节 频率结果 非谐振动分析 用3D模型展示计算结果 本视频演示可视化MO，曲面和其他体积数据： 分子轨道 生成多维数据集 观察表面 生成和查看轮廓 使用多个MO 观察溶剂化腔 将计算结果绘制成光谱 本视频演示如何将计算结果绘制成光谱。 Gaussian 进阶学习 只会依靠图形化的GaussView可没法走在学术的前沿呢！接下来就介绍一些更加深入的知识。 进阶：设置计算任务 本视频讨论“高斯计算设置”对话框中的控件，包括其所有各种面板和按钮。您将学习如何设置所需的任何类型的高斯计算，包括指定可能需要的其他输入部分。 自定义计算方案 本视频描述Gaussian作业设置的便利功能： 设置计算默认值 定义计算方案 使用快速启动]]></content>
+      <categories>
+        <category>Gaussian</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[免费SSH+SFTP软件：Bitvise SSH Client]]></title>
     <url>%2F2019%2F09%2F09%2Fbitivse%2F</url>
     <content type="text"><![CDATA[SSH (Secure Shell) 是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。 SSH协议使用加密来保护客户端和服务器之间的连接。所有用户身份验证，命令，输出和文件传输都经过加密，以防止网络中的攻击。有关SSH协议如何工作的详细信息，请参阅协议页面。要了解SSH文件传输协议，请参阅SFTP页面。 SSH.comSSH (SECURE SHELL) SFTP技术能让我们更安全、更快捷地传输文件。 SFTP（SSH文件传输协议）是一种安全的文件传输协议。它运行在SSH协议上。它支持SSH的完整安全性和身份验证功能。 SFTP几乎取代了传统FTP作为文件传输协议，并且正在迅速取代FTP/S。它提供了这些协议提供的所有功能，但更安全，更可靠，配置更简单。基本没有理由再使用传统协议。 SFTP还可以防止密码嗅探和中间人攻击。它使用加密和加密哈希函数保护数据的完整性，并对服务器和用户进行验证。 SSH.comSFTP – SSH SECURE FILE TRANSFER PROTOCOL 本文为大家带来个人免费使用的Bitvise SSH Client工具。该工具集合了SSH、SFTP与SSH 密码管理功能。它功能完善，图形界面也非常美观，最重要的是对于Windows 10这样的新系统适配及时。唯一的确定啊是其默认的xterm终端对于中文的支持不完善。 你当然可以从Bitvise官网上获取其下载链接。但是在某些地区可能并不能访问其官网。在这里提供百度网盘下载途径。 点击进入下载页面 提取码为： y0f3 上面提供的是Bitvise SSH Client 8.35 Windows版的下载方式。如果需要其他系统下的Bitvise SSH Client，请自行科学上网后进入官网下载。 安装完成后，Bitvise SSH Client共需要占据约133 MB的磁盘空间。 其主界面非常简洁大气。Bitvise SSH Client可以自动在profile中保存密码和凭证文件，设定好后直接点击“Log In”即可登录。 登录完后会自动打开两个窗口。 一个是基于xterm的终端界面，可以看到终端字体是Consolas，大小约为11~12。相较于Tectia，非常美观。 一个是SFTP界面，这个界面的操作和大多数其他的SFTP软件相似，可以调整窗口大小，对于Windows 10和高分屏都适配完整。 不像Tectia，你可以在Bitvise SSH Client中直接关闭终端和SFTP窗口，登出时只需要单击“Log Out”即可。]]></content>
