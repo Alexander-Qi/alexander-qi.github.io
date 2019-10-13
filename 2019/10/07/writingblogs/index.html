@@ -65,12 +65,19 @@
 <meta property="og:site_name" content="墘青">
 <meta property="og:description" content="建立一个免费的、易于维护的个人博客以用于自己或者中小组织的信息发布、生活记录等事务，是再好不过的选择。下面我会简单地讲一讲在2019年建立一个免费的个人博客所需的步骤和后期写博文时的一些技巧。  建立博客 在这里，我暂且假定读者们没有自己的托管服务器和域名，完全从一个计算机小白的角度来讲一讲怎么简单地建立一个简单的静态博客。虽然有些步骤是可以调换顺序的，但我还是推荐按照下面的步骤进行操作。。  必">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjifx.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjkp6.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjA1K.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/12/uOdPgA.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBOaLV.png">
-<meta property="og:updated_time" content="2019-10-12T06:57:10.090Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjE6O.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjVXD.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjPt1.jpg">
+<meta property="og:updated_time" content="2019-10-13T03:46:16.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何优雅地建立个人博客">
 <meta name="twitter:description" content="建立一个免费的、易于维护的个人博客以用于自己或者中小组织的信息发布、生活记录等事务，是再好不过的选择。下面我会简单地讲一讲在2019年建立一个免费的个人博客所需的步骤和后期写博文时的一些技巧。  建立博客 在这里，我暂且假定读者们没有自己的托管服务器和域名，完全从一个计算机小白的角度来讲一讲怎么简单地建立一个简单的静态博客。虽然有些步骤是可以调换顺序的，但我还是推荐按照下面的步骤进行操作。。  必">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/12/nBOaLV.png">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/10/13/ujjifx.jpg">
   <link rel="canonical" href="http://yoursite.com/2019/10/07/writingblogs/">
 
 
@@ -282,7 +289,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-12 14:57:10" itemprop="dateModified" datetime="2019-10-12T14:57:10+08:00">2019-10-12</time>
+                <time title="修改时间：2019-10-13 11:46:16" itemprop="dateModified" datetime="2019-10-13T11:46:16+08:00">2019-10-13</time>
               </span>
             
           
@@ -302,17 +309,20 @@
 <h1 id="建立博客"><a class="markdownIt-Anchor" href="#建立博客"></a> 建立博客</h1>
 <p>在这里，我暂且假定读者们没有自己的托管服务器和域名，完全从一个计算机小白的角度来讲一讲怎么简单地建立一个简单的静态博客。虽然有些步骤是可以调换顺序的，但我还是推荐按照下面的步骤进行操作。。</p>
 <h2 id="必备软件的安装"><a class="markdownIt-Anchor" href="#必备软件的安装"></a> 必备软件的安装</h2>
-<p>为了方便地构建我们的博客，这里使用了 hexo 来构建页面。而为了使用 hexo 则必须安装 git 和 node.js。</p>
-<p>在安装好 git 和 node.js 之后，打开 git bash ，输入以下命令来安装 hexo ：</p>
+<p>为了方便地构建我们的博客，这里使用了 hexo 来构建页面。而为了使用 hexo 则必须安装 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> 和 <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node.js</a> 。</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjifx.jpg" alt="ujjifx.jpg"><br>
+<img src="https://s2.ax1x.com/2019/10/13/ujjkp6.jpg" alt="ujjkp6.jpg"></p>
+<p>在安装好 git 和 node.js 之后，打开 <code>git bash</code> ，输入以下命令来安装 hexo ：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>随后，在你希望存放你的博客网站的文件的地方新建一个文件夹，（在Windows中）右键选择“git bash here”，随后在跳出来的终端中输入：</p>
+<p>随后，在你希望存放你的博客网站的文件的地方新建一个文件夹，（在Windows中）右键选择 <code>git bash here</code> ，随后在跳出来的终端中输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>其中“blog”只是一个文件夹的名字，你也可以取其他的名字（当然后面需要记住这个名字）。</p>
+<p>其中 <code>blog</code> 只是一个文件夹的名字，你也可以取其他的名字（当然后面需要记住这个名字）。</p>
 <h2 id="利用-github-pages-服务"><a class="markdownIt-Anchor" href="#利用-github-pages-服务"></a> 利用 GitHub Pages 服务</h2>
 <p>GitHub 为每一位用户提供了 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 服务。它完全免费，而且易于使用，唯一的缺点在于 GitHub Pages 的页面在国内加载起来普遍较慢。</p>
 <p>为了克服这个缺陷，我们也可以使用国内的代码托管厂家码云提供的<a href="https://gitee.com/help/articles/4136" target="_blank" rel="noopener">码云Pages</a>，它使用起来和 GitHub Pages 几乎没有差别。</p>
 <p>为了使用 GitHub Pages 服务，你首先应当<a href="https://github.com/" target="_blank" rel="noopener">注册一个 GitHub 账号</a>。注册时记得记住自己用于注册的邮箱和用户名。</p>
-<p>注册完成后，跟随官网的引导，新建一个仓库。仓库名必须用以下格式写： <em>用户名</em>.github.io</p>
+<p>注册完成后，跟随官网的引导，新建一个仓库。仓库名必须用以下格式写： <code>*用户名*.github.io</code></p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjA1K.jpg" alt="ujjA1K.jpg"></p>
 <p>仓库创建成功不会立即生效，可能需要过大概10-30分钟，或者更久。</p>
 <h2 id="配置-git"><a class="markdownIt-Anchor" href="#配置-git"></a> 配置 git</h2>
 <p>打开 git bash ，并在终端中输入以下内容：</p>
@@ -343,6 +353,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>在确认一切无误后，同样在 git bash 中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.ax1x.com/2019/10/12/uOdPgA.jpg" alt="uOdPgA.jpg"></p>
 <p>就可以将本地的内容远程部署到你的 GitHub Pages 上了！</p>
 <h1 id="开始使用博客"><a class="markdownIt-Anchor" href="#开始使用博客"></a> 开始使用博客</h1>
 <p>那么，和技术相关的问题基本上都解决了（要是大家遇到了问题，可以以“hexo”和“GitHub Pages”为关键词到网上寻找相应的解决方案）。</p>
@@ -376,10 +387,7 @@
 </tbody>
 </table>
 <h2 id="学会用-markdown-写作"><a class="markdownIt-Anchor" href="#学会用-markdown-写作"></a> 学会用 Markdown 写作</h2>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <code>.md</code>, <code>.markdown</code>。</p>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。用 Markdown 编写的文档后缀为 <code>.md</code>, <code>.markdown</code>。</p>
 <p>进行markdown写作非常简单易学。下面简单介绍 Markdown 中常用的语法。如果大家需要专业的指导请参考其官方<a href="http://www.markdown.cn/" target="_blank" rel="noopener">语法指导</a>。</p>
 <h3 id="段落和换行"><a class="markdownIt-Anchor" href="#段落和换行"></a> 段落和换行</h3>
 <p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p>
@@ -494,6 +502,32 @@
 <p>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock 希尔排序 lang:c https://www.runoob.com/cprogramming/c-sort-algorithm.html C 排序算法 %&#125;</span><br><span class="line">void shell_sort(int arr[], int len) &#123;</span><br><span class="line">    int gap, i, j;</span><br><span class="line">    int temp;</span><br><span class="line">    for (gap = len &gt;&gt; 1; gap &gt; 0; gap = gap &gt;&gt; 1)</span><br><span class="line">        for (i = gap; i &lt; len; i++) &#123;</span><br><span class="line">            temp = arr[i];</span><br><span class="line">            for (j = i - gap; j &gt;= 0 &amp;&amp; arr[j] &gt; temp; j -= gap)</span><br><span class="line">                arr[j + gap] = arr[j];</span><br><span class="line">            arr[j + gap] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight c"><figcaption><span>希尔排序</span><a href="https://www.runoob.com/cprogramming/c-sort-algorithm.html" target="_blank" rel="noopener">C 排序算法</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shell_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> gap, i, j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span> (gap = len &gt;&gt; <span class="number">1</span>; gap &gt; <span class="number">0</span>; gap = gap &gt;&gt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> (i = gap; i &lt; len; i++) &#123;</span><br><span class="line">            temp = arr[i];</span><br><span class="line">            <span class="keyword">for</span> (j = i - gap; j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; temp; j -= gap)</span><br><span class="line">                arr[j + gap] = arr[j];</span><br><span class="line">            arr[j + gap] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="如何美化你的博客"><a class="markdownIt-Anchor" href="#如何美化你的博客"></a> 如何美化你的博客</h1>
+<p>为了美化你的博客，你可能想更换一下主题，在文章里插入一些图片和视频等多媒体。接下来我们来看看如何做到这些。</p>
+<h2 id="更换主题"><a class="markdownIt-Anchor" href="#更换主题"></a> 更换主题</h2>
+<p>Hexo 有非常多现成的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a>，可以让你不费吹灰之力就将自己的博客变得非常漂亮。我们该如何获取主题呢？</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjE6O.jpg" alt="ujjE6O.jpg"></p>
+<p>接下来我们以更换为NexT为例子，教大家如何切换主题。</p>
+<p>首先我们需要安装主题。</p>
+<p>第一种方式，是找到你的站点文件夹，并在该位置呼出 git bash ，随后输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>第二种方式是前往 NexT 主题的<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">发布页面</a>，随后下载最新的稳定版，并解压到你的站点文件夹的<code>themes</code>子文件夹中，最后将解压后的文件夹名称（hexo-theme-next-5.1.4）更改为 next。</p>
+<p>随后我们找到站点配置文件<code>_config.yml</code>，找到<code>theme</code>字段，并将其更改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<p>即可成功启用 NexT 主题。我们也可以对主题进行更进一步的自定义化，此处不详述，可参见<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT入门指南</a>。</p>
+<h2 id="插入多媒体"><a class="markdownIt-Anchor" href="#插入多媒体"></a> 插入多媒体</h2>
+<p>为了让我们的博客更可读，我们还需要学会在博客中插入图片和视频的方法。</p>
+<p>插入图片的方法和使用图床的技巧之前已经讲过了，此处不再赘述。</p>
+<p>在博客中比较优雅地插入视频需要使用 HTML 中的 iframe 控件。</p>
+<p>下面以插入一个 bilibili 视频为例。</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjVXD.jpg" alt="ujjVXD.jpg"></p>
+<p>在网页端进入视频的播放页后，大家可以在分享选项中找到相应的嵌入代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=63514495&amp;cid=110293782&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>但是你会发现直接使用上面的代码生成的网页在移动端的体验很差。把上面那段代码中的 <code>src=&quot;...&quot;</code>中间的地址复制下来，黏贴到下面的代码中覆盖 <code>src=&quot;...&quot;</code> 中间的内容，就可以得到体验较好的视频嵌入体验。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;&gt;&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=63511105&amp;cid=110287165&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; style=&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="分享文件"><a class="markdownIt-Anchor" href="#分享文件"></a> 分享文件</h2>
+<p>如果大家想分享文件，当然也可以采用国内的各种网盘。但是使用国内的网盘需要你的读者们注册相应的账号，而且也有非常严重的限速问题。这个时候我们就可以使用 <a href="http://hostr.co" target="_blank" rel="noopener">hostr.co</a> 等文件床，来让读者们能直接从你博客中的链接下载文件。你可以在它的<a href="https://hostr.co" target="_blank" rel="noopener">官网</a>注册账号，虽然免费账号只能上传最大 20 MB 的文件，但是对于常规文件的分享也是非常够用了。</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjPt1.jpg" alt="ujjPt1.jpg"></p>
 
     </div>
 
@@ -653,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#建立博客"><span class="nav-number">1.</span> <span class="nav-text"> 建立博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#必备软件的安装"><span class="nav-number">1.1.</span> <span class="nav-text"> 必备软件的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-github-pages-服务"><span class="nav-number">1.2.</span> <span class="nav-text"> 利用 GitHub Pages 服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-git"><span class="nav-number">1.3.</span> <span class="nav-text"> 配置 git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程部署"><span class="nav-number">1.4.</span> <span class="nav-text"> 远程部署</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始使用博客"><span class="nav-number">2.</span> <span class="nav-text"> 开始使用博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何新建页面和博文"><span class="nav-number">2.1.</span> <span class="nav-text"> 如何新建页面和博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学会用-markdown-写作"><span class="nav-number">2.2.</span> <span class="nav-text"> 学会用 Markdown 写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#段落和换行"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 段落和换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加粗-倾斜"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 加粗、倾斜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">2.2.4.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.2.5.</span> <span class="nav-text"> 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超链接"><span class="nav-number">2.2.6.</span> <span class="nav-text"> 超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入图片"><span class="nav-number">2.2.7.</span> <span class="nav-text"> 插入图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学会使用一些-hexo-组件"><span class="nav-number">2.3.</span> <span class="nav-text"> 学会使用一些 hexo 组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#博文的扉页"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 博文的“扉页”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用-2"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块"><span class="nav-number">2.3.3.</span> <span class="nav-text"> 代码块</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#建立博客"><span class="nav-number">1.</span> <span class="nav-text"> 建立博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#必备软件的安装"><span class="nav-number">1.1.</span> <span class="nav-text"> 必备软件的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-github-pages-服务"><span class="nav-number">1.2.</span> <span class="nav-text"> 利用 GitHub Pages 服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-git"><span class="nav-number">1.3.</span> <span class="nav-text"> 配置 git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程部署"><span class="nav-number">1.4.</span> <span class="nav-text"> 远程部署</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始使用博客"><span class="nav-number">2.</span> <span class="nav-text"> 开始使用博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何新建页面和博文"><span class="nav-number">2.1.</span> <span class="nav-text"> 如何新建页面和博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学会用-markdown-写作"><span class="nav-number">2.2.</span> <span class="nav-text"> 学会用 Markdown 写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#段落和换行"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 段落和换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加粗-倾斜"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 加粗、倾斜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">2.2.4.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.2.5.</span> <span class="nav-text"> 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超链接"><span class="nav-number">2.2.6.</span> <span class="nav-text"> 超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入图片"><span class="nav-number">2.2.7.</span> <span class="nav-text"> 插入图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学会使用一些-hexo-组件"><span class="nav-number">2.3.</span> <span class="nav-text"> 学会使用一些 hexo 组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#博文的扉页"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 博文的“扉页”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用-2"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块"><span class="nav-number">2.3.3.</span> <span class="nav-text"> 代码块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何美化你的博客"><span class="nav-number">3.</span> <span class="nav-text"> 如何美化你的博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">3.1.</span> <span class="nav-text"> 更换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入多媒体"><span class="nav-number">3.2.</span> <span class="nav-text"> 插入多媒体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分享文件"><span class="nav-number">3.3.</span> <span class="nav-text"> 分享文件</span></a></li></ol></li></ol></div>
             
 
           </div>
