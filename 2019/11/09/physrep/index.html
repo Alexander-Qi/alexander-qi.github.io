@@ -64,7 +64,7 @@
 <meta name="keywords" content="LaTeX, Gaussian">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何用LaTeX写物理实验报告">
-<meta property="og:url" content="https://alexanderqi.github.io/2019/11/09/physrep/index.html">
+<meta property="og:url" content="https://alexander-qi.github.io/2019/11/09/physrep/index.html">
 <meta property="og:site_name" content="墘青">
 <meta property="og:description" content="在世界一流大学上过大学物理实验的同学们相信都能体会到，写实验报告实在是一件无聊又花精力的事情，特别是还要考虑输入公式和排版效果的时候。有没有能够一劳永逸的方法呢？ 本文将介绍让你在非常短的时间内用LaTeX写出精美的实验报告的方法，并给出一个作者本人也在使用的模板！ 如果你没有安装LaTeX，那么请先看一下这一篇文章并安装一下。相信我，安装起来非常快，上手也只需要一两个小时，LaTeX是一个非常好">
 <meta property="og:locale" content="zh_CN">
@@ -75,7 +75,7 @@
 <meta name="twitter:title" content="如何用LaTeX写物理实验报告">
 <meta name="twitter:description" content="在世界一流大学上过大学物理实验的同学们相信都能体会到，写实验报告实在是一件无聊又花精力的事情，特别是还要考虑输入公式和排版效果的时候。有没有能够一劳永逸的方法呢？ 本文将介绍让你在非常短的时间内用LaTeX写出精美的实验报告的方法，并给出一个作者本人也在使用的模板！ 如果你没有安装LaTeX，那么请先看一下这一篇文章并安装一下。相信我，安装起来非常快，上手也只需要一两个小时，LaTeX是一个非常好">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/11/09/MeX9Ld.jpg">
-  <link rel="canonical" href="https://alexanderqi.github.io/2019/11/09/physrep/">
+  <link rel="canonical" href="https://alexander-qi.github.io/2019/11/09/physrep/">
 
 
 <script id="page-configurations">
@@ -244,7 +244,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://alexanderqi.github.io/2019/11/09/physrep/">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2019/11/09/physrep/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="任之">
@@ -309,7 +309,7 @@
       
         <p>在世界一流大学上过大学物理实验的同学们相信都能体会到，写实验报告实在是一件无聊又花精力的事情，特别是还要考虑输入公式和排版效果的时候。有没有能够一劳永逸的方法呢？</p>
 <p>本文将介绍让你在非常短的时间内用LaTeX写出精美的实验报告的方法，并给出一个作者本人也在使用的模板！</p>
-<p>如果你没有安装LaTeX，那么请先看一下<a href="https://alexander-qi.github.io/2019/06/26/latex%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" target="_blank" rel="noopener">这一篇文章</a>并安装一下。相信我，安装起来非常快，上手也只需要一两个小时，LaTeX是一个非常好用的工具！</p>
+<p>如果你没有安装LaTeX，那么请先看一下<a href="https://alexander-qi.github.io/2019/06/26/latex%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">这一篇文章</a>并安装一下。相信我，安装起来非常快，上手也只需要一两个小时，LaTeX是一个非常好用的工具！</p>
 <p>下文将按照报告写作的时间顺序来简单介绍一下写法，并给出相对应的模板和例子。</p>
 <h1 id="文档整体信息设置"><a class="markdownIt-Anchor" href="#文档整体信息设置"></a> 文档整体信息设置</h1>
 <p>在我过去的文章中也已经介绍过<code>.tex</code>文档中导言区的功能。为了让我们的报告省心好看，我们需要在导言区下一些心思。</p>
@@ -340,7 +340,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125;</span><br><span class="line">    \maketitle</span><br><span class="line">    \section&#123;实验名称和目的&#125;</span><br><span class="line">    \section&#123;实验原理&#125;</span><br><span class="line">    \section&#123;实验仪器&#125;</span><br><span class="line">    \section&#123;实验步骤&#125;</span><br><span class="line">    \section&#123;数据处理&#125;</span><br><span class="line">    \section&#123;实验小结&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <p>其中由于原始数据表格一般是直接在打印后附在最后的，正文中就不列出了。</p>
 <h1 id="输入普通文本"><a class="markdownIt-Anchor" href="#输入普通文本"></a> 输入普通文本</h1>
-<p>正如我在<a href="https://alexander-qi.github.io/2019/06/27/latextext/" target="_blank" rel="noopener">以前的文章</a>中提到过的，在LaTeX中输入普通的文本是非常直观的，没有任何上手难度，只需要在段落间多打一个换行符（和英文中习惯类似）就能起到换段的作用。例如：</p>
+<p>正如我在<a href="https://alexander-qi.github.io/2019/06/27/latextext/">以前的文章</a>中提到过的，在LaTeX中输入普通的文本是非常直观的，没有任何上手难度，只需要在段落间多打一个换行符（和英文中习惯类似）就能起到换段的作用。例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\section&#123;思考题&#125;</span><br><span class="line">	</span><br><span class="line">\paragraph&#123;一般量热学实验精度高吗？为什么？&#125;</span><br><span class="line">一般而言，量热学实验需要测量温度和热流密度等量，而这些量的测量往往都需要依靠电学器具或者温度计等仪器。</span><br><span class="line">	</span><br><span class="line">这些仪器本身往往就紧密度不佳，再加上量热学实验所求的量往往需要通过较为复杂的方程计算得到，最终的测量结果的相对偏差累计了非常多的原始数据的偏差，故而精度往往是不高的。</span><br></pre></td></tr></table></figure>
 <p>如果你希望在段落开头附加一个加粗的段落标题，那么你也可以像上面那个例子一样使用<code>\paragraph{·}</code>命令，并将标题放在花括号内。</p>
 <h1 id="生成列表"><a class="markdownIt-Anchor" href="#生成列表"></a> 生成列表</h1>
@@ -352,7 +352,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;[1.]</span><br><span class="line">	\item 了解准稳态法测量不良导体的导热系数和比热原理，并通过快速测量学习掌握该方法。</span><br><span class="line">	\item 学习使用数字万用表。</span><br><span class="line">	\item 掌握使用热电偶测量温度的方法。</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
 <p>需要注意的是上面的例子里，<code>\begin{enumerate}[1.]</code>中的<code>[1.]</code>是<code>enumerate</code>宏包所带来的功能，若需要使用请一定要在导言区加载该宏包。</p>
 <h1 id="公式的快速输入"><a class="markdownIt-Anchor" href="#公式的快速输入"></a> 公式的快速输入</h1>
-<p>在LaTeX中自己手动输入数学公式需要一定的学习时间，大家如果感兴趣可以参考<a href="https://alexander-qi.github.io/2019/06/29/latexmath/" target="_blank" rel="noopener">这篇文章</a>。下面我介绍一个偷懒却快捷好用的方法。</p>
+<p>在LaTeX中自己手动输入数学公式需要一定的学习时间，大家如果感兴趣可以参考<a href="https://alexander-qi.github.io/2019/06/29/latexmath/">这篇文章</a>。下面我介绍一个偷懒却快捷好用的方法。</p>
 <p>mathpix是一个可以识别手写和打印公式的软件。大家可以在它的官网<a href="https://mathpix.com/win_app/mathpix_snipping_tool_setup.exe" target="_blank" rel="noopener">下载</a>这个工具。</p>
 <p>注册完账号登录之后，我们就可以使用这个软件快速得到自己（或别人）手写的以及电子版讲义上已经有的公式。使用方法非常简单，只要用这个软件截屏含有公式的部分就可以了。</p>
 <p><img src="https://s2.ax1x.com/2019/11/09/MeX9Ld.jpg" alt="MeX9Ld.jpg"></p>
@@ -361,7 +361,7 @@
 <p>这个工具的限制是每个月每个账号只能免费识别50个公式，大家如果需求量比较大可以适当氪一点金。</p>
 <p>下面是两个比较具体的例子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;align&#125;</span><br><span class="line">	\Delta_&#123;n&#125;&amp;=\sqrt&#123;\left(\frac&#123;\partial n&#125;&#123;\partial A&#125; \times \Delta_&#123;A&#125;\right)^&#123;2&#125;+\left(\frac&#123;\partial n&#125;&#123;\partial \delta&#125; \times \Delta_&#123;j&#125;\right)^&#123;2&#125;&#125;\notag\\</span><br><span class="line">	&amp;=\sqrt&#123;\left(\frac&#123;\sin \frac&#123;\delta&#125;&#123;2&#125;&#125;&#123;2 \sin ^&#123;2&#125; \frac&#123;A&#125;&#123;2&#125;&#125; \times \Delta_&#123;A&#125;\right)^&#123;2&#125;+\left(\frac&#123;\cos \frac&#123;\delta+A&#125;&#123;2&#125;&#125;&#123;\sin \frac&#123;A&#125;&#123;2&#125;&#125; \times \Delta_&#123;\delta&#125;\right)^&#123;2&#125;&#125;\tag&#123;*&#125;</span><br><span class="line">\end&#123;align&#125;</span><br><span class="line"></span><br><span class="line">f=\frac&#123;N&#125;&#123;2 L&#125; \sqrt&#123;\frac&#123;T&#125;&#123;\rho&#125;&#125;， \qquad v=\lambda f=\sqrt&#123;\frac&#123;T&#125;&#123;\rho&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>由于LaTeX中数学输入的语法比较复杂，大家如果想学习如何做到更好看的效果请一定要看一下<a href="https://alexander-qi.github.io/2019/06/29/latexmath/" target="_blank" rel="noopener">《LaTeX中输入数学公式》</a>这篇文章！</p>
+<p>由于LaTeX中数学输入的语法比较复杂，大家如果想学习如何做到更好看的效果请一定要看一下<a href="https://alexander-qi.github.io/2019/06/29/latexmath/">《LaTeX中输入数学公式》</a>这篇文章！</p>
 <h1 id="建立并处理表格"><a class="markdownIt-Anchor" href="#建立并处理表格"></a> 建立并处理表格</h1>
 <h2 id="学会使用表格"><a class="markdownIt-Anchor" href="#学会使用表格"></a> 学会使用表格</h2>
 <p>记录实验数据离不开使用表格。在LaTeX中，<code>tabular</code>环境能够用来绘制最基础的表格。我们可以用这样的命令来进入<code>tabular</code>环境：<code>\begin{tabular}{table spec}</code>。其中第二个花括号里面的<code>table spec</code>定义了表格的样式。在这个环境中：<code>\hline</code>命令表示横线，<code>|</code>表示竖线；用<code>&amp;</code>来分列，用<code>\\</code>来换行；每列可以分别采用居左、居中、居右等横向对齐方式，分别在<code>{table spec}</code>里面用l、c、r来表示。</p>
@@ -380,7 +380,7 @@
 <p>在线工具的优点在于不需要下载任何文件，打开浏览器就可以用。在这里我推荐<a href="http://www.tablesgenerator.com/" target="_blank" rel="noopener">Tables Generator</a>这个网站。将我们已经制作好的表格黏贴进去后，立即就可以得到LaTeX命令。同时访问这个网站不需要科学上网。最令人意外的是，这个网站不仅仅支持将表格转换成LaTeX命令，也可以将表格转换成HTML表格、纯文本表格、markdown表格和MediaWiki表格。</p>
 <h3 id="本地插件"><a class="markdownIt-Anchor" href="#本地插件"></a> 本地插件</h3>
 <p>有很多朋友不喜欢在线工具，因为它们更新速度快，消失的速度也快，同时完全离不开网络。我们也有着可以下载到本地的插件，能够将excel表格转化成LaTeX代码。我要介绍的插件是<a href="http://mirrors.ctan.org/support/excel2latex/Excel2LaTeX.xla" target="_blank" rel="noopener">Excel2LaTeX</a>，这个插件是一个可以应用于Windows平台下的Microsoft Excel 2000-2019的excel插件，是一个标准的<code>.xla</code>文件。</p>
-<p>其实关于表格还有非常多高阶的技巧，大家如果感兴趣可以查看<a href="https://alexander-qi.github.io/2019/08/10/advancedtables/" target="_blank" rel="noopener">这篇文章</a>。</p>
+<p>其实关于表格还有非常多高阶的技巧，大家如果感兴趣可以查看<a href="https://alexander-qi.github.io/2019/08/10/advancedtables/">这篇文章</a>。</p>
 <h1 id="插图的绘制和处理"><a class="markdownIt-Anchor" href="#插图的绘制和处理"></a> 插图的绘制和处理</h1>
 <p>我一般使用matlab处理数据并绘制插图。由于我的matlab还非常低下，这里就不误人子弟了。大家只需要注意在LaTeX中我们最好将图片绘制为<code>.eps</code>格式的矢量图形，而不要使用<code>.jpeg</code>等格式的文件。</p>
 <p>并置多张图片是我在写植物组织培养的实验报告的时候才第一次遇到的需求。不论是在论文、简历、PPT还是实验报告中，你都会常常遇到这种需求。在LaTeX中实现多张图片并置其实也不难。我们只需要用<code>subfigure</code>宏包提供的<code>\subfigure[name-of-subfigure]{include-figure-file}</code>命令即可。</p>
@@ -569,10 +569,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">任之</span>
 </div>
-  <div class="powered-by"> <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 专属
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">闲言碎语
+  <div class="theme-info">胡言乱语
   </div>
 
         

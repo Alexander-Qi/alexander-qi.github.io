@@ -64,7 +64,7 @@
 <meta name="keywords" content="LaTeX, Gaussian">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始用beamer做学术报告幻灯片">
-<meta property="og:url" content="https://alexanderqi.github.io/2019/09/07/teachbeamer/index.html">
+<meta property="og:url" content="https://alexander-qi.github.io/2019/09/07/teachbeamer/index.html">
 <meta property="og:site_name" content="墘青">
 <meta property="og:description" content="本文主要内容：  LaTeX的安装 LaTeX和beamer的基础语法 关于引用、主题设置 制作插图的注意事项 如何制作动画   安装 LaTeX是一种常被用于期刊、论文的排版的排版引擎。不像Microsoft Word，它是一种“所见非所得”的工具，但并不难学，不需要编程基础，一般两小时就可上手。更多的信息可参阅《LaTeX是什么？有什么用？》。 首先需要安装一种LaTeX的发行版，这里我们选择">
 <meta property="og:locale" content="zh_CN">
@@ -80,7 +80,7 @@
 <meta name="twitter:title" content="从零开始用beamer做学术报告幻灯片">
 <meta name="twitter:description" content="本文主要内容：  LaTeX的安装 LaTeX和beamer的基础语法 关于引用、主题设置 制作插图的注意事项 如何制作动画   安装 LaTeX是一种常被用于期刊、论文的排版的排版引擎。不像Microsoft Word，它是一种“所见非所得”的工具，但并不难学，不需要编程基础，一般两小时就可上手。更多的信息可参阅《LaTeX是什么？有什么用？》。 首先需要安装一种LaTeX的发行版，这里我们选择">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/09/07/nlL6mT.jpg">
-  <link rel="canonical" href="https://alexanderqi.github.io/2019/09/07/teachbeamer/">
+  <link rel="canonical" href="https://alexander-qi.github.io/2019/09/07/teachbeamer/">
 
 
 <script id="page-configurations">
@@ -249,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://alexanderqi.github.io/2019/09/07/teachbeamer/">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2019/09/07/teachbeamer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="任之">
@@ -321,7 +321,7 @@
 <li>如何制作动画</li>
 </ul>
 <h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
-<p>LaTeX是一种常被用于期刊、论文的排版的排版引擎。不像Microsoft Word，它是一种“所见非所得”的工具，但并不难学，不需要编程基础，一般两小时就可上手。更多的信息可参阅<a href="https://alexander-qi.github.io/2019/06/26/latex%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" target="_blank" rel="noopener">《LaTeX是什么？有什么用？》</a>。</p>
+<p>LaTeX是一种常被用于期刊、论文的排版的排版引擎。不像Microsoft Word，它是一种“所见非所得”的工具，但并不难学，不需要编程基础，一般两小时就可上手。更多的信息可参阅<a href="https://alexander-qi.github.io/2019/06/26/latex%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">《LaTeX是什么？有什么用？》</a>。</p>
 <p>首先需要安装一种LaTeX的发行版，这里我们选择最通用的TeX Live。其<a href="http://tug.org/texlive/" target="_blank" rel="noopener">官网</a>上提供了许多下载方式与媒介。一般使用官方的<a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe" target="_blank" rel="noopener">在线安装工具</a>就可以了。除此以外，在清华大学开源软件镜像站上面也有TeX Live最新版的<a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2019-20190410.iso" target="_blank" rel="noopener">镜像</a>以供离线安装。</p>
 <p>需要注意：</p>
 <ul>
@@ -345,8 +345,8 @@
 <p>其中，在<code>\begin{document}</code>之前的是导言区，我们在这里声明以下内容：文章的类型；全文标题、作者；需要加载的“插件”（即宏包）；宏包的全局设置等。例如设置文章的标题：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\title&#123;Hello, \LaTeX\ !&#125;</span><br><span class="line">\author&#123;Qian-Qing&#125;</span><br><span class="line">\date&#123;\today&#125;</span><br></pre></td></tr></table></figure>
 <p>在<code>\begin{document}</code>到<code>\end{document}</code>之间的所有部分是<code>.tex</code>文档的正文区。在这里，我们输入自己创作的内容，并提交给TeX引擎排版。</p>
-<p>本文只简述最基本的原理，有关具体文本输入的方法请参见<a href="https://alexander-qi.github.io/2019/06/27/latextext/" target="_blank" rel="noopener">《LaTeX基本文本输入》</a>。</p>
-<p>在LaTeX中输入表格、列表和图片都有特殊的语法，具体请参见<a href="https://alexander-qi.github.io/2019/07/01/latex%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/" target="_blank" rel="noopener">《LaTeX文档组织结构》</a>。</p>
+<p>本文只简述最基本的原理，有关具体文本输入的方法请参见<a href="https://alexander-qi.github.io/2019/06/27/latextext/">《LaTeX基本文本输入》</a>。</p>
+<p>在LaTeX中输入表格、列表和图片都有特殊的语法，具体请参见<a href="https://alexander-qi.github.io/2019/07/01/latex%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84/">《LaTeX文档组织结构》</a>。</p>
 <p>LaTeX中有三种列表环境，分别是生成无序号列表的<code>itemize</code>，生成有序号列表的<code>enumerate</code>和能添加描述的<code>description</code>环境。这些列表是可以嵌套的（虽然有时候效果不好），就像下面这个例子所展示的一样。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;</span><br><span class="line">    \item 第一层是有序号的列表。</span><br><span class="line">        \begin&#123;itemize&#125;</span><br><span class="line">          \item 第二层是无序号列表，</span><br><span class="line">          \item[记住] 用方括号括起来的内容可以是“小标题”</span><br><span class="line">        \end&#123;itemize&#125;</span><br><span class="line">    \item 你必须记住：</span><br><span class="line">        \begin&#123;description&#125;</span><br><span class="line">            \item[列表不会] 让所有事情都看起来很漂亮有序</span><br><span class="line">            \item[但是它能够] 让一些东西以非常美丽的方式展现出来</span><br><span class="line">        \end&#123;description&#125;</span><br><span class="line">\end&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://s2.ax1x.com/2019/09/07/nlL6mT.jpg" alt="nlL6mT.jpg"></p>
@@ -363,7 +363,7 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;</span><br><span class="line">    \centering</span><br><span class="line">        \includegraphics[angle=45, width=0.7\textwidth]&#123;sign.eps&#125;</span><br><span class="line">    \caption&#123;Signature&#125;</span><br><span class="line">    \label&#123;fig:sign&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://s2.ax1x.com/2019/09/07/nlLzct.jpg" alt="nlLzct.jpg"></p>
-<p>同时你可以直接在LaTeX中绘制化学结构式，而完全不需要使用ChemDraw之中收费的软件！具体的方法请参见<a href="https://alexander-qi.github.io/2019/07/07/latexchemfig/" target="_blank" rel="noopener">《LaTeX绘制化学结构式》</a></p>
+<p>同时你可以直接在LaTeX中绘制化学结构式，而完全不需要使用ChemDraw之中收费的软件！具体的方法请参见<a href="https://alexander-qi.github.io/2019/07/07/latexchemfig/">《LaTeX绘制化学结构式》</a></p>
 <p>为了使用<code>beamer</code>制作幻灯片，你需要在导言区加载以下语句：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;beamer&#125;</span><br></pre></td></tr></table></figure>
 <p><code>beamer</code>中所有的内容都被放在一个被称为<code>frame</code>的环境中，在frame外的内容会被LaTeX用奇怪的方法排版到幻灯片上，影响效果，请大家将自己的正文放在<code>frame</code>中。</p>
@@ -372,8 +372,8 @@
 <p>我们也可以通过命令<code>\tableofcontents</code>来生成目录（需要在<code>frame</code>环境外使用<code>\section</code>命令），同时用<code>\frametitle{&lt;title&gt;}</code>命令来为这页幻灯片加上标题：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;</span><br><span class="line">    \frametitle&#123;Catalogue&#125;</span><br><span class="line">    \tableofcontents</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="引用"><a class="markdownIt-Anchor" href="#引用"></a> 引用</h1>
-<p>在普通的论文中进行引用是一件非常方便快捷的事情，方法可参见<a href="https://alexander-qi.github.io/2019/07/19/latex-cite/" target="_blank" rel="noopener">《在LaTeX里处理引用》</a>，但是在幻灯片中引用就稍显麻烦一些。</p>
-<p>为了在幻灯片中引用，我们仍旧需要创建自己的<code>.bib</code>文件。创建方法多种多样，有快有慢，希望学习比较方便的方法可以参考<a href="https://alexander-qi.github.io/2019/07/22/latex-skills2/" target="_blank" rel="noopener">《LaTeX中三分钟搞定引用》</a>。</p>
+<p>在普通的论文中进行引用是一件非常方便快捷的事情，方法可参见<a href="https://alexander-qi.github.io/2019/07/19/latex-cite/">《在LaTeX里处理引用》</a>，但是在幻灯片中引用就稍显麻烦一些。</p>
+<p>为了在幻灯片中引用，我们仍旧需要创建自己的<code>.bib</code>文件。创建方法多种多样，有快有慢，希望学习比较方便的方法可以参考<a href="https://alexander-qi.github.io/2019/07/22/latex-skills2/">《LaTeX中三分钟搞定引用》</a>。</p>
 <p>我们需要使用<code>biblatex</code>宏包。同时对它进行一定的设定。这里我选择让引用形式为右上角的数字。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\usepackage[backend=bibtex,style=numeric,sorting=none]&#123;biblatex&#125;</span><br><span class="line">\addbibresource&#123;&lt;filename&gt;.bib&#125; %BibTeX数据文件及位置</span><br></pre></td></tr></table></figure>
 <p>通常的引用方法会让参考文件集中出现在最后。这里我们使用<code>\footfullcite</code>命令在幻灯片每页的页脚处进行引用。</p>
@@ -607,10 +607,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">任之</span>
 </div>
-  <div class="powered-by"> <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 专属
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">闲言碎语
+  <div class="theme-info">胡言乱语
   </div>
 
         
