@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/catwalk.svg?v=7.3.0" color="#222">
+  <meta name="google-site-verification" content="true">
+   <meta name="msvalidate.01" content="505F1D2C133880577A334218EA5F59C5" />
+  <meta name="baidu-site-verification" content="1DwodgnsTs" />
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="本文的主要内容有：  什么是计算化学？ 什么是Gaussian？ Gaussian的运作模式是怎么样的？ 该如何上手Gaussian？   计算化学是什么？ 计算化学（computational chemistry）是理论化学的一个分支，主要目的是利用有效的数学近似以及电脑程序计算分子的性质，例如总能量、偶极矩、四极矩、振动频率、反应活性等，并用以解释一些具体的化学问题。计算化学这个名词有时也用来">
+<meta name="keywords" content="LaTeX, Gaussian">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是Gaussian？">
+<meta property="og:url" content="https://alexander-qi.github.io/2019/begingauss/index.html">
+<meta property="og:site_name" content="墘青">
+<meta property="og:description" content="本文的主要内容有：  什么是计算化学？ 什么是Gaussian？ Gaussian的运作模式是怎么样的？ 该如何上手Gaussian？   计算化学是什么？ 计算化学（computational chemistry）是理论化学的一个分支，主要目的是利用有效的数学近似以及电脑程序计算分子的性质，例如总能量、偶极矩、四极矩、振动频率、反应活性等，并用以解释一些具体的化学问题。计算化学这个名词有时也用来">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/begingauss/gausslogo.png">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/begingauss/guass1.svg">
+<meta property="og:updated_time" content="2019-08-14T08:56:31.700Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是Gaussian？">
+<meta name="twitter:description" content="本文的主要内容有：  什么是计算化学？ 什么是Gaussian？ Gaussian的运作模式是怎么样的？ 该如何上手Gaussian？   计算化学是什么？ 计算化学（computational chemistry）是理论化学的一个分支，主要目的是利用有效的数学近似以及电脑程序计算分子的性质，例如总能量、偶极矩、四极矩、振动频率、反应活性等，并用以解释一些具体的化学问题。计算化学这个名词有时也用来">
+<meta name="twitter:image" content="https://alexander-qi.github.io/2019/begingauss/gausslogo.png">
+  <link rel="canonical" href="https://alexander-qi.github.io/2019/begingauss/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>什么是Gaussian？ | 墘青</title>
+  
+
+
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?079ecf7f137b525cbb89fdda7e5d6b93";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">墘青</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">LaTeX, Gaussian and More...</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2019/begingauss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="任之">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="墘青">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">什么是Gaussian？
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-14 15:51:23 / 修改时间：16:56:31" itemprop="dateCreated datePublished" datetime="2019-08-14T15:51:23+08:00">2019-08-14</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Gaussian/" itemprop="url" rel="index"><span itemprop="name">Gaussian</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文的主要内容有：</p>
+<ul>
+<li>什么是计算化学？</li>
+<li>什么是Gaussian？</li>
+<li>Gaussian的运作模式是怎么样的？</li>
+<li>该如何上手Gaussian？</li>
+</ul>
+<h1 id="计算化学是什么"><a class="markdownIt-Anchor" href="#计算化学是什么"></a> 计算化学是什么？</h1>
+<p>计算化学（computational chemistry）是理论化学的一个分支，主要目的是利用有效的数学近似以及电脑程序计算分子的性质，例如总能量、偶极矩、四极矩、振动频率、反应活性等，并用以解释一些具体的化学问题。计算化学这个名词有时也用来表示计算机科学与化学的交叉学科。</p>
+<p>计算化学以及密切相关的分子模拟技术领域如今已成为整个化学科学的基本工具。</p>
+<p>计算化学主要应用已有的电脑程序和方法对特定的化学问题进行研究。而算法和电脑程序的开发则由理论化学家和理论物理学家完成。计算化学在研究原子和分子性质、化学反应途径等问题时，常侧重于解决以下两个方面的问题：</p>
+<ul>
+<li>为合成实验预测起始条件</li>
+<li>研究化学反应机理、解释反应现象</li>
+</ul>
+<p>计算化学的子学科主要包括：</p>
+<ul>
+<li>原子和分子的计算机表述</li>
+<li>利用计算机协助存储和搜索化学信息数据</li>
+<li>研究化学结构与性质之间的关系</li>
+<li>根据对作用力模拟对化学结构进行理论阐释</li>
+<li>计算机辅助化合物合成</li>
+<li>计算机辅助特性分子设计（例如计算机辅助药物设计）</li>
+</ul>
+<p>最值得注意的是，该领域已经实现了为复杂的化学问题或甚至生物问题提供答案的能力，可以预测并补充许多实验。</p>
+<p>然而，在许多情况下，这一重要作用尚未完全出现在本科课程和课程中；因此，处理分子建模和计算的本科生的教科书很少见。</p>
+<h1 id="什么是gaussian高斯"><a class="markdownIt-Anchor" href="#什么是gaussian高斯"></a> 什么是Gaussian(高斯)？</h1>
+<p><a href="http://gaussian.com/" target="_blank" rel="noopener">Gaussian</a>是1998年诺贝尔化学奖得主<a href="https://www.nobelprize.org/prizes/chemistry/1998/pople/facts/" target="_blank" rel="noopener">John A. Pople</a>于1970年主导开发完成的计算化学程序。</p>
+<p>分子的结构和它们彼此反应的方式取决于电子的运动及其在空间中的分布，这是由量子力学定律决定的。然而，量子力学需要对诸如分子的复杂系统进行非常复杂的计算。</p>
+<p>在20世纪60年代末，John Pople提供了关于使用计算机进行此类计算的重要信息，包括他开发的Gaussian计算机程序。使用各种实验数据，该程序可以提供分子特性和反应过程的描述。</p>
+<p>Gaussian可以计算很多事情，具体包括：</p>
+<ul>
+<li>分子能量和结构研究</li>
+<li>过渡态的能量和结构研究</li>
+<li>化学键以及反应的能量</li>
+<li>分子轨道</li>
+<li>偶极矩和多极矩</li>
+<li>原子电荷和电势</li>
+<li>振动频率</li>
+<li>红外和拉曼光谱</li>
+<li>核磁</li>
+<li>极化率和超极化率</li>
+<li>热力学性质</li>
+<li>反应途径</li>
+</ul>
+<p>目前，Gaussian的最新版本是<a href="http://gaussian.com/gaussian16/" target="_blank" rel="noopener">Gaussian 16</a>。</p>
+<img src="/2019/begingauss/gausslogo.png" title="高斯的logo">
+<p>从量子力学的基本定律出发，高斯16预测了化合物的能量，分子结构，振动频率和分子特性以及各种化学环境中的反应。高斯16的模型可以应用于稳定物种和难以或不可能通过实验观察的化合物，无论是由于它们的性质（例如，毒性，可燃性，放射性）还是其固有的短暂性质（例如，短寿命的中间体和过渡结构）。</p>
+<p>使用Gaussian 16，您可以彻底调查您感兴趣的化学问题。例如，您不仅可以快速可靠地最小化分子结构，还可以预测过渡态的结构，并验证预测的静止点实际上是最小值或过渡结构（视情况而定）。您可以通过遵循内在反应坐标（IRC）继续计算反应路径，并确定哪些反应物和产物通过给定的过渡结构连接。一旦您全面了解了潜在的能量表面，就可以准确预测反应能量和障碍。您还可以预测各种化学特性。</p>
+<h1 id="gaussian如何运作"><a class="markdownIt-Anchor" href="#gaussian如何运作"></a> Gaussian如何运作？</h1>
+<p>Gaussian本体的运作过程<strong>非常简单</strong>：</p>
+<ol>
+<li>读入<code>.gjf</code>输入文件</li>
+<li>调动Gaussian主程序进行计算</li>
+<li>创建并写入输出文件</li>
+</ol>
+<p>输入文件中包含你希望计算的体系的信息，如原子位置、键级等。默认为<code>.out</code>格式的输出文件和计算过程中会产生的<code>.chk</code>文件(Gaussian Checkpoint File，里面包含着一些计算过程中产生的信息)里就会含有你希望得到的关键信息。</p>
+<img src="/2019/begingauss/guass1.svg" title="Gaussian如何工作">
+<p>理论上，<code>.gjf</code>输入文件和<code>.out</code>输出文件都是完全可以用记事本这样的纯文本编辑工具来读写的。</p>
+<p><code>.gjf</code>输入文件长这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">%chk=E:\Gaussian results\formyl.chk		! Link 0 命令</span><br><span class="line"># b3lyp/6-31g(d) geom=connectivity		! 作业控制部分，输入基组和计算方法</span><br><span class="line"></span><br><span class="line">Formaldehyde-Energy			! 作业的标题</span><br><span class="line"></span><br><span class="line">0 1					! 电荷和自旋多重度</span><br><span class="line"> C                 -0.02586107    1.11111103    0.00000953	! 原子坐标</span><br><span class="line"> O                  1.23253893    1.11111103   -0.00000306</span><br><span class="line"> H                 -0.56086107    2.03775821   -0.00000297</span><br><span class="line"> H                 -0.56086107    0.18446385    0.00003550</span><br><span class="line"></span><br><span class="line"> 1 2 2.0 3 1.0 4 1.0				! 键级数据</span><br><span class="line"> 2</span><br><span class="line"> 3</span><br><span class="line"> 4</span><br></pre></td></tr></table></figure>
+<p>输入文件里不区分大小写，<code>!</code>后的部分为注释。</p>
+<p>Gaussian Inc.开发的GaussView工具可以用于更快更好地编写输入文件和查看输出文件。</p>
+<h1 id="该如何开始入门gaussian"><a class="markdownIt-Anchor" href="#该如何开始入门gaussian"></a> 该如何开始入门Gaussian？</h1>
+<p>从Gaussian Inc.提供的官方教程开始学习使用方法是个不错的选择。</p>
+<p>在Bilibili上有搬运好的视频，大家不必再科学上网。</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/av63511105/" target="_blank" rel="noopener">与GaussView的第一次接触</a></li>
+<li><a href="https://www.bilibili.com/video/av63511443/" target="_blank" rel="noopener">GaussView构建分子结构</a></li>
+<li><a href="https://www.bilibili.com/video/av63511904/" target="_blank" rel="noopener">用GaussView设置计算工作类型</a></li>
+<li><a href="https://www.bilibili.com/video/av63513585/" target="_blank" rel="noopener">【GaussView】可视化计算结果</a></li>
+<li><a href="https://www.bilibili.com/video/av63513940/" target="_blank" rel="noopener">【GaussView】用3D模型展示计算结果</a></li>
+<li><a href="https://www.bilibili.com/video/av63514495/" target="_blank" rel="noopener">【GaussView】将计算结果绘制成光谱</a></li>
+<li><a href="https://www.bilibili.com/video/av63515629/" target="_blank" rel="noopener">【GaussView】如何快速构建分子</a></li>
+<li><a href="https://www.bilibili.com/video/av63516302/" target="_blank" rel="noopener">【Gaussian】自定义计算方案</a></li>
+<li><a href="https://www.bilibili.com/video/av63515958/" target="_blank" rel="noopener">【Gaussian】如何设置计算任务</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/weixinqrcode.jpg" alt="任之 wechat" style="width: 200px; max-width: 100%;">
+  <div>订阅公众号以获取最新内容！</div>
+</div>
+
+
+    <footer class="post-footer">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/exploitingpdf/" rel="next" title="充分利用PDF格式">
+                <i class="fa fa-chevron-left"></i> 充分利用PDF格式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/readgaussout/" rel="prev" title="与Gaussian的第一次接触">
+                与Gaussian的第一次接触 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avator.png"
+      alt="任之">
+  <p class="site-author-name" itemprop="name">任之</p>
+  <div class="site-description motion-element" itemprop="description">Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Alexander-Qi" title="GitHub &rarr; https://github.com/Alexander-Qi" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:alexanderqi126@outlook.com" title="E-Mail &rarr; mailto:alexanderqi126@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算化学是什么"><span class="nav-number">1.</span> <span class="nav-text"> 计算化学是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是gaussian高斯"><span class="nav-number">2.</span> <span class="nav-text"> 什么是Gaussian(高斯)？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gaussian如何运作"><span class="nav-number">3.</span> <span class="nav-text"> Gaussian如何运作？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#该如何开始入门gaussian"><span class="nav-number">4.</span> <span class="nav-text"> 该如何开始入门Gaussian？</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">任之</span>
+</div>
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">胡言乱语
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>

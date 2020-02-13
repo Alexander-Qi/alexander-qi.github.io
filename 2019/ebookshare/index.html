@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/catwalk.svg?v=7.3.0" color="#222">
+  <meta name="google-site-verification" content="true">
+   <meta name="msvalidate.01" content="505F1D2C133880577A334218EA5F59C5" />
+  <meta name="baidu-site-verification" content="1DwodgnsTs" />
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="本文会提供一些LaTeX、Gaussian的学习资源。  LaTeX 毕竟本站目前的文章基本都是关于LaTeX的，先介绍一些LaTeX的入门读物。如果是零基础的读者，建议的阅读顺序是从前至后。  如何使用LaTeX排版论文 清华大学TUNA协会的陈晟祺在2018年11月的时候在清华大学图书馆系列讲座中给出了一个关于LaTeX入门的非常好的报告。生动形象、插图较多，对于零基础的同学非常友好。  但是">
+<meta name="keywords" content="resources">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有什么书可看？">
+<meta property="og:url" content="https://alexander-qi.github.io/2019/ebookshare/index.html">
+<meta property="og:site_name" content="墘青">
+<meta property="og:description" content="本文会提供一些LaTeX、Gaussian的学习资源。  LaTeX 毕竟本站目前的文章基本都是关于LaTeX的，先介绍一些LaTeX的入门读物。如果是零基础的读者，建议的阅读顺序是从前至后。  如何使用LaTeX排版论文 清华大学TUNA协会的陈晟祺在2018年11月的时候在清华大学图书馆系列讲座中给出了一个关于LaTeX入门的非常好的报告。生动形象、插图较多，对于零基础的同学非常友好。  但是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/ebookshare/ruhe.png">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/ebookshare/beginner.jpg">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/ebookshare/cookbook.jpg">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/ebookshare/quantum.jpg">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/ebookshare/comorg.jpg">
+<meta property="og:image" content="https://alexander-qi.github.io/2019/ebookshare/expl.jpg">
+<meta property="og:updated_time" content="2019-08-18T04:58:48.129Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="有什么书可看？">
+<meta name="twitter:description" content="本文会提供一些LaTeX、Gaussian的学习资源。  LaTeX 毕竟本站目前的文章基本都是关于LaTeX的，先介绍一些LaTeX的入门读物。如果是零基础的读者，建议的阅读顺序是从前至后。  如何使用LaTeX排版论文 清华大学TUNA协会的陈晟祺在2018年11月的时候在清华大学图书馆系列讲座中给出了一个关于LaTeX入门的非常好的报告。生动形象、插图较多，对于零基础的同学非常友好。  但是">
+<meta name="twitter:image" content="https://alexander-qi.github.io/2019/ebookshare/ruhe.png">
+  <link rel="canonical" href="https://alexander-qi.github.io/2019/ebookshare/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>有什么书可看？ | 墘青</title>
+  
+
+
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?079ecf7f137b525cbb89fdda7e5d6b93";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">墘青</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">LaTeX, Gaussian and More...</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2019/ebookshare/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="任之">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="墘青">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">有什么书可看？
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-18 11:22:14 / 修改时间：12:58:48" itemprop="dateCreated datePublished" datetime="2019-08-18T11:22:14+08:00">2019-08-18</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文会提供一些LaTeX、Gaussian的学习资源。</p>
+<h1 id="latex"><a class="markdownIt-Anchor" href="#latex"></a> LaTeX</h1>
+<p>毕竟本站目前的文章基本都是关于LaTeX的，先介绍一些LaTeX的入门读物。如果是零基础的读者，建议的阅读顺序是从前至后。</p>
+<h2 id="如何使用latex排版论文"><a class="markdownIt-Anchor" href="#如何使用latex排版论文"></a> 如何使用LaTeX排版论文</h2>
+<p>清华大学TUNA协会的<a href="mailto:shengqi.chen@tuna.tsinghua.edu.cn" target="_blank" rel="noopener">陈晟祺</a>在2018年11月的时候在清华大学图书馆系列讲座中给出了一个关于LaTeX入门的非常好的报告。生动形象、插图较多，对于零基础的同学非常友好。</p>
+<img src="/2019/ebookshare/ruhe.png" title="如何使用LaTeX排版论文">
+<p>但是基本上只是介绍了LaTeX本身和它的安装，对于LaTeX的语法没有过多的涉及，并不能当成教材来用。</p>
+<p>你可以在这里<a href="http://www.mediafire.com/file/fr3wtbag8vhlx39/%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8LATEX_%25E6%258E%2592%25E7%2589%2588%25E8%25AE%25BA%25E6%2596%2587.pdf/file" target="_blank" rel="noopener">下载</a>。</p>
+<h2 id="latex-beginners-guide"><a class="markdownIt-Anchor" href="#latex-beginners-guide"></a> LaTeX Beginner’s Guide</h2>
+<p>由Stefan Kottwitz所作，非常适合零基础的同学们的一本纯英文教材。</p>
+<p>LaTeX Beginner’s Guide包含充分解释的示例，是一个实践性的介绍，可以快速引导新手用户使用LaTeX获得专业品质的结果。如果您即将撰写数学或科学论文，研讨会讲义，甚至计划撰写论文，那么本书将为您提供快节奏和实用的介绍。特别是在学校和大学学习期间，作为数学家或物理学家以及工程师或人文主义者，您将受益匪浅。</p>
+<img src="/2019/ebookshare/beginner.jpg" title="LaTeX Beginner" alt="s Guide">
+<p>你可以在这里<a href="http://www.mediafire.com/file/2wx4q3weeu6286z/LaTeX_Beginners_Guide.pdf/file" target="_blank" rel="noopener">获取</a>。</p>
+<h2 id="latex-cookbook"><a class="markdownIt-Anchor" href="#latex-cookbook"></a> LaTeX Cookbook</h2>
+<p>本书同样是由Stefan Kottwitz所作，是适合进阶LaTeX学习的书籍。</p>
+<p>你可以用这本书做什么：</p>
+<ul>
+<li>为项目选择正确的文档类以自定义其功能</li>
+<li>全局和本地使用字体</li>
+<li>框架，形状，排列和注释图像</li>
+<li>添加参考书目，词汇表和索引</li>
+<li>创建彩色图形，包括图表，流程图，条形图，树木，二维和三维图形，时间线和思维导图</li>
+<li>解决各种科学的典型任务，包括数学，物理，化学，电工和计算机科学</li>
+<li>优化PDF输出并使用元数据，注释，弹出窗口，动画和填充字段丰富它</li>
+</ul>
+<img src="/2019/ebookshare/cookbook.jpg" title="LaTeX Cookbook">
+<p>你可以在这里获取到<a href="http://www.mediafire.com/file/80mllmn0fkpci23/LaTeX_Cookbook.pdf/file" target="_blank" rel="noopener">书籍本体</a>。</p>
+<p>你可以在这里获取到它附赠的<a href="http://latex-cookbook.net/media/LaTeX-Cookbook-Code.zip" target="_blank" rel="noopener">代码教学文件</a>。</p>
+<h2 id="一份不太简短的latex2e介绍"><a class="markdownIt-Anchor" href="#一份不太简短的latex2e介绍"></a> 一份不太简短的LaTeX2e介绍</h2>
+<p>一份大而全的LaTeX功能介绍，由Tobias Oetiker所作。这份文档是免费的；在自由软件组织颁布的GNU 通用出版许可证的条款下，你可以再版或者修改它。</p>
+<p>这份文档是多语种的。你可以在CTAN获取它的<a href="http://mirrors.ctan.org/info/lshort/chinese/lshort-zh-cn.pdf" target="_blank" rel="noopener">中文版</a>。</p>
+<h1 id="gaussian"><a class="markdownIt-Anchor" href="#gaussian"></a> Gaussian</h1>
+<p>Gaussian是量子化学计算软件。因此要熟练自如地使用Gaussian得到想要的计算结果，除了需要掌握软件的使用方法，还需要一定的理论基础。</p>
+<h2 id="理论基础"><a class="markdownIt-Anchor" href="#理论基础"></a> 理论基础</h2>
+<p>这里只提供三本比较基础的书籍。</p>
+<h3 id="quantum-chemistry"><a class="markdownIt-Anchor" href="#quantum-chemistry"></a> Quantum Chemistry</h3>
+<p>本书由Ira N. Levine所作。</p>
+<blockquote><p>这本书对于专门搞量化理论的人来说只是初级水平，而对搞应用性计算的人，看完此书后基础知识方面勉强够了。此书写得很好，很系统，公式推导很易懂（只要高数能及格的人看着就没压力），量化常见概念也都有解释。但是，不要以为光读了这本书就算入门了，这本书不告诉你怎么结合Gaussian等主流程序算实际问题，不会用量化解决基本问题就还称不上入门。另外，此书对于广大量子化学初学者入门的一个很大问题就是铺垫太多，前半本书都在讲量子力学，可能都看累了、完全失去兴趣了，结果连HF还没明白是什么意思。所以，这本书，如果你有充裕的学习时间，慢慢从头到尾看完是很好的，但如果没那么多时间，别试图把此书都从头到尾细致啃完、习题都做了一遍才开始算实际问题。</p>
+<footer><strong>Sobereva</strong><cite><a href="http://sobereva.com/355" target="_blank" rel="noopener">谈谈学量子化学如何正确地入门</a></cite></footer></blockquote>
+<img src="/2019/ebookshare/quantum.jpg" title="Quantum Chemistry">
+<p>你可以在这里获取本书的<a href="http://www.mediafire.com/file/1gcna2dnbsjgw0b/Ira_N._Levine-Quantum_Chemistry-Pearson_%25282013%2529.pdf/file" target="_blank" rel="noopener">第七版（纯英文）</a>。</p>
+<h3 id="computational-organic-chemistry"><a class="markdownIt-Anchor" href="#computational-organic-chemistry"></a> Computational Organic Chemistry</h3>
+<p>本书由Steven M. Bachrach所作。包含许多有机体系中计算的例子，算是理论和实践结合吧，是一本入手计算的好书。</p>
+<img src="/2019/ebookshare/comorg.jpg" title="Computational Organic Chemistry">
+<p>你可以在这里获取本书<a href="http://www.mediafire.com/file/awax7iktxvi850t/Steven_M._Bachrach-Computational_Organic_Chemistry-Wiley_%25282014%2529.pdf/file" target="_blank" rel="noopener">第二版（纯英文）</a></p>
+<h3 id="量子化学基础"><a class="markdownIt-Anchor" href="#量子化学基础"></a> 量子化学基础</h3>
+<p>本书是由刘若庄等人所编，与1983年由科学出版社出版的中文教材。着重讲述了量子力学基础知识、原子结构的量子理论、分子轨道理论及其应用、配位场理论和价键理论。</p>
+<p>你可以在这里获取到<a href="http://www.mediafire.com/file/a8edyhx354909h3/%25E9%2587%258F%25E5%25AD%2590%25E5%258C%2596%25E5%25AD%25A6%25E5%259F%25BA%25E7%25A1%2580.pdf/file" target="_blank" rel="noopener">本书</a>。</p>
+<h2 id="软件使用"><a class="markdownIt-Anchor" href="#软件使用"></a> 软件使用</h2>
+<p>主要是Gaussian和GaussView的使用方法。</p>
+<h3 id="探索化学的奥秘电子结构方法"><a class="markdownIt-Anchor" href="#探索化学的奥秘电子结构方法"></a> 探索化学的奥秘：电子结构方法</h3>
+<img src="/2019/ebookshare/expl.jpg" title="Exploring Chemistry with Electronic Structure Methods">
+<p>本书由J. B. Foresman和Æ Frisch所著，是Gaussian Inc.的作品。本书的英文名是Exploring Chemistry with Electronic Structure Methods。</p>
+<blockquote><p>这是Gaussian官方的书，专门讲怎么用Gaussian算各种具体实际化学问题，给了很多例子，对于初学者学习Gaussian使用实属难得。此书虽然也讲了点理论，但讲得很少，即便对于应用性量化研究的人也完全不够用。一定要看第二版，切勿看最新的第三版。第三版相对于第二版彻底重写，但是反倒更差，里面有很多误导性的东西，不少地方数据错误或缺乏逻辑，而且有用的例子更少，废话（而且是那种真正意义上的废话并不是有助于初学者理解问题的废话）还特别多。第二版bug不多，写得质量不错，可惜年代久远（1996年），书里用的计算级别在现在看来大多已经太低或过时了，但至少没有误人子弟或者科学、逻辑方面的问题。要注意，切勿以为把exploring这本书看了、都搞明白了，Gaussian就能用得顺利、游刃有余了，大多数在实际计算中必知的关键性的知识、技巧，在这书里没有强调或者根本都没提及，不懂这些的话在实际研究中经常会被卡住或者犯错，比如究竟应该如何合理有效地解决不收敛以及不该有的虚频。</p>
+<footer><strong>Sobereva</strong><cite><a href="http://sobereva.com/355" target="_blank" rel="noopener">谈谈学量子化学如何正确地入门</a></cite></footer></blockquote>
+<p>你可以在这里获取到本书<a href="http://www.mediafire.com/file/ot5zqho85wx7e8i/Exploring_Chemistry_With_Electronic_Structure_Methods.pdf/file" target="_blank" rel="noopener">第二版中译本</a>。</p>
+<h3 id="gaussian-09-中文使用手册"><a class="markdownIt-Anchor" href="#gaussian-09-中文使用手册"></a> Gaussian 09 中文使用手册</h3>
+<p>这是官方使用手册的中译本。</p>
+<p>你可以在这里<a href="http://www.mediafire.com/file/w6nqaq4nwf8ia7h/Gaussian_09_%25E4%25B8%25AD%25E6%2596%2587%25E4%25BD%25BF%25E7%2594%25A8%25E6%2589%258B%25E5%2586%258C.pdf/file" target="_blank" rel="noopener">获取</a></p>
+
+    </div>
+
+    
+    
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/weixinqrcode.jpg" alt="任之 wechat" style="width: 200px; max-width: 100%;">
+  <div>订阅公众号以获取最新内容！</div>
+</div>
+
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/resources/" rel="tag"># resources</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/readgaussout/" rel="next" title="与Gaussian的第一次接触">
+                <i class="fa fa-chevron-left"></i> 与Gaussian的第一次接触
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/teachbeamer/" rel="prev" title="从零开始用beamer做学术报告幻灯片">
+                从零开始用beamer做学术报告幻灯片 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avator.png"
+      alt="任之">
+  <p class="site-author-name" itemprop="name">任之</p>
+  <div class="site-description motion-element" itemprop="description">Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Alexander-Qi" title="GitHub &rarr; https://github.com/Alexander-Qi" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:alexanderqi126@outlook.com" title="E-Mail &rarr; mailto:alexanderqi126@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#latex"><span class="nav-number">1.</span> <span class="nav-text"> LaTeX</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用latex排版论文"><span class="nav-number">1.1.</span> <span class="nav-text"> 如何使用LaTeX排版论文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-beginners-guide"><span class="nav-number">1.2.</span> <span class="nav-text"> LaTeX Beginner’s Guide</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-cookbook"><span class="nav-number">1.3.</span> <span class="nav-text"> LaTeX Cookbook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一份不太简短的latex2e介绍"><span class="nav-number">1.4.</span> <span class="nav-text"> 一份不太简短的LaTeX2e介绍</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gaussian"><span class="nav-number">2.</span> <span class="nav-text"> Gaussian</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#理论基础"><span class="nav-number">2.1.</span> <span class="nav-text"> 理论基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#quantum-chemistry"><span class="nav-number">2.1.1.</span> <span class="nav-text"> Quantum Chemistry</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#computational-organic-chemistry"><span class="nav-number">2.1.2.</span> <span class="nav-text"> Computational Organic Chemistry</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#量子化学基础"><span class="nav-number">2.1.3.</span> <span class="nav-text"> 量子化学基础</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件使用"><span class="nav-number">2.2.</span> <span class="nav-text"> 软件使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#探索化学的奥秘电子结构方法"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 探索化学的奥秘：电子结构方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gaussian-09-中文使用手册"><span class="nav-number">2.2.2.</span> <span class="nav-text"> Gaussian 09 中文使用手册</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">任之</span>
+</div>
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">胡言乱语
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>

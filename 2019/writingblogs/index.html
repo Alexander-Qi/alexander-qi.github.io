@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/catwalk.svg?v=7.3.0" color="#222">
+  <meta name="google-site-verification" content="true">
+   <meta name="msvalidate.01" content="505F1D2C133880577A334218EA5F59C5" />
+  <meta name="baidu-site-verification" content="1DwodgnsTs" />
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="建立一个免费的、易于维护的个人博客以用于自己或者中小组织的信息发布、生活记录等事务，是再好不过的选择。下面我会简单地讲一讲在2019年建立一个免费的个人博客所需的步骤和后期写博文时的一些技巧。  建立博客 在这里，我暂且假定读者们没有自己的托管服务器和域名，完全从一个计算机小白的角度来讲一讲怎么简单地建立一个简单的静态博客。虽然有些步骤是可以调换顺序的，但我还是推荐按照下面的步骤进行操作。  必备">
+<meta name="keywords" content="resources">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何优雅地建立个人博客">
+<meta property="og:url" content="https://alexander-qi.github.io/2019/writingblogs/index.html">
+<meta property="og:site_name" content="墘青">
+<meta property="og:description" content="建立一个免费的、易于维护的个人博客以用于自己或者中小组织的信息发布、生活记录等事务，是再好不过的选择。下面我会简单地讲一讲在2019年建立一个免费的个人博客所需的步骤和后期写博文时的一些技巧。  建立博客 在这里，我暂且假定读者们没有自己的托管服务器和域名，完全从一个计算机小白的角度来讲一讲怎么简单地建立一个简单的静态博客。虽然有些步骤是可以调换顺序的，但我还是推荐按照下面的步骤进行操作。  必备">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjifx.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjkp6.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjA1K.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/12/uOdPgA.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/12/nBOaLV.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjE6O.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjVXD.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/13/ujjPt1.jpg">
+<meta property="og:updated_time" content="2019-10-13T04:01:49.769Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何优雅地建立个人博客">
+<meta name="twitter:description" content="建立一个免费的、易于维护的个人博客以用于自己或者中小组织的信息发布、生活记录等事务，是再好不过的选择。下面我会简单地讲一讲在2019年建立一个免费的个人博客所需的步骤和后期写博文时的一些技巧。  建立博客 在这里，我暂且假定读者们没有自己的托管服务器和域名，完全从一个计算机小白的角度来讲一讲怎么简单地建立一个简单的静态博客。虽然有些步骤是可以调换顺序的，但我还是推荐按照下面的步骤进行操作。  必备">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/10/13/ujjifx.jpg">
+  <link rel="canonical" href="https://alexander-qi.github.io/2019/writingblogs/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>如何优雅地建立个人博客 | 墘青</title>
+  
+
+
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?079ecf7f137b525cbb89fdda7e5d6b93";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">墘青</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">LaTeX, Gaussian and More...</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2019/writingblogs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="任之">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="墘青">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">如何优雅地建立个人博客
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-07 19:22:14" itemprop="dateCreated datePublished" datetime="2019-10-07T19:22:14+08:00">2019-10-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-13 12:01:49" itemprop="dateModified" datetime="2019-10-13T12:01:49+08:00">2019-10-13</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>建立一个免费的、易于维护的个人博客以用于自己或者中小组织的信息发布、生活记录等事务，是再好不过的选择。下面我会简单地讲一讲在2019年建立一个免费的个人博客所需的步骤和后期写博文时的一些技巧。</p>
+<h1 id="建立博客"><a class="markdownIt-Anchor" href="#建立博客"></a> 建立博客</h1>
+<p>在这里，我暂且假定读者们没有自己的托管服务器和域名，完全从一个计算机小白的角度来讲一讲怎么简单地建立一个简单的静态博客。虽然有些步骤是可以调换顺序的，但我还是推荐按照下面的步骤进行操作。</p>
+<h2 id="必备软件的安装"><a class="markdownIt-Anchor" href="#必备软件的安装"></a> 必备软件的安装</h2>
+<p>为了方便地构建我们的博客，这里使用了 hexo 来构建页面。而为了使用 hexo 则必须安装 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> 和 <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node.js</a> 。</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjifx.jpg" alt="ujjifx.jpg"><br>
+<img src="https://s2.ax1x.com/2019/10/13/ujjkp6.jpg" alt="ujjkp6.jpg"></p>
+<p>在安装好 git 和 node.js 之后，打开 <code>git bash</code> ，输入以下命令来安装 hexo ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>随后，在你希望存放你的博客网站的文件的地方新建一个文件夹，（在Windows中）右键选择 <code>git bash here</code> ，随后在跳出来的终端中输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>其中 <code>blog</code> 只是一个文件夹的名字，你也可以取其他的名字（当然后面需要记住这个名字）。</p>
+<h2 id="利用-github-pages-服务"><a class="markdownIt-Anchor" href="#利用-github-pages-服务"></a> 利用 GitHub Pages 服务</h2>
+<p>GitHub 为每一位用户提供了 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 服务。它完全免费，而且易于使用，唯一的缺点在于 GitHub Pages 的页面在国内加载起来普遍较慢。</p>
+<p>为了克服这个缺陷，我们也可以使用国内的代码托管厂家码云提供的<a href="https://gitee.com/help/articles/4136" target="_blank" rel="noopener">码云Pages</a>，它使用起来和 GitHub Pages 几乎没有差别。</p>
+<p>为了使用 GitHub Pages 服务，你首先应当<a href="https://github.com/" target="_blank" rel="noopener">注册一个 GitHub 账号</a>。注册时记得记住自己用于注册的邮箱和用户名。</p>
+<p>注册完成后，跟随官网的引导，新建一个仓库。仓库名必须用以下格式写： <code>*用户名*.github.io</code></p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjA1K.jpg" alt="ujjA1K.jpg"></p>
+<p>仓库创建成功不会立即生效，可能需要过大概10-30分钟，或者更久。</p>
+<h2 id="配置-git"><a class="markdownIt-Anchor" href="#配置-git"></a> 配置 git</h2>
+<p>打开 git bash ，并在终端中输入以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>注意在你的用户名和邮箱外侧加上英文的引号<code>&quot;&quot;</code>。</p>
+<p>完成后，我们开始配置ssh。</p>
+<p>首先在 git bash 中输入以下命令检查本机中已经有的ssh密钥：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<p>如果没有，则生成新的ssh key：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>你可以选择设定一个密码，如果不想要密码的话也可以直接按三次回车来完成设置。</p>
+<p>随后，使用下面的命令来在终端中打开刚刚生成的ssh key：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>复制这个文件的内容到剪贴板，随后打开你的GitHub 中的 Settings -&gt; SSH and GPG keys -&gt; New SSH key</p>
+<p>随后黏贴进去。</p>
+<p>接下来回到 git bash 中测试 GitHub 的公钥设置是否成功。</p>
+<p>在 git bash 中精确地输入下列内容（git@github.com 是不能更改的！）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>对跳出来的问题回答“yes”，随后回车。出现以下结果即为成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<h2 id="远程部署"><a class="markdownIt-Anchor" href="#远程部署"></a> 远程部署</h2>
+<p>接下来我们要让 hexo 学会将生成的博客文件部署到远端的服务器上。</p>
+<p>打开你的 GitHub Pages 对应的仓库，找到“Clone or download”，随后将https或者ssh的url复制到剪贴板上。</p>
+<p>随后打开你的hexo文件夹（如果你完全按照本博文的引导进行操作，那这个文件夹的名字应该是<code>blog</code>）。在这个文件夹（而非子文件夹中）中找到并打开<code>_config.yml</code>，随后找到<code>deploy</code>这个关键字（一般在文档末尾，但是不一定），把他修改成下面的样子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: **直接黏贴，例如https://github.com/wunsiang/wunsiang.github.io.git**</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>要注意，英文冒号后面要有一个空格，不然 hexo 无法工作。</p>
+<p>更改完成后，在你的hexo安装目录下打开 git bash 并输入以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>在确认一切无误后，同样在 git bash 中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.ax1x.com/2019/10/12/uOdPgA.jpg" alt="uOdPgA.jpg"></p>
+<p>就可以将本地的内容远程部署到你的 GitHub Pages 上了！</p>
+<h1 id="开始使用博客"><a class="markdownIt-Anchor" href="#开始使用博客"></a> 开始使用博客</h1>
+<p>那么，和技术相关的问题基本上都解决了（要是大家遇到了问题，可以以“hexo”和“GitHub Pages”为关键词到网上寻找相应的解决方案）。</p>
+<p>接下来的问题就是如何开始写我们的博文了！</p>
+<p>为了愉快优雅地写博客，我们还需要学会一些技能。比如如何新建一个博文，如何改变博客的外观等。</p>
+<p>在我们用简单易学的 Markdown 写好了我们的博文后，我们使用的 hexo 可以自动将 <code>.md</code> 文件转换为 HTML 文件。</p>
+<h2 id="如何新建页面和博文"><a class="markdownIt-Anchor" href="#如何新建页面和博文"></a> 如何新建页面和博文</h2>
+<p>在 hexo 中，新建博文的方法非常简单。你可以用下面的命令来新建博文和页面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>其中的 layout 也被称为布局。Hexo 有三种默认布局：<code>post</code>、<code>page</code> 和 <code>draft</code>。在创建者三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 <code>post</code> 相同，都将储存到 <code>source/_posts</code> 文件夹。</p>
+<table>
+<thead>
+<tr>
+<th>布局</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>post</code></td>
+<td><code>source/_posts</code></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td><code>source</code></td>
+</tr>
+<tr>
+<td><code>draft</code></td>
+<td><code>source/_drafts</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="学会用-markdown-写作"><a class="markdownIt-Anchor" href="#学会用-markdown-写作"></a> 学会用 Markdown 写作</h2>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。用 Markdown 编写的文档后缀为 <code>.md</code>, <code>.markdown</code>。</p>
+<p>进行markdown写作非常简单易学。下面简单介绍 Markdown 中常用的语法。如果大家需要专业的指导请参考其官方<a href="http://www.markdown.cn/" target="_blank" rel="noopener">语法指导</a>。</p>
+<h3 id="段落和换行"><a class="markdownIt-Anchor" href="#段落和换行"></a> 段落和换行</h3>
+<p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p>
+<h3 id="加粗-倾斜"><a class="markdownIt-Anchor" href="#加粗-倾斜"></a> 加粗、倾斜</h3>
+<ul>
+<li>要加粗的文字左右分别用两个<code>*</code>号包起来</li>
+<li>要倾斜的文字左右分别用一个<code>*</code>号包起来</li>
+<li>要倾斜和加粗的文字左右分别用三个<code>*</code>号包起来</li>
+<li>要加删除线的文字左右分别用两个<code>~~</code>号包起来</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**这是加粗的文字**</span></span><br><span class="line"><span class="emphasis">*这是倾斜的文字*</span>`</span><br><span class="line"><span class="strong">***这是斜体加粗的文字**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<h3 id="标题"><a class="markdownIt-Anchor" href="#标题"></a> 标题</h3>
+<p>markdown中标题的输入方法有两种，这里推荐类 Atx 形式。</p>
+<p>在行首插入 1 到 6 个 # ，对应到 1 到 6 级的标题，例如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 这是 一级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">## 这是 二级标题</span></span><br><span class="line"></span><br><span class="line"><span class="section">###### 这是 三级标题</span></span><br></pre></td></tr></table></figure>
+<h3 id="列表"><a class="markdownIt-Anchor" href="#列表"></a> 列表</h3>
+<p>Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用星号<code>*</code>、加号<code>+</code>或是减号<code>-</code>作为列表标记：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*   </span>Red</span><br><span class="line"><span class="bullet">*   </span>Green</span><br><span class="line"><span class="bullet">*   </span>Blue</span><br></pre></td></tr></table></figure>
+<p>有序列表则使用数字接着一个英文句点：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.  </span>Bird</span><br><span class="line"><span class="bullet">2.  </span>McHale</span><br><span class="line"><span class="bullet">3.  </span>Parish</span><br></pre></td></tr></table></figure>
+<h3 id="引用"><a class="markdownIt-Anchor" href="#引用"></a> 引用</h3>
+<p>Markdown 标记区块引用是使用类似 email 中用 &gt; 的引用方式。如果你还熟悉在 email 信件中的引言部分，你就知道怎么在 Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上 &gt; ，Markdown 也允许你偷懒只在整个段落的第一行最前面加上 &gt; ：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span></span><br><span class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span></span><br><span class="line">id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure>
+<p>区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 &gt; ：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> This is the first level of quoting.</span><br><span class="line">&gt;</span><br><span class="line"><span class="quote">&gt; &gt; This is nested blockquote.</span></span><br><span class="line">&gt;</span><br><span class="line"><span class="quote">&gt; Back to the first level.</span></span><br></pre></td></tr></table></figure>
+<h3 id="超链接"><a class="markdownIt-Anchor" href="#超链接"></a> 超链接</h3>
+<p>Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。</p>
+<p>不管是哪一种，链接文字都是用 [方括号] 来标记。</p>
+<p>要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This is [<span class="string">an example</span>](<span class="link">http://example.com/ "Title"</span>) inline link.</span><br><span class="line"></span><br><span class="line">[<span class="string">This link</span>](<span class="link">http://example.net/</span>) has no title attribute.</span><br></pre></td></tr></table></figure>
+<h3 id="插入图片"><a class="markdownIt-Anchor" href="#插入图片"></a> 插入图片</h3>
+<p>Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： 行内式和参考式。</p>
+<p>行内式的图片语法看起来像是：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
+<p>如果你希望插入自己的照片而非在线的照片，你应该使用图床。图床允许你上传自己的照片并获得该图片的直链。</p>
+<p>推荐的图床为<a href="https://imgchr.com" target="_blank" rel="noopener">路过图床</a>。请注意上传到图床上的图片有一定的大小限制，一般在 5 MB 左右。</p>
+<p>路过图床允许你在上传完图片之后直接复制markdown代码，非常节省时间。并且该图床有 cdn 加速，加载速度比较快。</p>
+<p><img src="https://s2.ax1x.com/2019/09/12/nBOaLV.png" alt="nBOaLV.png"></p>
+<h2 id="学会使用一些-hexo-组件"><a class="markdownIt-Anchor" href="#学会使用一些-hexo-组件"></a> 学会使用一些 hexo 组件</h2>
+<p>hexo 除了支持标准的 Markdown 语法，也为了更好地生成网页，支持在 Markdown 中加入一些非标准的语法，来达到更好的效果。</p>
+<h3 id="博文的扉页"><a class="markdownIt-Anchor" href="#博文的扉页"></a> 博文的“扉页”</h3>
+<p>在 hexo 的 <code>.md</code> 文件开头，有以<code>---</code>分割的一块区域，叫做“Front-Matter”，这个区域用于记载博文的标题、写作日期和分类等信息。形如下面的形式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2019/7/23 14:16:44</span><br><span class="line">categories: </span><br><span class="line">- Maintaince</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>在 Front-Matter 中预先定义好的参数有以下这些：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>布局</td>
+<td></td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>categories</td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>覆盖文章网址</td>
+<td></td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Homework</span><br><span class="line">tags:</span><br><span class="line">- Chemistry</span><br><span class="line">- Synthesis</span><br></pre></td></tr></table></figure>
+<h3 id="引用-2"><a class="markdownIt-Anchor" href="#引用-2"></a> 引用</h3>
+<p>Hexo 中定义了更好用更高等的引用块。通式是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<p>例如，当你引用网络上的文章：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %&#125;</span><br><span class="line">Every interaction is both precious and an opportunity to delight.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码块"><a class="markdownIt-Anchor" href="#代码块"></a> 代码块</h3>
+<p>同样的，Hexo 也定义了更高级的代码块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock 希尔排序 lang:c https://www.runoob.com/cprogramming/c-sort-algorithm.html C 排序算法 %&#125;</span><br><span class="line">void shell_sort(int arr[], int len) &#123;</span><br><span class="line">    int gap, i, j;</span><br><span class="line">    int temp;</span><br><span class="line">    for (gap = len &gt;&gt; 1; gap &gt; 0; gap = gap &gt;&gt; 1)</span><br><span class="line">        for (i = gap; i &lt; len; i++) &#123;</span><br><span class="line">            temp = arr[i];</span><br><span class="line">            for (j = i - gap; j &gt;= 0 &amp;&amp; arr[j] &gt; temp; j -= gap)</span><br><span class="line">                arr[j + gap] = arr[j];</span><br><span class="line">            arr[j + gap] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><figcaption><span>希尔排序</span><a href="https://www.runoob.com/cprogramming/c-sort-algorithm.html" target="_blank" rel="noopener">C 排序算法</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shell_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> gap, i, j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span> (gap = len &gt;&gt; <span class="number">1</span>; gap &gt; <span class="number">0</span>; gap = gap &gt;&gt; <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> (i = gap; i &lt; len; i++) &#123;</span><br><span class="line">            temp = arr[i];</span><br><span class="line">            <span class="keyword">for</span> (j = i - gap; j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; temp; j -= gap)</span><br><span class="line">                arr[j + gap] = arr[j];</span><br><span class="line">            arr[j + gap] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="如何美化你的博客"><a class="markdownIt-Anchor" href="#如何美化你的博客"></a> 如何美化你的博客</h1>
+<p>为了美化你的博客，你可能想更换一下主题，在文章里插入一些图片和视频等多媒体。接下来我们来看看如何做到这些。</p>
+<h2 id="更换主题"><a class="markdownIt-Anchor" href="#更换主题"></a> 更换主题</h2>
+<p>Hexo 有非常多现成的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a>，可以让你不费吹灰之力就将自己的博客变得非常漂亮。我们该如何获取主题呢？</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjE6O.jpg" alt="ujjE6O.jpg"></p>
+<p>接下来我们以更换为NexT为例子，教大家如何切换主题。</p>
+<p>首先我们需要安装主题。</p>
+<p>第一种方式，是找到你的站点文件夹，并在该位置呼出 git bash ，随后输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>第二种方式是前往 NexT 主题的<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">发布页面</a>，随后下载最新的稳定版，并解压到你的站点文件夹的<code>themes</code>子文件夹中，最后将解压后的文件夹名称（hexo-theme-next-5.1.4）更改为 next。</p>
+<p>随后我们找到站点配置文件<code>_config.yml</code>，找到<code>theme</code>字段，并将其更改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<p>即可成功启用 NexT 主题。我们也可以对主题进行更进一步的自定义化，此处不详述，可参见<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">NexT入门指南</a>。</p>
+<h2 id="插入多媒体"><a class="markdownIt-Anchor" href="#插入多媒体"></a> 插入多媒体</h2>
+<p>为了让我们的博客更可读，我们还需要学会在博客中插入图片和视频的方法。</p>
+<p>插入图片的方法和使用图床的技巧之前已经讲过了，此处不再赘述。</p>
+<p>在博客中比较优雅地插入视频需要使用 HTML 中的 iframe 控件。</p>
+<p>下面以插入一个 bilibili 视频为例。</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjVXD.jpg" alt="ujjVXD.jpg"></p>
+<p>在网页端进入视频的播放页后，大家可以在分享选项中找到相应的嵌入代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=63514495&amp;cid=110293782&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
+<p>但是你会发现直接使用上面的代码生成的网页在移动端的体验很差。把上面那段代码中的 <code>src=&quot;...&quot;</code>中间的地址复制下来，黏贴到下面的代码中覆盖 <code>src=&quot;...&quot;</code> 中间的内容，就可以得到体验较好的视频嵌入体验。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;&gt;&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=63511105&amp;cid=110287165&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; style=&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="分享文件"><a class="markdownIt-Anchor" href="#分享文件"></a> 分享文件</h2>
+<p>如果大家想分享文件，当然也可以采用国内的各种网盘。但是使用国内的网盘需要你的读者们注册相应的账号，而且也有非常严重的限速问题。这个时候我们就可以使用 <a href="http://hostr.co" target="_blank" rel="noopener">hostr.co</a> 等文件床，来让读者们能直接从你博客中的链接下载文件。你可以在它的<a href="https://hostr.co" target="_blank" rel="noopener">官网</a>注册账号，虽然免费账号只能上传最大 20 MB 的文件，但是对于常规文件的分享也是非常够用了。</p>
+<p><img src="https://s2.ax1x.com/2019/10/13/ujjPt1.jpg" alt="ujjPt1.jpg"></p>
+
+    </div>
+
+    
+    
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/weixinqrcode.jpg" alt="任之 wechat" style="width: 200px; max-width: 100%;">
+  <div>订阅公众号以获取最新内容！</div>
+</div>
+
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/resources/" rel="tag"># resources</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/gaussvideos/" rel="next" title="Gaussian视频教学">
+                <i class="fa fa-chevron-left"></i> Gaussian视频教学
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/physrep/" rel="prev" title="如何用LaTeX写物理实验报告">
+                如何用LaTeX写物理实验报告 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avator.png"
+      alt="任之">
+  <p class="site-author-name" itemprop="name">任之</p>
+  <div class="site-description motion-element" itemprop="description">Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Alexander-Qi" title="GitHub &rarr; https://github.com/Alexander-Qi" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:alexanderqi126@outlook.com" title="E-Mail &rarr; mailto:alexanderqi126@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#建立博客"><span class="nav-number">1.</span> <span class="nav-text"> 建立博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#必备软件的安装"><span class="nav-number">1.1.</span> <span class="nav-text"> 必备软件的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-github-pages-服务"><span class="nav-number">1.2.</span> <span class="nav-text"> 利用 GitHub Pages 服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-git"><span class="nav-number">1.3.</span> <span class="nav-text"> 配置 git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程部署"><span class="nav-number">1.4.</span> <span class="nav-text"> 远程部署</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始使用博客"><span class="nav-number">2.</span> <span class="nav-text"> 开始使用博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何新建页面和博文"><span class="nav-number">2.1.</span> <span class="nav-text"> 如何新建页面和博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学会用-markdown-写作"><span class="nav-number">2.2.</span> <span class="nav-text"> 学会用 Markdown 写作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#段落和换行"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 段落和换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加粗-倾斜"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 加粗、倾斜</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">2.2.4.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.2.5.</span> <span class="nav-text"> 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#超链接"><span class="nav-number">2.2.6.</span> <span class="nav-text"> 超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入图片"><span class="nav-number">2.2.7.</span> <span class="nav-text"> 插入图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学会使用一些-hexo-组件"><span class="nav-number">2.3.</span> <span class="nav-text"> 学会使用一些 hexo 组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#博文的扉页"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 博文的“扉页”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用-2"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块"><span class="nav-number">2.3.3.</span> <span class="nav-text"> 代码块</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何美化你的博客"><span class="nav-number">3.</span> <span class="nav-text"> 如何美化你的博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">3.1.</span> <span class="nav-text"> 更换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入多媒体"><span class="nav-number">3.2.</span> <span class="nav-text"> 插入多媒体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分享文件"><span class="nav-number">3.3.</span> <span class="nav-text"> 分享文件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">任之</span>
+</div>
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">胡言乱语
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>

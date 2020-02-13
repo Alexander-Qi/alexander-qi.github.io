@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/catwalk.svg?v=7.3.0" color="#222">
+  <meta name="google-site-verification" content="true">
+   <meta name="msvalidate.01" content="505F1D2C133880577A334218EA5F59C5" />
+  <meta name="baidu-site-verification" content="1DwodgnsTs" />
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="什么是LaTeX？ LaTeX是一种基于ΤΕΧ的排版系统，常被用于排版期刊文章、书籍、学位论文。LaTeX和它的前身TeX都是自由软件，因而被广泛使用，是排版高质量科技类文档的标准应用。  为什么要用LaTeX？ 首先需要声明的是，LaTeX在某种意义上和“编程”有一些像，但这并不说明它非常难学，相反地，LaTeX上手起来非常快，往往只需要几个小时。 和Microsoft Word这款工具相比，">
+<meta name="keywords" content="LaTeX, Gaussian">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTeX是什么？有什么用？">
+<meta property="og:url" content="https://alexander-qi.github.io/2019/latex基础知识/index.html">
+<meta property="og:site_name" content="墘青">
+<meta property="og:description" content="什么是LaTeX？ LaTeX是一种基于ΤΕΧ的排版系统，常被用于排版期刊文章、书籍、学位论文。LaTeX和它的前身TeX都是自由软件，因而被广泛使用，是排版高质量科技类文档的标准应用。  为什么要用LaTeX？ 首先需要声明的是，LaTeX在某种意义上和“编程”有一些像，但这并不说明它非常难学，相反地，LaTeX上手起来非常快，往往只需要几个小时。 和Microsoft Word这款工具相比，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2019-08-07T07:08:47.129Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LaTeX是什么？有什么用？">
+<meta name="twitter:description" content="什么是LaTeX？ LaTeX是一种基于ΤΕΧ的排版系统，常被用于排版期刊文章、书籍、学位论文。LaTeX和它的前身TeX都是自由软件，因而被广泛使用，是排版高质量科技类文档的标准应用。  为什么要用LaTeX？ 首先需要声明的是，LaTeX在某种意义上和“编程”有一些像，但这并不说明它非常难学，相反地，LaTeX上手起来非常快，往往只需要几个小时。 和Microsoft Word这款工具相比，">
+  <link rel="canonical" href="https://alexander-qi.github.io/2019/latex基础知识/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>LaTeX是什么？有什么用？ | 墘青</title>
+  
+
+
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?079ecf7f137b525cbb89fdda7e5d6b93";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">墘青</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">LaTeX, Gaussian and More...</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2019/latex基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="任之">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="墘青">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">LaTeX是什么？有什么用？
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-26 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-26T00:00:00+08:00">2019-06-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-07 15:08:47" itemprop="dateModified" datetime="2019-08-07T15:08:47+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="什么是latex"><a class="markdownIt-Anchor" href="#什么是latex"></a> 什么是LaTeX？</h1>
+<p>LaTeX是一种基于ΤΕΧ的排版系统，常被用于排版期刊文章、书籍、学位论文。LaTeX和它的前身TeX都是自由软件，因而被广泛使用，是排版高质量科技类文档的标准应用。</p>
+<h2 id="为什么要用latex"><a class="markdownIt-Anchor" href="#为什么要用latex"></a> 为什么要用LaTeX？</h2>
+<p>首先需要声明的是，LaTeX在某种意义上和“编程”有一些像，但这并不说明它非常难学，相反地，LaTeX上手起来非常快，往往只需要几个小时。</p>
+<p>和Microsoft Word这款工具相比，LaTeX最大的不同就是它不是一款“所见即所得”的工具。作者们需要首先编写一个<code>.tex</code>格式的文件(本质上就是一个文本文档)，随后将<code>.tex</code>文件交给TeX排版引擎处理，来得到最后的<code>.dvi</code>(现在已经少见)或是<code>.pdf</code>文档。这个特点使得作者们可以专心编辑内容，在最后调试输出的时候再细细考虑排版的问题；同时LaTeX也提供了大量的模板来减少作者的工作量。</p>
+<h2 id="关于latex的一些名词解释"><a class="markdownIt-Anchor" href="#关于latex的一些名词解释"></a> 关于LaTeX的一些名词解释</h2>
+<p>在使用LaTeX的过程中有几个重要的概念：引擎、宏集、发行版。</p>
+<h3 id="引擎"><a class="markdownIt-Anchor" href="#引擎"></a> 引擎</h3>
+<p>引擎是将文档的内容进行排版的真正主体，包含以下几种：</p>
+<ul>
+<li>TeX: 最为原始的排版引擎，生成的是<code>.dvi</code>文件，现在很少用到。</li>
+<li>pdfTeX: 在TeX的基础上将生成的<code>.dvi</code>文件转化成<code>.pdf</code>文件，是不少发行版的默认引擎。</li>
+<li>XeTeX(推荐): 是使用了Unicode的TeX排版引擎，对于中文的支持前所未有的好。除此以外还支持了不少现代字体技术(OpenType等)，排版效果有一定的提升。</li>
+<li>LuaTeX: 最新的排版引擎，但是默认使用Lua，对于LaTeX的支持现在并不完善。</li>
+</ul>
+<h3 id="宏集"><a class="markdownIt-Anchor" href="#宏集"></a> 宏集</h3>
+<p>宏集类似于编译器，可以将较为接近自然语言的内容编译成排版引擎可以“理解”的内容。以下是一些比较常见的宏集。</p>
+<ul>
+<li>plain TeX: 是最古老的TeX宏集, 提供了一些基本的命令，语法和现在流行的LaTeX已经大有不同。</li>
+<li>LaTeX: Leslie Lamport开发的宏包，更加直观简单。</li>
+<li>AMSTeX: 美国数学会提供的一个TeX宏集，针对数学符号和公式进行了优化</li>
+</ul>
+<h3 id="发行版"><a class="markdownIt-Anchor" href="#发行版"></a> 发行版</h3>
+<p>发行版是一个TeX引擎、宏集、文档模板的集合，是使用LaTeX不得不安装的一个组件。现在常见的发行版有：</p>
+<ul>
+<li>TeX Live(推荐): 是由国际TeX用户组织开发的TeX系统，是更新最快，内容最全的发行版。支持Windows, Unix, Linux。</li>
+<li>MacTeX: 同为TUG开发的TeX系统，针对Mac OS进行开发，安装简单、功能齐全。</li>
+<li>CTeX: 中科院吴凌云研究员基于MiKTeX开发的TeX系统，方便了中文输入。但是从2012年后已经停止开发不再更新，不推荐使用。</li>
+</ul>
+<h1 id="安装并配置latex"><a class="markdownIt-Anchor" href="#安装并配置latex"></a> 安装并配置LaTeX</h1>
+<h2 id="安装发行版"><a class="markdownIt-Anchor" href="#安装发行版"></a> 安装发行版</h2>
+<p>考虑到功能与更新速度，个人推荐使用自由软件TeX Live。下面以Windows平台上TeX Live的获取和安装为例子。</p>
+<p>TeX Live的<a href="http://tug.org/texlive/" target="_blank" rel="noopener">官网</a>上提供了许多下载方式与媒介，这使得获取安装文件异常简单，大家可以根据自己的需要获取对应的安装文件，一般来说使用官方的<a href="http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe" target="_blank" rel="noopener">这个安装工具</a>就可以了。除此以外，在清华大学开源软件镜像站上面也有TeX Live最新版的<a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2019-20190410.iso" target="_blank" rel="noopener">镜像</a>。</p>
+<p>下载完安装工具以后，只需要根据安装助手的指导一步步安装即可。需要注意以下几点：</p>
+<ul>
+<li>TeX Live需要的安装体积比较大，约6GB</li>
+<li>官方工具是在线安装的，安装速度会受到网速的影响</li>
+<li>安装文件全部下载完后，安装过程本身的索引过程时间比较长，需要约45分钟</li>
+</ul>
+<p>安装完成后，我们就可以开始安装编辑器了。</p>
+<h2 id="安装编辑器"><a class="markdownIt-Anchor" href="#安装编辑器"></a> 安装编辑器</h2>
+<p>编辑器是用来编辑<code>.tex</code>文件的工具。理论上，由于<code>.tex</code>文件本质上就是纯文本工具，因此用Windows的记事本就可以打开并编辑<code>.tex</code>文件了。但是这样编写文档的效率较低，因此有许多工具被开发出来提高创作者们编写<code>.tex</code>文档的效率。以下是一些比较常用的工具。</p>
+<ul>
+<li>TeXworks: TeX Live自带的编辑器，十分轻量级，界面较为简陋，代码高亮功能较弱。</li>
+<li>WinEdt: CTeX套装自带的编辑器，对中文支持较好，但是自动填充和代码高亮能力较弱。</li>
+<li>TeXstudio(推荐): 非常强大的编辑器，自动填充、语法检查、代码高亮能力都非常强。</li>
+<li>Sublime Text: 非常受欢迎的多语言工具，但是在用它码LaTeX的时候需要一些比较繁琐的配置过程</li>
+<li>Visual Studio Code: 界面美观、自动填充能力很强的多语言编辑器。</li>
+</ul>
+<p>接下来以Windows平台上TeXstudio的安装为例子。你可以在<a href="http://texstudio.sourceforge.net/" target="_blank" rel="noopener">这里</a>下载到TeXstudio的最新版本。安装过程非常简单，此不再赘述。</p>
+<p>接下来列举两条推荐的编辑器配置方法：（以Windows平台上TeXstudio为例）</p>
+<ol>
+<li>找到Options -&gt; Configure TeXstudio；在Build：Default Compiler这一项里选择 XeLaTeX</li>
+<li>搜索框输入 Line Number -&gt; Adv. Editor -&gt; 打开行号</li>
+</ol>
+<p>配置完成后，大家可以新建一个<code>.tex</code>文件，并输入如下的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">    Hello, \LaTeX\ !</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>接着单击TeXstudio界面上的“构建并查看”按钮(或者按下F5)，就能用LaTeX生成自己的第一篇文档啦！</p>
+
+    </div>
+
+    
+    
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/weixinqrcode.jpg" alt="任之 wechat" style="width: 200px; max-width: 100%;">
+  <div>订阅公众号以获取最新内容！</div>
+</div>
+
+
+    <footer class="post-footer">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/latextext/" rel="prev" title="LaTeX基本文本输入">
+                LaTeX基本文本输入 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avator.png"
+      alt="任之">
+  <p class="site-author-name" itemprop="name">任之</p>
+  <div class="site-description motion-element" itemprop="description">Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Alexander-Qi" title="GitHub &rarr; https://github.com/Alexander-Qi" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:alexanderqi126@outlook.com" title="E-Mail &rarr; mailto:alexanderqi126@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是latex"><span class="nav-number">1.</span> <span class="nav-text"> 什么是LaTeX？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要用latex"><span class="nav-number">1.1.</span> <span class="nav-text"> 为什么要用LaTeX？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于latex的一些名词解释"><span class="nav-number">1.2.</span> <span class="nav-text"> 关于LaTeX的一些名词解释</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引擎"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#宏集"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 宏集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发行版"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 发行版</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装并配置latex"><span class="nav-number">2.</span> <span class="nav-text"> 安装并配置LaTeX</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装发行版"><span class="nav-number">2.1.</span> <span class="nav-text"> 安装发行版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装编辑器"><span class="nav-number">2.2.</span> <span class="nav-text"> 安装编辑器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">任之</span>
+</div>
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">胡言乱语
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>

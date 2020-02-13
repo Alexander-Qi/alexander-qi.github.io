@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next mist use-motion" lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/catwalk.svg?v=7.3.0" color="#222">
+  <meta name="google-site-verification" content="true">
+   <meta name="msvalidate.01" content="505F1D2C133880577A334218EA5F59C5" />
+  <meta name="baidu-site-verification" content="1DwodgnsTs" />
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":true,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="说到制作幻灯片，大家首先想到的当然是Microsoft PowerPoint，或是预装于所有Mac OS中的KeyNote，也许还有Prezi等较为年轻的工具。但是事实上，LaTeX也可以用于制作幻灯片哦！ LaTeX制作的幻灯片，说到底还是.pdf格式的，而且生成方式也是通过TeX排版引擎编译而成。故而有几个比较大的硬伤：  没有华丽的动画 艺术字等衍生功能缺失 没有图片繁多的模板套用  但是相">
+<meta name="keywords" content="LaTeX, Gaussian">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用LaTeX制作幻灯片">
+<meta property="og:url" content="https://alexander-qi.github.io/2019/beamer/index.html">
+<meta property="og:site_name" content="墘青">
+<meta property="og:description" content="说到制作幻灯片，大家首先想到的当然是Microsoft PowerPoint，或是预装于所有Mac OS中的KeyNote，也许还有Prezi等较为年轻的工具。但是事实上，LaTeX也可以用于制作幻灯片哦！ LaTeX制作的幻灯片，说到底还是.pdf格式的，而且生成方式也是通过TeX排版引擎编译而成。故而有几个比较大的硬伤：  没有华丽的动画 艺术字等衍生功能缺失 没有图片繁多的模板套用  但是相">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2019-08-07T07:08:24.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用LaTeX制作幻灯片">
+<meta name="twitter:description" content="说到制作幻灯片，大家首先想到的当然是Microsoft PowerPoint，或是预装于所有Mac OS中的KeyNote，也许还有Prezi等较为年轻的工具。但是事实上，LaTeX也可以用于制作幻灯片哦！ LaTeX制作的幻灯片，说到底还是.pdf格式的，而且生成方式也是通过TeX排版引擎编译而成。故而有几个比较大的硬伤：  没有华丽的动画 艺术字等衍生功能缺失 没有图片繁多的模板套用  但是相">
+  <link rel="canonical" href="https://alexander-qi.github.io/2019/beamer/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>用LaTeX制作幻灯片 | 墘青</title>
+  
+
+
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?079ecf7f137b525cbb89fdda7e5d6b93";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh_CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">墘青</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">LaTeX, Gaussian and More...</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+    </div>
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2019/beamer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="任之">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="墘青">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">用LaTeX制作幻灯片
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-06 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-06T00:00:00+08:00">2019-08-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-07 15:08:24" itemprop="dateModified" datetime="2019-08-07T15:08:24+08:00">2019-08-07</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>说到制作幻灯片，大家首先想到的当然是Microsoft PowerPoint，或是预装于所有Mac OS中的KeyNote，也许还有Prezi等较为年轻的工具。但是事实上，LaTeX也可以用于制作幻灯片哦！</p>
+<p>LaTeX制作的幻灯片，说到底还是<code>.pdf</code>格式的，而且生成方式也是通过TeX排版引擎编译而成。故而有几个比较大的硬伤：</p>
+<ul>
+<li>没有华丽的动画</li>
+<li>艺术字等衍生功能缺失</li>
+<li>没有图片繁多的模板套用</li>
+</ul>
+<p>但是相对的，也有一些独到的优点：</p>
+<ul>
+<li>公式编号非常方便</li>
+<li>幻灯片文件在所有系统所有环境下都可以查看</li>
+<li>更换模板只需要修改一条命令</li>
+<li>一条命令就可以生成相应的讲义</li>
+</ul>
+<p>当然啦，也有着完全不需要图形界面就能完成幻灯片编辑的优点。</p>
+<h1 id="开始"><a class="markdownIt-Anchor" href="#开始"></a> 开始</h1>
+<p>主流的使用LaTeX制作幻灯片的工具是被称为<code>beamer</code>的宏包。在TeX Live中已经预置好了。如果你的发行版没有这个宏包，你可以在</p>
+<p><a href="https://ctan.org/pkg/beamer" target="_blank" rel="noopener">https://ctan.org/pkg/beamer</a></p>
+<p>获取到这个宏包的源码并自行安装。为了使<code>beamer</code>正常工作，或者说达到最佳的输出效果，最好同时使用以下宏包：<code>at­begshi</code>, <code>etool­box</code>, <code>hy­per­ref</code>, <code>if­pdf</code>, <code>multimedia</code>, <code>pgf</code>, 和 <code>trans­la­tor</code>。</p>
+<p>我们首先在导言区中输入以下代码以使用<code>beamer</code>宏包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;beamer&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，如果你的文档内容包含中文而且不满足于仅仅加载<code>ctex</code>宏包带来的汉化效果，你也可以直接使用<code>ctexbeamer</code>这个中文文档类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;ctexbeamer&#125;</span><br></pre></td></tr></table></figure>
+<p>在导言区输入完那些常规的信息（加载你需要的宏包，设置作者标题日期等）之后，我们就可以进入正文区啦！</p>
+<h1 id="正文排版"><a class="markdownIt-Anchor" href="#正文排版"></a> 正文排版</h1>
+<p>幻灯片嘛，肯定是由一张张幻灯片组成的（这不是废话嘛喂），在<code>beamer</code>中，<code>frame</code>环境就代表了一张幻灯片。</p>
+<p>让我们来看看幻灯片标题页的写法吧！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;</span><br><span class="line">    \titlepage</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
+<p>需要注意的是我们不再使用常规的<code>\maketitle</code>命令而是稍少见的<code>\titlepage</code>命令来生成标题页。</p>
+<p>同样，每一页的幻灯片总是需要一个标题的吧？以及要是需要生成目录该怎么办？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;</span><br><span class="line">    \frametitle&#123;Catalogue&#125;</span><br><span class="line">    \tableofcontents</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
+<p>你会发现常规的<code>\tableofcontents</code>仍然是可以用的。需要注意的是，此处的目录，仍然是根据你的<code>\section{·}</code>以及<code>\subsection{·}</code>来生成的。但是这些命令必须写在<code>frame</code>环境的外面！</p>
+<p>在<code>frame</code>中，你仍旧可以使用之前就已经熟悉的环境来输入文字，比如<code>itemize</code>、<code>enumerate</code>等；也可以照常插入表格和图片。不过由于幻灯片不同寻常的比例，记得调整表格和图片的输出效果哦！</p>
+<p>同时，你也可以使用类似<code>block</code>这种带标题的“文本框”来达到比较好的展示效果，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;</span><br><span class="line">    \frametitle&#123;Just Another Heading&#125;</span><br><span class="line">    \begin&#123;block&#125;&#123;Your Paragraph Title&#125;</span><br><span class="line">        Input whatever you want!</span><br><span class="line">    \end&#123;block&#125;</span><br><span class="line">    \begin&#123;itemize&#125;</span><br><span class="line">        \item An Example.</span><br><span class="line">    \end&#123;itemize&#125;</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
+<p>你也可以在<code>beamer</code>中使用<code>verbatim</code>环境来方便地进行代码教学！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[X, Y] = meshgrid(0.01:0.01:1, 0.01:0.01:1); </span><br><span class="line">Zfun =@(x,y)12.5*x.*log10(x).*y.*(y-1)+exp(-((25 ... </span><br><span class="line">*x - 25/exp(1)).^2+(25*y-25/2).^2).^3)./25; </span><br><span class="line">Z = Zfun(X,Y); </span><br><span class="line">figure; </span><br><span class="line">surf(Y,Z,X,&apos;FaceColor&apos;,[1 0.75 0.65],&apos;linestyle&apos;,&apos;none&apos;); </span><br><span class="line">hold on </span><br><span class="line">surf(Y+0.98,Z,X,&apos;FaceColor&apos;,[1 0.75 0.65],&apos;linestyle&apos;,&apos;none&apos;); </span><br><span class="line">axis equal; </span><br><span class="line">view([116 30]); </span><br><span class="line">camlight;</span><br></pre></td></tr></table></figure>
+<p>你也自然可以使用BibTeX来进行引用！</p>
+<h1 id="样式调整"><a class="markdownIt-Anchor" href="#样式调整"></a> 样式调整</h1>
+<p>相比较于Microsoft PowerPoint，<code>beamer</code>虽然没有那么多第三方的模板和主题，但仍然有许多快速美化幻灯片的方法。</p>
+<h2 id="更换主题"><a class="markdownIt-Anchor" href="#更换主题"></a> 更换主题</h2>
+<p><code>beamer</code>拥有超过200种主题供你选择。你也可以自定义你自己的主题。</p>
+<p>我们可以在导言区更改<code>beamer</code>的主题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usetheme&#123;Berlin&#125;</span><br></pre></td></tr></table></figure>
+<p>你也可以单独自定义颜色的主题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\usecolortheme&#123;whale&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你对标题和功能键的布局不甚满意，也可以通过再次更改<code>outer theme</code>来达到自定义幻灯片的效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\useoutertheme&#123;sidebar&#125;</span><br></pre></td></tr></table></figure>
+<p>具体可见：<a href="https://hartwork.org/beamer-theme-matrix/" target="_blank" rel="noopener">https://hartwork.org/beamer-theme-matrix/</a></p>
+<h2 id="字体和颜色"><a class="markdownIt-Anchor" href="#字体和颜色"></a> 字体和颜色</h2>
+<p>假如你想更换标题的字体和颜色，那该怎么办呢？在<code>beamer</code>中提供两个非常简单的命令让你自定义标题的输出效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\setbeamerfont&#123;title&#125;&#123;shape=\itshape,family=\rmfamily&#125;</span><br><span class="line">\setbeamercolor&#123;title&#125;&#123;fg=red!80!black,bg=red!20!white&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="讲义制作"><a class="markdownIt-Anchor" href="#讲义制作"></a> 讲义制作</h2>
+<p>在LaTeX中你只需要在导言区加入这几句命令就可以将你的幻灯片转换成讲义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;pgfpages&#125;</span><br><span class="line">\pgfpagesuselayout&#123;resize to&#125;[a4paper,border shrink=5mm,landscape]</span><br><span class="line">\mode&lt;handout&gt;&#123;\setbeamercolor&#123;background canvas&#125;&#123;bg=black!5&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/weixinqrcode.jpg" alt="任之 wechat" style="width: 200px; max-width: 100%;">
+  <div>订阅公众号以获取最新内容！</div>
+</div>
+
+
+    <footer class="post-footer">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/largedocs/" rel="next" title="LaTeX中长文档的处理">
+                <i class="fa fa-chevron-left"></i> LaTeX中长文档的处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+              <a href="/2019/advancedtables/" rel="prev" title="关于LaTeX表格的高阶技巧">
+                关于LaTeX表格的高阶技巧 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avator.png"
+      alt="任之">
+  <p class="site-author-name" itemprop="name">任之</p>
+  <div class="site-description motion-element" itemprop="description">Personal blog featuring tutorials for LaTeX and Gaussian in Chinese.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Alexander-Qi" title="GitHub &rarr; https://github.com/Alexander-Qi" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:alexanderqi126@outlook.com" title="E-Mail &rarr; mailto:alexanderqi126@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开始"><span class="nav-number">1.</span> <span class="nav-text"> 开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文排版"><span class="nav-number">2.</span> <span class="nav-text"> 正文排版</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#样式调整"><span class="nav-number">3.</span> <span class="nav-text"> 样式调整</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">3.1.</span> <span class="nav-text"> 更换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体和颜色"><span class="nav-number">3.2.</span> <span class="nav-text"> 字体和颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#讲义制作"><span class="nav-number">3.3.</span> <span class="nav-text"> 讲义制作</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">任之</span>
+</div>
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">胡言乱语
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>
