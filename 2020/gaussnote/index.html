@@ -72,7 +72,7 @@
 <meta property="og:site_name" content="墘青">
 <meta property="og:description" content="关于使用Gaussian、ORCA时的一些学习经验和技巧">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2020-02-14T02:30:59.276Z">
+<meta property="og:updated_time" content="2020-02-14T06:53:26.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gaussian、ORCA使用笔记">
 <meta name="twitter:description" content="关于使用Gaussian、ORCA时的一些学习经验和技巧">
@@ -296,7 +296,7 @@ var _hmt = _hmt || [];
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-14 10:30:59" itemprop="dateModified" datetime="2020-02-14T10:30:59+08:00">2020-02-14</time>
+                <time title="修改时间：2020-02-14 14:53:26" itemprop="dateModified" datetime="2020-02-14T14:53:26+08:00">2020-02-14</time>
               </span>
             
           
@@ -331,9 +331,9 @@ var _hmt = _hmt || [];
 <h1 id="用gaussian寻找过渡态"><a class="markdownIt-Anchor" href="#用gaussian寻找过渡态"></a> 用Gaussian寻找过渡态</h1>
 <p>过渡态，也即transition-state，可简写为TS。根据我个人的体验，过渡态的寻找算得上是很难的，所以也很值得一写。</p>
 <h2 id="关键词的选择"><a class="markdownIt-Anchor" href="#关键词的选择"></a> 关键词的选择</h2>
-<p>关于各种理论和方法的实现细节，我一点都算不上了解。有兴趣的可以参考Sobereva的<a href="http://sobereva.com/44" target="_blank" rel="noopener">过渡态、反应路径的计算方法及相关问题</a>。总得来说，寻找过渡态时，应优先考虑这样的关键词，而不要轻易尝试QST2、QST3：</p>
+<p>关于各种理论和方法的实现细节，我一点都算不上了解。有兴趣的可以参考Sobereva的<a href="http://sobereva.com/44" target="_blank" rel="noopener">《过渡态、反应路径的计算方法及相关问题》</a>。总得来说，寻找过渡态时，应优先考虑这样的关键词，而不要轻易尝试QST2、QST3：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># opt=(TS,calcfc,noeigen) freq</span><br></pre></td></tr></table></figure>
-<p>同时，如果你的体系里溶剂化效应非常明显，也请记得加上溶剂化，因为溶剂化模型会改变势能面的形状，程度随体系而变。</p>
+<p>同时，如果你的体系里溶剂化效应非常明显，也请记得加上溶剂化，因为溶剂化模型会改变势能面的形状，程度随体系而变。一般来说我们最常用的是SMD模型。但是有时由于SMD模型的背景噪音，会导致在过渡态搜索的时候一直不收敛，或者在同一振动路径上能收敛出多个结构。拿这样算出来的结构去算IRC一定是跑不出来的，应该尝试将溶剂化模型换为默认的IEFPCM重新算过渡态和IRC。</p>
 <p>如果你在之后遇到了困难（IRC跑不出来等）需要重新算TS，由于之前已经得到了比较接近的结构，可以使用较贵的关键词来得到更精确的结构：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># opt=(TS,calcfc,tight) freq</span><br></pre></td></tr></table></figure>
 <p>如果还不能解决问题，则需要考虑一些更昂贵的关键词：</p>
@@ -346,9 +346,9 @@ var _hmt = _hmt || [];
 </ol>
 <p>关于做柔性扫描的方法，首先采用<code># opt=modredundant</code>关键词，随后在坐标末尾空一行，再输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[原子序号1]  [原子序号2]  &#123;[原子序号3]&#125;  &#123;[原子序号4]&#125; S  [步数]  [步长]</span><br></pre></td></tr></table></figure>
-<p>输入两个原子对应键长，三个对于键角，四个对应二面角。详细的内容可参照Sobereva的<a href="http://sobereva.com/474" target="_blank" rel="noopener">详谈使用Gaussian做势能面扫描</a>。</p>
+<p>输入两个原子对应键长，三个对于键角，四个对应二面角。详细的内容可参照Sobereva的<a href="http://sobereva.com/474" target="_blank" rel="noopener">《详谈使用Gaussian做势能面扫描》</a>。</p>
 <h2 id="过渡态的验证irc"><a class="markdownIt-Anchor" href="#过渡态的验证irc"></a> 过渡态的验证：IRC</h2>
-<p>计算<strong>正常</strong>完成之后，我们再继续验证计算得到的结构是否是我们想要的结构。如果计算报错了，可以参考<a href="http://bbs.keinsci.com/thread-4829-1-1.html" target="_blank" rel="noopener">Gaussian FAQ；新手求助报错时的注意事项</a>以及<a href="http://sobereva.com/164" target="_blank" rel="noopener">量子化学计算中帮助几何优化收敛的常用方法</a>等文章中的方法尝试解决。</p>
+<p>计算<strong>正常</strong>完成之后，我们再继续验证计算得到的结构是否是我们想要的结构。如果计算报错了，可以参考<a href="http://bbs.keinsci.com/thread-4829-1-1.html" target="_blank" rel="noopener">《Gaussian FAQ；新手求助报错时的注意事项》</a>以及<a href="http://sobereva.com/164" target="_blank" rel="noopener">《量子化学计算中帮助几何优化收敛的常用方法》</a>等文章中的方法尝试解决。</p>
 <p>首先使用GaussView（或者免费的Avogadro等，都可以）打开输出文件，并进行以下检查：</p>
 <ol>
 <li>分子构型是否是合理的，有没有优化出明显和这个反应无关的结构</li>
@@ -357,18 +357,18 @@ var _hmt = _hmt || [];
 <p>满足以上两点之后，可以使用IRC来判断计算的结果到底是不是你想要的过渡态。</p>
 <p>所需的关键词为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># IRC=calcfc</span><br></pre></td></tr></table></figure>
-<p>按我个人的经验，跑IRC是非常容易报错的，大家可以参阅Sobereva的<a href="http://sobereva.com/400" target="_blank" rel="noopener">在Gaussian中计算IRC的方法和常见问题</a>来解决问题。</p>
+<p>按我个人的经验，跑IRC是非常容易报错的，大家可以参阅Sobereva的<a href="http://sobereva.com/400" target="_blank" rel="noopener">《在Gaussian中计算IRC的方法和常见问题》</a>来解决问题。</p>
 <h1 id="用orca计算单点能"><a class="markdownIt-Anchor" href="#用orca计算单点能"></a> 用ORCA计算单点能</h1>
-<p>由于ORCA有强大的RI，使得我们可以在机器不变、耗时不增加的情况下，使用高得多的方法和基组来得到更加精确的单点能。关于ORCA的安装和基础使用，可以参阅<a href="https://alexander-qi.github.io/2020/installorca/">如何安装量子化学软件ORCA</a>和<a href="https://alexander-qi.github.io/2019/orcajumpstart/">量子化学软件ORCA快速入门指南</a>。</p>
+<p>由于ORCA有强大的RI，使得我们可以在机器不变、耗时不增加的情况下，使用高得多的方法和基组来得到更加精确的单点能。关于ORCA的安装和基础使用，可以参阅<a href="https://alexander-qi.github.io/2020/installorca/">《如何安装量子化学软件ORCA》</a>和<a href="https://alexander-qi.github.io/2019/orcajumpstart/">《量子化学软件ORCA快速入门指南》</a>。</p>
 <p>自然，这一步是在优化完成之后才进行的。但是如何快捷地将大量的文件从Gaussian输出文件转化为ORCA输入文件呢？</p>
 <p>为了解决这个问题，我写了一个脚本，可以<strong>单独或批量</strong>地读取高斯输出的<code>.log</code>文件，转换为同名的<code>.inp</code>文件。</p>
 <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">mode</span> <span class="built_in">con</span> cols=<span class="number">55</span> lines=<span class="number">10</span></span><br><span class="line"><span class="built_in">Title</span> ORCA Input Generator</span><br><span class="line"></span><br><span class="line">:<span class="built_in">start</span></span><br><span class="line"><span class="built_in">echo</span> 请输入文件名(不含后缀名, 遍历请输入".")</span><br><span class="line"><span class="built_in">set</span> /p tsknum=文件名：</span><br><span class="line"><span class="keyword">If</span> "<span class="variable">%tsknum%</span>"=="" <span class="keyword">Goto</span> <span class="built_in">Start</span></span><br><span class="line"><span class="keyword">If</span> /I "<span class="variable">%tsknum%</span>"!="." <span class="keyword">Goto</span> A</span><br><span class="line"><span class="keyword">If</span> /I "<span class="variable">%tsknum%</span>"=="." <span class="keyword">Goto</span> B</span><br><span class="line"></span><br><span class="line">:A</span><br><span class="line"><span class="built_in">cd</span> /d D:\multiwfn</span><br><span class="line"><span class="built_in">echo</span> <span class="number">100</span> &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span> &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="number">12</span> &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> E:\zeropoint\<span class="variable">%tsknum%</span>.inp &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span> &gt;&gt; oitemp.txt</span><br><span class="line">Multiwfn.exe "E:\opt\<span class="variable">%tsknum%</span>.log" &lt; oitemp.txt</span><br><span class="line"><span class="built_in">del</span> /Q oitemp.txt</span><br><span class="line"><span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:B</span><br><span class="line"><span class="keyword">for</span> /R E:\opt <span class="variable">%%f</span> <span class="keyword">in</span> (*.log) <span class="keyword">do</span> ( </span><br><span class="line"><span class="built_in">cd</span> /d D:\multiwfn</span><br><span class="line"><span class="built_in">echo</span> <span class="number">100</span> &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="number">2</span> &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="number">12</span> &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> E:\zeropoint\<span class="variable">%%f</span>.inp &gt;&gt; oitemp.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="number">8</span> &gt;&gt; oitemp.txt</span><br><span class="line">Multiwfn.exe "E:\opt\<span class="variable">%%f</span>.log" &lt; oitemp.txt</span><br><span class="line"><span class="built_in">del</span> /Q oitemp.txt</span><br><span class="line">)</span><br><span class="line"><span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
 <p>这是一个<code>.bat</code>文件，只能在Windows上使用，linux用户很方便可以找到功能更强的shell脚本请不要担心。请大家在使用前首先确保自己的电脑安装了最新的<a href="http://sobereva.com/multiwfn/" target="_blank" rel="noopener">Multiwfn</a>，同时在<code>settings.ini</code>中设定为<code>isilent=1</code>，<code>iloadGaugeom=1</code>；再根据自己电脑上各类软件的安装目录对脚本进行修改后再使用。</p>
 <h1 id="计算热力学量"><a class="markdownIt-Anchor" href="#计算热力学量"></a> 计算热力学量</h1>
-<blockquote><p>怎么计算标况下气相下自由能，初学者总是没完没了犯错，故有必要再提一下。计算方式分为以下三种情况，结果准确度依次提升。注意这里B3LYP/6-31G<em>仅用来泛指中低计算级别，最适合用什么中低计算级别视具体体系而定，参看《谈谈量子化学中基组的选择》（<a href="http://sobereva.com/336%EF%BC%89%E5%92%8C%E3%80%8A%E7%AE%80%E8%B0%88%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6%E8%AE%A1%E7%AE%97%E4%B8%ADDFT%E6%B3%9B%E5%87%BD%E7%9A%84%E9%80%89%E6%8B%A9%E3%80%8B%EF%BC%88http://sobereva.com/272%EF%BC%89%EF%BC%9A" target="_blank" rel="noopener">http://sobereva.com/336）和《简谈量子化学计算中DFT泛函的选择》（http://sobereva.com/272）：</a><br>
-(1)巨懒无敌懒人、本科生：# B3LYP/6-31G</em> opt freq，读Sum of electronic and thermal Free Energies=后面的值。由于此时电子能量部分是在中低便宜级别下算的，所以自由能精度很垃圾，数据无法用于发表。<br>
+<blockquote><p>怎么计算标况下气相下自由能，初学者总是没完没了犯错，故有必要再提一下。计算方式分为以下三种情况，结果准确度依次提升。注意这里B3LYP/6-31G*仅用来泛指中低计算级别，最适合用什么中低计算级别视具体体系而定，参看《谈谈量子化学中基组的选择》（<a href="http://sobereva.com/336%EF%BC%89%E5%92%8C%E3%80%8A%E7%AE%80%E8%B0%88%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6%E8%AE%A1%E7%AE%97%E4%B8%ADDFT%E6%B3%9B%E5%87%BD%E7%9A%84%E9%80%89%E6%8B%A9%E3%80%8B%EF%BC%88http://sobereva.com/272%EF%BC%89%EF%BC%9A" target="_blank" rel="noopener">http://sobereva.com/336）和《简谈量子化学计算中DFT泛函的选择》（http://sobereva.com/272）：</a><br>
+(1)巨懒无敌懒人、本科生：# B3LYP/6-31G* opt freq，读Sum of electronic and thermal Free Energies=后面的值。由于此时电子能量部分是在中低便宜级别下算的，所以自由能精度很垃圾，数据无法用于发表。<br>
 (2)一般人：# B3LYP/6-31G* opt freq，读取吉布斯热校正量（Thermal correction to Gibbs Free Energy=后面的值）。然后在此结构下计算高精度单点能（比如用B2PLYP-D3(BJ)/def2-TZVP级别，关键词是B2PLYPD3/def2TZVP，或更好的比如CCSD(T)/cc-pVTZ）。之后将二者相加。<br>
-(3)讲究的人：先用B3LYP/6-31G<em>优化体系，然后在考虑B3LYP/6-31G</em>级别下的ZPE的频率校正因子、从0K升温对焓的改变的频率校正因子、熵的频率校正因子的情况下分别计算出吉布斯热校正量的相应部分，然后都加到高精度单点上。若不懂相关知识的话，仔仔仔细细细阅读《谈谈谐振频率校正因子》（<a href="http://sobereva.com/221%EF%BC%89%E3%80%82" target="_blank" rel="noopener">http://sobereva.com/221）。</a></p>
+(3)讲究的人：先用B3LYP/6-31G*优化体系，然后在考虑B3LYP/6-31G*级别下的ZPE的频率校正因子、从0K升温对焓的改变的频率校正因子、熵的频率校正因子的情况下分别计算出吉布斯热校正量的相应部分，然后都加到高精度单点上。若不懂相关知识的话，仔仔仔细细细阅读《谈谈谐振频率校正因子》（<a href="http://sobereva.com/221%EF%BC%89%E3%80%82" target="_blank" rel="noopener">http://sobereva.com/221）。</a></p>
 <p>另外，一种粗略但比较省事的计算溶剂下焓或自由能的方法如下：<br>
 (1)用opt freq优化结构同时获得焓或自由能的热校正量（获得焓的热校正量时建议用ZPE校正因子）。溶剂模型是否需要用看情况<br>
 (2)在(1)的结构下结合溶剂模型用高级别计算单点<br>
