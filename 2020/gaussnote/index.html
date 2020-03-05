@@ -72,7 +72,7 @@
 <meta property="og:site_name" content="墘青">
 <meta property="og:description" content="关于使用Gaussian、ORCA时的一些学习经验和技巧">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2020-02-14T06:53:26.314Z">
+<meta property="og:updated_time" content="2020-03-05T01:33:17.954Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gaussian、ORCA使用笔记">
 <meta name="twitter:description" content="关于使用Gaussian、ORCA时的一些学习经验和技巧">
@@ -296,7 +296,7 @@ var _hmt = _hmt || [];
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-14 14:53:26" itemprop="dateModified" datetime="2020-02-14T14:53:26+08:00">2020-02-14</time>
+                <time title="修改时间：2020-03-05 09:33:17" itemprop="dateModified" datetime="2020-03-05T09:33:17+08:00">2020-03-05</time>
               </span>
             
           
@@ -347,6 +347,7 @@ var _hmt = _hmt || [];
 <p>关于做柔性扫描的方法，首先采用<code># opt=modredundant</code>关键词，随后在坐标末尾空一行，再输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[原子序号1]  [原子序号2]  &#123;[原子序号3]&#125;  &#123;[原子序号4]&#125; S  [步数]  [步长]</span><br></pre></td></tr></table></figure>
 <p>输入两个原子对应键长，三个对于键角，四个对应二面角。详细的内容可参照Sobereva的<a href="http://sobereva.com/474" target="_blank" rel="noopener">《详谈使用Gaussian做势能面扫描》</a>。</p>
+<p>如果你的计划中采用的是M06-2X这样的泛函，有时候会出现找不到想要的过渡态的情况，比如得到的结构的虚频对应的总是分子骨架的振动。这个时候你可以考虑将方法换成B3LYP，并先适当地降低溶剂化级别的等级，如用IEFPCM代替SMD或者干脆暂时不用溶剂化模型，得到合理的结果后再将得到的结构作为M06-2X的初猜。如果这样还找不到，我还用过一种不知道原理上可不可靠的方法：先将你关心的几个原子距离调到柔性扫描时得到的最佳距离，再冻结住这几个原子，用B3LYP进行限制性优化；再将得到的结构作为初猜，使用低级别的溶剂化模型和B3LYP找TS；最后将上一步得到的结构作为初猜，用你本来的溶剂化级别和M06-2X找“准确”的过渡态。</p>
 <h2 id="过渡态的验证irc"><a class="markdownIt-Anchor" href="#过渡态的验证irc"></a> 过渡态的验证：IRC</h2>
 <p>计算<strong>正常</strong>完成之后，我们再继续验证计算得到的结构是否是我们想要的结构。如果计算报错了，可以参考<a href="http://bbs.keinsci.com/thread-4829-1-1.html" target="_blank" rel="noopener">《Gaussian FAQ；新手求助报错时的注意事项》</a>以及<a href="http://sobereva.com/164" target="_blank" rel="noopener">《量子化学计算中帮助几何优化收敛的常用方法》</a>等文章中的方法尝试解决。</p>
 <p>首先使用GaussView（或者免费的Avogadro等，都可以）打开输出文件，并进行以下检查：</p>
@@ -573,10 +574,10 @@ var _hmt = _hmt || [];
   </span>
   <span class="author" itemprop="copyrightHolder">任之</span>
 </div>
-  <div class="powered-by"> <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 专属
+  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">闲言碎语
+  <div class="theme-info">胡言乱语
   </div>
 
         
