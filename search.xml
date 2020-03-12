@@ -4,9 +4,6 @@
     <title><![CDATA[量子化学软件Psi4的教学视频]]></title>
     <url>%2F2020%2Fpsi4videos%2F</url>
     <content type="text"><![CDATA[本文总结一些量子化学软件Psi4的官方教学视频。 安装 本视频演示如何获得并从二进制文件安装量子化学软件Psi4。 运行方式 本视频介绍量子化学软件Psi4的运行方法。 输入文件格式 本视频介绍量子化学软件Psi4的输入文件写法。 输出文件结构 本视频介绍量子化学软件Psi4的输出文件的结构和阅读方法。 结构优化 本视频介绍如何使用量子化学软件Psi4进行结构优化任务。 频率计算 本视频介绍如何利用量子化学软件Psi4进行频率计算。 辅助Python脚本使用方法 本视频介绍如何利用Python脚本来进一步开发量子化学软件Psi4的潜能，辅助你的计算任务。 SAPT能量分解 本视频介绍如何利用量子化学软件Psi4进行SAPT能量分解。]]></content>
-      <categories>
-        <category>Psi4</category>
-      </categories>
       <tags>
         <tag>resources</tag>
         <tag>Psi4</tag>
