@@ -64,19 +64,19 @@
   };
 </script>
 
-  <meta name="description" content="关于在Gaussian、ORCA中寻找过渡态的经验和技巧">
-<meta name="keywords" content="Gaussian,ORCA">
+  <meta name="description" content="本文介绍计算化学相关的一些实用的数据库和在线工具。本文仅挑选一些内容较佳，访问体验较好的在线数据库和工具；若需要了解更多，可以参考《计算化学相关的免费的在线数据库及工具》。本文会不断更新。 Basis Set Exchange 包含：基组、赝势 简介：可以说是目前最重要、最全面的基组+赝势数据库，包含绝大多数（特别是常用的）目前已经发表的基组和赝势。 TURBOMOLE basis set lib">
+<meta name="keywords" content="Free,Databank,Online Tools">
 <meta property="og:type" content="article">
-<meta property="og:title" content="寻找过渡态的一些经验">
-<meta property="og:url" content="https://alexander-qi.github.io/2020/tstricks/index.html">
+<meta property="og:title" content="一些好用的在线数据库及在线工具">
+<meta property="og:url" content="https://alexander-qi.github.io/2020/chemdatabank/index.html">
 <meta property="og:site_name" content="墘青">
-<meta property="og:description" content="关于在Gaussian、ORCA中寻找过渡态的经验和技巧">
+<meta property="og:description" content="本文介绍计算化学相关的一些实用的数据库和在线工具。本文仅挑选一些内容较佳，访问体验较好的在线数据库和工具；若需要了解更多，可以参考《计算化学相关的免费的在线数据库及工具》。本文会不断更新。 Basis Set Exchange 包含：基组、赝势 简介：可以说是目前最重要、最全面的基组+赝势数据库，包含绝大多数（特别是常用的）目前已经发表的基组和赝势。 TURBOMOLE basis set lib">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2020-03-08T12:27:45.928Z">
+<meta property="og:updated_time" content="2020-03-18T05:36:43.499Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="寻找过渡态的一些经验">
-<meta name="twitter:description" content="关于在Gaussian、ORCA中寻找过渡态的经验和技巧">
-  <link rel="canonical" href="https://alexander-qi.github.io/2020/tstricks/">
+<meta name="twitter:title" content="一些好用的在线数据库及在线工具">
+<meta name="twitter:description" content="本文介绍计算化学相关的一些实用的数据库和在线工具。本文仅挑选一些内容较佳，访问体验较好的在线数据库和工具；若需要了解更多，可以参考《计算化学相关的免费的在线数据库及工具》。本文会不断更新。 Basis Set Exchange 包含：基组、赝势 简介：可以说是目前最重要、最全面的基组+赝势数据库，包含绝大多数（特别是常用的）目前已经发表的基组和赝势。 TURBOMOLE basis set lib">
+  <link rel="canonical" href="https://alexander-qi.github.io/2020/chemdatabank/">
 
 
 <script id="page-configurations">
@@ -90,7 +90,7 @@
   };
 </script>
 
-  <title>寻找过渡态的一些经验 | 墘青</title>
+  <title>一些好用的在线数据库及在线工具 | 墘青</title>
   
 
 
@@ -254,7 +254,7 @@ var _hmt = _hmt || [];
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2020/tstricks/">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2020/chemdatabank/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="任之">
@@ -268,7 +268,7 @@ var _hmt = _hmt || [];
       <header class="post-header">
 
         
-          <h2 class="post-title" itemprop="name headline">寻找过渡态的一些经验
+          <h2 class="post-title" itemprop="name headline">一些好用的在线数据库及在线工具
 
             
           </h2>
@@ -285,29 +285,14 @@ var _hmt = _hmt || [];
                 
               
 
-              <time title="创建时间：2020-03-08 19:33:14 / 修改时间：20:27:45" itemprop="dateCreated datePublished" datetime="2020-03-08T19:33:14+08:00">2020-03-08</time>
+              <time title="创建时间：2020-03-18 14:22:16 / 修改时间：13:36:43" itemprop="dateCreated datePublished" datetime="2020-03-18T14:22:16+08:00">2020-03-18</time>
             </span>
           
             
 
             
           
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Gaussian/" itemprop="url" rel="index"><span itemprop="name">Gaussian</span></a></span>
 
-                
-                
-              
-            </span>
-          
-
-          
-            <div class="post-description">关于在Gaussian、ORCA中寻找过渡态的经验和技巧</div>
           
 
         </div>
@@ -319,30 +304,43 @@ var _hmt = _hmt || [];
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>要是有一套成熟的自动化程序能帮我找到我想要的过渡态就好了。可惜我还没有找到过，只能自己不断地摸索。下面是我在寻找过渡态的过程中的一些经验。</p>
-<p>按照下面的步骤寻找过渡态，虽然可能比较耗费核时，但是经个人尝试，可以找到不少难找的过渡态。</p>
-<p>在实际的计算中，建议读者根据自己的体系和计算资源，谨慎选择地计算级别。为了更方便地说明，本文中假设你本来计划的结构优化的级别是M06-2X/def2-TZVP，溶剂化模型是SMD。</p>
-<h1 id="优化出合理的中间体"><a class="markdownIt-Anchor" href="#优化出合理的中间体"></a> 优化出合理的中间体</h1>
-<p>你首先应该获得可信的中间体结构，同时确保你的反应是基元反应。这一点可以确保你所找到的结构是有实际意义的。</p>
-<p>对于中间体的计算，收敛到你想要的结构一般来说比较简单，摆出合理的初猜，随后直接按照M06-2X/def2-TZVP再加上SMD优化就行。</p>
-<h1 id="柔性扫描"><a class="markdownIt-Anchor" href="#柔性扫描"></a> 柔性扫描</h1>
-<p>对于我这种化学直觉不太够的人来说，柔性扫描可以比较可靠地获取第一个初猜键长。</p>
-<p>在高斯中进行柔性扫描非常方便，详细的关键词可以参考Sobereva的<a href="http://sobereva.com/474" target="_blank" rel="noopener">《详谈使用Gaussian做势能面扫描》</a>。</p>
-<p>除非你真的知道自己在做什么，请不要用非半经验方法来进行柔性扫描。如果你用的是G16，建议使用PM7这样的半经验方法。</p>
-<p>注意，对于涉及多变量（比如多个键长或者一个键角和一个二面角）的扫描，请切记不要一起扫描。就算你真的需要多变量地扫描也请先一个一个扫，再对最高点附近的区域扫描。</p>
-<h1 id="低级别下限制性优化"><a class="markdownIt-Anchor" href="#低级别下限制性优化"></a> 低级别下限制性优化</h1>
-<p>通过上一步，我们已经获得了一个比较可靠的初猜键长。将中间体中的相对应键长修改成上一步得到的能量最高点对应的键长，保存得到的结构。随后，我们选取一个较低的级别，比如B3LYP-D3(BJ)/def2-SVP，溶剂化模型使用IEFPCM（你需要根据你的体系自己调整），在<code>.gjf</code>文件里在你关心的原子的元素符号后加上<code>-1</code>冻结它们，在其他元素符号后加上<code>0</code>，随后进行结构优化（即正常的<code>opt</code>）。</p>
-<p>这一步的目的是尽量消除掉结构中与你的反应无关的虚频，以免在找TS的时候收敛到无关的结构。</p>
-<h1 id="低级别下寻找过渡态"><a class="markdownIt-Anchor" href="#低级别下寻找过渡态"></a> 低级别下寻找过渡态</h1>
-<p>将上一步得到的结构提取出来（记得把冻结原子去掉，即删掉<code>.gjf</code>文件中元素符号后的<code>-1</code>和<code>0</code>），然后在与上一步<strong>完全相同</strong>的级别下，寻找TS（即记得把关键词修改成<code>opt=TS</code>）。</p>
-<h1 id="高级别下限制性优化"><a class="markdownIt-Anchor" href="#高级别下限制性优化"></a> 高级别下限制性优化</h1>
-<p>这一步的级别是你原先期望的M06-2X/def2-TZVP，溶剂化模型是SMD。如果上一步真的找到了你想要的TS，那么将结构保存下来，将你关心的原子冻结，随后进行限制性优化。</p>
-<h1 id="高级别下寻找过渡态"><a class="markdownIt-Anchor" href="#高级别下寻找过渡态"></a> 高级别下寻找过渡态</h1>
-<p>在与上一步完全相同的级别下，将上一步得到的结构保存下来作为初猜，解除冻结后修改关键词，寻找TS。</p>
-<h1 id="低级别下跑irc"><a class="markdownIt-Anchor" href="#低级别下跑irc"></a> 低级别下跑IRC</h1>
-<p>上一步成功了后，别高兴的太早，不跑以下IRC的话是没法确定过渡态找对了的。不过高级别下跑IRC很耗时，所以非常建议你先在低级别下跑一下。</p>
-<h1 id="高级别下跑irc"><a class="markdownIt-Anchor" href="#高级别下跑irc"></a> 高级别下跑IRC</h1>
-<p>这一步可以确保你得到的结构是正确的过渡态，能够非常好地证实TS的合理性。不过如果上一步都没成功的话，就不要考虑这一步了。</p>
+        <p>本文介绍计算化学相关的一些实用的数据库和在线工具。本文仅挑选一些内容较佳，访问体验较好的在线数据库和工具；若需要了解更多，可以参考<a href="http://sobereva.com/43" target="_blank" rel="noopener">《计算化学相关的免费的在线数据库及工具》</a>。本文会不断更新。</p>
+<p><a href="https://www.basissetexchange.org/" target="_blank" rel="noopener"><strong>Basis Set Exchange</strong></a><br>
+包含：基组、赝势<br>
+简介：可以说是目前最重要、最全面的基组+赝势数据库，包含绝大多数（特别是常用的）目前已经发表的基组和赝势。</p>
+<p><a href="http://www.cosmologic-services.de/basis-sets/basissets.php" target="_blank" rel="noopener"><strong>TURBOMOLE basis set library II</strong></a><br>
+包含：基组、赝势<br>
+简介：包括def、def2系列基组。除了普通基组，还可以获得/J、/JK、/C密度拟合基组。</p>
+<p><a href="http://www.tc.uni-koeln.de/PP/clickpse.en.html" target="_blank" rel="noopener"><strong>Energy-consistent Pseudopotentials of the Stuttgart/Cologne Group</strong></a><br>
+包含：基组、赝势<br>
+简介：Stuttgart赝势+赝势基组数据库，虽然BSE上也有Stuttgart赝势和配套基组的定义，Gaussian等程序也自带了，但都比较老，只有这里的才是最新、最全的。</p>
+<p><a href="http://www.chemspider.com/" target="_blank" rel="noopener"><strong>ChemSpider</strong></a><br>
+包含：分子平面结构、实验测定的和由ACD/Labs、EPISuite、ChemAxon软件预测的理化性质（LogP、LogD(PH=5.5和7.4时)、水溶性、分子体积、密度、沸点、闪点、蒸汽压、气化焓、折光率、可极化率、表面张力、SASA等），以及毒性、分子简介、Smile/InChI/InChIKey字符串、在其它分子数据库中的编号和链接、相关文章及专利、同义词、相关蛋白质、NMR/IR光谱图<br>
+简介：众多的在线分子数据库的信息整合，便于用户搜索，数据来自200种数据库。</p>
+<p><a href="https://sdbs.db.aist.go.jp/sdbs/cgi-bin/direct_frame_top.cgi" target="_blank" rel="noopener"><strong>Spectral Database for Organic Compounds, SDBS</strong></a><br>
+包含：有机化合物光谱（EI-MS、FT-IR、H-NMR、C13-NMR、ESR、Raman）<br>
+简介：含3万余个化合物，其中以商业化学试剂为主，约2/3的数据是6碳至16碳的化合物。数据大部分是其自行测定的，并不断添加。</p>
+<p><a href="https://webbook.nist.gov/chemistry/" target="_blank" rel="noopener"><strong>NIST Chemistry WebBook</strong></a><br>
+包含：分子量、CAS登记号、热力学数据、红外、紫外、气象色谱、质谱<br>
+简介：美国国家标准与技术研究院NIST的基于Web的物性数据库。</p>
+<p><a href="https://kinetics.nist.gov/kinetics/index.jsp" target="_blank" rel="noopener"><strong>NIST Chemical Kinetics Database</strong></a><br>
+包含：化学动力学数据、指前因子、活化能等<br>
+简介：包含38000个基元反应的的化学动力学数据。</p>
+<p><a href="https://cccbdb.nist.gov/" target="_blank" rel="noopener"><strong>Computational Chemistry Comparison and Benchmark DataBase</strong></a><br>
+包含：方法、泛函、基组、比较、测评<br>
+简介：包括各种量子化学方法、各种基组下对不同分子的各种属性的计算结果，也包含实验数据。可用来对比不同方法计算结果优劣。其中的<a href="https://cccbdb.nist.gov/vibscale.asp" target="_blank" rel="noopener">频率计算校正因子</a>尤其有用。</p>
+<p><a href="http://www.crystallography.net/cod/" target="_blank" rel="noopener"><strong>Crystallography Open Database</strong></a><br>
+包含：无机、有机晶体结构<br>
+简介：免费的晶体学数据库，可以直接得到cif文件。</p>
+<p><a href="http://rruff.geo.arizona.edu/AMS/amcsd.php" target="_blank" rel="noopener"><strong>American Mineralogist Crystal Structure Database</strong></a><br>
+包含：无机晶体结构<br>
+简介：可以获得大量无机晶体的晶体学信息和结构文件。</p>
+<p><a href="http://www.vcclab.org/lab/babel/" target="_blank" rel="noopener"><strong>Virtual Computational Chemistry Laboratory</strong></a><br>
+简介：在线版的Babel，可以支持几十种结构文件格式的转换。</p>
+<p><a href="https://www.webmo.net/demo/index.html" target="_blank" rel="noopener"><strong>WebMO Demo Server</strong></a><br>
+简介：提供了友好的GUI界面，在线绘制或导入结构并调用服务器上的Gaussian、Gamess、Mopac、Molpro、NWChem、QChem、Tinker程序进行量化/分子力学计算。对于免费用户WebMO提供了guest帐户登入，但运算时间限制在60秒以内，可以用来学习使用这些量化程序。</p>
+<p><a href="https://www.xemistry.com/edit/frame.html" target="_blank" rel="noopener"><strong>Xemistry Sketcher &amp; Internet Structure Data Retrieval Tool Demonstration</strong></a><br>
+简介：非常好的在线绘制平面分子结构的工具，它的一大好处是不需要安装java运行环境或其它插件，也不必等待缓慢的载入过程，打开网页直接就可以用。绘制结构方便，界面简洁，还可以进入模版页面直接调用基团。在绘制过程中可以实时生成SMILE、InChI等字符串，可以自动将当前绘制的结构在化学结构数据库中检索，立刻得到它的比如CAS编号、PubChem CID编号、名称等信息。绘制的结构可以导出为mol、ChemDraw的CDX、Sybyl的sln等格式，还可以导出png/gif等图形、pdf文件、swf文件等。也可以直接输入Smile字符串，或者上传分子结构文件来导入此编辑器。</p>
 
     </div>
 
@@ -361,15 +359,11 @@ var _hmt = _hmt || [];
         <div class="post-tags">
             <a href="/tags/resources/" rel="tag"># resources</a>
           
-            <a href="/tags/ORCA/" rel="tag"># ORCA</a>
-          
-            <a href="/tags/Gaussian/" rel="tag"># Gaussian</a>
-          
         </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2020/orcavideos/" rel="next" title="量子化学软件ORCA视频教学">
-                <i class="fa fa-chevron-left"></i> 量子化学软件ORCA视频教学
+              <a href="/2020/scripts_hpc/" rel="next" title="几个脚本的用法">
+                <i class="fa fa-chevron-left"></i> 几个脚本的用法
               </a>
             
           </div>
@@ -377,10 +371,6 @@ var _hmt = _hmt || [];
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2020/psi4videos/" rel="prev" title="量子化学软件Psi4的教学视频">
-                量子化学软件Psi4的教学视频 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -410,17 +400,8 @@ var _hmt = _hmt || [];
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -508,23 +489,6 @@ var _hmt = _hmt || [];
 
         </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#优化出合理的中间体"><span class="nav-number">1.</span> <span class="nav-text"> 优化出合理的中间体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#柔性扫描"><span class="nav-number">2.</span> <span class="nav-text"> 柔性扫描</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#低级别下限制性优化"><span class="nav-number">3.</span> <span class="nav-text"> 低级别下限制性优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#低级别下寻找过渡态"><span class="nav-number">4.</span> <span class="nav-text"> 低级别下寻找过渡态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高级别下限制性优化"><span class="nav-number">5.</span> <span class="nav-text"> 高级别下限制性优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高级别下寻找过渡态"><span class="nav-number">6.</span> <span class="nav-text"> 高级别下寻找过渡态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#低级别下跑irc"><span class="nav-number">7.</span> <span class="nav-text"> 低级别下跑IRC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高级别下跑irc"><span class="nav-number">8.</span> <span class="nav-text"> 高级别下跑IRC</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
     </div>
   </aside>
