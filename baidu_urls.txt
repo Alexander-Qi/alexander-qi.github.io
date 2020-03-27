@@ -1,4 +1,3 @@
-https://alexander-qi.github.io/2020/phychem1/
 https://alexander-qi.github.io/2020/chemdatabank/
 https://alexander-qi.github.io/2020/scripts_hpc/
 https://alexander-qi.github.io/2020/psi4videos/
