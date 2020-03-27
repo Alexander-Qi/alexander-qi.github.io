@@ -377,7 +377,7 @@ var _hmt = _hmt || [];
 <p>在Windows下，你可以写一个<code>runorca.bat</code>文件，文件内容如下：（假设你将自己的ORCA输入文件放在<code>E:\ORCAfile</code>下）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\ORCA421\orca &quot;E:\ORCAfile\test.inp&quot; &gt; &quot;E:\ORCAfile\test.out&quot;</span><br></pre></td></tr></table></figure>
 <p>这样只要每次改一改文件名就可以了。或者你也可以使用cmder等第三方命令行工具。</p>
-<blockquote><p>利用cmder可以令ORCA在Windows下的使用明显更方便，cmder是一个第三方的文本终端。首先去https://cmder.net下载Full版的cmder，然后解压到你平时安装应用程序的目录。之后进入操作系统的命令行窗口，在cmder的目录下，输入Cmder.exe /REGISTER ALL。从此在任意目录下点右键选cmder Here即可进入cmder命令行窗口，并且当前路径就是此文件夹。启动cmder窗口后，在cmder的标题位置点右键选Settings，在General页面里选择{bash::bash as Admin}，然后把cmder关了。从此之后，新开的cmder终端里的命令写法就和Linux的Bash环境下一样了，连awk、vi等常用工具都有。用文本编辑器打开cmder安装目录下的config\user_profile.sh，添加一行比如alias oo=‘D:/study/orca420/orca’，这里oo是你启动ORCA想用的自定义命令，后面是ORCA可执行文件路径。这样，进入cmder后就可以使用比如oo Roselia.inp |tee RAS.out来调用ORCA运行.inp文件，输出的信息不仅显示在屏幕上还同时输出到RAS.out里，比起在Windows的cmd或者powershell里运行ORCA方便省事得多。</p>
+<blockquote><p>利用cmder可以令ORCA在Windows下的使用明显更方便，cmder是一个第三方的文本终端。首先去https://cmder.net下载Full版的cmder，然后解压到你平时安装应用程序的目录。之后进入操作系统的命令行窗口，在cmder的目录下，输入Cmder.exe /REGISTER ALL。从此在任意目录下点右键选cmder Here即可进入cmder命令行窗口，并且当前路径就是此文件夹。启动cmder窗口后，在cmder的标题位置点右键选Settings，在General页面里选择{bash::bash as Admin}，然后把cmder关了。从此之后，新开的cmder终端里的命令写法就和Linux的Bash环境下一样了，连awk、vi等常用工具都有。用文本编辑器打开cmder安装目录下的config\user_profile.sh，添加一行比如alias oo='D:/study/orca420/orca'，这里oo是你启动ORCA想用的自定义命令，后面是ORCA可执行文件路径。这样，进入cmder后就可以使用比如oo Roselia.inp |tee RAS.out来调用ORCA运行.inp文件，输出的信息不仅显示在屏幕上还同时输出到RAS.out里，比起在Windows的cmd或者powershell里运行ORCA方便省事得多。</p>
 <footer><strong>Sobereva@北京科音</strong><cite><a href="http://sobereva.com/451" target="_blank" rel="noopener">量子化学程序ORCA的安装方法</a></cite></footer></blockquote>
 <p>在Linux下，只需要再次修改你的<code>.bashrc</code>即可：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias orca=/home/randomuser/ORCA421/orca</span><br></pre></td></tr></table></figure>
@@ -464,7 +464,7 @@ var _hmt = _hmt || [];
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -571,10 +571,10 @@ var _hmt = _hmt || [];
   </span>
   <span class="author" itemprop="copyrightHolder">任之</span>
 </div>
-  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
+  <div class="powered-by"> <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 专属
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">胡言乱语
+  <div class="theme-info">闲言碎语
   </div>
 
         

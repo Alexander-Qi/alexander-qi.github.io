@@ -461,8 +461,8 @@ var _hmt = _hmt || [];
 <p>#自洽场方程的计算</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">! &#123;SCF-Keywords&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">SCF-Keywords= </span><br><span class="line">    SP #单点能计算</span><br><span class="line">    NormalSCF #正常自洽场收敛标准</span><br><span class="line">    TightSCF #严格的自洽场收敛标准</span><br><span class="line">    VeryTightSCF #严格的自洽场收敛标准</span><br><span class="line">    SlowConv #预期收敛较慢</span><br><span class="line">    LShift #开启电平转换</span><br><span class="line">    SOSCF #打开二阶近似自洽场</span><br><span class="line">    NRSCF #打开牛顿-拉夫森自洽场</span><br><span class="line">    DIIS #打开DIIS</span><br><span class="line">    Direct #直接积分模式</span><br><span class="line">    Conv #传统积分模式</span><br><span class="line">    RHF #闭壳层计算</span><br><span class="line">    UHF #非限制性自旋计算</span><br><span class="line">    ROHF #限制性开壳层计算，需要更多输入参数</span><br></pre></td></tr></table></figure>
-<p>除非涉及过渡金属，否则默认情况是DIIS和SOSCF的组合。<br>
-同时默认运行单重态封闭壳，且更高的多重性旋转不受限制。<br>
+<p>除非涉及过渡金属，否则默认情况是DIIS和SOSCF的组合。
+同时默认运行单重态封闭壳，且更高的多重性旋转不受限制。
 复合体KDIIS SOSCF通常是快速收敛的理想选择，但可能不如电子难物种的默认值强。</p>
 <h2 id="强大的近似ri"><a class="markdownIt-Anchor" href="#强大的近似ri"></a> 强大的近似：RI</h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">! RI</span><br></pre></td></tr></table></figure>
@@ -607,7 +607,7 @@ var _hmt = _hmt || [];
 <p>HF和DFT及以上的方法也可以计算自旋耦合（J耦合）常数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%eprnmr </span><br><span class="line">    Nuclei = all H &#123;ssall, ist = 1 &#125; #假定所有氢都是氕，为所有氢计算耦合常数</span><br><span class="line">    SpinSpinRThresh 6.0 #为最远为6埃的原子间计算耦合常数</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 <h2 id="电子顺磁共振参数"><a class="markdownIt-Anchor" href="#电子顺磁共振参数"></a> 电子顺磁共振参数</h2>
-<p>EPR参数（g张量，D张量，超精细耦合常数（HFC）等）可以用HF，DFT和混合DFT级别的方法进行计算。<br>
+<p>EPR参数（g张量，D张量，超精细耦合常数（HFC）等）可以用HF，DFT和混合DFT级别的方法进行计算。
 这些参数的计算可以使用输入文件中的<code>％eprnmr</code>模块来引出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">%eprnmr</span><br><span class="line"></span><br><span class="line">gtensor 1 #计算g张量</span><br><span class="line"></span><br><span class="line">dtensor </span><br><span class="line">    so	#计算d张量的自旋-轨道部分</span><br><span class="line">    ss	#计算d张量的自旋-自旋部分 </span><br><span class="line">    ssandso	#计算d张量的自旋-轨道部分和自旋-轨道部分</span><br><span class="line"></span><br><span class="line">DSOC cp #默认方法：耦合微扰法</span><br><span class="line">DSS uno #使用UNO的自旋密度</span><br><span class="line"></span><br><span class="line">Ori centerofelcharge #默认：指定电荷中心</span><br><span class="line">    n	#中心的电荷数</span><br><span class="line">    x,y,z	#中心位置</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">solver #指定解CP-SCF方程的方法 </span><br><span class="line">    pople	#默认选项：polpe法</span><br><span class="line">    cg	#共轭梯度法</span><br><span class="line"></span><br><span class="line">Nuclei = all types &#123;FLAGS&#125; #计算超精细耦合常数</span><br><span class="line"></span><br><span class="line">PrintLevel N    #控制输出量，默认为2</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 <p>注意：例如，在计算这些属性（尤其是使用DFT或杂化泛函）时，正确选择泛函和基集非常重要。杂化泛函（B3LYP，TPSSh，PBE0）可提供可靠的结果。像B2PLYP这样的双杂化泛函更昂贵，但可以获得更好的结果。基组，例如EPR-II，EPR-III，IGLO-II和IGLO-III，增加了核心区域的柔韧性，因此对于有机基团表现良好。在许多情况下，基于CASSCF / NEVPT2计算得波函数的EPR参数比DFT（特别是对于过渡金属配合物）更可靠。有关详细信息，请参见CASSCF教程和手册。</p>
@@ -667,7 +667,7 @@ var _hmt = _hmt || [];
 <p>计算共振拉曼光谱</p>
 </li>
 </ol>
-<p>检查并分析计算出的电子光谱，并确定哪些计算出的谱带对应于实验观察到的谱带。高达100 nm的位移并不罕见！<br>
+<p>检查并分析计算出的电子光谱，并确定哪些计算出的谱带对应于实验观察到的谱带。高达100 nm的位移并不罕见！
 修改新创建的文件<code>mycalc.asa.inp</code>，以通过添加波数（例如63500、63800和64000 cm-1）来包含激发能：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RRSE 63500, 63800, 64000</span><br></pre></td></tr></table></figure>
 <p>必须手动选择激发能，以便将实验激发模拟到电子光谱的一个波段中。因此，能量仅在达到实验和计算的电子光谱之间的完全一致的情况下才与激光的能量相同。还要调整asa输入文件中电子跃迁的线宽参数以及共振拉曼带的线宽参数，以匹配实验观察到的线宽。然后运行命令：</p>
@@ -1027,7 +1027,7 @@ var _hmt = _hmt || [];
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1134,10 +1134,10 @@ var _hmt = _hmt || [];
   </span>
   <span class="author" itemprop="copyrightHolder">任之</span>
 </div>
-  <div class="powered-by">由 <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 创建
+  <div class="powered-by"> <a href="https://github.com/Alexander-Qi" class="theme-link" rel="noopener" target="_blank">Alexander Qi</a> 专属
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">胡言乱语
+  <div class="theme-info">闲言碎语
   </div>
 
         
