@@ -64,19 +64,19 @@
   };
 </script>
 
-  <meta name="description" content="这个博客有什么内容？ 现在本博客的主要内容仍然局限于LaTeX的基础教程，日后会根据读者的反馈慢慢地制作LaTeX的高阶使用技巧。 同时本博客也计划着在不远的将来开始添加关于Gaussian、VASP、ORCA等量子化学软件的使用方法的介绍。这些介绍将着重于软件的使用本身而非量子化学知识基础。  我是谁？ 我是一位在清华大学化学系就读的本科生。 对于我来说，LaTeX，Gaussian都只不过是">
-<meta name="keywords" content="LaTeX, Gaussian, ORCA">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://alexander-qi.github.io/about/index.html">
+  <meta name="description" content="本文主要讲解如何利用免费的可视化工具cylview来画出精美的结构图。并附上视频演示。 本文用到所有脚本均可在 https://github.com/Alexander-Qi/gauss-scirpts/releases/tag/0.1 获取到。感谢sobereva社长提供的GauIRC2xyz工具。  准备 首先需要安装openbabel，ffmpeg与cylview。这些软件都是免费的，大家很">
+<meta name="keywords" content="Free,cylview,分子可视化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速制作精美3D分子结构图（视频教程）">
+<meta property="og:url" content="https://alexander-qi.github.io/2020/mkircvid/index.html">
 <meta property="og:site_name" content="墘青">
-<meta property="og:description" content="这个博客有什么内容？ 现在本博客的主要内容仍然局限于LaTeX的基础教程，日后会根据读者的反馈慢慢地制作LaTeX的高阶使用技巧。 同时本博客也计划着在不远的将来开始添加关于Gaussian、VASP、ORCA等量子化学软件的使用方法的介绍。这些介绍将着重于软件的使用本身而非量子化学知识基础。  我是谁？ 我是一位在清华大学化学系就读的本科生。 对于我来说，LaTeX，Gaussian都只不过是">
+<meta property="og:description" content="本文主要讲解如何利用免费的可视化工具cylview来画出精美的结构图。并附上视频演示。 本文用到所有脚本均可在 https://github.com/Alexander-Qi/gauss-scirpts/releases/tag/0.1 获取到。感谢sobereva社长提供的GauIRC2xyz工具。  准备 首先需要安装openbabel，ffmpeg与cylview。这些软件都是免费的，大家很">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-08-18T03:29:51.256Z">
+<meta property="og:updated_time" content="2020-04-15T04:48:07.383Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="这个博客有什么内容？ 现在本博客的主要内容仍然局限于LaTeX的基础教程，日后会根据读者的反馈慢慢地制作LaTeX的高阶使用技巧。 同时本博客也计划着在不远的将来开始添加关于Gaussian、VASP、ORCA等量子化学软件的使用方法的介绍。这些介绍将着重于软件的使用本身而非量子化学知识基础。  我是谁？ 我是一位在清华大学化学系就读的本科生。 对于我来说，LaTeX，Gaussian都只不过是">
-  <link rel="canonical" href="https://alexander-qi.github.io/about/">
+<meta name="twitter:title" content="快速制作精美3D分子结构图（视频教程）">
+<meta name="twitter:description" content="本文主要讲解如何利用免费的可视化工具cylview来画出精美的结构图。并附上视频演示。 本文用到所有脚本均可在 https://github.com/Alexander-Qi/gauss-scirpts/releases/tag/0.1 获取到。感谢sobereva社长提供的GauIRC2xyz工具。  准备 首先需要安装openbabel，ffmpeg与cylview。这些软件都是免费的，大家很">
+  <link rel="canonical" href="https://alexander-qi.github.io/2020/mkircvid/">
 
 
 <script id="page-configurations">
@@ -84,13 +84,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>关于 | 墘青</title>
+  <title>快速制作精美3D分子结构图（视频教程） | 墘青</title>
   
 
 
@@ -212,21 +212,6 @@ var _hmt = _hmt || [];
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
     <div class="site-search">
       
   <div class="popup search-popup local-search-popup">
@@ -263,58 +248,135 @@ var _hmt = _hmt || [];
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://alexander-qi.github.io/2020/mkircvid/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="任之">
+      <meta itemprop="description" content="Personal blog featuring tutorials for LaTeX, Gaussian and ORCA in Chinese.">
+      <meta itemprop="image" content="/images/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="墘青">
+    </span>
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">关于
+        
+          <h2 class="post-title" itemprop="name headline">快速制作精美3D分子结构图（视频教程）
 
-</h2>
+            
+          </h2>
+        
 
-<div class="post-meta">
-  
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
+              
+                
+              
+
+              <time title="创建时间：2020-04-15 15:22:16 / 修改时间：12:48:07" itemprop="dateCreated datePublished" datetime="2020-04-15T15:22:16+08:00">2020-04-15</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文主要讲解如何利用免费的可视化工具cylview来画出精美的结构图。并附上视频演示。</p>
+<p>本文用到所有脚本均可在 <a href="https://github.com/Alexander-Qi/gauss-scirpts/releases/tag/0.1" target="_blank" rel="noopener">https://github.com/Alexander-Qi/gauss-scirpts/releases/tag/0.1</a> 获取到。感谢sobereva社长提供的GauIRC2xyz工具。</p>
+<h1 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h1>
+<p>首先需要安装openbabel，ffmpeg与cylview。这些软件都是免费的，大家很容易就能在它们各自的官网上找到它们。</p>
+<p>需要注意的是，openbabel需要下载老版本2.4.1，不然后面无法完美地与cylview连用。</p>
+<p>安装完cylview后，第一次打开时，需要点击右下角的检查更新按钮，来确保自己的版本是最新的。</p>
+<p>三个软件都安装好后，请记住它们的安装目录，后面要用。</p>
+<h1 id="静态分子图"><a class="markdownIt-Anchor" href="#静态分子图"></a> 静态分子图</h1>
+<p>让我们先来看看怎么绘制静态的结构图。打开cylview后，首先点击open，来载入包含分子结构信息的文件。加载好就可以看到分子骨架了，但显示的还只是未渲染的状态。</p>
+<p>在预览框中，鼠标拖动可以改变视角，点击preview可以预览渲染后的效果，在style栏中可以调整渲染风格。</p>
+<p>cylview还支持对特定原子对焦。先勾选show focus scale on screen，再点击set focus point，最后点击要对焦的原子。绿色圈代表焦点，红圈大小代表了失焦程度；可以在intensity一栏选择虚化强度。</p>
+<p>要标出键长、键角、二面角也非常简单，只需要在预览框下面的功能区中选择对应的功能，随后点击相对应的原子就可以了。</p>
+<p>要移动标签，只需要点击界面右上方的labels栏，选中对应的标签，随后就可以用方向键控制标签位置，还可以再custom一栏设置是否要画出表示角度的弧线等选项。</p>
+<p>调整到理想状态后，点击generate就可以得到图片了，得到的图片会被保存在同一文件夹下，可以直接用其他应用查看。</p>
+<h1 id="视角移动"><a class="markdownIt-Anchor" href="#视角移动"></a> 视角移动</h1>
+<p>下面讨论怎么制作视角移动的动画。</p>
+<p>打开文件后，首先进入poses，调整到你想要的初始视角后，点击add添加视角，再调整到最终视角，再次add；随后进入anim菜单，先选择分辨率，设置start pose为你刚刚第一个建立的视角，在animation type中选择custom，设置end pose为你第二个建立的视角，随后点击上面的add来新建动画。</p>
+<p>选中新建的动画，随后点击render animation。由于cylview自己的渲染方式有一点点bug，这里我们保留pov文件，用我写的脚本来渲染。</p>
+<p>得到的pov文件全在同文件夹下新生成的一个文件夹中。如果你安装了python，那就将<code>makeircvideo.py</code>脚本文件与<code>mkirc.bat</code>复制到这个目录下，然后编辑python脚本，将其中的两个路径修改为你自己的环境里的路径。</p>
+<p><code>mkirc.bat</code>没有放到发布页面，它的内容是这样的：</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">rem 使用方法：python makeircvideo.py 参数1（可选） 参数2（可选）</span></span><br><span class="line"><span class="comment">rem 参数1：  无--生成mp4   1--生成mp4  2--生成gif</span></span><br><span class="line"><span class="comment">rem 参数2：  无--不省略渲染  1--跳过渲染步骤</span></span><br><span class="line">python makeircvideo.py</span><br></pre></td></tr></table></figure>
+<p>要注意的是，如果路径里有空格，需要首先打两个双引号，随后将每个反斜杠换成两个反斜杠。</p>
+<p>修改完成后，保存python脚本；再打开bat脚本，根据你的需求修改参数，随后运行。</p>
+<p>运行结束后，我们可以看到文件夹下多出了很多png图片以及一个和你的结构文件同名的mp4文件，这就是我们需要的动画了，可以直接用其他软件打开，也可以嵌入到ppt里什么的。</p>
+<h1 id="单视角旋转"><a class="markdownIt-Anchor" href="#单视角旋转"></a> 单视角旋转</h1>
+<p>如果只是想看以一个视角出发的旋转动画，该怎么办呢？</p>
+<p>其实比刚才的更简单，只需要像刚才一样，进入poses，添加一个视角就够了；然后还是一样进入animation，设置完start pose后，在animation type里选择rotate，设置完旋转角度，再生成pov文件。</p>
+<p>下面介绍无需python环境的简单渲染方法：将standalone.exe放到同一目录下，然后去把povray.exe和ffmpeg.exe也都复制过来。</p>
+<p>随后点击standalone.exe，并选择功能；后面的运行过程和前文中的都一样了。</p>
+<h1 id="irc"><a class="markdownIt-Anchor" href="#irc"></a> IRC</h1>
+<p>最后讲一下怎么做IRC动画。</p>
+<p>首先我们使用sobereva社长的工具，把高斯IRC任务输出文件转化成xyz文件，转换好后，载入得到的xyz文件，根据你自己的需求调节标签等内容。</p>
+<p>最后在scan目录里选择make movie即可。</p>
+<p>得到pov文件后再用前面的两种脚本中任意一个渲染，就方便地得到IRC动画了。</p>
+
+    </div>
+
+    
+    
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/weixinqrcode.jpg" alt="任之 wechat" style="width: 200px; max-width: 100%;">
+  <div>订阅公众号以获取最新内容！</div>
 </div>
 
-</header>
 
-      
-      
-      
-      <div class="post-body">
+    <footer class="post-footer">
+          
         
-          <h1 id="这个博客有什么内容"><a class="markdownIt-Anchor" href="#这个博客有什么内容"></a> 这个博客有什么内容？</h1>
-<p>现在本博客的主要内容仍然局限于LaTeX的基础教程，日后会根据读者的反馈慢慢地制作LaTeX的高阶使用技巧。</p>
-<p>同时本博客也计划着在不远的将来开始添加关于Gaussian、VASP、ORCA等量子化学软件的使用方法的介绍。这些介绍将着重于软件的使用本身而非量子化学知识基础。</p>
-<h1 id="我是谁"><a class="markdownIt-Anchor" href="#我是谁"></a> 我是谁？</h1>
-<p>我是一位在清华大学化学系就读的本科生。</p>
-<p>对于我来说，LaTeX，Gaussian都只不过是工具，能用就好，并不会去追求夸张的、酷炫的效果，也不会过分追究功能的实现细节。故而本博客中的内容对于科班出身的同学们来说是非常浅薄、浮于表面的，大家要带有选择性地阅读，可以将本博客当成工具书来用。</p>
-<h1 id="关于知识产权"><a class="markdownIt-Anchor" href="#关于知识产权"></a> 关于知识产权</h1>
-<p>有时本站会分享一些外部学习资源。本站所有提供的所有信息资源均为其作者提供和网友推荐收集整理而来，仅供学习和研究使用。作品版权归作者所有，如果无意之中侵犯了您的版权，请来信告知。本站将在3个工作日内删除！</p>
-<p>本站一贯高度重视知识产权保护并遵守中国各项知识产权法律、法规和具有约束力的规范性文件。重视正版，打击盗版。根据法律、法规和规范性文件要求，本站旨在保护权利人的合法权益的措施和步骤，当权利人发现在本站生成的链接所指向的第三方网页的内容侵犯其合法权益时，权利人应事先向本站发出“权利通知”，本站将根据中国法律法规和政府规范性文件采取措施移除相关内容或相关链接。</p>
-<p>任何个人或单位如果同时符合以下两个条件：</p>
-<ul>
-<li>权利人发现本站侵害其合法权益</li>
-<li>权利人发现本站上有提供权利作品的相关连接</li>
-</ul>
-<p>请上述个人或单位务必以书面的通讯方式向本站提交权利通知。</p>
-<h1 id="怎么联系我"><a class="markdownIt-Anchor" href="#怎么联系我"></a> 怎么联系我</h1>
-<p>目前，我正在运营微信公众号“墘青”（微信号：graphicx），这个公众号的二维码在每一篇博文的末尾都有给出。</p>
-<p>如果你有一些关于博文内容的疑问或者希望我下一篇博文撰写特定的内容，你可以关注我的微信公众号并给我发信息，我会定时查看，但由于公众号系统的限制，有时不免会有所纰漏。</p>
-<p>如果你有更为详细的内容需要和我探讨，比如希望与我共同创作一篇文章，可以给我发<a href="mailto:alexanderqi126@outlook.com" target="_blank" rel="noopener">邮件</a>。</p>
+        <div class="post-tags">
+            <a href="/tags/resources/" rel="tag"># resources</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2020/chemdatabank/" rel="next" title="一些好用的在线数据库及在线工具">
+                <i class="fa fa-chevron-left"></i> 一些好用的在线数据库及在线工具
+              </a>
+            
+          </div>
 
-        
-      </div>
-      
-      
-      
-    </div>
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
+          <div class="post-nav-prev post-nav-item">
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
@@ -443,7 +505,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这个博客有什么内容"><span class="nav-number">1.</span> <span class="nav-text"> 这个博客有什么内容？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我是谁"><span class="nav-number">2.</span> <span class="nav-text"> 我是谁？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于知识产权"><span class="nav-number">3.</span> <span class="nav-text"> 关于知识产权</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么联系我"><span class="nav-number">4.</span> <span class="nav-text"> 怎么联系我</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text"> 准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静态分子图"><span class="nav-number">2.</span> <span class="nav-text"> 静态分子图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#视角移动"><span class="nav-number">3.</span> <span class="nav-text"> 视角移动</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单视角旋转"><span class="nav-number">4.</span> <span class="nav-text"> 单视角旋转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#irc"><span class="nav-number">5.</span> <span class="nav-text"> IRC</span></a></li></ol></div>
             
 
           </div>
@@ -568,10 +630,9 @@ var _hmt = _hmt || [];
 
 
   
-    <script src="/js/scrollspy.js?v=7.3.0"></script>
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
-  
 
 </body>
 </html>
