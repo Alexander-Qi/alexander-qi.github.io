@@ -8,7 +8,7 @@ middle_name:
 last_name: Qi
 
 contact_note: >
-  The best way to reach me is via email at qjq18@tsinghua.org.cn. 
+  The best way to reach me is via email. 
   I am usually available for academic discussions during weekdays.
 
 description: >
@@ -28,7 +28,7 @@ keywords: >
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://alexander-qi.github.io # the base hostname & protocol for your site
+url: https://jianqingqi.tech # https://alexander-qi.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -101,9 +101,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
+blog_name: Academic Activities # blog_name will be displayed in your blog page
+blog_description: Research updates, conference talks, and academic honors
+permalink: /activities/:year/:title/
 lsi: false # produce an index for related posts
 
 # Pagination

@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /blog/
-title: Blog
+permalink: /activities/
+title: Activities
 nav: true
 nav_order: 3
 pagination:

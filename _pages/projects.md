@@ -2,10 +2,10 @@
 layout: page
 title: Research
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: I have always been having fun with chemistry.
 nav: true
 nav_order: 1
-display_categories: [work, fun]
+display_categories: [Ongoing, Foundational]
 horizontal: false
 ---
 

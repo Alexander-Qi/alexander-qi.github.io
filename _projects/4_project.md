@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 4
+title: Pyridium-boron system
 description: another without an image
 img:
 importance: 3
-category: fun
+category: Foundational
 ---
 
 Every project has a beautiful feature showcase page.
