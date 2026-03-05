@@ -33,6 +33,7 @@ cv:
         score: ""
         courses: ""
         highlights:
+          - Graduated with Honors
           - Undergraduate research in reaction mechanisms and time-resolved spectroscopy.
 
       - institution: Tsinghua University
@@ -42,18 +43,20 @@ cv:
         start_date: 2022
         end_date: ""
         highlights:
+          - Adviser: Prof. Lei Jiao
           - Research on radical-mediated reaction mechanisms using time-resolved spectroscopy.
 
-    # Experience:
-    #   - company: Institute for Advanced Study, Princeton University
-    #     position: Professor of Theoretical Physics
-    #     location: Princeton University, NJ
-    #     start_date: 1933
-    #     end_date: 1955
-    #     summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-    #     highlights:
-    #       - Relativity
-    #       - Description 2.
+    Experience:
+      - company: Tsinghua University (Jiao Group)
+        position: Graduate Researcher
+        location: Beijing, China
+        start_date: 2022-08
+        end_date: Present
+        summary: "Investigating complex photocatalytic and organocatalytic cycles."
+        highlights:
+          - "Successfully achieved the first direct observation of all open-shell intermediates in a photocatalytic cycle."
+          - "Established a systematic reactivity scale for alpha-aminoalkyl radicals in halogen atom transfer (XAT) reactions."
+          - "Characterized transient enamine radical intermediates in synergistic catalytic cycles using TREPR."
 
     #   - company: California Institute of Technology
     #     position: Visiting Professor
@@ -100,20 +103,59 @@ cv:
     #     awarder: ""
     #     url: ""
     #     summary: ""
+    Awards:
+      - title: Selected Oral Presentation
+        date: 2024-08
+        awarder: Excellent Doctoral Student Forum of the National High-Level Talent Training Center for Chemistry
 
-    # Publications:
-    #   - title: ""
-    #     authors: []
-    #     publisher: ""
-    #     releaseDate: ""
-    #     url: ""
-    #     summary: ""
+      - title: Outstanding Presenter Award
+        date: 2024-04
+        awarder: 5th Beijing-Tianjin Organic Chemistry Graduate Student Academic Seminar
+
+    Publications:
+      - title: "Direct Observation of All Open-Shell Intermediates in a Photocatalytic Cycle"
+        authors: ["Jian-Qing Qi#", "Weiqun Suo#", "Jing Liu", "Songtao Sun", "Lei Jiao*", "Xingwei Guo*"]
+        publisher: "J. Am. Chem. Soc."
+        releaseDate: "2024-03"
+        url: "https://doi.org/10.1021/jacs.3c14471"
+        summary: "Achieved the first-time direct observation and kinetic characterization of all radical intermediates in a complex photocatalytic reaction using advanced TREPR."
+
+      - title: "Overestimated Halogen Atom Transfer Reactivity of α-Aminoalkyl Radicals"
+        authors: ["Weiqun Suo#", "Jian-Qing Qi#", "Jing Liu", "Songtao Sun", "Lei Jiao*", "Xingwei Guo*"]
+        publisher: "J. Am. Chem. Soc."
+        releaseDate: "2024-09"
+        url: "https://doi.org/10.1021/jacs.4c09792"
+        summary: "Established a reliable XAT reactivity scale for α-aminoalkyl radicals, challenging previous beliefs about their radical kinetics."
+
+      - title: "Characterization and Monitoring of Transient Enamine Radical Intermediates in Photoredox/Chiral Primary Amine Synergistic Catalytic Cycle"
+        authors: ["Shixue Zhang#", "Liang Cheng#", "Jian-Qing Qi#", "Zongbin Jia", "Long Zhang", "Lei Jiao*", "Xingwei Guo*", "Sanzhong Luo*"]
+        publisher: "CCS Chemistry"
+        releaseDate: "2024-04"
+        url: "https://doi.org/10.31635/ccschem.024.202404035"
+        summary: "Direct observation of transient enamine radical cations and α-imino radicals for the first time on a microsecond timescale."
+
+      - title: "Time-resolved electron paramagnetic resonance spectrometer based on ultrawide single-sideband phase-sensitive detection"
+        authors: ["Shixue Zhang", "Shengqi Zhou", "Jian-Qing Qi", "Lei Jiao", "Xingwei Guo"]
+        publisher: "Rev. Sci. Instrum."
+        releaseDate: "2023-08"
+        url: "https://doi.org/10.1063/5.0143480"
+
+      - title: "DFT Study on the Mechanism of 4,4′-Bipyridine-Catalyzed Nitrobenzene Reduction by Diboron(4) Compounds"
+        authors: ["Jian-Qing Qi", "Lei Jiao"]
+        publisher: "J. Org. Chem."
+        releaseDate: "2020-11"
+        url: "https://doi.org/10.1021/acs.joc.0c01963"
 
     Skills:
-      - name: Chemistry
-        level: ""
-        icon: fa-solid fa-hashtag
-        keywords: "Reaction mechanisms, time-resolved spectroscopy, photocatalyst design"
+      - name: Instrumentation & Analysis
+        level: Advanced
+        icon: fa-solid fa-microscope
+        keywords: "Time-Resolved EPR (TREPR), Transient Absorption Spectroscopy, Fluorescence Spectroscopy, DFT Calculation"
+      
+      - name: Chemistry Research
+        level: Advanced
+        icon: fa-solid fa-flask
+        keywords: "Physical Organic Chemistry, Radical Kinetics, Photocatalysis, Organocatalysis"
 
     Languages:
       - name: Chinese
