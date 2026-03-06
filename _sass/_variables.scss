@@ -50,3 +50,13 @@ $back-to-top-width: $back-to-top-diameter;
 
 // Max width default
 $max-content-width: 930px !default;
+
+// Morandi Custom Palette
+$m-dusty-blue:    #6a8a96 !default; // 莫兰迪蓝 (主色)
+$m-deep-blue:     #4a6a76 !default; // 深雾霾蓝 (悬停色)
+$m-sage-green:    #8da399 !default; // 草木灰绿 (暗色模式主色)
+$m-linen-white:   #f8f7f2 !default; // 亚麻白 (浅色背景)
+$m-matte-black:   #2b2d2f !default; // 哑光黑 (暗色背景)
+$m-charcoal:      #3c3c3c !default; // 炭灰色 (正文色)
+$m-warm-grey:     #a8a8a8 !default; // 暖灰色 (辅助文字)
+$m-terracotta:    #b08983 !default; // 陶土红 (强调/高亮)
