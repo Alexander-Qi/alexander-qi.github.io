@@ -2,12 +2,15 @@
 layout: page
 title: Research
 permalink: /projects/
-description: I have always been having fun with chemistry.
+# description: I have always been having fun with chemistry.
 nav: true
 nav_order: 1
 display_categories: [Ongoing, Foundational]
 horizontal: false
 ---
+
+{% assign target_post = site.projects | where: "title", "Research summary" | first %}
+{{ target_post.content }}
 
 <!-- pages/projects.md -->
 <div class="projects">

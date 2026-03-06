@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /activities/
-title: Activities
+title: Updates
 nav: true
 nav_order: 3
 pagination:

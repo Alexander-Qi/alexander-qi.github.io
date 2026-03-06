@@ -37,3 +37,8 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+
+p {
+  text-align: justify;
+  text-justify: inter-word; /* 针对现代浏览器优化词间距 */
+}
