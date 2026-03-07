@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Was vernünftig ist, das ist wirklich.
+subtitle: "-- <i>Was vernünftig ist, das ist wirklich.</i> --"
 
 profile:
   align: right
