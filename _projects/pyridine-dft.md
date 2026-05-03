@@ -24,22 +24,10 @@ Ultimately, I managed to resolve the reaction mechanism. With the guidance of Pr
 
 This study provides a detailed mechanistic auditing of the 4,4′-bipyridine-catalyzed reduction of nitrobenzene by $\text{B}_2\text{nep}_2$ using Density Functional Theory calculations.{% cite qi_dft_2020 %} The research establishes that the activation of diboron(4) compounds begins with the generation of a crucial *N*-boryl 4,4'-bipyridyl radical intermediate (**18**) through a sequence involving a [3,3]-sigmatropic rearrangement and subsequent homolytic cleavage. 
 
-
-
-[Image of a [3,3]
--sigmatropic rearrangement mechanism]
-
 This radical species then drives the formation of the boryl bipyridinylidene intermediate (**3**) via a radical chain mechanism. In this catalytic cycle, intermediate **3** functions as a stable reservoir that releases radical **18** to react with nitrobenzene, ultimately yielding intermediate **30**.
 
 The subsequent elimination of $(\text{Bnep})_2\text{O}$ to afford nitrosobenzene is identified as a complex, single-step reaction that proceeds through three distinct stages of dissociation and migration. A similar single-step pathway governs the interaction between nitrosobenzene and $\text{B}_2\text{nep}_2$ to form intermediate **7**. 
 
-
-
 A key discovery in this work concerns the formation of arylnitrene, which is found to occur on a triplet potential energy surface. The transition from the singlet manifold to the triplet intermediate (**35**) via intermediate **34** requires an intersystem crossing (ISC). 
-
-
-
-[Image of an intersystem crossing Jablonski diagram]
-
 
 This crossing is essential to achieving a kinetically feasible activation energy barrier for the nitrene generation process. These insights into radical chain processes and spin-multiplicity changes provide a theoretical framework for the rational design of pyridine- and bipyridine-based catalysts in reductive transformations.
