@@ -6,7 +6,7 @@ subtitle: "-- <i>Was vernünftig ist, das ist wirklich.</i> --"
 
 profile:
   align: right
-  image: avatar_side.jpg
+  image: avatar_side_chop.jpeg
   image_circular: true # crops the image to make it circular
   more_info: >
     <div class="profile-info text-center">
@@ -26,7 +26,6 @@ announcements:
   enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
-
 ---
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
@@ -47,13 +46,12 @@ Jian-Qing was competitively selected as one of only 30 Chinese PhD students to a
 
 Grateful for the opportunities that have shaped his academic path, Jian-Qing looks forward to continued growth in chemical research. He aspires to become a principal investigator, advancing scientific knowledge while mentoring future generations of researchers. -->
 
+I am a PhD candidate in physical organic chemistry at Tsinghua University under the supervision of Prof. Lei Jiao, expecting to graduate in June 2027. I have been conducting research within the [Jiao Research Group](https://www.jiaolei.group/) since 2018.
 
-I am a PhD candidate in physical organic chemistry and have been conducting research within the [Jiao Research Group](https://www.jiaolei.group/) since 2018. 
+My work integrates advanced instrumental analysis with computational methods to investigate chemical reaction mechanisms in the fields of photochemistry and radical chemistry. I currently focus on radical-mediated processes by utilizing the [U-PSD TREPR](https://www.tr-epr.com/) to monitor transient open-shell intermediates. This research includes a study on the overestimated halogen atom transfer reactivity of alpha-aminoalkyl radicals which was recognized with an **oral presentation prize at the ACS Spring 2025 meeting**.
 
-My work integrates advanced instrumental analysis with computational methods to investigate chemical reaction mechanisms in the fields of photochemistry and radical chemistry. I currently focus on radical-mediated processes by utilizing the [U-PSD TREPR](https://www.tr-epr.com/) to monitor transient open-shell intermediates. This research includes a study on the overestimated halogen atom transfer reactivity of alpha-aminoalkyl radicals which was recognized with an **oral presentation prize at the ACS Spring 2025 meeting**. 
+My technical expertise spans four areas: chemical synthesis and mechanistic analysis; advanced spectroscopic characterization (transient absorption, steady-state/transient EPR, U-PSD TREPR); quantum chemical calculations (Gaussian, ORCA, xtb); and programming and AI-assisted coding (Python, MATLAB, Claude Code, Gemini CLI).
 
-My technical profile includes the application of Python and Matlab for kinetic modeling and data processing alongside the development and optimization of spectroscopic instrumentation. 
-
-I was selected as one of thirty Chinese PhD students to participate in the **74th Lindau Nobel Laureate Meeting** in Germany and have received several awards at regional and international symposia. 
+I was selected as one of thirty Chinese PhD students to participate in the **74th Lindau Nobel Laureate Meeting** in Germany and have received several awards at regional and international symposia.
 
 My career objective is to lead a research group focused on radical chemistry and mechanistic innovation while providing mentorship to future generations of researchers.

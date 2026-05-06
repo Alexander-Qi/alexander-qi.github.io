@@ -14,11 +14,11 @@ I am honored to have been selected as one of the 30 Chinese PhD students to part
 
 **Highlights of the Experience:**
 
-* **German University Tour**: Prior to the meeting, I joined the Chinese delegation for an insightful tour of the University of Bonn, University of Giessen, University of Bayreuth, and the Technical University of Munich. I specifically audited the scientific infrastructure and laboratory management models at these institutions.
+- **German University Tour**: Prior to the meeting, I joined the Chinese delegation for an insightful tour of the University of Bonn, University of Giessen, University of Bayreuth, and the Technical University of Munich. I specifically audited the scientific infrastructure and laboratory management models at these institutions.
 
 {% include figure.liquid loading="eager" path="assets/img/post_img/lindau/visitinggiessen.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 
-* **Scientific Exchange**: During the meeting, I engaged with multiple Nobel Laureates. A notable highlight was participating in an on-stage "arm-wrestling" demonstration with **Professor Ben Feringa**, which vividly illustrated the mechanical properties of molecular machines.
+- **Scientific Exchange**: During the meeting, I engaged with multiple Nobel Laureates. A notable highlight was participating in an on-stage "arm-wrestling" demonstration with **Professor Ben Feringa**, which vividly illustrated the mechanical properties of molecular machines.
 
 {% include figure.liquid loading="eager" path="assets/img/post_img/lindau/withferinga.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
 

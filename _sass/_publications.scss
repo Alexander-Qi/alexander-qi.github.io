@@ -72,6 +72,12 @@
       }
 
       .author {
+        sup {
+          font-size: 0.7em;
+          vertical-align: super;
+          margin-left: 1px;
+        }
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 

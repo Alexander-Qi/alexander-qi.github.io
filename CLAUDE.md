@@ -29,15 +29,15 @@ npx prettier . --write
 
 This is a **Jekyll** static site using the **al-folio** academic theme. Content is organized into **collections**:
 
-| Directory | Purpose | Frontmatter Key Fields |
-|-----------|---------|----------------------|
-| `_posts/` | Blog posts (YYYY-MM-DD-title.md) | `layout: post`, `title`, `date`, `categories` |
-| `_projects/` | Project showcase | `layout: page`, `title`, `importance`, `img`, `description` |
-| `_news/` | News/announcements | `layout: post`, `title`, `date` |
-| `_pages/` | Static pages | `layout: page`, `title`, `permalink` |
-| `_bibliography/papers.bib` | Publications (BibTeX) | — |
-| `_books/` | Book reviews | `layout: book-review`, `title`, `author`, `rating` |
-| `_teachings/` | Course info | `layout: page`, `title`, `description` |
+| Directory                  | Purpose                          | Frontmatter Key Fields                                      |
+| -------------------------- | -------------------------------- | ----------------------------------------------------------- |
+| `_posts/`                  | Blog posts (YYYY-MM-DD-title.md) | `layout: post`, `title`, `date`, `categories`               |
+| `_projects/`               | Project showcase                 | `layout: page`, `title`, `importance`, `img`, `description` |
+| `_news/`                   | News/announcements               | `layout: post`, `title`, `date`                             |
+| `_pages/`                  | Static pages                     | `layout: page`, `title`, `permalink`                        |
+| `_bibliography/papers.bib` | Publications (BibTeX)            | —                                                           |
+| `_books/`                  | Book reviews                     | `layout: book-review`, `title`, `author`, `rating`          |
+| `_teachings/`              | Course info                      | `layout: page`, `title`, `description`                      |
 
 ### Key Config Files
 

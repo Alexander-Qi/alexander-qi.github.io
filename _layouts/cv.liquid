@@ -57,11 +57,8 @@ layout: default
       {% endif %}
 
       {% if render_rendercv and site.data.cv and site.data.cv.cv %}
-        
         {% comment %} RenderCV format {% endcomment %}
         {% assign cv = site.data.cv.cv %}
-
-        
 
         {% if cv.summary %}
           <div class="card mt-3 p-3">
@@ -148,8 +145,6 @@ layout: default
             </div>
           </div>
         {% endif %}
-
-        
 
         {% if cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}
           <div class="card mt-3 p-3">

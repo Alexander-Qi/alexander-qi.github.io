@@ -20,7 +20,7 @@
   // --global-divider-color: rgba(0, 0, 0, 0.1);
 
   --global-bg-color: #{v.$m-linen-white};
-  --global-code-bg-color: rgba(106, 138, 150, 0.05); 
+  --global-code-bg-color: rgba(106, 138, 150, 0.05);
   --global-text-color: #{v.$m-charcoal};
   --global-text-color-light: #{v.$m-warm-grey};
   --global-theme-color: #{v.$m-dusty-blue};
@@ -105,14 +105,13 @@ html[data-theme="dark"] {
 
   --global-bg-color: #{v.$m-matte-black};
   --global-code-bg-color: #1e1e1e;
-  --global-text-color: #d1d1d1; 
+  --global-text-color: #d1d1d1;
   --global-text-color-light: #{v.$m-warm-grey};
-  --global-theme-color: #{v.$m-sage-green}; 
+  --global-theme-color: #{v.$m-sage-green};
   --global-hover-color: #{v.$m-sage-green};
-  --global-card-bg-color: #343638; 
+  --global-card-bg-color: #343638;
   --global-divider-color: #424246;
   --global-hover-text-color: #{v.$white-color};
-
 
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},

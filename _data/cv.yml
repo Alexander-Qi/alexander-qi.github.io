@@ -1,10 +1,10 @@
 cv:
   name: Jian-Qing Qi
-  label: PhD student, class of 2022
+  label: PhD candidate, class of 2022
   email: qjq18@tsinghua.org.cn
   location: Beijing, China
   image: ""
-  summary: PhD student in chemistry at Tsinghua University, focusing on reaction mechanisms, time-resolved spectroscopy, and the design of photocatalysts.
+  summary: PhD candidate in physical organic chemistry at Tsinghua University, working at the interface of photochemistry, radical chemistry, and advanced spectroscopic techniques.
 
   social_networks:
     # - network: X
@@ -39,9 +39,9 @@ cv:
       - institution: Tsinghua University
         location: Beijing, China
         area: Chemistry
-        studyType: PhD student
+        studyType: PhD
         start_date: 2022
-        end_date: ""
+        end_date: 2027-06
         highlights:
           - "Adviser: Prof. Lei Jiao"
           - Research on radical-mediated reaction mechanisms using time-resolved spectroscopy.
@@ -62,7 +62,7 @@ cv:
         location: "Lindau, Germany"
         start_date: 2025-06
         end_date: 2025-07
-        summary: "Selected as one of the 600 most qualified young scientists globally to engage in in-depth scientific exchange with Nobel Laureates."
+        summary: "Selected as one of only 30 Chinese PhD students (600 globally) to engage in in-depth scientific exchange with Nobel Laureates."
         highlights:
           - "Engaged in cross-disciplinary dialogues focusing on the future of sustainable chemistry and quantum catalysis."
           - "Presented doctoral research on transient intermediates and EPR spectroscopy to a global audience of peers and Laureates."
@@ -114,6 +114,10 @@ cv:
     #     url: ""
     #     summary: ""
     Awards:
+      - title: Oral Presentation Prize
+        date: 2025-03
+        awarder: ACS Spring 2025 Meeting
+
       - title: Selected Oral Presentation
         date: 2024-08
         awarder: Excellent Doctoral Student Forum of the National High-Level Talent Training Center for Chemistry
@@ -157,15 +161,25 @@ cv:
         url: "https://doi.org/10.1021/acs.joc.0c01963"
 
     Skills:
-      - name: Instrumentation & Analysis
-        level: Advanced
-        icon: fa-solid fa-microscope
-        keywords: "Time-Resolved EPR (TREPR), Transient Absorption Spectroscopy, Fluorescence Spectroscopy, DFT Calculation"
-      
-      - name: Chemistry Research
+      - name: Chemical Synthesis & Mechanism
         level: Advanced
         icon: fa-solid fa-flask
-        keywords: "Physical Organic Chemistry, Radical Kinetics, Photocatalysis, Organocatalysis"
+        keywords: "Physical Organic Chemistry, Radical Kinetics, Photocatalysis, Organocatalysis, Mechanistic Analysis"
+
+      - name: Spectroscopy
+        level: Advanced
+        icon: fa-solid fa-microscope
+        keywords: "Transient Absorption Spectroscopy, Steady-State EPR, Time-Resolved EPR (TREPR), U-PSD TREPR, Fluorescence Spectroscopy"
+
+      - name: Computational Chemistry
+        level: Intermediate
+        icon: fa-solid fa-laptop
+        keywords: "Gaussian, ORCA, xtb, DFT Calculations"
+
+      - name: Programming & AI Tools
+        level: Intermediate
+        icon: fa-solid fa-code
+        keywords: "Python, MATLAB, Claude Code, Gemini CLI"
 
     Languages:
       - name: Chinese
