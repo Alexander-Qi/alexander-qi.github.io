@@ -6,7 +6,7 @@ subtitle: "-- <i>Was vernünftig ist, das ist wirklich.</i> --"
 
 profile:
   align: right
-  image: avatar.jpg
+  image: avatar_side.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <div class="profile-info text-center">
