@@ -113,9 +113,11 @@ importance: 1
 
 ## Include Shortcodes
 
+{% raw %}
 - `{% include figure.liquid path="..." title="..." %}` — responsive images
 - `{% include video.liquid path="..." %}` — video embeds
 - `{% include audio.liquid path="..." %}` — audio embeds
+{% endraw %}
 
 ## Git Workflow
 
