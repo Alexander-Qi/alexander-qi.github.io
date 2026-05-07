@@ -24,3 +24,4 @@ CLAUDE.md
 .github/agents/
 .github/instructions/
 .github/copilot-instructions.md
+run_local.sh
