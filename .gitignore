@@ -13,3 +13,14 @@ assets/rendercv/rendercv_output/*.typ
 Gemfile.lock
 node_modules/
 vendor
+
+# Agent related files
+.gemini/
+.cursor/
+.cursorrules
+.windsurfrules
+AGENTS.md
+CLAUDE.md
+.github/agents/
+.github/instructions/
+.github/copilot-instructions.md
