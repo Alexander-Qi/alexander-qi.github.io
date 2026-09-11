@@ -268,8 +268,6 @@ jekyll-archives:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["awards", "conferences"] # 只保留您需要显示的标签
 # display_categories: ["news"]  # 可选：如果您也需要分类
