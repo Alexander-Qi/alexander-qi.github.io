@@ -14,6 +14,9 @@ Gemfile.lock
 node_modules/
 vendor
 
+# Local backup, not part of the site
+assets/pdf/CV_jianqingqi_old.pdf
+
 # Agent related files
 .gemini/
 .cursor/
