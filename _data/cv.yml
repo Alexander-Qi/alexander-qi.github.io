@@ -127,6 +127,13 @@ cv:
         awarder: 5th Beijing-Tianjin Organic Chemistry Graduate Student Academic Seminar
 
     Publications:
+      - title: "Pyridinium(Boron) Fluorophores as Versatile Photocatalysts"
+        authors: ["Lutao Bai#", "Jian-Qing Qi#", "Xuegang Liu", "Jie Yang*", "Xingwei Guo*", "Lei Jiao*"]
+        publisher: "J. Am. Chem. Soc."
+        releaseDate: "2026-06"
+        url: "https://doi.org/10.1021/jacs.6c04010"
+        summary: "Introduced the pyridinium(boron) Ar(dppy)BX motif as a modular organic photocatalyst that rivals iridium sensitizers in energy-transfer catalysis and enables the switchable 1e/2e oxidation of amines."
+
       - title: "Direct Observation of All Open-Shell Intermediates in a Photocatalytic Cycle"
         authors: ["Jian-Qing Qi#", "Weiqun Suo#", "Jing Liu", "Songtao Sun", "Lei Jiao*", "Xingwei Guo*"]
         publisher: "J. Am. Chem. Soc."
