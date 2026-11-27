@@ -53,7 +53,7 @@ cv:
         position: Graduate Researcher
         location: Beijing, China
         start_date: 2022-08
-        end_date: Present
+        end_date: present
         summary: "Investigating photochemical and radical reaction mechanisms via time-resolved spectroscopy, global kinetic modeling, and quantum chemical calculations."
         highlights:
           - "Investigating excited-state energy partitioning and bond-cleavage dynamics of visible-light free hydrogen atom generation via multi-wavelength fs/ns transient absorption, kinetic-constraint global modeling, and TD-DFT."
