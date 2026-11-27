@@ -7,13 +7,13 @@ tags: conferences awards
 categories: activities
 ---
 
-I participated in the **ACS Spring 2025** virtual meeting, specifically the _Virtual Graduate Students Symposium in Asia-Pacific Region on Synthetic Chemistry_ session.
+I presented in the _Virtual Graduate Students Symposium in Asia-Pacific Region on Synthetic Chemistry_, held as part of **ACS Spring 2025**.
 
 **Presentation Details:**
 
 - **Topic**: _Overestimated halogen atom transfer reactivity of α-aminoalkyl radicals._
-- **Core Discussion**: The presentation focused on the kinetic auditing of α-aminoalkyl radicals and the potential overestimation of their reactivity in XAT processes.
+- **Core Discussion**: The talk focused on the quantitative kinetic characterization of α-aminoalkyl radicals and the substantial overestimation of their reactivity in halogen atom transfer (XAT) processes.
 
-Following the session, I was honored to receive the **Oral Presentation Prize**. This recognition validates our group's efforts in elucidating the fundamental kinetic behaviors of open-shell intermediates.
+Following the session, I was honored to receive the **Oral Presentation Prize**, reflecting our group's ongoing work on the fundamental kinetics of open-shell intermediates.
 
 {% include figure.liquid loading="eager" path="assets/img/post_img/acs_spring_2025_prize_jianqingqi.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}

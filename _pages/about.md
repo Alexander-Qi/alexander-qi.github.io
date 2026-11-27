@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "-- <i>Was vernünftig ist, das ist wirklich.</i> --"
+subtitle: "— <i>Was vernünftig ist, das ist wirklich.</i> —"
 
 profile:
   align: right
@@ -10,7 +10,7 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     <div class="profile-info text-center">
-      <p class="mb-1">PhD student</p>
+      <p class="mb-1">PhD candidate</p>
       <p class="mb-1">Tsinghua University</p>
     </div>
 
@@ -37,12 +37,10 @@ Jian-Qing was competitively selected as one of only 30 Chinese PhD students to a
 
 Grateful for the opportunities that have shaped his academic path, Jian-Qing looks forward to continued growth in chemical research. He aspires to become a principal investigator, advancing scientific knowledge while mentoring future generations of researchers. -->
 
-I am a PhD candidate in physical organic chemistry at Tsinghua University under the supervision of Prof. Lei Jiao, expecting to graduate in June 2027. I have been conducting research within the [Jiao Research Group](https://www.jiaolei.group/) since 2018.
+I am a PhD candidate in physical organic chemistry at Tsinghua University, advised by Prof. Lei Jiao and expecting to graduate in June 2027. I have been conducting research in the [Jiao Research Group](https://www.jiaolei.group/) since 2018.
 
-My work integrates advanced instrumental analysis with computational methods to investigate chemical reaction mechanisms in the fields of photochemistry and radical chemistry. I currently focus on radical-mediated processes by utilizing the [U-PSD TREPR](https://www.tr-epr.com/) to monitor transient open-shell intermediates. This research includes a study on the overestimated halogen atom transfer reactivity of alpha-aminoalkyl radicals which was recognized with an **oral presentation prize at the ACS Spring 2025 meeting**.
+My research sits at the intersection of time-resolved spectroscopy, photochemistry, and radical reaction mechanisms—using custom instrumentation, ultrafast transient absorption, and quantum chemical calculations to turn speculative reaction pathways into quantitative, testable kinetic models. Using our home-built [U-PSD TREPR](http://www.tr-epr.com/) spectrometer, I achieved the direct observation of all open-shell intermediates in a photocatalytic cycle, reassessed the overestimated halogen atom transfer reactivity of α-aminoalkyl radicals (recognized with an **Oral Presentation Prize at the ACS Spring 2025 Meeting**), and helped establish the pyridinium(boron) motif as a modular organic photocatalyst. Currently, my work focuses on ultrafast excited-state dynamics and visible-light-driven free hydrogen atom generation.
 
-My technical expertise spans four areas: chemical synthesis and mechanistic analysis; advanced spectroscopic characterization (transient absorption, steady-state/transient EPR, U-PSD TREPR); quantum chemical calculations (Gaussian, ORCA, xtb); and programming and AI-assisted coding (Python, MATLAB, Claude Code, Gemini CLI).
+My technical background spans four areas: mechanistic physical organic chemistry; time-resolved spectroscopy (fs/ns transient absorption, steady-state EPR, U-PSD TREPR) and kinetic-constraint global data modeling; quantum chemical calculations (Gaussian, ORCA, xtb); and scientific programming and AI-assisted research workflows (Python, MATLAB, C#).
 
-I was selected as one of thirty Chinese PhD students to participate in the **74th Lindau Nobel Laureate Meeting** in Germany and have received several awards at regional and international symposia.
-
-My career objective is to lead a research group focused on radical chemistry and mechanistic innovation while providing mentorship to future generations of researchers.
+In 2025, I was selected as one of 30 Chinese PhD students to attend the **74th Lindau Nobel Laureate Meeting** in Germany, and I have received presentation awards at regional and international symposia. Ultimately, I aim to lead an independent research group advancing radical chemistry and time-resolved mechanistic science while mentoring the next generation of physical organic chemists.

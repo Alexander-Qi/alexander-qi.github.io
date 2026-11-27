@@ -1,12 +1,14 @@
 cv:
   name: Jian-Qing Qi
-  label: PhD candidate, class of 2022
+  label: PhD Candidate in Physical Organic Chemistry
   email: qjq18@tsinghua.org.cn
   location: Beijing, China
   image: ""
-  summary: PhD candidate in physical organic chemistry at Tsinghua University, working at the interface of photochemistry, radical chemistry, and advanced spectroscopic techniques.
+  summary: PhD candidate in physical organic chemistry at Tsinghua University (expected June 2027), working at the interface of photochemistry, radical chemistry, ultrafast/time-resolved spectroscopy, and quantitative kinetic modeling.
 
   social_networks:
+    - network: ORCID
+      username: 0000-0001-5042-6315
     # - network: X
     #   username: your_x_handle
     # - network: GitHub
@@ -52,11 +54,13 @@ cv:
         location: Beijing, China
         start_date: 2022-08
         end_date: Present
-        summary: "Investigating complex photocatalytic and organocatalytic cycles."
+        summary: "Investigating photochemical and radical reaction mechanisms via time-resolved spectroscopy, global kinetic modeling, and quantum chemical calculations."
         highlights:
-          - "Successfully achieved the first direct observation of all open-shell intermediates in a photocatalytic cycle."
-          - "Established a systematic reactivity scale for alpha-aminoalkyl radicals in halogen atom transfer (XAT) reactions."
-          - "Characterized transient enamine radical intermediates in synergistic catalytic cycles using TREPR."
+          - "Investigating excited-state energy partitioning and bond-cleavage dynamics of visible-light free hydrogen atom generation via multi-wavelength fs/ns transient absorption, kinetic-constraint global modeling, and TD-DFT."
+          - "Dissected the photophysics, energy-transfer catalysis, and degradation kinetics of modular pyridinium(boron) organic photocatalysts (J. Am. Chem. Soc. 2026)."
+          - "Achieved the first direct observation and kinetic characterization of all open-shell intermediates in a photocatalytic cycle using U-PSD TREPR (J. Am. Chem. Soc. 2024)."
+          - "Established a quantitative reactivity scale for α-aminoalkyl radicals in halogen atom transfer (XAT) reactions, revising literature rate constants by 3–5 orders of magnitude (J. Am. Chem. Soc. 2024)."
+          - "Characterized transient enamine radical intermediates in photoredox/chiral primary amine synergistic catalysis via U-PSD TREPR (CCS Chem. 2024)."
       - company: "Lindau Nobel Laureate Meetings"
         position: "Young Scientist Nominee (Global Selection)"
         location: "Lindau, Germany"
@@ -122,9 +126,9 @@ cv:
         date: 2024-08
         awarder: Excellent Doctoral Student Forum of the National High-Level Talent Training Center for Chemistry
 
-      - title: Outstanding Presenter Award
+      - title: Outstanding Presentation Award
         date: 2024-04
-        awarder: 5th Beijing-Tianjin Organic Chemistry Graduate Student Academic Seminar
+        awarder: 5th Beijing–Tianjin Graduate Student Organic Chemistry Symposium
 
     Publications:
       - title: "Pyridinium(Boron) Fluorophores as Versatile Photocatalysts"
@@ -151,7 +155,7 @@ cv:
       - title: "Characterization and Monitoring of Transient Enamine Radical Intermediates in Photoredox/Chiral Primary Amine Synergistic Catalytic Cycle"
         authors: ["Shixue Zhang#", "Liang Cheng#", "Jian-Qing Qi#", "Zongbin Jia", "Long Zhang", "Lei Jiao*", "Xingwei Guo*", "Sanzhong Luo*"]
         publisher: "CCS Chemistry"
-        releaseDate: "2024-04"
+        releaseDate: "2024-10"
         url: "https://doi.org/10.31635/ccschem.024.202404035"
         summary: "Direct observation of transient enamine radical cations and α-imino radicals for the first time on a microsecond timescale."
 
@@ -168,25 +172,25 @@ cv:
         url: "https://doi.org/10.1021/acs.joc.0c01963"
 
     Skills:
-      - name: Chemical Synthesis & Mechanism
+      - name: Physical Organic Chemistry & Mechanism
         level: Advanced
         icon: fa-solid fa-flask
-        keywords: "Physical Organic Chemistry, Radical Kinetics, Photocatalysis, Organocatalysis, Mechanistic Analysis"
+        keywords: "Radical Kinetics, Photochemistry, Photocatalysis, Organocatalysis, Excited-State Dynamics, Kinetic Isotope Effects"
 
-      - name: Spectroscopy
+      - name: Time-Resolved Spectroscopy & Analysis
         level: Advanced
         icon: fa-solid fa-microscope
-        keywords: "Transient Absorption Spectroscopy, Steady-State EPR, Time-Resolved EPR (TREPR), U-PSD TREPR, Fluorescence Spectroscopy"
+        keywords: "fs/ns Transient Absorption (UV-vis/NIR), U-PSD TREPR, Steady-State EPR, TCSPC, Global Kinetic Analysis, MCR-ALS"
 
       - name: Computational Chemistry
         level: Intermediate
         icon: fa-solid fa-laptop
-        keywords: "Gaussian, ORCA, xtb, DFT Calculations"
+        keywords: "Gaussian, ORCA, xtb, DFT/TD-DFT, Excited-State PES & ESA Simulations"
 
-      - name: Programming & AI Tools
+      - name: Programming & Scientific Computing
         level: Intermediate
         icon: fa-solid fa-code
-        keywords: "Python, MATLAB, Claude Code, Gemini CLI"
+        keywords: "Python, MATLAB, C#, Automated Data Pipelines, AI-Assisted Research Workflows"
 
     Languages:
       - name: Chinese
@@ -196,15 +200,15 @@ cv:
         summary: "Fluent"
 
     Interests:
-      - name: Reaction mechanism
+      - name: Reaction mechanisms & excited-state dynamics
         icon: fa-solid fa-tag
         keywords: ""
 
-      - name: Time-resolved spectroscopy
+      - name: Time-resolved spectroscopy & kinetic modeling
         icon: fa-solid fa-tag
         keywords: ""
 
-      - name: Designing photocatalysts
+      - name: Photochemistry & photocatalyst design
         icon: fa-solid fa-tag
         keywords: ""
 
