@@ -68,9 +68,8 @@ cv:
         end_date: 2025-07
         summary: "Selected as one of only 30 Chinese PhD students (600 globally) to engage in in-depth scientific exchange with Nobel Laureates."
         highlights:
-          - "Engaged in cross-disciplinary dialogues focusing on the future of sustainable chemistry and quantum catalysis."
-          - "Presented doctoral research on transient intermediates and EPR spectroscopy to a global audience of peers and Laureates."
-          - "Established international academic networks with leading researchers in the fields of photochemistry and radical chemistry."
+          - "Engaged in cross-disciplinary dialogues on sustainable chemistry and quantum catalysis."
+          - "Presented doctoral research on transient radicals and EPR spectroscopy to an international audience of peers and Laureates."
 
     #   - company: California Institute of Technology
     #     position: Visiting Professor
@@ -118,17 +117,23 @@ cv:
     #     url: ""
     #     summary: ""
     Awards:
-      - title: Oral Presentation Prize
+      - name: Oral Presentation Prize
+        title: Oral Presentation Prize
         date: 2025-03
         awarder: ACS Spring 2025 Meeting
+        summary: ACS Spring 2025 Meeting
 
-      - title: Selected Oral Presentation
+      - name: Selected Oral Presentation
+        title: Selected Oral Presentation
         date: 2024-08
         awarder: Excellent Doctoral Student Forum of the National High-Level Talent Training Center for Chemistry
+        summary: Excellent Doctoral Student Forum of the National High-Level Talent Training Center for Chemistry
 
-      - title: Outstanding Presentation Award
+      - name: Outstanding Presentation Award
+        title: Outstanding Presentation Award
         date: 2024-04
         awarder: 5th Beijing–Tianjin Graduate Student Organic Chemistry Symposium
+        summary: 5th Beijing–Tianjin Graduate Student Organic Chemistry Symposium
 
     Publications:
       - title: "Pyridinium(Boron) Fluorophores as Versatile Photocatalysts"
@@ -173,24 +178,32 @@ cv:
 
     Skills:
       - name: Physical Organic Chemistry & Mechanism
+        label: Physical Organic Chemistry & Mechanism
         level: Advanced
         icon: fa-solid fa-flask
         keywords: "Radical Kinetics, Photochemistry, Photocatalysis, Organocatalysis, Excited-State Dynamics, Kinetic Isotope Effects"
+        details: "Radical kinetics, photochemistry, photocatalysis, organocatalysis, excited-state dynamics, kinetic isotope effects"
 
       - name: Time-Resolved Spectroscopy & Analysis
+        label: Time-Resolved Spectroscopy & Analysis
         level: Advanced
         icon: fa-solid fa-microscope
         keywords: "fs/ns Transient Absorption (UV-vis/NIR), U-PSD TREPR, Steady-State EPR, TCSPC, Global Kinetic Analysis, MCR-ALS"
+        details: "fs/ns transient absorption (UV–vis/NIR), U-PSD TREPR, steady-state EPR, TCSPC, global kinetic analysis, MCR-ALS"
 
       - name: Computational Chemistry
+        label: Computational Chemistry
         level: Intermediate
         icon: fa-solid fa-laptop
         keywords: "Gaussian, ORCA, xtb, DFT/TD-DFT, Excited-State PES & ESA Simulations"
+        details: "Gaussian, ORCA, xtb, DFT/TD-DFT, excited-state PES and ESA simulations"
 
       - name: Programming & Scientific Computing
+        label: Programming & Scientific Computing
         level: Intermediate
         icon: fa-solid fa-code
         keywords: "Python, MATLAB, C#, Automated Data Pipelines, AI-Assisted Research Workflows"
+        details: "Python, MATLAB, C#, automated data pipelines, AI-assisted research workflows"
 
     Languages:
       - name: Chinese

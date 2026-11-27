@@ -9,8 +9,8 @@ I am a PhD candidate in physical organic chemistry at Tsinghua University, advis
 My research sits at the intersection of time-resolved spectroscopy, photochemistry, and radical reaction mechanisms—combining U-PSD TREPR, ultrafast transient absorption, global kinetic modeling, and quantum chemical calculations to turn speculative reaction pathways into quantitative, testable mechanistic models.
 
 ### Technical Expertise
+
 - **Physical organic chemistry & reaction mechanisms** (radical kinetics, photochemistry, excited-state dynamics)
 - **Time-resolved spectroscopy & modeling** (fs/ns transient absorption, U-PSD TREPR, steady-state EPR, global kinetic analysis)
 - **Quantum chemical calculations** (Gaussian, ORCA, xtb)
 - **Scientific computing & AI-assisted research workflows** (Python, MATLAB, C#)
-

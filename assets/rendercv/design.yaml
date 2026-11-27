@@ -5,3 +5,7 @@ design:
     size: a4
     show_footer: false
     show_top_note: false
+  typography:
+    font_size:
+      body: 9.8pt
+    line_spacing: 0.58em

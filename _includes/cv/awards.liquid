@@ -37,7 +37,7 @@
               <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.awarder }}</h6>
             {% endif %}
 
-            {% if entry.summary %}
+            {% if entry.summary and entry.awarder == blank %}
               <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
             {% endif %}
           </div>
@@ -55,7 +55,7 @@
               <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.awarder }}</h6>
             {% endif %}
 
-            {% if entry.summary %}
+            {% if entry.summary and entry.awarder == blank %}
               <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
             {% endif %}
           </div>
