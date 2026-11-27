@@ -41,7 +41,7 @@ ninja.data = [{
         
           title: "Selected for the 74th Lindau Nobel Laureate Meeting",
         
-        description: "Participation in the prestigious 74th Lindau Nobel Laureate Meeting and a scientific tour across Germany.",
+        description: "Participating in the 74th Lindau Nobel Laureate Meeting and visiting research universities across Germany.",
         section: "Posts",
         handler: () => {
           
@@ -61,28 +61,33 @@ ninja.data = [{
         },
       },{id: "post-outstanding-presentation-award-at-the-5th-beijing-tianjin-organic-chemistry-symposium",
         
-          title: "Outstanding Presentation Award at the 5th Beijing-Tianjin Organic Chemistry Symposium",
+          title: "Outstanding Presentation Award at the 5th Beijing–Tianjin Organic Chemistry Symposium",
         
-        description: "Awarded for oral presentation at the regional organic chemistry symposium held at Nankai University.",
+        description: "Awarded for an oral presentation at the regional organic chemistry symposium held at Nankai University.",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/activities/2024/beijing-tianjin-symposium/";
           
         },
-      },{id: "projects-metal-free-group-transfer-reaction",
+      },{id: "projects-visible-light-free-hydrogen-atom-generation",
+          title: 'Visible-light free hydrogen atom generation',
+          description: "Unraveling the excited-state photophysics and bond-cleavage dynamics behind mild, visible-light generation of free hydrogen atoms.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/free-hydrogen-atom/";
+            },},{id: "projects-metal-free-group-transfer-reaction",
           title: 'Metal-free group transfer reaction',
-          description: "Realizing SN2 reactions without metal.",
+          description: "Exploring metal-free $S_N2$ group transfer through transition-state design.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/group-transfer/";
-            },},{id: "projects-novel-photocatalyst",
-          title: 'Novel photocatalyst',
-          description: "A modular, structurally tunable fluorophore for diverse photochemical transformations.",
+            },},{id: "projects-pyridinium-boron-photocatalysts",
+          title: 'Pyridinium(boron) photocatalysts',
+          description: "A modular fluorophore whose redox and excited-state properties can be tuned independently.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/nbc/";
             },},{id: "projects-dft-study-of-pyridine-catalyzed-reactions",
-          title: 'DFT study of pyridine catalyzed reactions',
-          description: "My initial undergraduate research, completed during the pandemic-related lockdowns.",
+          title: 'DFT study of pyridine-catalyzed reactions',
+          description: "My initial undergraduate research, carried out during the COVID-19 lockdowns.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/pyridine-dft/";
             },},{id: "projects-research-summary",
@@ -108,6 +113,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%71%6A%71%31%38@%74%73%69%6E%67%68%75%61.%6F%72%67.%63%6E", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0001-5042-6315", "_blank");
         },
       },{
         id: 'social-scholar',
